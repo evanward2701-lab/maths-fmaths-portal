@@ -1,0 +1,50 @@
+<!--
+Asset ID: AS1EquationsInequalitiesSVG-001
+Source: P1 Chapter 3 PDF pages on solution sets; Chapter 3 transcript explanation of solution sets.
+Related lesson section: Key Definitions and Notation; Core Theory: Solution Sets.
+Purpose: Show the different possible sizes of a solution set: one value, multiple values, infinite values, empty set and all real values.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Types of Solution Sets</title>
+  <desc id="desc">A teaching diagram showing solution sets with one value, multiple values, infinitely many values, no real values, and every allowed real value.</desc>
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+  <rect x="30" y="30" width="1140" height="700" rx="24" fill="#f7f7f7" stroke="#222222" stroke-width="3"/>
+  <text x="600" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111111">Solution sets: the answer is a set of values</text>
+  <text x="600" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333333">An equation or inequality may be true for one value, many values, no values, or every allowed value.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="175" width="320" height="210" rx="18" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+    <text x="230" y="220" text-anchor="middle" font-size="28" font-weight="700" fill="#111111">One value</text>
+    <text x="230" y="270" text-anchor="middle" font-size="30" fill="#111111">2x + 1 = 5</text>
+    <line x1="125" y1="300" x2="335" y2="300" stroke="#111111" stroke-width="2"/>
+    <text x="230" y="345" text-anchor="middle" font-size="28" fill="#111111">{2}</text>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="440" y="175" width="320" height="210" rx="18" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+    <text x="600" y="220" text-anchor="middle" font-size="28" font-weight="700" fill="#111111">Multiple values</text>
+    <text x="600" y="270" text-anchor="middle" font-size="30" fill="#111111">x² + 3x + 2 = 0</text>
+    <line x1="495" y1="300" x2="705" y2="300" stroke="#111111" stroke-width="2"/>
+    <text x="600" y="345" text-anchor="middle" font-size="28" fill="#111111">{-1, -2}</text>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="810" y="175" width="320" height="210" rx="18" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+    <text x="970" y="220" text-anchor="middle" font-size="28" font-weight="700" fill="#111111">Infinitely many</text>
+    <text x="970" y="270" text-anchor="middle" font-size="30" fill="#111111">x &gt; 3</text>
+    <line x1="865" y1="300" x2="1075" y2="300" stroke="#111111" stroke-width="2"/>
+    <text x="970" y="345" text-anchor="middle" font-size="28" fill="#111111">{x : x &gt; 3}</text>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="205" y="430" width="340" height="210" rx="18" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+    <text x="375" y="475" text-anchor="middle" font-size="28" font-weight="700" fill="#111111">No real values</text>
+    <text x="375" y="525" text-anchor="middle" font-size="30" fill="#111111">x² = -1</text>
+    <line x1="270" y1="555" x2="480" y2="555" stroke="#111111" stroke-width="2"/>
+    <text x="375" y="600" text-anchor="middle" font-size="32" fill="#111111">∅</text>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="655" y="430" width="340" height="210" rx="18" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+    <text x="825" y="475" text-anchor="middle" font-size="28" font-weight="700" fill="#111111">Every allowed value</text>
+    <text x="825" y="525" text-anchor="middle" font-size="30" fill="#111111">identity true for all x</text>
+    <line x1="720" y1="555" x2="930" y2="555" stroke="#111111" stroke-width="2"/>
+    <text x="825" y="600" text-anchor="middle" font-size="32" fill="#111111">ℝ</text>
+  </g>
+  <text x="600" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#111111">Key idea: write the full set of values that makes the statement true.</text>
+</svg>

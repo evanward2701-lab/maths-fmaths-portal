@@ -1,0 +1,29 @@
+<!--
+Asset ID: A22MomentsSVG-004
+Source: Rigid Bodies transcript sections 2 and 3.
+Related lesson section: Core Theory 4; Exam Technique Notes.
+Purpose: Choosing where to take moments.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Choosing where to take moments">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111827"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:28px;font-weight:700;fill:#111827}
+      .label{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+      .small{font-family:Arial,sans-serif;font-size:15px;fill:#374151}
+      .rod{stroke:#111827;stroke-width:10;stroke-linecap:round}
+      .beam{fill:#F3F4F6;stroke:#111827;stroke-width:3}
+      .support{fill:#D1D5DB;stroke:#111827;stroke-width:2}
+      .up{stroke:#2563EB;stroke-width:4;marker-end:url(#arrow)}
+      .down{stroke:#DC2626;stroke-width:4;marker-end:url(#arrow)}
+      .force{stroke:#7C3AED;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#6B7280;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="40" y="55" class="title">Uniform rod on two supports</text>
+  <rect x="170" y="245" width="560" height="34" rx="8" class="beam"/><polygon points="210,279 175,345 245,345" class="support"/><polygon points="575,279 540,345 610,345" class="support"/><line x1="210" y1="345" x2="210" y2="292" class="up"/><line x1="575" y1="345" x2="575" y2="292" class="up"/><line x1="450" y1="185" x2="450" y2="242" class="down"/><text x="225" y="325" class="label">RA</text><text x="590" y="325" class="label">RC</text><text x="463" y="215" class="label">W</text><text x="405" y="302" class="small">midpoint</text><rect x="45" y="105" width="295" height="95" class="note"/><text x="65" y="140" class="label">Uniform rod:</text><text x="65" y="170" class="small">weight acts at midpoint.</text>
+</svg>

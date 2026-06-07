@@ -1,0 +1,12 @@
+% asset_id: FA22FlowsInNetworks2TikZ-002
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}\usepackage{xcolor}\usetikzlibrary{arrows.meta,positioning,calc}
+\definecolor{Canvas}{HTML}{FAF9F6}\definecolor{Panel}{HTML}{FFFFF0}\definecolor{LineSoft}{HTML}{E5E5EA}\definecolor{Ink}{HTML}{2C2C2E}\definecolor{Gold}{HTML}{C5A059}\definecolor{SoftRose}{HTML}{FBEFEF}\definecolor{TealSoft}{HTML}{DDF6F4}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,vertex/.style={circle,draw=Gold,line width=1.1pt,fill=Panel,text=Ink,font=\bfseries\small,minimum size=7.5mm},arc/.style={->,line width=1.1pt,draw=Ink},force/.style={->,line width=2.4pt,draw=Gold},cap/.style={fill=Canvas,draw=LineSoft,rounded corners=2pt,inner sep=1.8pt,font=\scriptsize},flowcap/.style={fill=SoftRose,draw=Gold,rounded corners=2pt,inner sep=2pt,font=\scriptsize\bfseries},note/.style={fill=SoftRose,draw=LineSoft,rounded corners=5pt,align=left,inner sep=7pt,text=Ink,font=\small}]
+\fill[Canvas] (-1.1,-2.5) rectangle (10.6,4.15);\draw[LineSoft,fill=Panel,rounded corners=10pt] (-0.85,-2.25) rectangle (10.35,3.9);\node[anchor=west,font=\bfseries\Large,text=Ink] at (-0.55,3.55){Worked network: lower and upper capacities};
+\node[vertex] (S) at (0,0) {$S$};\node[vertex] (A) at (1.65,1.45) {$A$};\node[vertex,fill=SoftRose] (B) at (3.45,0) {$B$};\node[vertex,fill=SoftRose] (C) at (2.9,-1.55) {$C$};\node[vertex] (D) at (3.1,2.8) {$D$};\node[vertex,fill=SoftRose] (E) at (5.35,1.45) {$E$};\node[vertex] (F) at (6.95,2.8) {$F$};\node[vertex] (G) at (6.65,0) {$G$};\node[vertex] (T) at (7.05,1.45) {$T$};
+\draw[force] (S)--(C) node[midway,below left,cap] {$(2,8)$};\draw[force] (B)--(C) node[midway,left,cap] {$(4,6)$};\draw[force] (C)--(G) node[midway,below,cap] {$(3,6)$};\node[flowcap] at (1.08,-1.18){$SC=2$};\node[flowcap] at (3.03,-0.78){$BC=4$};\node[flowcap] at (4.88,-1.05){$CG=6$};
+\draw[force] (D)--(E) node[midway,right,cap] {$(4,8)$};\draw[force] (A)--(E) node[midway,below,cap] {$(4,6)$};\draw[force] (B)--(E) node[midway,above left,cap] {$(3,5)$};\draw[force] (E)--(T) node[midway,above,cap] {$(7,11)$};\draw[force] (G)--(T) node[midway,right,cap] {$(8,11)$};
+\node[note,text width=3.7cm] at (0.95,2.75){At $C$:\\minimum inflow $=2+4=6$,\\maximum outflow $=6$.};\node[note,text width=3.85cm] at (9.0,2.35){At $E$:\\maximum outflow $=11$,\\minimum inflow $=4+4+3=11$.};\node[note,text width=3.45cm] at (9.0,-0.65){At $G$: $CG=6$ and $BG\ge5$, so $GT=11$.};
+\end{tikzpicture}\end{document}

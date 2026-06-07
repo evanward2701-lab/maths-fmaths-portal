@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Shifted circle equation</title><desc id="desc">Circle centred at C(a,b) with point P(x,y), showing x-a and y-b.</desc>
+  <rect width="900" height="560" fill="#ffffff"/><text x="45" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Circle Centred at (a,b)</text>
+  <text x="45" y="88" font-family="Arial, sans-serif" font-size="17">The same Pythagoras idea works after shifting the centre.</text>
+  <line x1="105" y1="340" x2="790" y2="340" stroke="#9ca3af" stroke-width="2"/><line x1="310" y1="495" x2="310" y2="110" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="405" cy="320" r="155" fill="none" stroke="#111827" stroke-width="4"/><circle cx="405" cy="320" r="8" fill="#111827"/><text x="362" y="347" font-family="Arial, sans-serif" font-size="20">C(a,b)</text>
+  <circle cx="555" cy="215" r="8" fill="#2563eb"/><text x="568" y="210" font-family="Arial, sans-serif" font-size="20">P(x,y)</text>
+  <line x1="405" y1="320" x2="555" y2="215" stroke="#ef4444" stroke-width="5"/><text x="484" y="255" font-family="Arial, sans-serif" font-size="22" fill="#ef4444">r</text>
+  <line x1="405" y1="320" x2="555" y2="320" stroke="#2563eb" stroke-width="4"/><line x1="555" y1="320" x2="555" y2="215" stroke="#16a34a" stroke-width="4"/>
+  <text x="455" y="345" font-family="Arial, sans-serif" font-size="20" fill="#2563eb">x - a</text><text x="570" y="270" font-family="Arial, sans-serif" font-size="20" fill="#16a34a">y - b</text>
+  <path d="M 540 320 L 540 305 L 555 305" fill="none" stroke="#111827" stroke-width="3"/>
+  <rect x="55" y="410" width="790" height="95" rx="16" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="22" font-weight="700">Pythagoras:</text><text x="245" y="445" font-family="Arial, sans-serif" font-size="24">(x - a)² + (y - b)² = r²</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="18">Centre: (a,b). Radius: r.</text>
+</svg>

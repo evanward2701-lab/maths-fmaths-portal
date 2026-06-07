@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Decision Analysis: Node Shape Reference</title>
+  <desc id="desc">Decision node, chance node and end or payoff node shape reference.</desc>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FAF9F6;stroke:#C5A059;stroke-width:4} .chance{fill:#FFFFF0;stroke:#D4AF37;stroke-width:4} .pay{fill:#FBEFEF;stroke:#C5A059;stroke-width:4} .branch{stroke:#2C2C2E;stroke-width:3;fill:none;stroke-linecap:round} .chosen{stroke:#C5A059;stroke-width:4;fill:none;stroke-linecap:round} .cross{stroke:#C5A059;stroke-width:5;stroke-linecap:round} .text{fill:#2C2C2E;font-family:Inter,Arial,sans-serif} .title{font-size:36px;font-weight:700} .small{font-size:17px} .label{font-size:22px;font-weight:700} .math{fill:#2C2C2E;font-family:Times New Roman,serif;font-size:24px}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1200" height="720"/>
+  <text class="text title" x="60" y="70">Decision Analysis: Node Shape Reference</text>
+  
+  <text class="text small" x="60" y="108">Off-spec enrichment reference: use the shape to decide what belongs on the branches.</text>
+  <rect class="panel" x="70" y="150" width="320" height="390" rx="24"/>
+  <rect class="node" x="160" y="220" width="140" height="95" rx="8"/>
+  <text class="text label" x="135" y="370">Decision node</text>
+  <text class="text small" x="115" y="412">A choice is made.</text>
+  <text class="text small" x="105" y="442">No probabilities on</text>
+  <text class="text small" x="130" y="470">outgoing branches.</text>
+  <rect class="panel" x="440" y="150" width="320" height="390" rx="24"/>
+  <circle class="chance" cx="600" cy="270" r="60"/>
+  <text class="text label" x="495" y="370">Chance node</text>
+  <text class="text small" x="490" y="412">A random event occurs.</text>
+  <text class="text small" x="482" y="442">Probabilities go on</text>
+  <text class="text small" x="510" y="470">chance branches.</text>
+  <rect class="panel" x="810" y="150" width="320" height="390" rx="24"/>
+  <polygon class="pay" points="960,220 875,270 960,320"/>
+  <text class="text label" x="858" y="370">End/pay-off node</text>
+  <text class="text small" x="860" y="412">The branch finishes.</text>
+  <text class="text small" x="848" y="442">Write the final pay-off</text>
+  <text class="text small" x="895" y="470">next to it.</text>
+  <rect class="panel" x="310" y="590" width="580" height="65" rx="18"/>
+  <text class="math" x="345" y="632">EMV = Σ probability × pay-off</text>
+
+</svg>

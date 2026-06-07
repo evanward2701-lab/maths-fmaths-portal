@@ -1,0 +1,54 @@
+<!--
+Asset ID: AS1VectorsWidget-001
+Source: CCEA AS1-VEC-LO001 to AS1-VEC-LO005 + P1-Chp11-Vectors.pdf magnitude/unit-vector examples + Chapter_11_Vectors transcript.
+Related lesson section: Core Theory: Magnitude, Direction, Unit Vectors; Worked Examples 7, 8, 15 and 16.
+Purpose: Let students adjust vector components and see magnitude, unit vector, direction angle, i,j form and speed-from-velocity interpretation update live.
+Status: Phase 5 interactive widget asset.
+Off-spec control: No cross product, 3D vector product, STEP extension or Further Mathematics vector multiplication included.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AS1 Vectors Widget</title>
+<style>
+body{margin:0;padding:24px;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8fafc;color:#0f172a}.shell{max-width:1180px;margin:0 auto;background:white;border:1px solid #cbd5e1;border-radius:24px;box-shadow:0 18px 45px rgba(15,23,42,.12);overflow:hidden}header{padding:28px 30px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border-bottom:1px solid #cbd5e1}h1{margin:0 0 8px;font-size:clamp(1.6rem,2.8vw,2.3rem)}.layout{display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:20px;padding:24px}.panel{border:1px solid #cbd5e1;border-radius:18px;padding:20px;background:#fff}.control-row{display:grid;grid-template-columns:1fr 86px;gap:10px;align-items:center;margin-bottom:14px}label{font-weight:700;display:block;margin-bottom:6px}input[type=range]{width:100%;accent-color:#2563eb}input[type=number]{width:86px;padding:8px;border-radius:10px;border:1px solid #cbd5e1;font-weight:700}button{border:0;border-radius:999px;padding:10px 14px;font-weight:800;color:white;background:#2563eb;cursor:pointer;margin:4px}button.secondary{background:#16a34a}button.ghost{background:#334155}canvas{width:100%;height:430px;display:block;border-radius:14px;background:#fbfdff;border:1px solid #e2e8f0}.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.card{border-radius:16px;padding:14px;border:1px solid #cbd5e1;background:#eff6ff;min-height:90px}.card:nth-child(2){background:#ecfdf5}.card:nth-child(3){background:#fff7ed}.card:nth-child(4){background:#f8fafc}.math{font-family:"Cambria Math","Times New Roman",serif;font-size:1.25rem;font-weight:700;line-height:1.45}.note{font-size:.92rem;color:#475569;line-height:1.45;margin-top:7px}.warning{margin-top:16px;padding:14px;border-radius:16px;background:#fef2f2;border:1px solid #fecaca;color:#7f1d1d;line-height:1.45;display:none}@media(max-width:920px){.layout{grid-template-columns:1fr}.results{grid-template-columns:1fr}canvas{height:360px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header><h1>AS1 Vectors: Magnitude, Direction and Unit Vector</h1><p>Adjust a 2D vector. The widget updates column form, i,j form, magnitude, unit vector, direction and a scalar multiple.</p></header>
+<section class="layout">
+<aside class="panel"><h2>Choose the vector</h2>
+<label>x-component</label><div class="control-row"><input id="xRange" type="range" min="-10" max="10" step="1" value="3"><input id="xNumber" type="number" min="-10" max="10" step="1" value="3"></div>
+<label>y-component</label><div class="control-row"><input id="yRange" type="range" min="-10" max="10" step="1" value="4"><input id="yNumber" type="number" min="-10" max="10" step="1" value="4"></div>
+<label>scalar multiplier λ</label><div class="control-row"><input id="scaleRange" type="range" min="-3" max="3" step="0.5" value="2"><input id="scaleNumber" type="number" min="-3" max="3" step="0.5" value="2"></div>
+<button id="randomBtn" type="button">Random vector</button><button class="secondary" id="classicBtn" type="button">Use (3,4)</button><button class="ghost" id="zeroBtn" type="button">Zero vector</button>
+<div id="warning" class="warning">The zero vector has magnitude 0, so it has no unique direction and no unit vector.</div>
+<p class="note"><strong>Mini-practice:</strong> predict magnitude, unit vector and direction before reading the cards.</p>
+</aside>
+<section class="panel"><h2>Live diagram</h2><canvas id="vectorCanvas" width="860" height="430"></canvas>
+<div class="results"><article class="card"><h3>Vector forms</h3><div id="formOutput" class="math"></div></article><article class="card"><h3>Magnitude</h3><div id="magOutput" class="math"></div><div id="magSteps" class="note"></div></article><article class="card"><h3>Unit vector</h3><div id="unitOutput" class="math"></div></article><article class="card"><h3>Direction and scalar multiple</h3><div id="dirOutput" class="math"></div><div id="scaleOutput" class="note"></div></article></div></section>
+</section>
+</main>
+<script>
+const ids=["x","y","scale"],els={};for(const id of ids){els[id+"Range"]=document.getElementById(id+"Range");els[id+"Number"]=document.getElementById(id+"Number");}
+const canvas=document.getElementById("vectorCanvas"),ctx=canvas.getContext("2d");
+const formOutput=document.getElementById("formOutput"),magOutput=document.getElementById("magOutput"),magSteps=document.getElementById("magSteps"),unitOutput=document.getElementById("unitOutput"),dirOutput=document.getElementById("dirOutput"),scaleOutput=document.getElementById("scaleOutput"),warning=document.getElementById("warning");
+function clamp(v,min,max){const n=Number(v);return Number.isNaN(n)?0:Math.min(Math.max(n,min),max)}
+function sync(range,num,min,max){const safe=clamp(num.value,min,max);num.value=safe;range.value=safe;update()}
+function signedIJ(x,y){let i=x===0?"":`${x===1?"":x===-1?"-":x}i`,j="";if(y!==0){const a=Math.abs(y),c=`${a===1?"":a}j`;j=i===""?(y<0?`-${c}`:c):(y<0?` - ${c}`:` + ${c}`)}return i+j||"0"}
+function round(v,p=3){if(!Number.isFinite(v))return"undefined";return String(Math.round(v*10**p)/10**p)}
+function magText(x,y){const s=x*x+y*y,r=Math.sqrt(s);return Number.isInteger(r)?`${r}`:`√${s}`}
+function arrow(x1,y1,x2,y2,color,w=4){const h=13,a=Math.atan2(y2-y1,x2-x1);ctx.save();ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=w;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-h*Math.cos(a-Math.PI/6),y2-h*Math.sin(a-Math.PI/6));ctx.lineTo(x2-h*Math.cos(a+Math.PI/6),y2-h*Math.sin(a+Math.PI/6));ctx.closePath();ctx.fill();ctx.restore()}
+function grid(){const w=canvas.width,h=canvas.height,ox=w/2,oy=h/2,u=20;ctx.clearRect(0,0,w,h);ctx.fillStyle="#fbfdff";ctx.fillRect(0,0,w,h);ctx.strokeStyle="#e2e8f0";ctx.lineWidth=1;for(let x=ox%u;x<=w;x+=u){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}for(let y=oy%u;y<=h;y+=u){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}ctx.strokeStyle="#0f172a";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,oy);ctx.lineTo(w,oy);ctx.stroke();ctx.beginPath();ctx.moveTo(ox,0);ctx.lineTo(ox,h);ctx.stroke();arrow(w-50,oy,w-14,oy,"#0f172a",2);arrow(ox,50,ox,14,"#0f172a",2);ctx.fillStyle="#0f172a";ctx.font="700 16px system-ui";ctx.fillText("+x",w-42,oy-10);ctx.fillText("+y",ox+10,28);ctx.fillText("O",ox+8,oy+18);return{ox,oy,u}}
+function draw(x,y,l,m){const {ox,oy,u}=grid(),ax=ox+x*u,ay=oy-y*u,sx=ox+l*x*u,sy=oy-l*y*u;ctx.setLineDash([6,6]);ctx.strokeStyle="#94a3b8";ctx.beginPath();ctx.moveTo(ax,oy);ctx.lineTo(ax,ay);ctx.lineTo(ox,ay);ctx.stroke();ctx.setLineDash([]);if(x||y){arrow(ox,oy,sx,sy,"#f97316",3);arrow(ox,oy,ax,ay,"#2563eb",5);arrow(ox,oy,ox+x/m*u*3,oy-y/m*u*3,"#16a34a",4)}ctx.fillStyle="#0f172a";ctx.font="700 16px system-ui";ctx.fillText(`a = (${x}, ${y})`,ax+8,ay-8)}
+function update(){const x=Number(els.xNumber.value),y=Number(els.yNumber.value),l=Number(els.scaleNumber.value),m2=x*x+y*y,m=Math.sqrt(m2);draw(x,y,l,m);formOutput.innerHTML=`a = (${x}, ${y})<br>a = ${signedIJ(x,y)}`;magOutput.textContent=`|a| = ${magText(x,y)}`;magSteps.textContent=`Because |a| = √(${x}² + ${y}²) = √${m2}. Decimal value: ${round(m,4)}.`;if(m===0){warning.style.display="block";unitOutput.textContent="Undefined";dirOutput.textContent="No unique direction"}else{warning.style.display="none";unitOutput.textContent=`â = (${round(x/m,4)}, ${round(y/m,4)})`;let t=Math.atan2(y,x)*180/Math.PI;if(t<0)t+=360;dirOutput.textContent=`θ = ${round(t,2)}°`}scaleOutput.textContent=`λa = ${l}(${x}, ${y}) = (${round(l*x,3)}, ${round(l*y,3)}). Negative scalars reverse direction.`}
+function setV(x,y,l=Number(els.scaleNumber.value)){els.xRange.value=x;els.yRange.value=y;els.scaleRange.value=l;els.xNumber.value=x;els.yNumber.value=y;els.scaleNumber.value=l;update()}
+for(const id of ids){els[id+"Range"].addEventListener("input",()=>{els[id+"Number"].value=els[id+"Range"].value;update()})}
+els.xNumber.addEventListener("change",()=>sync(els.xRange,els.xNumber,-10,10));els.yNumber.addEventListener("change",()=>sync(els.yRange,els.yNumber,-10,10));els.scaleNumber.addEventListener("change",()=>sync(els.scaleRange,els.scaleNumber,-3,3));
+document.getElementById("randomBtn").onclick=()=>{let x=0,y=0;while(x===0&&y===0){x=Math.floor(Math.random()*21)-10;y=Math.floor(Math.random()*21)-10}const opts=[-3,-2,-1,-.5,.5,1,2,3];setV(x,y,opts[Math.floor(Math.random()*opts.length)])};document.getElementById("classicBtn").onclick=()=>setV(3,4,2);document.getElementById("zeroBtn").onclick=()=>setV(0,0,2);update();
+</script>
+</body>
+</html>

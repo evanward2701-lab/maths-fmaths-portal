@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22GeneratingFunctionsSVG-001: Probability Table to PGF Encoding</title>
+  <desc id="desc">A visual showing how a probability table is encoded as a probability generating function. Outcomes become powers of t and probabilities become coefficients. This is marked as optional PGF enrichment.</desc>
+  <metadata>Asset ID: FA22GeneratingFunctionsSVG-001; Unit: FA22; Topic code: FA22-GENFUNC; Topic ID: FA22GeneratingFunctions; Related lesson: FA22_generating_functions_lesson.md</metadata>
+  <defs>
+    <marker id="arrowGold" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 14 7 L 0 14 z" fill="#C5A059"/></marker>
+    <style>.canvas{fill:#FAF9F6}.card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2}.soft-card{fill:#FBEFEF;stroke:#E5E5EA;stroke-width:2}.table-line{stroke:#2C2C2E;stroke-width:2}.gold-line{stroke:#C5A059;stroke-width:4;fill:none;marker-end:url(#arrowGold)}.thin-gold{stroke:#D4AF37;stroke-width:2;fill:none}.title{font-family:Arial,Helvetica,sans-serif;font-size:34px;font-weight:700;fill:#2C2C2E}.subtitle{font-family:Arial,Helvetica,sans-serif;font-size:20px;fill:#2C2C2E}.label{font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:700;fill:#2C2C2E}.small{font-family:Arial,Helvetica,sans-serif;font-size:18px;fill:#2C2C2E}.math{font-family:Times New Roman,Times,serif;font-size:28px;fill:#2C2C2E}.math-small{font-family:Times New Roman,Times,serif;font-size:22px;fill:#2C2C2E}.warning{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;fill:#2C2C2E}</style>
+  </defs>
+  <rect class="canvas" x="0" y="0" width="1200" height="760"/>
+  <text class="title" x="60" y="70">Probability table to generating function</text>
+  <text class="subtitle" x="60" y="106">Optional PGF enrichment: outcomes become powers of t, probabilities become coefficients.</text>
+  <rect class="soft-card" x="815" y="42" width="310" height="78" rx="18"/>
+  <text class="warning" x="840" y="74">Boundary label</text><text class="small" x="840" y="101">PGF enrichment, not confirmed CCEA core</text>
+  <rect class="card" x="60" y="165" width="470" height="260" rx="22"/>
+  <text class="label" x="95" y="210">Distribution of X</text>
+  <rect x="95" y="240" width="390" height="130" fill="#FAF9F6" stroke="#2C2C2E" stroke-width="2"/>
+  <line class="table-line" x1="95" y1="305" x2="485" y2="305"/><line class="table-line" x1="173" y1="240" x2="173" y2="370"/><line class="table-line" x1="251" y1="240" x2="251" y2="370"/><line class="table-line" x1="329" y1="240" x2="329" y2="370"/><line class="table-line" x1="407" y1="240" x2="407" y2="370"/>
+  <text class="math-small" x="126" y="282">x</text><text class="math-small" x="205" y="282">0</text><text class="math-small" x="283" y="282">1</text><text class="math-small" x="361" y="282">2</text><text class="math-small" x="439" y="282">3</text>
+  <text class="math-small" x="105" y="347">P(X=x)</text><text class="math-small" x="190" y="347">0.2</text><text class="math-small" x="268" y="347">0.3</text><text class="math-small" x="339" y="347">0.35</text><text class="math-small" x="423" y="347">0.15</text>
+  <path class="gold-line" d="M 548 295 C 620 295, 660 295, 730 295"/>
+  <rect class="card" x="750" y="190" width="390" height="210" rx="22"/>
+  <text class="label" x="785" y="236">Encoded PGF</text>
+  <text class="math" x="785" y="302">G<tspan baseline-shift="sub" font-size="18">X</tspan>(t) = 0.2 + 0.3t + 0.35t² + 0.15t³</text>
+  <text class="small" x="785" y="350">The variable t is a dummy variable.</text>
+  <rect class="soft-card" x="110" y="505" width="435" height="145" rx="18"/><text class="label" x="145" y="548">Powers of t</text><text class="small" x="145" y="585">The power gives the outcome.</text><text class="math-small" x="145" y="625">0.35t² means the outcome is x = 2.</text>
+  <rect class="soft-card" x="655" y="505" width="435" height="145" rx="18"/><text class="label" x="690" y="548">Coefficients</text><text class="small" x="690" y="585">The coefficient gives the probability.</text><text class="math-small" x="690" y="625">0.35t² means P(X = 2) = 0.35.</text>
+  <text class="small" x="60" y="710">Check: Gₓ(1) = 0.2 + 0.3 + 0.35 + 0.15 = 1, because probabilities sum to 1.</text>
+</svg>

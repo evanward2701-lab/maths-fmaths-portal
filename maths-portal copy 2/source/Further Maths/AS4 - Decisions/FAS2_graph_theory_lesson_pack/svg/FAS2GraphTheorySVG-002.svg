@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2GraphTheorySVG-002: Degree, valency and odd/even vertices</title>
+  <desc id="desc">Graph with degrees A=4, B=2, C=2, D=3, E=1 and odd/even classification.</desc>
+  <!-- asset_id: FAS2GraphTheorySVG-002 | unit_code: FAS2 | topic_code: FAS2-GRAPH | topic_id: FAS2GraphTheory -->
+  <rect width="1100" height="720" fill="#FAF9F6"/>
+  <rect x="40" y="34" width="1020" height="650" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  
+  <text x="80" y="86" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#2C2C2E">Degree, valency or order</text>
+  <text x="80" y="124" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">The degree of a vertex is the number of edges incident to it. Edge weights do not affect degree.</text>
+  <g stroke="#2C2C2E" stroke-width="5" stroke-linecap="round"><line x1="245" y1="330" x2="150" y2="520"/><line x1="245" y1="330" x2="470" y2="210"/><line x1="245" y1="330" x2="540" y2="520"/><line x1="245" y1="330" x2="805" y2="365"/><line x1="150" y1="520" x2="540" y2="520"/><line x1="470" y1="210" x2="540" y2="520"/></g>
+  <g fill="#D4AF37" stroke="#2C2C2E" stroke-width="3"><circle cx="245" cy="330" r="19"/><circle cx="150" cy="520" r="19"/><circle cx="470" cy="210" r="19"/><circle cx="540" cy="520" r="19"/><circle cx="805" cy="365" r="19"/></g>
+  <g font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#2C2C2E"><text x="205" y="332">A</text><text x="112" y="528">B</text><text x="490" y="204">C</text><text x="563" y="528">D</text><text x="830" y="373">E</text></g>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E"><circle cx="195" cy="275" r="22" fill="#FBEFEF" stroke="#C5A059"/><text x="190" y="282">4</text><circle cx="105" cy="520" r="22" fill="#FBEFEF" stroke="#C5A059"/><text x="100" y="527">2</text><circle cx="505" cy="180" r="22" fill="#FBEFEF" stroke="#C5A059"/><text x="500" y="187">2</text><circle cx="585" cy="520" r="22" fill="#FBEFEF" stroke="#C5A059"/><text x="580" y="527">3</text><circle cx="850" cy="365" r="22" fill="#FBEFEF" stroke="#C5A059"/><text x="845" y="372">1</text></g>
+  <rect x="690" y="450" width="320" height="190" rx="16" fill="#FAF9F6" stroke="#E5E5EA"/>
+  <text x="720" y="485" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E">Vertex degrees</text>
+  <text x="720" y="520" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">A: 4 even</text><text x="720" y="550" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">B: 2 even, C: 2 even</text><text x="720" y="580" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">D: 3 odd, E: 1 odd</text>
+
+</svg>

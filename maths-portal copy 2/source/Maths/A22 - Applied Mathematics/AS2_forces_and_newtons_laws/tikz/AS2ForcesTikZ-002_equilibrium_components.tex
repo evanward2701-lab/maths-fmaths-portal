@@ -1,0 +1,18 @@
+% Asset ID: AS2ForcesTikZ-002
+% Source: Chapter 5/7 Forces Transcript
+% Related lesson section: Worked Example 1
+% Purpose: Show a particle in equilibrium under P, 4N and Q.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, angles, quotes, decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}[force/.style={-{Latex[length=3mm]}, thick}, comp/.style={-{Latex[length=3mm]}, thick, dashed}, label/.style={font=\large}, note/.style={font=\normalsize}]
+
+\coordinate (O) at (0,0); \fill (O) circle (2.3pt);
+\draw[force] (O)--(3.2,1.85) node[above right,label] {$P\text{ N}$};
+\draw[force] (O)--(-2.5,2.5) node[above left,label] {$4\text{ N}$};
+\draw[force] (O)--(0,-3) node[below right,label] {$Q\text{ N}$};
+\draw[dashed] (-3.4,0)--(3.8,0);
+\node[note, align=left] at (0,-4.3) {$P\cos30^\circ=4\cos45^\circ$\\$Q=P\sin30^\circ+4\sin45^\circ$};
+\end{tikzpicture}
+\end{document}

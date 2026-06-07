@@ -1,0 +1,17 @@
+% asset_id: FAS2EulerianTraversabilityAndRouteInspectionTikZ-004
+% asset_type: TikZ
+% unit_code: FAS2
+% topic_code: FAS2-GRAPH
+% topic_id: FAS2EulerianTraversabilityAndRouteInspection
+\documentclass[tikz,border=8pt]{standalone}
+\usetikzlibrary{positioning,calc}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily]
+\fill[white] (-1,-1) rectangle (13,7);
+\node[anchor=west,font=\bfseries\Large] at (0,6.4) {FAS2EulerianTraversabilityAndRouteInspectionTikZ-004};
+
+\node at (6,5.5) {Complete graphs: $\deg(v)=n-1$};
+\node[draw,rounded corners,align=left] at (6,3.5) {$K_1$: degree 0, Eulerian\\$K_2$: degree 1, Semi-Eulerian\\$K_3$: degree 2, Eulerian\\$K_4$: degree 3, Neither\\$K_5$: degree 4, Eulerian\\$K_6$: degree 5, Neither\\$K_{2n+1}$: degree $2n$, Eulerian};
+
+\end{tikzpicture}
+\end{document}

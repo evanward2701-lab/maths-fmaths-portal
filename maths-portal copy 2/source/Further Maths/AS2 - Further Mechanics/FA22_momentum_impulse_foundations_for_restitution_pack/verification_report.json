@@ -1,0 +1,54 @@
+[
+  {
+    "check": "lesson_placeholders_match_files",
+    "passed": true,
+    "missing": [],
+    "paths": [
+      "mermaid/FA22MomentumImpulseFoundationsForRestitutionMermaid-001.md",
+      "mermaid/FA22MomentumImpulseFoundationsForRestitutionMermaid-002.md",
+      "svg/FA22MomentumImpulseFoundationsForRestitutionSVG-001.svg",
+      "svg/FA22MomentumImpulseFoundationsForRestitutionSVG-002.svg",
+      "svg/FA22MomentumImpulseFoundationsForRestitutionBridgeSVG-001.svg",
+      "tikz/FA22MomentumImpulseFoundationsForRestitutionTikZ-001.tex",
+      "tikz/FA22MomentumImpulseFoundationsForRestitutionTikZ-002.tex",
+      "widgets/FA22MomentumImpulseFoundationsForRestitutionWidget-001.html",
+      "widgets/FA22MomentumImpulseFoundationsForRestitutionWidget-002.html",
+      "widgets/FA22MomentumImpulseFoundationsForRestitutionWidget-003.html"
+    ]
+  },
+  {
+    "check": "svg_xml_parse",
+    "passed": true,
+    "results": {
+      "FA22MomentumImpulseFoundationsForRestitutionSVG-001.svg": "valid XML",
+      "FA22MomentumImpulseFoundationsForRestitutionSVG-002.svg": "valid XML",
+      "FA22MomentumImpulseFoundationsForRestitutionBridgeSVG-001.svg": "valid XML"
+    }
+  },
+  {
+    "check": "html_basic_structure",
+    "passed": true,
+    "results": {
+      "FA22MomentumImpulseFoundationsForRestitutionWidget-001.html": "valid basic HTML",
+      "FA22MomentumImpulseFoundationsForRestitutionWidget-002.html": "valid basic HTML",
+      "FA22MomentumImpulseFoundationsForRestitutionWidget-003.html": "valid basic HTML"
+    }
+  },
+  {
+    "check": "no_old_single_markdown_refs",
+    "passed": true,
+    "matches": []
+  },
+  {
+    "check": "lo_ids_preserved",
+    "passed": true
+  },
+  {
+    "check": "bridge_labelled",
+    "passed": true
+  },
+  {
+    "check": "off_spec_logged",
+    "passed": true
+  }
+]

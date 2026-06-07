@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860" role="img" aria-labelledby="title desc">
+  <title id="title">PMCC formula card</title>
+  <desc id="desc">A formula-card SVG showing Sxx, Syy and Sxy as corrected sums feeding into r equals Sxy over square root of Sxx Syy.</desc>
+  <metadata>Asset ID: FAS2ProductMomentCorrelationCoefficientSVG-002; Source: PMCC formula evidence from transcript and formula booklet reference; Purpose: Help students remember the full calculation structure.</metadata>
+  <rect x="0" y="0" width="1400" height="860" fill="#FAF9F6"/>
+  <text x="70" y="78" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" fill="#2C2C2E">PMCC Formula Card</text>
+  <text x="70" y="118" font-family="Inter, Arial, sans-serif" font-size="22" fill="#2C2C2E">Calculate the corrected sums first. Then substitute into the product-moment correlation coefficient.</text>
+  <line x1="70" y1="152" x2="1330" y2="152" stroke="#E5E5EA" stroke-width="2"/>
+  <rect x="90" y="190" width="1220" height="100" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="125" y="230" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">Start with summary statistics</text>
+  <text x="125" y="265" font-family="Inter, Arial, sans-serif" font-size="26" fill="#2C2C2E">n,  Σx,  Σy,  Σx²,  Σy²,  Σxy</text>
+  <g fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"><rect x="90" y="345" width="360" height="170" rx="24"/><rect x="520" y="345" width="360" height="170" rx="24"/><rect x="950" y="345" width="360" height="170" rx="24"/></g>
+  <text x="125" y="392" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#C5A059">Sxx</text><text x="125" y="440" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2C2C2E">Sxx = Σx² − (Σx)² / n</text><text x="125" y="480" font-family="Inter, Arial, sans-serif" font-size="18" fill="#2C2C2E">corrected spread of x-values</text>
+  <text x="555" y="392" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#C5A059">Syy</text><text x="555" y="440" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2C2C2E">Syy = Σy² − (Σy)² / n</text><text x="555" y="480" font-family="Inter, Arial, sans-serif" font-size="18" fill="#2C2C2E">corrected spread of y-values</text>
+  <text x="985" y="392" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#C5A059">Sxy</text><text x="985" y="440" font-family="Inter, Arial, sans-serif" font-size="28" fill="#2C2C2E">Sxy = Σxy − (Σx)(Σy) / n</text><text x="985" y="480" font-family="Inter, Arial, sans-serif" font-size="18" fill="#2C2C2E">corrected co-variation</text>
+  <rect x="300" y="610" width="800" height="150" rx="28" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text x="345" y="662" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#2C2C2E">Product-moment correlation coefficient</text>
+  <text x="345" y="722" font-family="Inter, Arial, sans-serif" font-size="42" fill="#2C2C2E">r = Sxy / √(Sxx Syy)</text>
+  <rect x="90" y="795" width="1220" height="48" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="125" y="827" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">Exam trap: use Sxy in the numerator, not Σxy. Always include the division by n in each correction term.</text>
+</svg>

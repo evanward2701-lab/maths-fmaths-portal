@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22FlowsInNetworksSVG-002: Capacity versus Current Flow</title>
+  <desc id="desc">Network comparing capacities with current flow values.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .arc{stroke:#2C2C2E;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .cut{stroke:#C5A059;stroke-width:5;stroke-dasharray:14 10;fill:none} .hi{stroke:#D4AF37;stroke-width:10;opacity:.38;fill:none}
+      .node{fill:#D4AF37;stroke:#2C2C2E;stroke-width:2} .source{fill:#FBEFEF;stroke:#C5A059;stroke-width:3} .sink{fill:#FFF8DC;stroke:#C5A059;stroke-width:3}
+      .title{font-family:Georgia,serif;font-size:30px;font-weight:700;fill:#2C2C2E} .text{font-family:Arial,sans-serif;font-size:22px;fill:#2C2C2E} .math{font-family:Georgia,serif;font-size:25px;fill:#2C2C2E} .box{fill:white;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="720"/><rect class="panel" x="40" y="40" width="1020" height="640" rx="24"/>
+  <text class="title" x="70" y="95">Capacity versus current flow</text>
+  <text class="text" x="70" y="132">Non-circled numbers are capacities. Circled numbers are current flows.</text>
+  
+  <line class="arc" x1="160" y1="370" x2="330" y2="230"/><line class="arc" x1="160" y1="390" x2="330" y2="510"/>
+  <line class="arc" x1="350" y1="230" x2="560" y2="230"/><line class="arc" x1="350" y1="250" x2="560" y2="370"/>
+  <line class="arc" x1="350" y1="510" x2="560" y2="390"/><line class="arc" x1="350" y1="530" x2="560" y2="530"/>
+  <line class="arc" x1="585" y1="230" x2="800" y2="370"/><line class="arc" x1="585" y1="530" x2="800" y2="400"/>
+  <circle class="source" cx="145" cy="380" r="20"/><circle class="node" cx="340" cy="230" r="18"/><circle class="node" cx="340" cy="520" r="18"/>
+  <circle class="node" cx="575" cy="230" r="18"/><circle class="node" cx="575" cy="380" r="18"/><circle class="node" cx="575" cy="530" r="18"/><circle class="sink" cx="820" cy="385" r="20"/>
+  <text class="math" x="113" y="390">S</text><text class="math" x="333" y="205">A</text><text class="math" x="333" y="565">B</text><text class="math" x="568" y="205">C</text><text class="math" x="568" y="370">D</text><text class="math" x="568" y="575">E</text><text class="math" x="845" y="395">T</text>
+  <path class="hi" d="M350 230 L560 230"/><path class="hi" d="M350 250 L560 370"/><text class="math" x="205" y="300">20</text><text class="math" x="455" y="212">8</text><text class="math" x="455" y="325">11</text><circle cx="245" cy="270" r="24" fill="white" stroke="#C5A059" stroke-width="3"/><text class="math" x="231" y="279">19</text><circle cx="455" cy="185" r="24" fill="white" stroke="#C5A059" stroke-width="3"/><text class="math" x="447" y="194">8</text><circle cx="510" cy="330" r="24" fill="white" stroke="#C5A059" stroke-width="3"/><text class="math" x="496" y="339">11</text><rect class="box" x="820" y="185" width="240" height="250"/><text class="math" x="845" y="235">x = 5 + 2 = 7</text><text class="math" x="845" y="285">y = 6</text><text class="math" x="845" y="335">Flow value = 30</text><text class="text" x="845" y="385">Saturated: AB, AE, DF, CF, DE</text>
+
+</svg>

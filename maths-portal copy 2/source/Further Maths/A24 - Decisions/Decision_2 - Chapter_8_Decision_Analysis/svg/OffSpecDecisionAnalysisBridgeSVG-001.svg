@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bridge: Probability Trees Versus Decision Trees</title>
+  <desc id="desc">Side-by-side bridge diagram comparing probability trees with decision trees.</desc>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FAF9F6;stroke:#C5A059;stroke-width:4} .chance{fill:#FFFFF0;stroke:#D4AF37;stroke-width:4} .pay{fill:#FBEFEF;stroke:#C5A059;stroke-width:4} .branch{stroke:#2C2C2E;stroke-width:3;fill:none;stroke-linecap:round} .chosen{stroke:#C5A059;stroke-width:4;fill:none;stroke-linecap:round} .cross{stroke:#C5A059;stroke-width:5;stroke-linecap:round} .text{fill:#2C2C2E;font-family:Inter,Arial,sans-serif} .title{font-size:36px;font-weight:700} .small{font-size:17px} .label{font-size:22px;font-weight:700} .math{fill:#2C2C2E;font-family:Times New Roman,serif;font-size:24px}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <text class="text title" x="60" y="70">Bridge: Probability Trees Versus Decision Trees</text>
+  
+  <text class="text small" x="60" y="108">Ordinary A-Level tree thinking helps, but decision branches are not probability branches.</text>
+  <rect class="panel" x="70" y="155" width="590" height="560" rx="24"/><text class="text label" x="110" y="210">Ordinary probability tree</text><text class="text small" x="110" y="242">Every split below represents random outcomes.</text>
+  <circle class="chance" cx="180" cy="410" r="45"/><text class="math" x="168" y="418">C</text><path class="branch" d="M225 400 C340 315 430 275 540 255"/><path class="branch" d="M225 420 C340 500 430 545 540 575"/><text class="math" x="338" y="302">P(A)</text><text class="math" x="338" y="525">P(B)</text><circle class="chance" cx="560" cy="255" r="30"/><circle class="chance" cx="560" cy="575" r="30"/><text class="text small" x="110" y="655">Question type: What is the probability?</text>
+  <rect class="panel" x="740" y="155" width="590" height="560" rx="24"/><text class="text label" x="780" y="210">Decision tree</text><text class="text small" x="780" y="242">Some splits are choices. Only chance splits carry probabilities.</text>
+  <rect class="node" x="805" y="372" width="90" height="68" rx="8"/><text class="math" x="838" y="414">D</text><path class="chosen" d="M895 406 C995 315 1080 285 1195 275"/><path class="branch" d="M895 406 C1000 500 1085 540 1195 565"/><text class="math" x="1005" y="315">choose option</text><text class="math" x="1005" y="535">choose other option</text><circle class="chance" cx="1215" cy="275" r="38"/><polygon class="pay" points="1265,525 1195,565 1265,605"/><path class="branch" d="M1253 263 C1285 230 1305 210 1320 185"/><path class="branch" d="M1253 286 C1285 325 1305 350 1320 380"/><text class="math" x="1280" y="228">p</text><text class="math" x="1275" y="350">1−p</text><text class="text small" x="780" y="655">Question type: Which strategy is best?</text>
+  <rect x="175" y="742" width="1050" height="50" rx="16" fill="#FBEFEF" stroke="#D4AF37" stroke-width="2"/><text class="text label" x="205" y="774">Warning: do not put probabilities after a decision box. Only chance circles produce probability branches.</text>
+
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Combining Expansions</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 006.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Combining Expansions</text>
+  <text x="600" y="140" text-anchor="middle" font-family="Arial" font-size="26">When multiplying expansions, keep only powers requested by the question.</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial" font-size="26">x · x = x^2, so keep it when working to x^2.</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Arial" font-size="26">x · x^2 = x^3, so ignore it when working only to x^2.</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial" font-size="26">x^2 · x^2 = x^4, so ignore it when working only to x^2.</text>
+  <text x="600" y="550" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700">Exam habit: discard by power, not by appearance.</text>
+</svg>

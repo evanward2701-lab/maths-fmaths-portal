@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Sketch: y = x² + 4x - 5</title>
+<desc id="desc">Labelled graph sketch with roots, y-intercept, turning point and symmetry.</desc>
+<!-- asset_id: AS1QuadraticsSVG-005
+source: CCEA AS1-AF specification map + lesson evidence
+related_section: Core Theory Part F
+purpose: Sketch y=x^2+4x-5 with key features. -->
+<rect width="1200" height="720" fill="#f8fafc"/>
+<rect x="60" y="40" width="1080" height="90" rx="20" fill="#111827"/>
+<text x="600" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">Sketch: y = x² + 4x - 5</text>
+
+<rect x="90" y="130" width="1020" height="520" rx="20" fill="#fff" stroke="#cbd5e1" stroke-width="3"/>
+<line x1="150" y1="300" x2="1050" y2="300" stroke="#0f172a" stroke-width="3"/><line x1="780" y1="610" x2="780" y2="160" stroke="#0f172a" stroke-width="3"/>
+<path d="M240 170 C350 570 610 660 780 450 C870 340 960 210 1050 170" fill="none" stroke="#2563eb" stroke-width="5"/>
+<circle cx="330" cy="300" r="8" fill="#dc2626"/><text x="330" y="335" text-anchor="middle" font-family="Arial" font-size="20" fill="#dc2626">(-5,0)</text>
+<circle cx="870" cy="300" r="8" fill="#dc2626"/><text x="870" y="335" text-anchor="middle" font-family="Arial" font-size="20" fill="#dc2626">(1,0)</text>
+<circle cx="780" cy="450" r="8" fill="#059669"/><text x="810" y="470" font-family="Arial" font-size="20" fill="#059669">(0,-5)</text>
+<circle cx="600" cy="560" r="9" fill="#7c3aed"/><text x="600" y="595" text-anchor="middle" font-family="Arial" font-size="21" fill="#7c3aed">(-2,-9)</text><line x1="600" y1="160" x2="600" y2="620" stroke="#7c3aed" stroke-width="3" stroke-dasharray="9 9"/><text x="625" y="195" font-family="Arial" font-size="20" fill="#4c1d95">x=-2</text>
+
+</svg>

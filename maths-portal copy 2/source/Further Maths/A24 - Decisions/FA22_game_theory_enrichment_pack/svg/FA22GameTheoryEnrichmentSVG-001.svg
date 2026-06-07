@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Prisoner’s Dilemma Pay-off Table</title>
+<desc id="desc">Asset ID: FA22GameTheoryEnrichmentSVG-001. Optional enrichment only. Prisoner’s Dilemma Pay-off Table</desc>
+<rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+<rect x="50" y="40" width="1100" height="680" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="90" y="95" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Prisoner’s Dilemma Pay-off Table</text>
+<text x="90" y="135" font-family="Arial" font-size="18" fill="#2C2C2E">Coordinate pairs are (A's outcome, B's outcome). Negative values represent years in prison.</text>
+<g font-family="Arial" font-size="20" fill="#2C2C2E">
+<rect x="250" y="210" width="700" height="300" fill="#FFFFFF" stroke="#E5E5EA"/>
+<line x1="250" y1="270" x2="950" y2="270" stroke="#E5E5EA"/><line x1="250" y1="390" x2="950" y2="390" stroke="#E5E5EA"/>
+<line x1="480" y1="210" x2="480" y2="510" stroke="#E5E5EA"/><line x1="715" y1="210" x2="715" y2="510" stroke="#E5E5EA"/>
+<text x="530" y="250">B confesses</text><text x="745" y="250">B does not confess</text>
+<text x="275" y="335">A confesses</text><text x="275" y="445">A does not confess</text>
+<text x="565" y="335">(-4, -4)</text><text x="785" y="335">(0, -10)</text><text x="555" y="445">(-10, 0)</text><text x="795" y="445">(-1, -1)</text>
+</g><rect x="125" y="575" width="950" height="80" rx="16" fill="#FBEFEF" stroke="#C5A059"/><text x="155" y="625" font-family="Arial" font-size="20" fill="#2C2C2E">Individual self-protection can lead to the worse joint outcome: both confess.</text>
+</svg>

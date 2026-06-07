@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-006; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: The output becomes the next input.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Iteration machine</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">The output becomes the next input.</text>
+  <rect x="90" y="200" width="110" height="65" rx="10" fill="#f4f4f4" stroke="#222" stroke-width="2"/><text x="125" y="240" font-family="Arial" font-size="22">x₀</text><line x1="200" y1="232" x2="300" y2="232" stroke="#222" stroke-width="3"/><rect x="300" y="175" width="180" height="115" rx="14" fill="#dbeafe" stroke="#222" stroke-width="2"/><text x="350" y="230" font-family="Arial" font-size="24">g(x)</text><line x1="480" y1="232" x2="580" y2="232" stroke="#222" stroke-width="3"/><rect x="580" y="200" width="110" height="65" rx="10" fill="#f4f4f4" stroke="#222" stroke-width="2"/><text x="615" y="240" font-family="Arial" font-size="22">x₁</text>
+</svg>

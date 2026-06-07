@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">Area bounded by y equals 20 minus x minus x squared and the x-axis</title>
+<desc id="desc">A downward-opening parabola with roots at -5 and 4 and the finite region above the x-axis shaded.</desc>
+<rect width="1000" height="650" fill="#ffffff"/>
+
+<text x="60" y="60" font-family="Arial" font-size="30" font-weight="700">Area: y = 20 − x − x²</text>
+<line x1="110" y1="480" x2="860" y2="480" stroke="#222" stroke-width="3"/>
+<line x1="485" y1="560" x2="485" y2="110" stroke="#222" stroke-width="3"/>
+<path d="M180,480 C300,250 460,115 630,220 C710,270 760,370 790,480 Z" fill="#a8dadc" opacity="0.65"/>
+<path d="M135,560 C250,330 415,115 590,170 C725,215 800,400 860,600" fill="none" stroke="#1d3557" stroke-width="5"/>
+<circle cx="180" cy="480" r="7" fill="#d62828"/><circle cx="790" cy="480" r="7" fill="#d62828"/>
+<text x="156" y="520" font-family="Arial" font-size="24">−5</text>
+<text x="780" y="520" font-family="Arial" font-size="24">4</text>
+<text x="560" y="165" font-family="Arial" font-size="26" fill="#1d3557">y = 20 − x − x²</text>
+<text x="310" y="360" font-family="Arial" font-size="27" fill="#023047">∫₋₅⁴ (20 − x − x²) dx</text>
+<rect x="120" y="565" width="760" height="50" rx="12" fill="#f7f7f7" stroke="#ccc"/>
+<text x="145" y="598" font-family="Arial" font-size="20">Roots: 20 − x − x² = 0 ⇒ x² + x − 20 = 0 ⇒ x = −5, 4</text>
+
+</svg>

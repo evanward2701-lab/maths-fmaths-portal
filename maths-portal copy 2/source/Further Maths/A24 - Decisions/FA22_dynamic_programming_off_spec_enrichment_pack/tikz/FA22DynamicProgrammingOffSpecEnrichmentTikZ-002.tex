@@ -1,0 +1,10 @@
+% Asset ID: FA22DynamicProgrammingOffSpecEnrichmentTikZ-002
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\node[circle,draw](S) at (0,0){$S$};\node[circle,draw](A) at (2,0){$A$};\node[circle,draw](B) at (4,0){$B$};\node[circle,draw](C) at (6,0){$C$};\node[circle,draw](T) at (8,0){$T$};
+\draw[->] (S)--(A)--(B)--(C)--(T);
+\node at (4,-1){Any part of an optimal path is an optimal path.};
+\end{tikzpicture}
+\end{document}

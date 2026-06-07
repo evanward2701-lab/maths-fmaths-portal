@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">sqrt2 proof chain</title>
+<desc id="desc">Contradiction chain for sqrt2 irrationality.</desc>
+<metadata>Asset ID: A21AlgebraicMethodsProofByContradictionSVG-004; Source: Transcript and slide proof; Section: Worked Example 5; Purpose: sqrt2 contradiction chain.</metadata>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#222"/></marker></defs>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#111">Proving √2 is irrational</text>
+<rect x="70" y="145" width="260" height="100" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="200.0" y="183" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Assume rational</text>
+<text x="200.0" y="219" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">√2 = a / b</text><line x1="330" y1="195" x2="440" y2="195" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="440" y="145" width="260" height="100" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="570.0" y="183" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Square</text>
+<text x="570.0" y="219" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">2b² = a²</text><line x1="700" y1="195" x2="810" y2="195" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="810" y="145" width="260" height="100" rx="18" fill="#effced" stroke="#2b7a2b" stroke-width="3"/>
+<text x="940.0" y="183" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">a² even</text>
+<text x="940.0" y="219" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">so a even</text><line x1="940" y1="245" x2="940" y2="335" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="810" y="335" width="260" height="100" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="940.0" y="373" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Let a = 2k</text>
+<text x="940.0" y="409" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">2b² = 4k²</text><line x1="810" y1="385" x2="700" y2="385" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="440" y="335" width="260" height="100" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="570.0" y="373" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Divide by 2</text>
+<text x="570.0" y="409" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">b² = 2k²</text><line x1="440" y1="385" x2="330" y2="385" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="70" y="335" width="260" height="100" rx="18" fill="#effced" stroke="#2b7a2b" stroke-width="3"/>
+<text x="200.0" y="373" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">b² even</text>
+<text x="200.0" y="409" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">so b even</text><line x1="330" y1="385" x2="440" y2="535" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="440" y="500" width="260" height="100" rx="18" fill="#fff0f0" stroke="#a00020" stroke-width="3"/>
+<text x="570.0" y="538" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Contradiction</text>
+<text x="570.0" y="574" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">a and b both even</text><line x1="700" y1="550" x2="810" y2="550" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="810" y="500" width="260" height="100" rx="18" fill="#effced" stroke="#2b7a2b" stroke-width="3"/>
+<text x="940.0" y="538" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Conclusion</text>
+<text x="940.0" y="574" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">√2 irrational</text>
+</svg>

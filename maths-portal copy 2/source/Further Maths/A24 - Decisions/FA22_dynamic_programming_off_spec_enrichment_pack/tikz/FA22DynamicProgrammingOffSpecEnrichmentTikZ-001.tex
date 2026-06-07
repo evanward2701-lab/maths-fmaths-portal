@@ -1,0 +1,11 @@
+% Asset ID: FA22DynamicProgrammingOffSpecEnrichmentTikZ-001
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Latex]
+\node[circle,draw](S) at (0,0){$S$};\node[circle,draw](A) at (2,1){$A$};\node[circle,draw](E) at (4,0){$E$};\node[circle,draw](I) at (6,-1){$I$};\node[circle,draw](T) at (8,0){$T$};
+\draw[->] (S)--node[above]{10}(A);\draw[->](A)--node[above]{10}(E);\draw[->](E)--node[below]{11}(I);\draw[->](I)--node[below]{9}(T);
+\node at (4,-2){SAEIT, cost 40. Off-spec enrichment only.};
+\end{tikzpicture}
+\end{document}

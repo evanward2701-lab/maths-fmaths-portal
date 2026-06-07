@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Inverse trigonometric graphs</title>
+  <desc id="desc">Three panels showing arcsin, arccos and arctan graphs with domains, ranges and asymptotes where relevant.</desc>
+  <metadata>
+    Asset ID: A21TrigonometricFunctionsSVG-002
+    Source: Chapter 6 Trigonometric Functions PDF and transcript
+    Related lesson section: Inverse Trig Functions
+    Purpose: Show inverse trig graphs, restricted domains and ranges.
+  </metadata>
+  <defs><style>.title{font-family:Arial,sans-serif;font-size:30px;font-weight:700;fill:#111827}.box{fill:#f9fafb;stroke:#d1d5db;stroke-width:1.2;rx:12}.pt{font-family:Arial,sans-serif;font-size:19px;font-weight:700;fill:#111827}.small{font-family:Arial,sans-serif;font-size:12px;fill:#374151}.axis{stroke:#111827;stroke-width:1.5}.grid{stroke:#d1d5db;stroke-width:1}.curve{fill:none;stroke:#7c3aed;stroke-width:3}.asym{stroke:#ef4444;stroke-width:1.5;stroke-dasharray:6 5}.domain{font-family:Arial,sans-serif;font-size:14px;font-weight:600;fill:#111827}.note{font-family:Arial,sans-serif;font-size:13px;fill:#4b5563}.point{fill:#111827}</style></defs>
+  <rect width="1200" height="760" fill="#fff"/>
+  <text x="55" y="45" class="title">Inverse trigonometric functions</text>
+  <text x="55" y="72" class="note">Restrict the original trig graph so it is one-to-one, then reflect in y = x.</text>
+  <rect x="45" y="105" width="350" height="510" class="box"/><text x="70" y="138" class="pt">1. y = arcsin x</text>
+  <line x1="95" y1="310" x2="345" y2="310" class="axis"/><line x1="220" y1="185" x2="220" y2="435" class="axis"/>
+  <line x1="95" y1="185" x2="345" y2="185" class="grid"/><line x1="95" y1="435" x2="345" y2="435" class="grid"/>
+  <path class="curve" d="M95 435 C105 390,170 330,220 310 C270 290,335 230,345 185"/>
+  <circle cx="95" cy="435" r="4" class="point"/><circle cx="220" cy="310" r="4" class="point"/><circle cx="345" cy="185" r="4" class="point"/>
+  <text x="70" y="480" class="domain">Domain: -1 ≤ x ≤ 1</text><text x="70" y="505" class="domain">Range: -π/2 ≤ y ≤ π/2</text><text x="70" y="535" class="note">Original branch: sin x on -π/2 ≤ x ≤ π/2</text>
+  <rect x="425" y="105" width="350" height="510" class="box"/><text x="450" y="138" class="pt">2. y = arccos x</text>
+  <line x1="475" y1="435" x2="725" y2="435" class="axis"/><line x1="600" y1="185" x2="600" y2="435" class="axis"/>
+  <line x1="475" y1="310" x2="725" y2="310" class="grid"/><line x1="475" y1="185" x2="725" y2="185" class="grid"/>
+  <path class="curve" d="M475 185 C485 230,550 290,600 310 C650 330,715 390,725 435"/>
+  <circle cx="475" cy="185" r="4" class="point"/><circle cx="600" cy="310" r="4" class="point"/><circle cx="725" cy="435" r="4" class="point"/>
+  <text x="450" y="480" class="domain">Domain: -1 ≤ x ≤ 1</text><text x="450" y="505" class="domain">Range: 0 ≤ y ≤ π</text><text x="450" y="535" class="note">Original branch: cos x on 0 ≤ x ≤ π</text>
+  <rect x="805" y="105" width="350" height="510" class="box"/><text x="830" y="138" class="pt">3. y = arctan x</text>
+  <line x1="855" y1="310" x2="1105" y2="310" class="axis"/><line x1="980" y1="185" x2="980" y2="435" class="axis"/>
+  <line x1="855" y1="185" x2="1105" y2="185" class="asym"/><line x1="855" y1="435" x2="1105" y2="435" class="asym"/>
+  <path class="curve" d="M855 395 C900 385,935 350,980 310 C1025 270,1060 235,1105 225"/>
+  <circle cx="980" cy="310" r="4" class="point"/>
+  <text x="830" y="480" class="domain">Domain: x ∈ ℝ</text><text x="830" y="505" class="domain">Range: -π/2 &lt; y &lt; π/2</text><text x="830" y="535" class="note">Horizontal asymptotes: y = ±π/2</text>
+</svg>

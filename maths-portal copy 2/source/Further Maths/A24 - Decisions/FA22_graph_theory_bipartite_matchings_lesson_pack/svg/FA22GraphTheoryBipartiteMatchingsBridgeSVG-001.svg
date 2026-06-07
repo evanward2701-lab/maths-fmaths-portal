@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1050" height="620" viewBox="0 0 1050 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bridge visual from table reading to bipartite graph</title>
+  <desc id="desc">A bridge diagram showing how an ordinary table of yes and no entries becomes a bipartite graph. Workers A, B and C are listed against tasks 1, 2 and 3. Yes entries become edges: A1, A2, B1, C2 and C3. The diagram warns that this is not a weighted cost matrix.</desc>
+  <style>
+    .bg { fill: #FAF9F6; }.panel { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; }.title { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 28px; font-weight: 700; }.subtitle { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 16px; }.sectionTitle { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 700; }.cellText { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 15px; text-anchor: middle; dominant-baseline: central; }.headerText { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }.small { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 14px; }.warning { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 700; }.tableLine { stroke: #E5E5EA; stroke-width: 2; }.tableOuter { fill: #FFFFF0; stroke: #C5A059; stroke-width: 2; rx: 10; }.yesCell { fill: #FFF8DC; }.noCell { fill: #FAF9F6; }.vertex { fill: #FFFFF0; stroke: #2C2C2E; stroke-width: 2; }.vertexText { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }.edge { stroke: #C5A059; stroke-width: 4; stroke-linecap: round; }.arrow { stroke: #D4AF37; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; fill: none; }.noteBox { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 2; rx: 16; }.bridgeBox { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; rx: 18; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1050" height="620"/><rect class="panel" x="45" y="35" width="960" height="540" rx="24"/>
+  <text class="title" x="525" y="78" text-anchor="middle">A-Level Maths Bridge: Table to Bipartite Graph</text>
+  <text class="subtitle" x="525" y="108" text-anchor="middle">Ordinary table-reading becomes Further Maths graph structure.</text>
+  <rect class="bridgeBox" x="80" y="145" width="365" height="330"/><text class="sectionTitle" x="262" y="178" text-anchor="middle">Ordinary skill: read the table</text>
+  <rect class="tableOuter" x="120" y="210" width="285" height="185"/>
+  <rect class="yesCell" x="191.25" y="256.25" width="71.25" height="46.25"/><rect class="yesCell" x="262.5" y="256.25" width="71.25" height="46.25"/><rect class="noCell" x="333.75" y="256.25" width="71.25" height="46.25"/>
+  <rect class="yesCell" x="191.25" y="302.5" width="71.25" height="46.25"/><rect class="noCell" x="262.5" y="302.5" width="71.25" height="46.25"/><rect class="noCell" x="333.75" y="302.5" width="71.25" height="46.25"/>
+  <rect class="noCell" x="191.25" y="348.75" width="71.25" height="46.25"/><rect class="yesCell" x="262.5" y="348.75" width="71.25" height="46.25"/><rect class="yesCell" x="333.75" y="348.75" width="71.25" height="46.25"/>
+  <line class="tableLine" x1="191.25" y1="210" x2="191.25" y2="395"/><line class="tableLine" x1="262.5" y1="210" x2="262.5" y2="395"/><line class="tableLine" x1="333.75" y1="210" x2="333.75" y2="395"/>
+  <line class="tableLine" x1="120" y1="256.25" x2="405" y2="256.25"/><line class="tableLine" x1="120" y1="302.5" x2="405" y2="302.5"/><line class="tableLine" x1="120" y1="348.75" x2="405" y2="348.75"/>
+  <text class="headerText" x="155.625" y="233.125">Worker</text><text class="headerText" x="226.875" y="233.125">Task 1</text><text class="headerText" x="298.125" y="233.125">Task 2</text><text class="headerText" x="369.375" y="233.125">Task 3</text>
+  <text class="headerText" x="155.625" y="279.375">A</text><text class="headerText" x="155.625" y="325.625">B</text><text class="headerText" x="155.625" y="371.875">C</text>
+  <text class="cellText" x="226.875" y="279.375">yes</text><text class="cellText" x="298.125" y="279.375">yes</text><text class="cellText" x="369.375" y="279.375">no</text>
+  <text class="cellText" x="226.875" y="325.625">yes</text><text class="cellText" x="298.125" y="325.625">no</text><text class="cellText" x="369.375" y="325.625">no</text>
+  <text class="cellText" x="226.875" y="371.875">no</text><text class="cellText" x="298.125" y="371.875">yes</text><text class="cellText" x="369.375" y="371.875">yes</text>
+  <text class="small" x="262" y="425" text-anchor="middle">Each “yes” becomes an edge.</text>
+  <path class="arrow" d="M 470 310 C 505 310, 530 310, 565 310"/><path class="arrow" d="M 552 292 L 575 310 L 552 328"/>
+  <rect class="bridgeBox" x="605" y="145" width="365" height="330"/><text class="sectionTitle" x="787" y="178" text-anchor="middle">Further Maths: graph structure</text>
+  <text class="small" x="690" y="218" text-anchor="middle">U = {A, B, C}</text><text class="small" x="885" y="218" text-anchor="middle">W = {1, 2, 3}</text>
+  <line class="edge" x1="690" y1="260" x2="885" y2="260"/><line class="edge" x1="690" y1="260" x2="885" y2="325"/><line class="edge" x1="690" y1="325" x2="885" y2="260"/><line class="edge" x1="690" y1="390" x2="885" y2="325"/><line class="edge" x1="690" y1="390" x2="885" y2="390"/>
+  <circle class="vertex" cx="690" cy="260" r="23"/><circle class="vertex" cx="690" cy="325" r="23"/><circle class="vertex" cx="690" cy="390" r="23"/>
+  <circle class="vertex" cx="885" cy="260" r="23"/><circle class="vertex" cx="885" cy="325" r="23"/><circle class="vertex" cx="885" cy="390" r="23"/>
+  <text class="vertexText" x="690" y="260">A</text><text class="vertexText" x="690" y="325">B</text><text class="vertexText" x="690" y="390">C</text><text class="vertexText" x="885" y="260">1</text><text class="vertexText" x="885" y="325">2</text><text class="vertexText" x="885" y="390">3</text>
+  <text class="small" x="787" y="425" text-anchor="middle">Edges: A1, A2, B1, C2, C3.</text>
+  <rect class="noteBox" x="255" y="500" width="540" height="48"/>
+  <text class="warning" x="525" y="530" text-anchor="middle">Boundary warning: this is not a weighted cost matrix.</text>
+  <text class="small" x="525" y="565" text-anchor="middle">CCEA FA22-GRAPH-LO003: work with bipartite graphs, matchings and complete matchings.</text>
+</svg>

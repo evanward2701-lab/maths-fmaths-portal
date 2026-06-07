@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1100 760" width="1100" height="760">
+<title id="title">Conic sections from a non-solid double cone</title>
+<desc id="desc">A diagram of a non-solid double cone with cutting planes producing circle, ellipse, parabola and hyperbola. It preserves the warning that conics are lines and the shaded plane areas are not included.</desc>
+<!--
+Asset ID: FAS1ConicSections1SVG-001
+Source: FP1-Chp2-ConicSections1.pdf conic-section overview + lesson screenshots visual evidence
+Related lesson section: Section 9 Visual Asset Integration
+Purpose: Show the four conic families obtained by slicing a non-solid double cone.
+-->
+<defs>
+  <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M 0 0 L 12 6 L 0 12 z" fill="#C5A059"/>
+  </marker>
+  <linearGradient id="planeGold" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FBEFEF" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#C5A059" stop-opacity="0.35"/>
+  </linearGradient>
+</defs>
+<style>
+.bg{fill:#FAF9F6}.card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5;rx:18}.title{font:700 30px Inter,Arial,sans-serif;fill:#2C2C2E}.subtitle{font:500 15px Inter,Arial,sans-serif;fill:#55555A}.label{font:700 22px Inter,Arial,sans-serif;fill:#2C2C2E}.body{font:500 15px Inter,Arial,sans-serif;fill:#2C2C2E}.small{font:500 12.5px Inter,Arial,sans-serif;fill:#55555A}.math{font:600 17px "Cambria Math",serif;fill:#2C2C2E}.cone{fill:none;stroke:#2C2C2E;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.coneDash{fill:none;stroke:#2C2C2E;stroke-width:1.7;stroke-dasharray:7 7}.plane{fill:url(#planeGold);stroke:#C5A059;stroke-width:1.7}.cut{fill:none;stroke:#C5A059;stroke-width:4;stroke-linecap:round}.warn{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.4;rx:12}.connector{stroke:#C5A059;stroke-width:1.7;fill:none;marker-end:url(#arrowGold)}
+</style>
+<rect class="bg" width="1100" height="760"/>
+<text class="title" x="55" y="58">Conic Sections</text>
+<text class="subtitle" x="55" y="84">Curves obtained by intersecting a plane with a non-solid double cone.</text>
+<rect class="warn" x="55" y="112" width="300" height="96"/>
+<text class="body" x="75" y="143">Fro note preserved:</text>
+<text class="label" x="75" y="174">Conics are lines.</text>
+<text class="body" x="75" y="197">The shaded plane area is not included.</text>
+<ellipse class="cone" cx="510" cy="128" rx="142" ry="38"/>
+<path class="cone" d="M 368 128 L 510 382 L 652 128"/>
+<ellipse class="cone" cx="510" cy="636" rx="142" ry="38"/>
+<path class="cone" d="M 368 636 L 510 382 L 652 636"/>
+<path class="coneDash" d="M 368 128 C 430 157 590 157 652 128"/>
+<path class="coneDash" d="M 368 636 C 430 607 590 607 652 636"/>
+<circle cx="510" cy="382" r="4.2" fill="#2C2C2E"/>
+<polygon class="plane" points="414,229 595,215 620,241 440,256"/>
+<ellipse cx="514" cy="235" rx="58" ry="13" fill="none" stroke="#A44E50" stroke-width="4"/>
+<polygon class="plane" points="356,265 488,223 555,400 426,440"/>
+<ellipse cx="456" cy="335" rx="24" ry="82" transform="rotate(-22 456 335)" fill="none" stroke="#6B9FA3" stroke-width="4"/>
+<polygon class="plane" points="557,156 617,177 520,392 463,365"/>
+<path class="cut" d="M 584 178 C 571 244 540 309 501 366"/>
+<polygon class="plane" points="625,92 688,121 535,666 471,637"/>
+<path class="cut" d="M 638 142 C 612 247 580 331 535 379"/>
+<path class="cut" d="M 522 388 C 493 452 487 546 498 632"/>
+<rect class="card" x="760" y="104" width="285" height="118"/><text class="label" x="785" y="139" fill="#8F2F39">Circle</text><text class="body" x="785" y="192">Plane parallel to the base.</text>
+<rect class="card" x="760" y="245" width="285" height="118"/><text class="label" x="785" y="280" fill="#6B9FA3">Ellipse</text><text class="body" x="785" y="333">Plane less steep than the cone.</text>
+<rect class="card" x="760" y="386" width="285" height="118"/><text class="label" x="785" y="421" fill="#C5A059">Parabola</text><text class="body" x="785" y="474">Plane parallel to the surface.</text>
+<rect class="card" x="760" y="527" width="285" height="132"/><text class="label" x="785" y="562" fill="#7A9653">Hyperbola</text><text class="body" x="785" y="615">Plane intersects both cones.</text>
+<path class="connector" d="M 572 235 C 650 214 700 172 754 155"/>
+<path class="connector" d="M 456 335 C 610 324 690 305 754 302"/>
+<path class="connector" d="M 520 350 C 635 397 694 427 754 441"/>
+<path class="connector" d="M 515 520 C 640 555 703 581 754 587"/>
+<rect class="card" x="428" y="704" width="360" height="34"/>
+<text class="math" x="452" y="727">Conics 1 core: y² = 4ax and xy = c²</text>
+</svg>

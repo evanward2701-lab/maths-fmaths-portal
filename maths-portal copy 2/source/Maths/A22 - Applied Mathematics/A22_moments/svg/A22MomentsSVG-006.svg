@@ -1,0 +1,29 @@
+<!--
+Asset ID: A22MomentsSVG-006
+Source: Rigid Bodies transcript section 4.
+Related lesson section: Worked Example 7; Worked Example 8.
+Purpose: Suspended beam with tensions.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Suspended beam with tensions">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111827"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:28px;font-weight:700;fill:#111827}
+      .label{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+      .small{font-family:Arial,sans-serif;font-size:15px;fill:#374151}
+      .rod{stroke:#111827;stroke-width:10;stroke-linecap:round}
+      .beam{fill:#F3F4F6;stroke:#111827;stroke-width:3}
+      .support{fill:#D1D5DB;stroke:#111827;stroke-width:2}
+      .up{stroke:#2563EB;stroke-width:4;marker-end:url(#arrow)}
+      .down{stroke:#DC2626;stroke-width:4;marker-end:url(#arrow)}
+      .force{stroke:#7C3AED;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#6B7280;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="40" y="55" class="title">Suspended beam with two tensions</text>
+  <rect x="150" y="100" width="600" height="20" class="beam"/><line x1="190" y1="120" x2="190" y2="260" stroke="#111827" stroke-width="3"/><line x1="710" y1="120" x2="710" y2="260" stroke="#111827" stroke-width="3"/><rect x="150" y="260" width="600" height="34" rx="8" class="beam"/><line x1="190" y1="260" x2="190" y2="210" class="up"/><line x1="710" y1="260" x2="710" y2="210" class="up"/><line x1="450" y1="210" x2="450" y2="258" class="down"/><line x1="375" y1="210" x2="375" y2="258" class="down"/><text x="205" y="230" class="label">TA</text><text x="725" y="230" class="label">TB</text><text x="465" y="236" class="label">20 N</text><text x="390" y="236" class="label">10 N</text>
+</svg>

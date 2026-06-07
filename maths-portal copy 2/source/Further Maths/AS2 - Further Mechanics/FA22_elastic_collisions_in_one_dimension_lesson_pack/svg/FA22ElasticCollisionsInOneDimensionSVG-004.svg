@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Asset ID: FA22ElasticCollisionsInOneDimensionSVG-004
+Source: Lesson PDF Sources of Inequalities slide + transcript inequality discussion
+Related lesson section: Section 9.8 Inequality logic visual
+Used placeholder: [VISUAL PLACEHOLDER: FA22ElasticCollisionsInOneDimensionSVG-004 | Source: Lesson PDF Sources of Inequalities slide + transcript inequality discussion | Insert from svg/FA22ElasticCollisionsInOneDimensionSVG-004.svg | Purpose: Summarise the four common sources of inequalities in collision questions.]
+Purpose: Summarise inequality triggers.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Sources of inequalities in restitution questions</title>
+  <desc id="desc">Four panels: direction unchanged, restitution range, collision logic, collide again.</desc>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <text x="60" y="70" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Sources of inequalities in restitution questions</text>
+  <rect x="60" y="110" width="1080" height="90" rx="20" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="162" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#2C2C2E">Start with the physical condition, then translate into algebra.</text>
+  
+  <rect x="80" y="250" width="480" height="190" rx="22" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><text x="120" y="300" font-size="28" font-weight="700" fill="#C5A059">A. Direction unchanged</text><text x="320" y="365" text-anchor="middle" font-size="28" font-weight="700" fill="#2C2C2E">v &gt; 0 or v &lt; 0</text>
+  <rect x="640" y="250" width="480" height="190" rx="22" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><text x="680" y="300" font-size="28" font-weight="700" fill="#C5A059">B. Restitution range</text><text x="880" y="365" text-anchor="middle" font-size="32" font-weight="700" fill="#2C2C2E">0 ≤ e ≤ 1</text>
+  <rect x="80" y="485" width="480" height="190" rx="22" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><text x="120" y="535" font-size="28" font-weight="700" fill="#C5A059">C. Collision logic</text><text x="320" y="600" text-anchor="middle" font-size="26" font-weight="700" fill="#2C2C2E">behind particle faster</text>
+  <rect x="640" y="485" width="480" height="190" rx="22" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><text x="680" y="535" font-size="28" font-weight="700" fill="#C5A059">D. Particles collide again</text><text x="880" y="600" text-anchor="middle" font-size="26" font-weight="700" fill="#2C2C2E">rebound speed must catch</text>
+
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2WorkEnergyAndPowerSVG-005: Pump raising and ejecting water</title>
+  <desc id="desc">A pump raises water with mass flow rate r through height h and ejects it with speed v.</desc>
+  <metadata>asset_id: FAS2WorkEnergyAndPowerSVG-005; unit_code: FAS2; topic_code: FAS2-WENG + FAS2-POW; topic_id: FAS2WorkEnergyAndPower; status: Generated in Phase 3</metadata>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" fill="#C5A059"/></marker></defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="45" width="1100" height="670" rx="30" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="90" y="105" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Pump raising and ejecting water</text>
+  
+  <rect x="120" y="540" width="350" height="90" rx="22" fill="#F7F7FA" stroke="#E5E5EA" stroke-width="2"/>
+  <path d="M150 585 C190 565 230 605 270 585 C310 565 350 605 435 585" fill="none" stroke="#C5A059" stroke-width="5"/>
+  <rect x="540" y="480" width="170" height="140" rx="26" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="4"/>
+  <text x="625" y="560" text-anchor="middle" font-size="24" font-family="Inter, Arial">pump</text>
+  <path d="M470 585 H540" stroke="#2C2C2E" stroke-width="14" stroke-linecap="round"/>
+  <path d="M710 520 H805 V240 H920" stroke="#2C2C2E" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="805" y1="520" x2="805" y2="245" stroke="#C5A059" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="920" y1="240" x2="1080" y2="240" stroke="#C5A059" stroke-width="7" marker-end="url(#arrow)"/>
+  <text x="1000" y="210" text-anchor="middle" font-size="26" font-family="Cambria Math">speed v</text>
+  <line x1="1120" y1="585" x2="1120" y2="240" stroke="#C5A059" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1140" y="420" font-size="30" font-family="Cambria Math">h</text>
+  <text x="320" y="555" text-anchor="middle" font-size="24" font-family="Cambria Math">r kg s⁻¹</text>
+  <rect x="130" y="190" width="500" height="230" rx="26" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/>
+  <text x="380" y="250" text-anchor="middle" font-size="30" font-family="Cambria Math">P_raise = rgh</text>
+  <text x="380" y="315" text-anchor="middle" font-size="30" font-family="Cambria Math">P_kinetic = 1/2rv²</text>
+  <text x="380" y="380" text-anchor="middle" font-size="30" font-family="Cambria Math" fill="#C5A059">P_useful = rgh + 1/2rv²</text>
+
+</svg>

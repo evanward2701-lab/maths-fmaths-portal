@@ -1,0 +1,30 @@
+% TikZ Asset: FAS2ContinuousDistributionsTikZ-001
+% Unit: FAS2
+% Topic code: FAS2-DIST
+% Topic ID: FAS2ContinuousDistributions
+% Lesson file: FAS2_continuous_distributions_lesson.md
+% Related lesson section: Section 9.5 Piecewise quadratic p.d.f. sketch
+% Source: DrFrost/Pearson p.d.f. worked example and teacher transcript
+% Purpose: Sketch the active support of f(x)=3/16 x(4-x), 2 <= x <= 4, with f(x)=0 otherwise.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing}
+\begin{document}
+\begin{tikzpicture}[x=2.2cm,y=4.3cm,axis/.style={->, thick, draw={rgb,255:red,44;green,44;blue,46}},curve/.style={very thick, draw={rgb,255:red,197;green,160;blue,89}},support/.style={thick, draw={rgb,255:red,44;green,44;blue,46}},guide/.style={draw={rgb,255:red,44;green,44;blue,46}, dashed},note/.style={rounded corners=4pt, draw={rgb,255:red,229;green,229;blue,234}, fill=white, inner sep=6pt},warning/.style={rounded corners=4pt, draw={rgb,255:red,212;green,175;blue,55}, fill={rgb,255:red,251;green,239;blue,239}, inner sep=6pt}]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-0.35,-0.18) rectangle (4.85,1.08);
+\draw[{rgb,255:red,229;green,229;blue,234}, rounded corners=8pt] (-0.25,-0.12) rectangle (4.75,1.00);
+\draw[axis] (-0.05,0) -- (4.55,0) node[right] {$x$};
+\draw[axis] (0,-0.02) -- (0,0.92) node[above] {$f(x)$};
+\draw[support] (0,0) -- (2,0);\draw[support] (4,0) -- (4.35,0);
+\draw[curve, domain=2:4, samples=120] plot (\x,{3/16*\x*(4-\x)});
+\draw[guide] (2,0) -- (2,0.75);\draw[guide] (4,0) -- (4,0.02);\draw[guide] (0,0.75) -- (2,0.75);
+\fill[{rgb,255:red,197;green,160;blue,89}] (2,0.75) circle (1.8pt);\fill[{rgb,255:red,197;green,160;blue,89}] (4,0) circle (1.8pt);
+\node[below] at (2,0) {$2$};\node[below] at (4,0) {$4$};\node[left] at (0,0.75) {$\frac34$};
+\node[above right] at (2,0.75) {$(2,\frac34)$};\node[above right] at (4,0) {$(4,0)$};
+\node[note, align=center] at (2.25,0.95) {\(\displaystyle f(x)=\frac{3}{16}x(4-x)\)\\for \(2\leq x\leq4\)};
+\node[warning, align=center] at (2.35,-0.105) {Only the interval \(2\leq x\leq4\) belongs to the p.d.f.;\\outside this support, \(f(x)=0\).};
+\draw[decorate, decoration={brace, amplitude=5pt, mirror}, draw={rgb,255:red,197;green,160;blue,89}] (2,-0.025) -- (4,-0.025) node[midway, below=7pt, fill={rgb,255:red,250;green,249;blue,246}, inner sep=2pt] {support};
+\node[align=center, font=\bfseries\large] at (2.25,1.04) {Quadratic p.d.f. on its active support};
+\end{tikzpicture}
+\end{document}

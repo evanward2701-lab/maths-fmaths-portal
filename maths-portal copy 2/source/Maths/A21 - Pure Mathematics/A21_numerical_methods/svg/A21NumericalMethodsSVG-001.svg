@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-001; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: Continuous graph crossing the axis between endpoint signs.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Locating roots by sign change</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">Continuous graph crossing the axis between endpoint signs.</text>
+  <line x1="90" y1="300" x2="820" y2="300" stroke="#222" stroke-width="3"/><line x1="140" y1="430" x2="140" y2="130" stroke="#222" stroke-width="3"/><path d="M120,410 C250,380 330,335 410,280 C500,220 610,170 790,140" fill="none" stroke="#1f77b4" stroke-width="5"/><circle cx="360" cy="312" r="8" fill="#d62728"/><circle cx="610" cy="170" r="8" fill="#2ca02c"/><circle cx="390" cy="300" r="8" fill="#111"/><text x="300" y="350" font-family="Arial" font-size="20">f(a) &lt; 0</text><text x="630" y="170" font-family="Arial" font-size="20">f(b) &gt; 0</text><text x="405" y="288" font-family="Arial" font-size="20">root</text>
+</svg>

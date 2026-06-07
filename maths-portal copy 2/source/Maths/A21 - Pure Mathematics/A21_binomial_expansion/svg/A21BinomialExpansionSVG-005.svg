@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Coefficient Pattern for (1+u)^n</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 005.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Coefficient Pattern for (1+u)^n</text>
+  <text x="600" y="135" text-anchor="middle" font-family="Arial" font-size="25">(1+u)^n = 1 + nu + n(n-1)u^2/2! + n(n-1)(n-2)u^3/3! + ...</text>
+  <rect x="130" y="210" width="940" height="330" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="300" y="280" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Power</text><text x="650" y="280" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Coefficient</text>
+  <text x="300" y="350" text-anchor="middle" font-family="Arial" font-size="24">u^0</text><text x="650" y="350" text-anchor="middle" font-family="Arial" font-size="24">1</text>
+  <text x="300" y="410" text-anchor="middle" font-family="Arial" font-size="24">u^1</text><text x="650" y="410" text-anchor="middle" font-family="Arial" font-size="24">n</text>
+  <text x="300" y="470" text-anchor="middle" font-family="Arial" font-size="24">u^2</text><text x="650" y="470" text-anchor="middle" font-family="Arial" font-size="24">n(n-1)/2!</text>
+  <text x="300" y="530" text-anchor="middle" font-family="Arial" font-size="24">u^3</text><text x="650" y="530" text-anchor="middle" font-family="Arial" font-size="24">n(n-1)(n-2)/3!</text>
+</svg>

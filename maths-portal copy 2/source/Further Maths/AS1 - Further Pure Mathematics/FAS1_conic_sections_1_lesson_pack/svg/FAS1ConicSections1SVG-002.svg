@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1000 680" width="1000" height="680">
+<title id="title">Standard horizontal parabola y squared equals 4 a x</title>
+<desc id="desc">A labelled right-opening parabola showing vertex, focus, directrix, axis of symmetry and equal distances from a point to the focus and directrix.</desc>
+<!-- Asset ID: FAS1ConicSections1SVG-002; Source: FP1-Chp2-ConicSections1.pdf parabola definition slide; Purpose: Explain the geometry of y^2=4ax. -->
+<defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#C5A059"/></marker><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0L0 0 0 40" fill="none" stroke="#E5E5EA" stroke-width="0.8"/></pattern></defs>
+<style>.bg{fill:#FAF9F6}.plot{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5;rx:18}.grid{fill:url(#grid)}.title{font:700 30px Inter,Arial,sans-serif;fill:#2C2C2E}.subtitle{font:500 15px Inter,Arial,sans-serif;fill:#55555A}.label{font:700 18px Inter,Arial,sans-serif;fill:#2C2C2E}.body{font:500 14px Inter,Arial,sans-serif;fill:#2C2C2E}.small{font:500 12px Inter,Arial,sans-serif;fill:#55555A}.math{font:600 18px "Cambria Math",serif;fill:#2C2C2E}.axis{stroke:#2C2C2E;stroke-width:2.2;marker-end:url(#arrowGold)}.axisSoft{stroke:#C5A059;stroke-width:1.5;stroke-dasharray:6 6}.curve{fill:none;stroke:#C5A059;stroke-width:4;stroke-linecap:round}.directrix{stroke:#8F6C9F;stroke-width:2.4;stroke-dasharray:9 7}.distance{stroke:#6B9FA3;stroke-width:2.5;fill:none;stroke-dasharray:7 5}.point{fill:#2C2C2E;stroke:#FFFFF0;stroke-width:3}.focus{fill:#D4AF37;stroke:#2C2C2E;stroke-width:1.5}.box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.3;rx:16}.warning{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.3;rx:12}</style>
+<rect class="bg" width="1000" height="680"/>
+<text class="title" x="56" y="58">The standard horizontal parabola</text>
+<text class="subtitle" x="56" y="84">A parabola is the locus of points equidistant from a focus and a directrix.</text>
+<rect class="plot" x="56" y="112" width="650" height="500"/><rect class="grid" x="56" y="112" width="650" height="500"/>
+<line class="axis" x1="120" y1="362" x2="675" y2="362"/><line class="axis" x1="430" y1="592" x2="430" y2="142"/><text class="small" x="679" y="354">x</text><text class="small" x="442" y="148">y</text>
+<line class="directrix" x1="340" y1="142" x2="340" y2="592"/><line class="axisSoft" x1="120" y1="362" x2="675" y2="362"/>
+<text class="label" x="236" y="153">Directrix</text><text class="math" x="257" y="177">x = −a</text><text class="small" x="486" y="383">axis of symmetry: y = 0</text>
+<path class="curve" d="M705 160C585 178 465 262 430 362C465 462 585 546 705 565"/>
+<circle class="point" cx="430" cy="362" r="6"/><text class="label" x="398" y="395">V(0,0)</text>
+<circle class="focus" cx="520" cy="362" r="7"/><text class="label" x="536" y="356">Focus</text><text class="math" x="536" y="380">(a,0)</text>
+<circle class="point" cx="608" cy="238" r="6.5"/><text class="label" x="625" y="233">P(x,y)</text><text class="math" x="625" y="258">or P(at²,2at)</text>
+<line class="distance" x1="608" y1="238" x2="520" y2="362"/><line class="distance" x1="608" y1="238" x2="340" y2="238"/><circle cx="340" cy="238" r="4.5" fill="#6B9FA3"/>
+<text class="small" x="478" y="258">distance to focus</text><text class="small" x="388" y="222">perpendicular distance to directrix</text>
+<rect class="box" x="735" y="112" width="220" height="168"/><text class="label" x="760" y="146">Core equations</text><text class="math" x="760" y="180">Cartesian: y² = 4ax</text><text class="math" x="760" y="215">Parametric:</text><text class="math" x="780" y="245">x = at², y = 2at</text>
+<rect class="box" x="735" y="305" width="220" height="178"/><text class="label" x="760" y="339">Geometry</text><text class="body" x="760" y="371">Focus: (a,0)</text><text class="body" x="760" y="400">Directrix: x = −a</text><text class="body" x="760" y="429">Vertex: (0,0)</text><text class="body" x="760" y="458">Axis: y = 0</text>
+<rect class="warning" x="735" y="506" width="220" height="106"/><text class="label" x="760" y="537">Locus condition</text><text class="math" x="760" y="569">PF = distance to x = −a</text><text class="small" x="760" y="594">This gives y² = 4ax.</text>
+</svg>

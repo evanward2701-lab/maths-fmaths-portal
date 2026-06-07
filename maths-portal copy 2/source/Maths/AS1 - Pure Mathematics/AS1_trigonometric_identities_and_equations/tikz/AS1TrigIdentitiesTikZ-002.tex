@@ -1,0 +1,41 @@
+% asset_id: AS1TrigIdentitiesTikZ-002
+% asset_type: TikZ
+% unit_code: AS1
+% topic_code: AS1-TRIG
+% topic_name: Trigonometric Identities and Equations
+% related_lesson_file: AS1_trigonometric_identities_and_equations_lesson.md
+% related_lesson_section: Core Theory 8.1 Exact values for 30°, 45°, 60°
+% source: Chapter 10 lesson PDF page 4; transcript video 5
+% purpose: Provide a clean printable diagram deriving exact trigonometric values from half a unit square and half an equilateral triangle of side 2.
+% status: Written
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{angles,quotes,calc,positioning}
+\begin{document}
+\begin{tikzpicture}[scale=1, tri/.style={thick, fill=blue!5}, eqtri/.style={thick, fill=green!5}, side/.style={font=\large}, note/.style={draw=gray!45, rounded corners=3pt, fill=gray!5, inner sep=5pt, align=left}, title/.style={font=\bfseries\Large, align=center}, subtitle/.style={font=\bfseries, align=center}]
+\node[title] at (5.8,4.45) {Exact Values for \(30^\circ\), \(45^\circ\), \(60^\circ\)};
+\node[font=\small, align=center] at (5.8,4.05) {Derive them from two special triangles instead of treating them as calculator magic.};
+\node[subtitle] at (2,3.35) {Half a unit square};
+\coordinate (A) at (0,0); \coordinate (B) at (3,0); \coordinate (C) at (3,3);
+\draw[tri] (A) -- (B) -- (C) -- cycle;
+\draw ($(B)+(-0.28,0)$) -- ($(B)+(-0.28,0.28)$) -- ($(B)+(0,0.28)$);
+\pic[draw=orange!85!black, thick, "$45^\circ$", angle radius=0.65cm, angle eccentricity=1.35] {angle = B--A--C};
+\node[side, below] at ($(A)!0.5!(B)$) {$1$};
+\node[side, right] at ($(B)!0.5!(C)$) {$1$};
+\node[side, above left] at ($(A)!0.5!(C)$) {$\sqrt2$};
+\node[note, anchor=north west] at (-0.4,-0.45) {Pythagoras:\\ \[ \sqrt{1^2+1^2}=\sqrt2 \] \[ \sin45^\circ=\frac{1}{\sqrt2}=\frac{\sqrt2}{2} \] \[ \cos45^\circ=\frac{1}{\sqrt2}=\frac{\sqrt2}{2} \] \[ \tan45^\circ=1 \]};
+\node[subtitle] at (8.65,3.35) {Half an equilateral triangle};
+\coordinate (D) at (7,0); \coordinate (E) at (10.5,0); \coordinate (F) at (7,3.5);
+\draw[eqtri] (D) -- (E) -- (F) -- cycle;
+\draw ($(D)+(0.28,0)$) -- ($(D)+(0.28,0.28)$) -- ($(D)+(0,0.28)$);
+\pic[draw=orange!85!black, thick, "$60^\circ$", angle radius=0.75cm, angle eccentricity=1.35] {angle = F--E--D};
+\pic[draw=orange!85!black, thick, "$30^\circ$", angle radius=0.75cm, angle eccentricity=1.35] {angle = D--F--E};
+\node[side, below] at ($(D)!0.5!(E)$) {$1$};
+\node[side, left] at ($(D)!0.5!(F)$) {$\sqrt3$};
+\node[side, above right] at ($(E)!0.5!(F)$) {$2$};
+\node[note, anchor=north west] at (6.25,-0.45) {Pythagoras:\\ \[ \sqrt{2^2-1^2}=\sqrt3 \] For \(30^\circ\): \[ \sin30^\circ=\frac12,\quad \cos30^\circ=\frac{\sqrt3}{2},\quad \tan30^\circ=\frac1{\sqrt3} \] For \(60^\circ\): \[ \sin60^\circ=\frac{\sqrt3}{2},\quad \cos60^\circ=\frac12,\quad \tan60^\circ=\sqrt3 \]};
+\node[note, anchor=north, align=center] at (5.8,-4.4) {\begin{tabular}{c|c|c|c} \(\theta\) & \(\sin\theta\) & \(\cos\theta\) & \(\tan\theta\)\\ \hline \(30^\circ\) & \(\frac12\) & \(\frac{\sqrt3}{2}\) & \(\frac1{\sqrt3}=\frac{\sqrt3}{3}\)\\[3pt] \(45^\circ\) & \(\frac1{\sqrt2}=\frac{\sqrt2}{2}\) & \(\frac1{\sqrt2}=\frac{\sqrt2}{2}\) & \(1\)\\[3pt] \(60^\circ\) & \(\frac{\sqrt3}{2}\) & \(\frac12\) & \(\sqrt3\) \end{tabular}};
+\end{tikzpicture}
+\end{document}

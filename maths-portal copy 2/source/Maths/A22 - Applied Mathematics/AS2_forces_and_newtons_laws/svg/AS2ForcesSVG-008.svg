@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-008
+Source: Chapter 5/7 Forces Transcript and supporting PDFs
+Related lesson section: Worked Example 1
+Purpose: Show P, Q and 4 N equilibrium with resolved components.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Worked Example 1 Force Diagram</title>
+  <desc id="desc">Show P, Q and 4 N equilibrium with resolved components.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Worked Example 1 Force Diagram</text>
+  <circle cx="450" cy="260" r="7" fill="#111"/><line x1="450" y1="260" x2="600" y2="175" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="525.0" y="207.5" font-family="Arial" font-size="20" text-anchor="middle">P</text><line x1="450" y1="260" x2="320" y2="145" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="385.0" y="192.5" font-family="Arial" font-size="20" text-anchor="middle">4 N</text><line x1="450" y1="260" x2="450" y2="430" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="450.0" y="335.0" font-family="Arial" font-size="20" text-anchor="middle">Q</text><text x="450" y="480" text-anchor="middle" font-family="Arial" font-size="22">P cos30° = 4 cos45°, Q = P sin30° + 4 sin45°</text>
+</svg>

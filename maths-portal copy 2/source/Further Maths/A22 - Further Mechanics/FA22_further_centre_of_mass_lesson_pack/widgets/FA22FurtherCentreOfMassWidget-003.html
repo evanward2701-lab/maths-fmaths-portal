@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22FurtherCentreOfMassWidget-003 | Sliding or Toppling Classifier</title>
+  <!-- Asset ID: FA22FurtherCentreOfMassWidget-003; Source: AI-proposed teaching enhancement based on lesson evidence; Related lesson file: FA22_further_centre_of_mass_lesson.md; Purpose: Compare sliding and toppling thresholds for a rigid body on a rough plane. -->
+  <style>
+    :root { --canvas:#FAF9F6; --ivory:#FFFFF0; --line:#E5E5EA; --ink:#2C2C2E; --gold:#C5A059; --soft:#FBEFEF; }
+    body { margin:0; background:var(--canvas); color:var(--ink); font-family:Inter,Arial,sans-serif; line-height:1.5; }
+    main { max-width:1050px; margin:24px auto; padding:24px; background:var(--ivory); border:1px solid var(--line); border-radius:24px; }
+    h1 { margin:0 0 8px; } .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:800px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--canvas);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0} input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--ivory)}
+    label{font-weight:700;display:block;margin-top:12px} button{margin-top:14px;border:1px solid var(--gold);background:var(--soft);border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .math{font-family:Georgia,'Times New Roman',serif;font-size:1.15rem;background:var(--ivory);border-left:4px solid var(--gold);padding:10px;border-radius:10px;margin:8px 0;overflow-x:auto}
+    .warn{background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px;margin:8px 0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sliding or Toppling Classifier</h1><p>Friction decides sliding. The line of action of weight decides toppling.</p><div class="grid"><section class="card"><label>Coefficient of friction μ</label><input id="mu" type="number" value="0.45" step="0.01"><label>Half-width b</label><input id="b" type="number" value="2" step="0.1"><label>CoM height h</label><input id="h" type="number" value="3" step="0.1"><label>Current slope angle θ</label><input id="theta" type="range" min="0" max="80" value="20" step="0.5"><button onclick="calc()">Classify</button></section><section class="card"><div id="out"></div></section></div><div class="math">Sliding: tan θ = μ. Toppling for a centred rectangular block: tan θ = b/h.</div><div class="warn">Do not use F = μR unless sliding is limiting.</div>
+  </main>
+  <script>function deg(x){return x*180/Math.PI} function calc(){const mu=Number(document.getElementById('mu').value),b=Number(document.getElementById('b').value),h=Number(document.getElementById('h').value),th=Number(document.getElementById('theta').value); const s=deg(Math.atan(mu)),t=deg(Math.atan(b/h)); let first=Math.abs(s-t)<1e-9?'simultaneous':(s<t?'slides first':'topples first'); document.getElementById('out').innerHTML=`<div class="math">θ = ${th}°</div><div class="math">Sliding threshold θₛ = ${s.toFixed(1)}°</div><div class="math">Toppling threshold θₜ = ${t.toFixed(1)}°</div><div class="math">First event: ${first}</div><div class="warn">Topples before sliding if μ > b/h.</div>`} ['mu','b','h','theta'].forEach(id=>document.getElementById(id).addEventListener('input',calc)); calc();</script>
+</body>
+</html>

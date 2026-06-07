@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="950" height="620" viewBox="0 0 950 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Hall's theorem subset and neighbourhood diagram</title>
+  <desc id="desc">A bipartite graph showing U equals {A, B, C} and W equals {1, 2, 3}. The subset S equals {A, B} is highlighted on the left. Its neighbourhood N(S) equals {1, 2} is highlighted on the right. The diagram shows that |S| equals 2 and |N(S)| equals 2, so Hall's condition holds for this subset.</desc>
+  <style>
+    .bg { fill: #FAF9F6; }.panel { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; }.title { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 28px; font-weight: 700; }.subtitle { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 16px; }.label { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 700; }.small { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 14px; }.math { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 600; }.vertex { fill: #FFFFF0; stroke: #2C2C2E; stroke-width: 2; }.vertexText { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 22px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }.edge { stroke: #A9A9B2; stroke-width: 3; stroke-linecap: round; opacity: 0.75; }.activeEdge { stroke: #D4AF37; stroke-width: 6; stroke-linecap: round; }.subsetBox { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 3; rx: 26; opacity: 0.92; }.neighbourBox { fill: #FFF8DC; stroke: #C5A059; stroke-width: 3; rx: 26; opacity: 0.92; }.countBox { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; rx: 18; }.success { fill: #FFFFF0; stroke: #D4AF37; stroke-width: 2; rx: 16; }
+  </style>
+  <rect class="bg" x="0" y="0" width="950" height="620"/>
+  <rect class="panel" x="45" y="35" width="860" height="540" rx="24"/>
+  <text class="title" x="475" y="78" text-anchor="middle">Hall’s Theorem: Subset and Neighbourhood</text>
+  <text class="subtitle" x="475" y="108" text-anchor="middle">For S = {A, B}, the neighbours are N(S) = {1, 2}.</text>
+  <text class="label" x="175" y="148" text-anchor="middle">Left set U</text>
+  <text class="label" x="775" y="148" text-anchor="middle">Right set W</text>
+  <rect class="subsetBox" x="110" y="170" width="130" height="205"/>
+  <rect class="neighbourBox" x="710" y="170" width="130" height="205"/>
+  <text class="math" x="175" y="193" text-anchor="middle">S = {A, B}</text>
+  <text class="math" x="775" y="193" text-anchor="middle">N(S) = {1, 2}</text>
+  <line class="edge" x1="175" y1="445" x2="775" y2="315"/>
+  <line class="edge" x1="175" y1="445" x2="775" y2="445"/>
+  <line class="activeEdge" x1="175" y1="235" x2="775" y2="235"/>
+  <line class="activeEdge" x1="175" y1="235" x2="775" y2="315"/>
+  <line class="activeEdge" x1="175" y1="315" x2="775" y2="235"/>
+  <circle class="vertex" cx="175" cy="235" r="28"/><circle class="vertex" cx="175" cy="315" r="28"/><circle class="vertex" cx="175" cy="445" r="28"/>
+  <circle class="vertex" cx="775" cy="235" r="28"/><circle class="vertex" cx="775" cy="315" r="28"/><circle class="vertex" cx="775" cy="445" r="28"/>
+  <text class="vertexText" x="175" y="235">A</text><text class="vertexText" x="175" y="315">B</text><text class="vertexText" x="175" y="445">C</text>
+  <text class="vertexText" x="775" y="235">1</text><text class="vertexText" x="775" y="315">2</text><text class="vertexText" x="775" y="445">3</text>
+  <text class="small" x="175" y="494" text-anchor="middle">C is not in S</text>
+  <text class="small" x="775" y="494" text-anchor="middle">3 is not in N(S)</text>
+  <rect class="countBox" x="295" y="175" width="360" height="170"/>
+  <text class="label" x="475" y="212" text-anchor="middle">Hall condition check</text>
+  <text class="math" x="475" y="252" text-anchor="middle">|S| = |{A, B}| = 2</text>
+  <text class="math" x="475" y="292" text-anchor="middle">|N(S)| = |{1, 2}| = 2</text>
+  <rect class="success" x="305" y="365" width="340" height="70"/>
+  <text class="math" x="475" y="395" text-anchor="middle">|N(S)| ≥ |S|</text>
+  <text class="small" x="475" y="420" text-anchor="middle">For this subset, 2 ≥ 2, so Hall’s condition holds.</text>
+  <text class="small" x="475" y="545" text-anchor="middle">CCEA FA22-GRAPH-LO004: use Hall’s marriage theorem.</text>
+</svg>

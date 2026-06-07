@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">Definite integral evaluation layout</title>
+<desc id="desc">A layout showing integrate, square brackets, upper substitution minus lower substitution, and final answer.</desc>
+<rect width="1000" height="650" fill="#ffffff"/>
+
+<text x="60" y="60" font-family="Arial" font-size="32" font-weight="700">Evaluating a definite integral</text>
+<rect x="60" y="105" width="880" height="400" rx="18" fill="#f8fbff" stroke="#b8d8ea" stroke-width="3"/>
+<text x="100" y="170" font-family="Arial" font-size="36">∫₁⁵ 4x³ dx = [ x⁴ ]₁⁵</text>
+<text x="100" y="255" font-family="Arial" font-size="36">= (5⁴) − (1⁴)</text>
+<text x="100" y="340" font-family="Arial" font-size="36">= 625 − 1</text>
+<text x="100" y="425" font-family="Arial" font-size="44" font-weight="700" fill="#126782">= 624</text>
+<rect x="585" y="195" width="310" height="95" rx="12" fill="#fff4e6" stroke="#e09f3e" stroke-width="2"/>
+<text x="610" y="230" font-family="Arial" font-size="22">Upper substitution</text>
+<text x="610" y="260" font-family="Arial" font-size="22">minus lower substitution.</text>
+<rect x="60" y="535" width="880" height="70" rx="14" fill="#fff8f0" stroke="#d62828" stroke-width="2"/>
+<text x="90" y="578" font-family="Arial" font-size="22" fill="#d62828" font-weight="700">Exam trap:</text>
+<text x="220" y="578" font-family="Arial" font-size="22">Always write (upper) − (lower).</text>
+
+</svg>

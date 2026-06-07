@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A22 Projectiles Interactive Widget</title>
+  <style>
+    :root { --ink:#111827; --muted:#6b7280; --panel:#f9fafb; --line:#d1d5db; --blue:#2563eb; --red:#dc2626; --green:#059669; --purple:#7c3aed; --white:#ffffff; }
+    * { box-sizing:border-box; } body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#eef2ff; }
+    .widget { max-width:1180px; margin:24px auto; padding:18px; }
+    .header,.panel,.canvas-card,.results { background:var(--white); border:2px solid var(--line); border-radius:18px; box-shadow:0 8px 24px rgba(17,24,39,.08); }
+    .header { padding:18px 20px; margin-bottom:16px; } .header h1 { margin:0 0 8px; font-size:1.7rem; }
+    .meta { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 18px; color:var(--muted); font-size:.95rem; }
+    .layout { display:grid; grid-template-columns:330px 1fr; gap:16px; align-items:start; } .panel{padding:16px;} .panel h2,.results h2{margin:0 0 12px;font-size:1.25rem;}
+    .control{margin:14px 0;} .control label{display:flex;justify-content:space-between;gap:10px;font-weight:700;margin-bottom:6px;} .control output{font-weight:700;color:var(--blue);} input[type=range]{width:100%;}
+    .checks{display:grid;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);} .checks label{display:flex;align-items:center;gap:8px;font-weight:600;}
+    .buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;} button{border:0;border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer;background:var(--blue);color:var(--white);} button.secondary{background:var(--ink);} button:hover{filter:brightness(.95);}
+    .canvas-card{padding:12px;} canvas{width:100%;height:520px;display:block;border-radius:14px;background:linear-gradient(#fff,#f8fafc);border:1px solid var(--line);}
+    .results{margin-top:16px;padding:16px;} .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;} .stat{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--panel);} .stat .name{color:var(--muted);font-size:.85rem;margin-bottom:6px;} .stat .value{font-weight:800;font-size:1.08rem;}
+    .formula-box{margin-top:14px;display:grid;gap:8px;font-size:.96rem;} .formula{background:#f3f4f6;border-left:5px solid var(--purple);padding:10px 12px;border-radius:10px;} .warning{margin-top:14px;padding:12px;border-radius:14px;background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;font-weight:700;}
+    @media(max-width:920px){.layout{grid-template-columns:1fr}.meta,.grid{grid-template-columns:1fr}canvas{height:430px}}
+  </style>
+</head>
+<body>
+  <main class="widget">
+    <section class="header"><h1>A22 Projectiles: Interactive Trajectory Widget</h1><div class="meta"><div><strong>Asset ID:</strong> A22ProjectilesWidget-001</div><div><strong>Source:</strong> CCEA A22-KIN + teacher transcript + screenshot simulation evidence</div><div><strong>Related section:</strong> Core Theory, Visual Asset Integration, Exam Technique</div><div><strong>Purpose:</strong> Explore horizontal and vertical projectile motion separately</div></div></section>
+    <section class="layout">
+      <aside class="panel"><h2>Controls</h2>
+        <div class="control"><label for="speed">Initial speed U <output id="speedOut">28</output> m s⁻¹</label><input id="speed" type="range" min="5" max="80" step="1" value="28" /></div>
+        <div class="control"><label for="angle">Launch angle θ <output id="angleOut">30</output>°</label><input id="angle" type="range" min="0" max="85" step="1" value="30" /></div>
+        <div class="control"><label for="height">Initial height y₀ <output id="heightOut">0</output> m</label><input id="height" type="range" min="0" max="80" step="1" value="0" /></div>
+        <div class="control"><label for="gravity">Gravity g <output id="gravityOut">9.8</output> m s⁻²</label><input id="gravity" type="range" min="1" max="20" step="0.1" value="9.8" /></div>
+        <div class="control"><label for="timeSlider">Time t <output id="timeOut">0.00</output> s</label><input id="timeSlider" type="range" min="0" max="1" step="0.01" value="0" /></div>
+        <div class="checks"><label><input id="showComponents" type="checkbox" checked /> Show velocity components</label><label><input id="showPath" type="checkbox" checked /> Show full trajectory</label><label><input id="showPosition" type="checkbox" checked /> Show position vector</label><label><input id="showGhosts" type="checkbox" checked /> Show time snapshots</label></div>
+        <div class="buttons"><button id="playBtn">Play</button><button id="resetBtn" class="secondary">Reset</button></div><div class="warning">Exam lens: horizontal motion has constant velocity. Vertical motion uses acceleration due to gravity.</div>
+      </aside>
+      <section><div class="canvas-card"><canvas id="canvas" width="900" height="520" aria-label="Projectile motion graph"></canvas></div><div class="results"><h2>Live values</h2><div class="grid">
+        <div class="stat"><div class="name">Horizontal component</div><div class="value" id="uxStat"></div></div><div class="stat"><div class="name">Vertical component</div><div class="value" id="uyStat"></div></div><div class="stat"><div class="name">Time of flight</div><div class="value" id="tofStat"></div></div><div class="stat"><div class="name">Range</div><div class="value" id="rangeStat"></div></div><div class="stat"><div class="name">Greatest height</div><div class="value" id="heightStat"></div></div><div class="stat"><div class="name">Current x</div><div class="value" id="xStat"></div></div><div class="stat"><div class="name">Current y</div><div class="value" id="yStat"></div></div><div class="stat"><div class="name">Current speed</div><div class="value" id="speedStat"></div></div></div>
+        <div class="formula-box"><div class="formula"><strong>Horizontal:</strong> x = U cos(θ)t, so aₓ = 0 and vₓ is constant.</div><div class="formula"><strong>Vertical:</strong> y = y₀ + U sin(θ)t − ½gt², so aᵧ = −g if upwards is positive.</div><div class="formula"><strong>Speed:</strong> |v| = √(vₓ² + vᵧ²), where vᵧ = U sin(θ) − gt.</div></div>
+      </div></section>
+    </section>
+  </main>
+  <script>
+    const canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d');
+    const c={speed:document.getElementById('speed'),angle:document.getElementById('angle'),height:document.getElementById('height'),gravity:document.getElementById('gravity'),timeSlider:document.getElementById('timeSlider'),showComponents:document.getElementById('showComponents'),showPath:document.getElementById('showPath'),showPosition:document.getElementById('showPosition'),showGhosts:document.getElementById('showGhosts')};
+    const o={speedOut:document.getElementById('speedOut'),angleOut:document.getElementById('angleOut'),heightOut:document.getElementById('heightOut'),gravityOut:document.getElementById('gravityOut'),timeOut:document.getElementById('timeOut'),uxStat:document.getElementById('uxStat'),uyStat:document.getElementById('uyStat'),tofStat:document.getElementById('tofStat'),rangeStat:document.getElementById('rangeStat'),heightStat:document.getElementById('heightStat'),xStat:document.getElementById('xStat'),yStat:document.getElementById('yStat'),speedStat:document.getElementById('speedStat')};
+    const playBtn=document.getElementById('playBtn'),resetBtn=document.getElementById('resetBtn'); let playing=false,lastFrame=null,currentTime=0;
+    const rad=d=>d*Math.PI/180, rnd=(v,p=2)=>Number(v).toFixed(p);
+    function model(){const U=+c.speed.value,thDeg=+c.angle.value,th=rad(thDeg),y0=+c.height.value,g=+c.gravity.value,ux=U*Math.cos(th),uy=U*Math.sin(th); const tof=(uy+Math.sqrt(uy*uy+2*g*y0))/g, range=ux*tof, top=y0+uy*uy/(2*g), tt=uy/g; return{U,thDeg,th,y0,g,ux,uy,tof,range,top,tt};}
+    function pos(m,t){const x=m.ux*t,y=m.y0+m.uy*t-.5*m.g*t*t,vx=m.ux,vy=m.uy-m.g*t; return{x,y,vx,vy,speed:Math.sqrt(vx*vx+vy*vy)};}
+    function scale(m){const mar=52,maxX=Math.max(m.range,20),maxY=Math.max(m.top,m.y0,10),s=Math.min((canvas.width-mar*2)/(maxX*1.08),(canvas.height-mar*2)/(maxY*1.18)); return{s,ox:mar,oy:canvas.height-mar,mar};}
+    function pt(sc,x,y){return{cx:sc.ox+x*sc.s,cy:sc.oy-y*sc.s};}
+    function arrow(x1,y1,x2,y2,color,w=3){const a=Math.atan2(y2-y1,x2-x1),h=12;ctx.save();ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=w;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-h*Math.cos(a-Math.PI/6),y2-h*Math.sin(a-Math.PI/6));ctx.lineTo(x2-h*Math.cos(a+Math.PI/6),y2-h*Math.sin(a+Math.PI/6));ctx.closePath();ctx.fill();ctx.restore();}
+    function text(t,x,y,color='#111827',size=14){ctx.save();ctx.fillStyle=color;ctx.font=`700 ${size}px Arial`;ctx.fillText(t,x,y);ctx.restore();}
+    function drawAxes(sc){arrow(sc.ox,sc.oy,canvas.width-26,sc.oy,'#111827',3);arrow(sc.ox,sc.oy,sc.ox,24,'#111827',3);text('x / m',canvas.width-60,sc.oy-10);text('y / m',sc.ox+10,30);}
+    function drawPath(m,sc){ctx.save();ctx.strokeStyle='#dc2626';ctx.lineWidth=3;ctx.beginPath();for(let i=0;i<=180;i++){const p=pos(m,m.tof*i/180),q=pt(sc,p.x,Math.max(p.y,0)); if(i===0)ctx.moveTo(q.cx,q.cy);else ctx.lineTo(q.cx,q.cy);}ctx.stroke();ctx.restore();}
+    function drawGhosts(m,sc){ctx.save();ctx.fillStyle='rgba(37,99,235,.28)';for(let i=0;i<=9;i++){const p=pos(m,m.tof*i/9),q=pt(sc,p.x,Math.max(p.y,0));ctx.beginPath();ctx.arc(q.cx,q.cy,5,0,Math.PI*2);ctx.fill();}ctx.restore();}
+    function drawCurrent(m,sc,t){const p=pos(m,t),q=pt(sc,p.x,Math.max(p.y,0)),orig=pt(sc,0,0);ctx.fillStyle='#111827';ctx.beginPath();ctx.arc(q.cx,q.cy,8,0,Math.PI*2);ctx.fill(); if(c.showPosition.checked){arrow(orig.cx,orig.cy,q.cx,q.cy,'#059669',3);text('position vector',(orig.cx+q.cx)/2+10,(orig.cy+q.cy)/2-10,'#059669');} if(c.showComponents.checked){const vs=Math.max(1.2,Math.min(4.5,sc.s*.22));arrow(q.cx,q.cy,q.cx+p.vx*vs,q.cy,'#2563eb');arrow(q.cx,q.cy,q.cx,q.cy-p.vy*vs,'#dc2626');arrow(q.cx,q.cy,q.cx+p.vx*vs,q.cy-p.vy*vs,'#111827');text('vₓ',q.cx+p.vx*vs+6,q.cy-6,'#2563eb');text('vᵧ',q.cx+6,q.cy-p.vy*vs-6,'#dc2626');} return p;}
+    function drawRangeHeight(m,sc){const origin=pt(sc,0,0),land=pt(sc,m.range,0),top=pt(sc,m.ux*m.tt,m.top),under=pt(sc,m.ux*m.tt,0);ctx.save();ctx.setLineDash([6,6]);ctx.strokeStyle='#7c3aed';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(top.cx,top.cy);ctx.lineTo(under.cx,under.cy);ctx.stroke();ctx.setLineDash([]);arrow(origin.cx,origin.cy+28,land.cx,land.cy+28,'#7c3aed');arrow(land.cx,land.cy+28,origin.cx,origin.cy+28,'#7c3aed');text('Range R',(origin.cx+land.cx)/2-30,origin.cy+52,'#7c3aed');text('Greatest height',top.cx+10,top.cy-10,'#7c3aed');ctx.restore();}
+    function update(m,p){o.speedOut.textContent=m.U;o.angleOut.textContent=m.thDeg;o.heightOut.textContent=m.y0;o.gravityOut.textContent=rnd(m.g,1);o.timeOut.textContent=rnd(currentTime);o.uxStat.textContent=`${rnd(m.ux)} m s⁻¹`;o.uyStat.textContent=`${rnd(m.uy)} m s⁻¹`;o.tofStat.textContent=`${rnd(m.tof)} s`;o.rangeStat.textContent=`${rnd(m.range)} m`;o.heightStat.textContent=`${rnd(m.top)} m`;o.xStat.textContent=`${rnd(p.x)} m`;o.yStat.textContent=`${rnd(Math.max(p.y,0))} m`;o.speedStat.textContent=`${rnd(p.speed)} m s⁻¹`;}
+    function render(){const m=model();c.timeSlider.max=String(m.tof);if(currentTime>m.tof)currentTime=m.tof;c.timeSlider.value=String(currentTime);ctx.clearRect(0,0,canvas.width,canvas.height);const sc=scale(m);drawAxes(sc);if(c.showPath.checked)drawPath(m,sc);if(c.showGhosts.checked)drawGhosts(m,sc);drawRangeHeight(m,sc);update(m,drawCurrent(m,sc,currentTime));}
+    function animate(ts){if(!playing)return;const m=model();if(lastFrame===null)lastFrame=ts;const d=(ts-lastFrame)/1000;lastFrame=ts;currentTime+=d*Math.max(.25,m.tof/5);if(currentTime>=m.tof){currentTime=m.tof;playing=false;playBtn.textContent='Play';lastFrame=null;}render();requestAnimationFrame(animate);}
+    Object.values(c).forEach(x=>{x.addEventListener('input',()=>{currentTime=Math.min(currentTime,model().tof);render();});x.addEventListener('change',()=>{currentTime=Math.min(currentTime,model().tof);render();});});
+    c.timeSlider.addEventListener('input',()=>{currentTime=+c.timeSlider.value;render();});playBtn.addEventListener('click',()=>{playing=!playing;playBtn.textContent=playing?'Pause':'Play';lastFrame=null;if(playing&&currentTime>=model().tof)currentTime=0;requestAnimationFrame(animate);});resetBtn.addEventListener('click',()=>{playing=false;playBtn.textContent='Play';currentTime=0;lastFrame=null;render();});render();
+  </script>
+</body>
+</html>

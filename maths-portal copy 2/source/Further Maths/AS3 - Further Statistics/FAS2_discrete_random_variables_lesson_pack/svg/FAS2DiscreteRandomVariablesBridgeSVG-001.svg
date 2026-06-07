@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ordinary A-Level Maths bridge to Further Maths discrete random variables</title>
+  <desc id="desc">A three-lane bridge diagram. Frequency table mean connects to expected value. Listed-data variance connects to variance of a random variable. Ordinary coding connects to expectation and variance of aX plus b.</desc>
+  <metadata>Asset ID: FAS2DiscreteRandomVariablesBridgeSVG-001; Source: ordinary A-Level Maths bridge plus Further Maths specification.</metadata>
+  <rect x="0" y="0" width="1200" height="720" fill="#FAF9F6"/>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="36" font-weight="700" fill="#2C2C2E">A-Level Maths Bridge: what changes in Further Maths?</text>
+  <rect x="70" y="160" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#E5E5EA"/><text x="100" y="198" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Frequency table mean</text><text x="100" y="235" font-family="Arial" font-size="24" fill="#2C2C2E">x̄ = Σfx / Σf</text>
+  <path d="M525 215 C570 190, 615 190, 660 215" fill="none" stroke="#C5A059" stroke-width="4"/><polygon points="660,215 640,204 644,227" fill="#C5A059"/>
+  <rect x="690" y="160" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><text x="720" y="198" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Expected value</text><text x="720" y="235" font-family="Arial" font-size="24" fill="#2C2C2E">E(X) = Σxp(x)</text>
+  <rect x="70" y="310" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#E5E5EA"/><text x="100" y="348" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Listed-data variance</text><text x="100" y="385" font-family="Arial" font-size="24" fill="#2C2C2E">mean of squares − square of mean</text>
+  <path d="M525 365 C570 340, 615 340, 660 365" fill="none" stroke="#C5A059" stroke-width="4"/><polygon points="660,365 640,354 644,377" fill="#C5A059"/>
+  <rect x="690" y="310" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><text x="720" y="348" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Random-variable variance</text><text x="720" y="385" font-family="Arial" font-size="24" fill="#2C2C2E">Var(X) = E(X²) − [E(X)]²</text>
+  <rect x="70" y="460" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#E5E5EA"/><text x="100" y="498" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Ordinary coding</text><text x="100" y="535" font-family="Arial" font-size="24" fill="#2C2C2E">Y = aX + b</text>
+  <path d="M525 515 C570 490, 615 490, 660 515" fill="none" stroke="#C5A059" stroke-width="4"/><polygon points="660,515 640,504 644,527" fill="#C5A059"/>
+  <rect x="690" y="460" width="440" height="110" rx="16" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><text x="720" y="498" font-family="Georgia" font-size="24" font-weight="700" fill="#2C2C2E">Further Maths coding</text><text x="720" y="532" font-family="Arial" font-size="23" fill="#2C2C2E">E(aX+b)=aE(X)+b</text><text x="720" y="562" font-family="Arial" font-size="23" fill="#2C2C2E">Var(aX+b)=a²Var(X)</text>
+</svg>

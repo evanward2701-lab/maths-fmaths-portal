@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Asset ID: FAS2CircularMotionWidget-003 | Purpose: Practise vertical-circle energy and tension/reaction checks. -->
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAS2 Circular Motion Widget 003</title>
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--accent:#C5A059;--rose:#FBEFEF;--text:#2C2C2E;--muted:#6B6B70}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--canvas);color:var(--text);line-height:1.45}
+    main{max-width:1100px;margin:24px auto;padding:22px;background:var(--panel);border:2px solid var(--line);border-radius:24px}
+    .grid{display:grid;grid-template-columns:390px 1fr;gap:18px}@media(max-width:860px){.grid{grid-template-columns:1fr}}
+    section,.result{background:#fffdf4;border:1.5px solid var(--line);border-radius:18px;padding:16px}
+    label{display:block;margin:12px 0 6px;font-weight:700} input,select{width:100%;padding:11px;border:1.5px solid var(--line);border-radius:12px}
+    button{margin-top:16px;width:100%;border:0;border-radius:14px;padding:13px;background:var(--accent);color:white;font-weight:800}
+    .formula{padding:12px 14px;margin:10px 0;border-radius:14px;background:var(--rose);border:1px solid var(--line);font-family:"Times New Roman",serif;font-size:1.12rem}
+    .line{padding:10px 0;border-bottom:1px solid var(--line)}.value{color:var(--accent);font-weight:800}.warning{margin-top:12px;padding:12px;border-radius:14px;background:var(--rose);border:1px solid var(--line);font-weight:700}.success{margin-top:12px;padding:12px;border-radius:14px;background:#F4FAF6;border:1px solid var(--line);font-weight:700}
+    svg{width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:var(--canvas);margin-top:14px}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Vertical Circle Energy and Radial Force Checker</h1>
+    <p>Use energy to find speed, then use radial F = ma to check tension, reaction or thrust.</p>
+    <div class="grid">
+      <section>
+        <label for="model">Model type</label><select id="model"><option value="string">String, unconstrained if T = 0</option><option value="rod">Rigid rod, constrained</option><option value="wire">Bead on circular wire, constrained</option><option value="sphere">Outside smooth sphere, unconstrained if R = 0</option></select>
+        <label for="mass">Mass m in kg</label><input id="mass" type="number" step="any" value="0.4" />
+        <label for="radius">Radius r in metres</label><input id="radius" type="number" step="any" value="0.3" />
+        <label for="u">Initial speed u at lowest point in m s⁻¹</label><input id="u" type="number" step="any" value="5" />
+        <label for="theta">Angle θ from downward vertical in degrees</label><input id="theta" type="number" step="any" value="120" />
+        <label for="g">Use g in m s⁻²</label><input id="g" type="number" step="any" value="9.8" />
+        <button id="calculate">Check vertical-circle state</button>
+      </section>
+      <section>
+        <div class="formula">h = r(1 − cos θ)</div>
+        <div class="formula">v² = u² − 2gr(1 − cos θ)</div>
+        <div class="formula">For a string: T = mv²/r + mg cos θ</div>
+        <div id="output" class="result" aria-live="polite"></div>
+        <svg id="diagram" viewBox="0 0 560 340" role="img" aria-label="Vertical circle diagram"></svg>
+      </section>
+    </div>
+  </main>
+  <script>
+    const model=document.getElementById("model"), mass=document.getElementById("mass"), radius=document.getElementById("radius"), u=document.getElementById("u"), theta=document.getElementById("theta"), gInput=document.getElementById("g"), output=document.getElementById("output"), diagram=document.getElementById("diagram");
+    function fmt(x){return Number.isFinite(x)?x.toPrecision(6).replace(/\.?0+$/,""):"not defined"}
+    function draw(td){const rad=td*Math.PI/180,cx=220,cy=160,R=105,px=cx+R*Math.sin(rad),py=cy+R*Math.cos(rad);diagram.innerHTML=`<rect x="0" y="0" width="560" height="340" rx="18" fill="#FAF9F6"/><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#2C2C2E" stroke-width="4"/><circle cx="${cx}" cy="${cy}" r="4" fill="#2C2C2E"/><line x1="${cx}" y1="${cy}" x2="${px}" y2="${py}" stroke="#2C2C2E" stroke-width="3"/><circle cx="${px}" cy="${py}" r="10" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="3"/><line x1="${px}" y1="${py}" x2="${cx+(px-cx)*0.68}" y2="${cy+(py-cy)*0.68}" stroke="#C5A059" stroke-width="5"/><line x1="${px}" y1="${py}" x2="${px}" y2="${py+62}" stroke="#2C2C2E" stroke-width="4"/><text x="335" y="130" fill="#2C2C2E" font-family="Arial" font-size="17">θ = ${fmt(td)}°</text><text x="335" y="166" fill="#2C2C2E" font-family="Arial" font-size="17">h = r(1 − cos θ)</text>`}
+    function calc(){const m=Number(mass.value),r=Number(radius.value),speed=Number(u.value),td=Number(theta.value),g=Number(gInput.value),type=model.value;if(!Number.isFinite(m)||m<=0||!Number.isFinite(r)||r<=0||!Number.isFinite(speed)||speed<0||!Number.isFinite(td)||!Number.isFinite(g)||g<=0){output.innerHTML='<div class="warning">Use positive mass, radius, speed and g, plus a numerical angle.</div>';draw(0);return}const rad=td*Math.PI/180,cos=Math.cos(rad),h=r*(1-cos),v2=speed*speed-2*g*r*(1-cos);draw(td);let html=`<div class="line">Height gain h = <span class="value">${fmt(h)}</span> m</div><div class="line">v² = <span class="value">${fmt(v2)}</span></div>`;if(v2<0){output.innerHTML=html+'<div class="warning">v² is negative: the particle cannot reach this angle on the circular path.</div>';return}const radial=m*v2/r;let force,condition;if(type==="sphere"){force=m*g*cos-radial;condition=force>0?"R > 0: contact maintained.":"R ≤ 0: contact lost, projectile motion begins."}else{force=radial+m*g*cos;condition=type==="string"?(force>0?"T > 0: string taut.":"T ≤ 0: string slack, projectile motion begins."):(force>=0?"Constrained path; force acts as tension/reaction direction shown.":"Constrained path; force changes direction or becomes thrust.")}output.innerHTML=html+`<div class="line">v = <span class="value">${fmt(Math.sqrt(v2))}</span> m s⁻¹</div><div class="line">mv²/r = <span class="value">${fmt(radial)}</span> N</div><div class="line">Constraint force = <span class="value">${fmt(force)}</span> N</div><div class="${condition.includes("≤")?"warning":"success"}">${condition}</div>`}
+    document.getElementById("calculate").addEventListener("click",calc); model.addEventListener("change",calc); calc();
+  </script>
+</body>
+</html>

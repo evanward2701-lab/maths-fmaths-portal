@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Proof by contradiction logic loop</title>
+<desc id="desc">A loop showing assume negation, derive contradiction, conclude original statement.</desc>
+<metadata>Asset ID: A21AlgebraicMethodsProofByContradictionSVG-001; Source: CCEA proof theme and transcript; Section: Core Theory; Purpose: contradiction-proof loop.</metadata>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#222"/></marker></defs>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#111">Proof by contradiction</text>
+<rect x="120" y="150" width="300" height="120" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="270.0" y="188" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Original statement</text>
+<text x="270.0" y="224" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">S: what we prove</text><rect x="780" y="150" width="300" height="120" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="930.0" y="188" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Assume negation</text>
+<text x="930.0" y="224" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">not S, for contradiction</text><rect x="780" y="430" width="300" height="120" rx="18" fill="#fff0f0" stroke="#a00020" stroke-width="3"/>
+<text x="930.0" y="468" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Contradiction</text>
+<text x="930.0" y="504" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">Impossible result</text><rect x="120" y="430" width="300" height="120" rx="18" fill="#effced" stroke="#2b7a2b" stroke-width="3"/>
+<text x="270.0" y="468" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Conclusion</text>
+<text x="270.0" y="504" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">S is true</text><line x1="420" y1="210" x2="780" y2="210" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><line x1="930" y1="270" x2="930" y2="430" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><line x1="780" y1="490" x2="420" y2="490" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><line x1="270" y1="430" x2="270" y2="270" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

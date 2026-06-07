@@ -1,0 +1,86 @@
+<!-- Asset ID: AS1AlgebraicExpressionsSVG-002 -->
+<!-- Source: CCEA AS1-AF-LO001 and Dr Frost index laws slide -->
+<!-- Related lesson section: Core Theory, Worked Examples, Exam Technique -->
+<!-- Purpose: Display the index laws as a clean rule table with examples. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Index laws rule table</title>
+  <desc id="desc">A table of index laws for multiplication, division, powers of powers, products, zero powers, negative powers and fractional powers.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #333; }
+      .header { font: 700 20px Arial, sans-serif; fill: #fff; }
+      .cell { font: 400 20px Arial, sans-serif; fill: #111; }
+      .math { font: 700 22px Georgia, serif; fill: #111; }
+      .warn { font: 700 18px Arial, sans-serif; fill: #111; }
+      .small { font: 400 16px Arial, sans-serif; fill: #333; }
+      .panel { fill: #fff; stroke: #111; stroke-width: 3; rx: 24; }
+      .head { fill: #111; }
+      .rowA { fill: #f6f6f6; }
+      .rowB { fill: #ffffff; }
+      .line { stroke: #222; stroke-width: 1.5; }
+      .warningBox { fill: #f3f3f3; stroke: #111; stroke-width: 2; rx: 14; }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="1160" height="680" class="panel"/>
+  <text x="60" y="70" class="title">Index laws for AS1 Algebraic Expressions</text>
+  <text x="60" y="102" class="subtitle">Use these when the structure matches. Same-base laws need the same base.</text>
+
+  <rect x="60" y="135" width="1080" height="50" class="head"/>
+  <text x="85" y="168" class="header">Situation</text>
+  <text x="345" y="168" class="header">Law</text>
+  <text x="675" y="168" class="header">Example</text>
+  <text x="955" y="168" class="header">Move</text>
+
+  <rect x="60" y="185" width="1080" height="62" class="rowA"/>
+  <text x="85" y="222" class="cell">Same base multiplication</text>
+  <text x="345" y="222" class="math">a^m × a^n = a^(m+n)</text>
+  <text x="675" y="222" class="math">x^3 × x^2 = x^5</text>
+  <text x="955" y="222" class="cell">add indices</text>
+
+  <rect x="60" y="247" width="1080" height="62" class="rowB"/>
+  <text x="85" y="284" class="cell">Same base division</text>
+  <text x="345" y="284" class="math">a^m ÷ a^n = a^(m-n)</text>
+  <text x="675" y="284" class="math">x^3 ÷ x^2 = x</text>
+  <text x="955" y="284" class="cell">subtract indices</text>
+
+  <rect x="60" y="309" width="1080" height="62" class="rowA"/>
+  <text x="85" y="346" class="cell">Power of a power</text>
+  <text x="345" y="346" class="math">(a^m)^n = a^(mn)</text>
+  <text x="675" y="346" class="math">(x^3)^2 = x^6</text>
+  <text x="955" y="346" class="cell">multiply indices</text>
+
+  <rect x="60" y="371" width="1080" height="62" class="rowB"/>
+  <text x="85" y="408" class="cell">Power of a product</text>
+  <text x="345" y="408" class="math">(ab)^n = a^n b^n</text>
+  <text x="675" y="408" class="math">(4x^3y)^3 = 64x^9y^3</text>
+  <text x="955" y="408" class="cell">power to each factor</text>
+
+  <rect x="60" y="433" width="1080" height="62" class="rowA"/>
+  <text x="85" y="470" class="cell">Zero power</text>
+  <text x="345" y="470" class="math">a^0 = 1, a ≠ 0</text>
+  <text x="675" y="470" class="math">7^0 = 1</text>
+  <text x="955" y="470" class="cell">non-zero base</text>
+
+  <rect x="60" y="495" width="1080" height="62" class="rowB"/>
+  <text x="85" y="532" class="cell">Negative power</text>
+  <text x="345" y="532" class="math">a^(-m) = 1/a^m</text>
+  <text x="675" y="532" class="math">3^(-2) = 1/9</text>
+  <text x="955" y="532" class="cell">take reciprocal</text>
+
+  <rect x="60" y="557" width="1080" height="62" class="rowA"/>
+  <text x="85" y="594" class="cell">Fractional power</text>
+  <text x="345" y="594" class="math">a^(m/n) = (nth root of a)^m</text>
+  <text x="675" y="594" class="math">32^(2/5) = 4</text>
+  <text x="955" y="594" class="cell">root, then power</text>
+
+  <line x1="320" y1="135" x2="320" y2="619" class="line"/>
+  <line x1="650" y1="135" x2="650" y2="619" class="line"/>
+  <line x1="930" y1="135" x2="930" y2="619" class="line"/>
+
+  <rect x="60" y="640" width="1080" height="42" class="warningBox"/>
+  <text x="85" y="667" class="warn">Exam trap:</text>
+  <text x="190" y="667" class="small">Do not add indices when collecting like terms. 10x^3 + x^3 = 11x^3, not 11x^6.</text>
+</svg>

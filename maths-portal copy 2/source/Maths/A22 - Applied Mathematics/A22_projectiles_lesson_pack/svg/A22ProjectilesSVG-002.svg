@@ -1,0 +1,9 @@
+<!-- Asset ID: A22ProjectilesSVG-002 | Source: transcript + acceleration slide | Purpose: horizontal vs vertical split. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-label="Horizontal and vertical projectile motion comparison">
+  <rect width="1100" height="620" fill="white"/><text x="550" y="55" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700">Separating Projectile Motion</text>
+  <rect x="70" y="100" width="460" height="440" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/><rect x="570" y="100" width="460" height="440" rx="18" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+  <text x="300" y="145" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#1d4ed8">Horizontal direction</text><text x="800" y="145" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#b91c1c">Vertical direction</text>
+  <text x="300" y="250" text-anchor="middle" font-family="Arial" font-size="30">aₓ = 0</text><text x="300" y="310" text-anchor="middle" font-family="Arial" font-size="28">velocity constant</text><text x="300" y="370" text-anchor="middle" font-family="Arial" font-size="28">x = uₓt</text>
+  <text x="800" y="250" text-anchor="middle" font-family="Arial" font-size="30">aᵧ = -g</text><text x="800" y="310" text-anchor="middle" font-family="Arial" font-size="28">velocity changes</text><text x="800" y="370" text-anchor="middle" font-family="Arial" font-size="28">Use SUVAT</text>
+  <rect x="350" y="555" width="400" height="45" rx="14" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="550" y="585" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Same time t connects both directions</text>
+</svg>

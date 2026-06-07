@@ -1,0 +1,37 @@
+% Asset ID: FA21FurtherCalculusTikZ-002
+% Asset type: TikZ diagram
+% Related lesson file: FA21_further_calculus_lesson.md
+% Related lesson section: Section 9.7 Weierstrass substitution wheel
+% Used placeholder: [VISUAL PLACEHOLDER: FA21FurtherCalculusTikZ-002 | Source: Uploaded FP1 Weierstrass evidence | Insert from tikz/FA21FurtherCalculusTikZ-002.tex | Purpose: Show how t = tan(x/2) transforms sin x, cos x, tan x and dx.]
+% Source: Uploaded FP1 Weierstrass evidence
+% Purpose: Show how the Weierstrass substitution transforms trigonometric expressions and the differential.
+% Boundary note: Boundary-risk enrichment.
+
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows.meta, positioning, calc, shapes.geometric}
+\begin{document}
+\begin{tikzpicture}[
+    font=\sffamily,
+    titlebox/.style={rounded corners=10pt, draw={rgb,255:red,229;green,229;blue,234}, line width=0.9pt, fill={rgb,255:red,255;green,255;blue,240}, align=center, inner sep=10pt},
+    centre/.style={circle, draw={rgb,255:red,212;green,175;blue,55}, line width=1.2pt, fill={rgb,255:red,251;green,239;blue,239}, align=center, inner sep=8pt, minimum size=3.15cm},
+    formula/.style={rounded corners=9pt, draw={rgb,255:red,229;green,229;blue,234}, line width=0.8pt, fill={rgb,255:red,255;green,255;blue,240}, align=center, inner sep=9pt, text width=5.0cm, minimum height=1.45cm},
+    formulaGold/.style={rounded corners=9pt, draw={rgb,255:red,212;green,175;blue,55}, line width=1pt, fill={rgb,255:red,255;green,255;blue,240}, align=center, inner sep=9pt, text width=5.0cm, minimum height=1.45cm},
+    arrow/.style={-{Latex[length=3mm]}, draw={rgb,255:red,197;green,160;blue,89}, line width=1.0pt},
+    note/.style={rounded corners=8pt, draw={rgb,255:red,229;green,229;blue,234}, fill={rgb,255:red,251;green,239;blue,239}, align=center, inner sep=8pt}
+]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-8.7,-7.4) rectangle (8.7,6.35);
+\node[titlebox, text width=14.5cm] (title) at (0,5.55) {{\Large\bfseries Weierstrass Substitution Wheel}\\[4pt] Boundary-risk enrichment: convert trigonometric expressions into rational functions of \(t\)};
+\node[note, text width=13.4cm] at (0,4.15) {CCEA boundary reminder: trigonometric substitution is part of FA21-FCALC, but this exact named Weierstrass method is preserved here as uploaded FP1 enrichment unless official CCEA confirmation is supplied.};
+\node[centre] (t) at (0,0.4) {{\Large\(\displaystyle t=\tan\frac{x}{2}\)}\\[5pt] \small tangent half-angle};
+\node[formulaGold] (sin) at (-5.3,3.05) {\textbf{sine}\\[5pt]\[\sin x=\frac{2t}{1+t^2}\]};
+\node[formulaGold] (cos) at (5.3,3.05) {\textbf{cosine}\\[5pt]\[\cos x=\frac{1-t^2}{1+t^2}\]};
+\node[formula] (tan) at (-5.3,-2.15) {\textbf{tangent}\\[5pt]\[\tan x=\frac{2t}{1-t^2}\]};
+\node[formulaGold] (dx) at (5.3,-2.15) {\textbf{differential}\\[5pt]\[dx=\frac{2}{1+t^2}\,dt\]};
+\draw[arrow] (t) -- (sin);\draw[arrow] (t) -- (cos);\draw[arrow] (t) -- (tan);\draw[arrow] (t) -- (dx);
+\node[note, text width=6.4cm] (derive) at (0,-5.15) {Derive the differential from \[x=2\arctan t.\] Hence \[\frac{dx}{dt}=\frac{2}{1+t^2}\] and therefore \[dx=\frac{2}{1+t^2}\,dt.\]};
+\draw[arrow] (dx.south west) to[out=-140,in=25] (derive.east);
+\node[note, text width=6.4cm] at (0,-6.9) {Definite integrals: change the bounds immediately.\\[3pt] Example: \[x=0\Rightarrow t=0,\qquad x=\frac{\pi}{2}\Rightarrow t=1.\]};
+\end{tikzpicture}
+\end{document}

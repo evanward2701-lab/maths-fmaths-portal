@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">A-Level Maths bridge to Further Maths PMCC</title>
+  <desc id="desc">A bridge diagram comparing ordinary A-Level scatter diagram interpretation with Further Maths PMCC calculation and limitations.</desc>
+  <metadata>Asset ID: FAS2ProductMomentCorrelationCoefficientBridgeSVG-001; Source: Ordinary A-Level Maths bridge + Further Maths specification; Purpose: Make the transition from ordinary A-Level correlation language to Further Maths PMCC explicit.</metadata>
+  <rect x="0" y="0" width="1400" height="820" fill="#FAF9F6"/>
+  <text x="70" y="78" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">A-Level Maths Bridge → Further Maths Upgrade</text>
+  <text x="70" y="120" font-family="Inter, Arial, sans-serif" font-size="21" fill="#2C2C2E">Ordinary Maths gives the visual language. FAS2 turns that language into calculation, interpretation and limitation.</text>
+  <line x1="70" y1="155" x2="1330" y2="155" stroke="#E5E5EA" stroke-width="2"/>
+  <rect x="80" y="205" width="540" height="500" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="120" y="258" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">Ordinary A-Level Maths</text>
+  <text x="120" y="295" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">Scatter diagrams and correlation language</text>
+  <line x1="150" y1="600" x2="430" y2="600" stroke="#2C2C2E" stroke-width="3"/><line x1="150" y1="600" x2="150" y2="350" stroke="#2C2C2E" stroke-width="3"/>
+  <g fill="#2C2C2E"><circle cx="180" cy="560" r="7"/><circle cx="220" cy="520" r="7"/><circle cx="245" cy="500" r="7"/><circle cx="280" cy="470" r="7"/><circle cx="310" cy="430" r="7"/><circle cx="350" cy="405" r="7"/><circle cx="385" cy="370" r="7"/></g><line x1="170" y1="565" x2="400" y2="360" stroke="#C5A059" stroke-width="4"/>
+  <text x="120" y="645" font-family="Inter, Arial, sans-serif" font-size="21" fill="#2C2C2E">You learned to say:</text><text x="145" y="676" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">• positive / negative</text><text x="145" y="705" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">• strong / weak</text>
+  <line x1="650" y1="455" x2="750" y2="455" stroke="#C5A059" stroke-width="6"/><text x="644" y="420" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#C5A059">upgrade</text>
+  <rect x="780" y="205" width="540" height="500" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="820" y="258" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">FAS2 Further Mathematics</text><text x="820" y="295" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">Calculate and interpret PMCC</text>
+  <rect x="830" y="335" width="440" height="88" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/><text x="860" y="370" font-family="Inter, Arial, sans-serif" font-size="24" fill="#2C2C2E">Sxx = Σx² − (Σx)² / n</text><text x="860" y="405" font-family="Inter, Arial, sans-serif" font-size="24" fill="#2C2C2E">Syy = Σy² − (Σy)² / n</text>
+  <rect x="830" y="445" width="440" height="88" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/><text x="860" y="480" font-family="Inter, Arial, sans-serif" font-size="24" fill="#2C2C2E">Sxy = Σxy − (Σx)(Σy) / n</text><text x="860" y="515" font-family="Inter, Arial, sans-serif" font-size="24" fill="#2C2C2E">r = Sxy / √(Sxx Syy)</text>
+  <rect x="830" y="555" width="440" height="105" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/><text x="860" y="590" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#2C2C2E">Interpret with limitations:</text><text x="860" y="620" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">• linear correlation only</text><text x="860" y="648" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">• not gradient, not causation</text>
+  <rect x="120" y="735" width="1160" height="52" rx="20" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/><text x="155" y="768" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">Bridge rule: ordinary Maths helps you understand the idea, but the CCEA Further Maths specification controls the core content.</text>
+</svg>

@@ -1,0 +1,44 @@
+% Asset ID: AS1AlgebraicExpressionsTIKZ-004
+% Source: Dr Frost factorising slides and transcript
+% Related lesson section: Factorising, Worked Examples, Guided Practice
+% Purpose: Show the split-middle-term method for factorising 6x^2+x-2.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    font=\sffamily,
+    arrow/.style={-{Latex[length=3mm]}, thick},
+    step/.style={draw, rounded corners=4pt, thick, fill=gray!8, align=left, text width=6.2cm, minimum height=1.15cm},
+    final/.style={draw, rounded corners=4pt, thick, fill=black, text=white, align=center, text width=6.2cm, minimum height=1.15cm}
+]
+
+\node[font=\sffamily\bfseries\Large, anchor=west] at (-3.3,3.4)
+{Factorising by splitting the middle term};
+
+\node[step] (s1) at (0,2.2)
+{\textbf{Start}\\$6x^2+x-2$};
+
+\node[step] (s2) at (0,0.9)
+{\textbf{Find two numbers}\\Add to $1$ and multiply to $6(-2)=-12$.\\The numbers are $4$ and $-3$.};
+
+\node[step] (s3) at (0,-0.6)
+{\textbf{Split the middle term}\\$6x^2+x-2=6x^2+4x-3x-2$};
+
+\node[step] (s4) at (0,-2.1)
+{\textbf{Factorise by grouping}\\$6x^2+4x-3x-2$\\$=2x(3x+2)-1(3x+2)$};
+
+\node[final] (s5) at (0,-3.65)
+{\textbf{Factor out the repeated bracket}\\$(3x+2)(2x-1)$};
+
+\draw[arrow] (s1.south) -- (s2.north);
+\draw[arrow] (s2.south) -- (s3.north);
+\draw[arrow] (s3.south) -- (s4.north);
+\draw[arrow] (s4.south) -- (s5.north);
+
+\node[draw, rounded corners=4pt, thick, fill=gray!12, align=left, text width=6.2cm] at (0,-5.1)
+{\textbf{Check:} $(3x+2)(2x-1)=6x^2-3x+4x-2=6x^2+x-2$.};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Saddle Point Illustration</title>
+<desc id="desc">Asset ID: FA22GameTheoryEnrichmentSVG-004. Optional enrichment only. Saddle Point Illustration</desc>
+<rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+<rect x="50" y="40" width="1100" height="680" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="90" y="95" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Saddle Point Illustration</text>
+<text x="90" y="135" font-family="Arial" font-size="18" fill="#2C2C2E">A saddle point is smallest in its row and largest in its column.</text><rect x="170" y="210" width="520" height="300" fill="#FFFFFF" stroke="#E5E5EA"/><rect x="345" y="330" width="130" height="60" fill="#FFF7DD" stroke="#D4AF37" stroke-width="4"/><g font-family="Arial" font-size="22" fill="#2C2C2E"><text x="210" y="255">A1: 4, 1, 5</text><text x="210" y="315">A2: 6, 2, 7</text><text x="210" y="375">A3: 3, -1, 4</text><text x="210" y="435">A4: 5, 0, 8</text></g><rect x="760" y="240" width="320" height="220" rx="18" fill="#FFF7DD" stroke="#D4AF37"/><text x="790" y="295" font-family="Arial" font-size="20" fill="#2C2C2E">Highlighted entry 2</text><text x="790" y="335" font-family="Arial" font-size="18" fill="#2C2C2E">min(6,2,7)=2</text><text x="790" y="375" font-family="Arial" font-size="18" fill="#2C2C2E">max(1,2,-1,0)=2</text><text x="790" y="415" font-family="Arial" font-size="18" fill="#2C2C2E">Stable solution</text>
+</svg>

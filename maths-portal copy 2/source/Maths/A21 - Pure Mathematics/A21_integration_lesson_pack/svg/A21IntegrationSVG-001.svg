@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Integration reverses differentiation</title>
+<desc id="desc">Integration reverses differentiation for A21 Integration.</desc>
+<!-- Asset ID: A21IntegrationSVG-001 | Source: CCEA A21 Integration + lesson evidence | Purpose: teaching visual -->
+<rect x="20" y="20" width="860" height="520" rx="24" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="450" y="65" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#0f172a">Integration reverses differentiation</text>
+<text x="450" y="180" text-anchor="middle" font-family="Arial" font-size="28">d/dx(sin x) = cos x</text><text x="450" y="250" text-anchor="middle" font-family="Arial" font-size="28">∫ cos x dx = sin x + C</text><text x="450" y="350" text-anchor="middle" font-family="Arial" font-size="24" fill="#475569">Check integrals by differentiating.</text>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Before and after collision diagram for conservation of linear momentum</title>
+  <desc id="desc">A two-particle collision diagram showing masses m1 and m2, initial velocities u1 and u2, final velocities v1 and v2, a chosen positive direction, and the equation m1u1 plus m2u2 equals m1v1 plus m2v2.</desc>
+  <defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker><marker id="arrowDark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker><marker id="arrowMuted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#6B6B70"/></marker></defs>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="32" width="1120" height="696" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="84" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Conservation of Linear Momentum</text>
+  <text x="80" y="122" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6B6B70">For an isolated direct collision: total momentum before impact equals total momentum after impact.</text>
+  <line x1="80" y1="155" x2="1120" y2="155" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="805" y="110" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E">chosen positive direction</text>
+  <line x1="1010" y1="104" x2="1110" y2="104" stroke="#C5A059" stroke-width="5" marker-end="url(#arrowGold)"/>
+  <rect x="80" y="190" width="500" height="310" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="110" y="232" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#2C2C2E">Before collision</text>
+  <text x="110" y="262" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">Initial velocities are signed using the chosen positive direction.</text>
+  <circle cx="230" cy="365" r="58" fill="#FBEFEF" stroke="#C5A059" stroke-width="4"/><circle cx="430" cy="365" r="58" fill="#FAF9F6" stroke="#C5A059" stroke-width="4"/>
+  <text x="207" y="374" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">m₁</text><text x="407" y="374" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">m₂</text>
+  <line x1="175" y1="285" x2="300" y2="285" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrowDark)"/><text x="214" y="275" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">u₁</text>
+  <line x1="375" y1="285" x2="500" y2="285" stroke="#6B6B70" stroke-width="4" marker-end="url(#arrowMuted)"/><text x="414" y="275" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">u₂</text>
+  <text x="136" y="465" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">momentum before:</text><text x="305" y="465" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">m₁u₁ + m₂u₂</text>
+  <rect x="620" y="190" width="500" height="310" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="650" y="232" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#2C2C2E">After collision</text>
+  <text x="650" y="262" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">A negative final velocity means the actual direction is reversed.</text>
+  <circle cx="770" cy="365" r="58" fill="#FBEFEF" stroke="#C5A059" stroke-width="4"/><circle cx="970" cy="365" r="58" fill="#FAF9F6" stroke="#C5A059" stroke-width="4"/>
+  <text x="747" y="374" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">m₁</text><text x="947" y="374" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#2C2C2E">m₂</text>
+  <line x1="715" y1="285" x2="840" y2="285" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrowDark)"/><text x="754" y="275" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">v₁</text>
+  <line x1="915" y1="285" x2="1040" y2="285" stroke="#6B6B70" stroke-width="4" marker-end="url(#arrowMuted)"/><text x="954" y="275" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">v₂</text>
+  <text x="676" y="465" font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E">momentum after:</text><text x="830" y="465" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">m₁v₁ + m₂v₂</text>
+  <rect x="135" y="548" width="930" height="112" rx="24" fill="#FAF9F6" stroke="#C5A059" stroke-width="3"/>
+  <text x="190" y="592" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" fill="#2C2C2E">PCLM:</text><text x="295" y="594" font-family="Inter, Arial, sans-serif" font-size="33" font-weight="700" fill="#2C2C2E">m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</text>
+  <text x="190" y="630" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6B6B70">These are vector quantities, so each velocity must carry its direction by sign or components.</text>
+  <text x="80" y="705" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6B6B70">Asset ID: FA22MomentumImpulseFoundationsForRestitutionSVG-001 | AI-rendered teaching diagram</text>
+</svg>

@@ -1,0 +1,44 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingSVG-002
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Core Theory, Why use exponential regression?
+Source: Lesson transcript and Stats Yr2 Chapter 1 PDF
+Purpose: Compare a poor linear fit with a better exponential fit for population-time data.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Linear fit compared with exponential fit</title>
+  <desc id="desc">A population-time scatter diagram with a straight linear model and a curved exponential model. The exponential curve fits the plotted points more closely.</desc>
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text x="480" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700">When a straight line is not the best model</text>
+  <line x1="105" y1="455" x2="790" y2="455" stroke="#111111" stroke-width="4"/>
+  <line x1="105" y1="455" x2="105" y2="90" stroke="#111111" stroke-width="4"/>
+  <polygon points="790,455 770,445 770,465" fill="#111111"/><polygon points="105,90 95,110 115,110" fill="#111111"/>
+  <text x="445" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="22">Time, x</text>
+  <text x="45" y="285" text-anchor="middle" transform="rotate(-90 45 285)" font-family="Arial, sans-serif" font-size="22">Population, y</text>
+  <line x1="105" y1="425" x2="750" y2="130" stroke="#777777" stroke-width="3" stroke-dasharray="12 8"/>
+  <text x="682" y="119" font-family="Arial, sans-serif" font-size="18">Linear model</text>
+  <text x="682" y="143" font-family="Arial, sans-serif" font-size="18" font-style="italic">y = a + bx</text>
+  <path d="M 105 430 C 220 410, 305 395, 390 345 C 500 280, 610 210, 745 95" fill="none" stroke="#111111" stroke-width="4"/>
+  <text x="625" y="245" font-family="Arial, sans-serif" font-size="18">Exponential model</text>
+  <text x="625" y="270" font-family="Arial, sans-serif" font-size="18" font-style="italic">y = kb<tspan baseline-shift="super" font-size="13">x</tspan></text>
+  <g fill="#ffffff" stroke="#111111" stroke-width="3">
+    <line x1="92" y1="442" x2="118" y2="416"/><line x1="92" y1="416" x2="118" y2="442"/>
+    <line x1="210" y1="418" x2="236" y2="392"/><line x1="210" y1="392" x2="236" y2="418"/>
+    <line x1="320" y1="390" x2="346" y2="364"/><line x1="320" y1="364" x2="346" y2="390"/>
+    <line x1="430" y1="327" x2="456" y2="301"/><line x1="430" y1="301" x2="456" y2="327"/>
+    <line x1="535" y1="255" x2="561" y2="229"/><line x1="535" y1="229" x2="561" y2="255"/>
+    <line x1="655" y1="170" x2="681" y2="144"/><line x1="655" y1="144" x2="681" y2="170"/>
+    <line x1="735" y1="106" x2="761" y2="80"/><line x1="735" y1="80" x2="761" y2="106"/>
+  </g>
+  <rect x="120" y="65" width="355" height="94" rx="12" fill="#f6f6f6" stroke="#333333" stroke-width="2"/>
+  <text x="298" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">Modelling judgement</text>
+  <text x="298" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">A high-quality model follows the shape</text>
+  <text x="298" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">of the data, not just the direction.</text>
+  <rect x="585" y="330" width="305" height="130" rx="12" fill="#ffffff" stroke="#333333" stroke-width="2"/>
+  <text x="738" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">Log-linear link</text>
+  <text x="738" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">If y = kb<tspan baseline-shift="super" font-size="11">x</tspan></text>
+  <text x="738" y="416" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">then log y = log k + x log b</text>
+  <text x="738" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">so plotting x against log y can straighten the curve.</text>
+</svg>

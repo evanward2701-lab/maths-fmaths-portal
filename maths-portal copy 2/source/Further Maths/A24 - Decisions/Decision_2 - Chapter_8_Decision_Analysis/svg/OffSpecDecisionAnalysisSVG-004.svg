@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1300" height="820" viewBox="0 0 1300 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Utility Functions and Risk Aversion</title>
+  <desc id="desc">Curve sketch comparing utility curves for different R values.</desc>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FAF9F6;stroke:#C5A059;stroke-width:4} .chance{fill:#FFFFF0;stroke:#D4AF37;stroke-width:4} .pay{fill:#FBEFEF;stroke:#C5A059;stroke-width:4} .branch{stroke:#2C2C2E;stroke-width:3;fill:none;stroke-linecap:round} .chosen{stroke:#C5A059;stroke-width:4;fill:none;stroke-linecap:round} .cross{stroke:#C5A059;stroke-width:5;stroke-linecap:round} .text{fill:#2C2C2E;font-family:Inter,Arial,sans-serif} .title{font-size:36px;font-weight:700} .small{font-size:17px} .label{font-size:22px;font-weight:700} .math{fill:#2C2C2E;font-family:Times New Roman,serif;font-size:24px}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1300" height="820"/>
+  <text class="text title" x="60" y="70">Utility Functions and Risk Aversion</text>
+  
+  <text class="text small" x="60" y="108">Utility changes the value of money depending on attitude to risk.</text>
+  <rect class="panel" x="70" y="140" width="1160" height="570" rx="24"/>
+  <g transform="translate(160,180)">
+    <line class="branch" x1="0" y1="420" x2="900" y2="420"/><line class="branch" x1="430" y1="470" x2="430" y2="10"/>
+    <text class="math" x="870" y="455">x</text><text class="math" x="445" y="30">U(x)</text><text class="text small" x="35" y="448">loss</text><text class="text small" x="760" y="448">profit</text><text class="math" x="440" y="448">0</text>
+    <path d="M90 455 C145 450 190 435 235 390 C295 330 350 255 430 210 C535 150 650 125 805 110" stroke="#C5A059" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M95 430 C165 405 240 365 320 310 C385 265 430 235 500 205 C610 160 710 140 825 125" stroke="#D4AF37" stroke-width="4" fill="none" stroke-dasharray="10 9" stroke-linecap="round"/>
+    <path d="M115 395 C250 345 360 295 430 260 C520 220 650 180 780 135" stroke="#2C2C2E" stroke-width="3" fill="none" stroke-dasharray="6 8" opacity="0.78"/>
+    <text class="text small" x="90" y="505">smaller R: losses become very negative quickly</text>
+    <text class="text small" x="620" y="178">larger R: more willing to take risk</text>
+    <text class="text small" x="710" y="120">linear reference</text>
+  </g>
+  <rect class="panel" x="820" y="545" width="330" height="110" rx="18"/><text class="math" x="850" y="590">U(x)=1−e^(−x/R)</text><text class="text small" x="850" y="620">x = pay-off</text><text class="text small" x="850" y="648">R &gt; 0 controls risk attitude</text>
+  <rect x="200" y="738" width="900" height="50" rx="16" fill="#FBEFEF" stroke="#D4AF37" stroke-width="2"/><text class="text label" x="226" y="770">Utility is not money. Convert pay-offs first, then calculate expected utility.</text>
+
+</svg>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">A-Level Maths bridge to Further Maths nearest neighbour algorithm</title>
+  <desc id="desc">A two-column bridge compares ordinary maths skills with Further Maths graph algorithm work.</desc>
+  <metadata>
+    asset_id: FA22TravellingSalesmanProblemBridgeSVG-001
+    asset_type: svg
+    topic_id: FA22TravellingSalesmanProblem
+    unit_code: FA22
+    topic_code: FA22-ALGGRAPH
+    lesson_file: FA22_travelling_salesman_problem_lesson.md
+  </metadata>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:22}
+      .title{font-family:Arial,sans-serif;font-size:32px;font-weight:700;fill:#2C2C2E}
+      .text{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E}
+      .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E}
+      .edge{stroke:#8E8E93;stroke-width:3;fill:none} .route{stroke:#C5A059;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .node{fill:#FAF9F6;stroke:#2C2C2E;stroke-width:2.5} .gold{fill:#FBEFEF;stroke:#C5A059;stroke-width:3}
+      .cell{fill:#FAF9F6;stroke:#E5E5EA;stroke-width:1.2} .hi{fill:#FBEFEF;stroke:#C5A059;stroke-width:2.5}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  
+  <text class="title" x="60" y="60">Bridge: Ordinary A-Level Maths to Further Maths TSP</text>
+  <text class="small" x="60" y="90">The old skills still work, but the graph algorithm adds rules about vertices, routes and visited status.</text>
+  <rect class="card" x="60" y="125" width="1080" height="560"/>
+  <text class="text" x="125" y="175">Ordinary A-Level Maths habit</text><text class="text" x="690" y="175">Further Maths upgrade</text>
+  <text class="small" x="125" y="250">Read a table entry</text><text class="small" x="690" y="250">Use a distance matrix</text>
+  <text class="small" x="125" y="340">Compare numbers</text><text class="small" x="690" y="340">Choose nearest unvisited vertex</text>
+  <text class="small" x="125" y="430">Optimisation language</text><text class="small" x="690" y="430">Construct an upper bound</text>
+  <text class="small" x="125" y="520">Structured working</text><text class="small" x="690" y="520">State route and length</text>
+  <line class="route" x1="480" y1="245" x2="650" y2="245"/><line class="route" x1="480" y1="335" x2="650" y2="335"/><line class="route" x1="480" y1="425" x2="650" y2="425"/><line class="route" x1="480" y1="515" x2="650" y2="515"/>
+  <text class="text" x="290" y="640">Warning: nearest means nearest from the current vertex, not smallest number anywhere.</text>
+
+</svg>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22FurtherCentreOfMassWidget-002 | Composite Body Table</title>
+  <!-- Asset ID: FA22FurtherCentreOfMassWidget-002; Source: AI-proposed teaching enhancement based on lesson evidence; Related lesson file: FA22_further_centre_of_mass_lesson.md; Purpose: Let students build a component table for composite bodies and calculate centre of mass. -->
+  <style>
+    :root { --canvas:#FAF9F6; --ivory:#FFFFF0; --line:#E5E5EA; --ink:#2C2C2E; --gold:#C5A059; --soft:#FBEFEF; }
+    body { margin:0; background:var(--canvas); color:var(--ink); font-family:Inter,Arial,sans-serif; line-height:1.5; }
+    main { max-width:1050px; margin:24px auto; padding:24px; background:var(--ivory); border:1px solid var(--line); border-radius:24px; }
+    h1 { margin:0 0 8px; } .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:800px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--canvas);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0} input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--ivory)}
+    label{font-weight:700;display:block;margin-top:12px} button{margin-top:14px;border:1px solid var(--gold);background:var(--soft);border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .math{font-family:Georgia,'Times New Roman',serif;font-size:1.15rem;background:var(--ivory);border-left:4px solid var(--gold);padding:10px;border-radius:10px;margin:8px 0;overflow-x:auto}
+    .warn{background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px;margin:8px 0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Composite Body Mass-Moment Table</h1><p>Add pieces, subtract holes, and let moments do the bookkeeping.</p><section class="card"><label>Component</label><input id="name" value="Large solid"><label>Mass-ratio m</label><input id="mass" type="number" value="8"><label>Coordinate x</label><input id="coord" type="number" value="0.5"><label>Sign</label><select id="sign"><option value="1">Add</option><option value="-1">Subtract</option></select><button onclick="addRow()">Add row</button><button onclick="example()">Load example</button></section><section class="card"><table border="1" cellpadding="8" style="border-collapse:collapse;width:100%;background:#FFFFF0"><thead><tr><th>Component</th><th>signed m</th><th>x</th><th>mx</th></tr></thead><tbody id="rows"></tbody></table><div id="summary"></div></section><div class="math">x̄ = Σmx / Σm</div><div class="warn">Removed body rule: subtract its mass and subtract its moment.</div>
+  </main>
+  <script>let rows=[['Large solid',8,.5,1],['Removed solid',2,1.4,-1]]; function render(){let sm=0,sx=0;document.getElementById('rows').innerHTML=rows.map(r=>{let m=r[1]*r[3],mx=m*r[2];sm+=m;sx+=mx;return `<tr><td>${r[0]}</td><td>${m}</td><td>${r[2]}</td><td>${Math.round(mx*1000)/1000}</td></tr>`}).join('');document.getElementById('summary').innerHTML=`<div class="math">Σm = ${Math.round(sm*1000)/1000}</div><div class="math">Σmx = ${Math.round(sx*1000)/1000}</div><div class="math">x̄ = ${sm?Math.round((sx/sm)*1000)/1000:'undefined'}</div>`} function addRow(){rows.push([name.value,Number(mass.value),Number(coord.value),Number(sign.value)]);render()} function example(){rows=[['Dense cone',8/3,.5,1],['Large hemisphere',16/3,-.75,1]];render()} render();</script>
+</body>
+</html>

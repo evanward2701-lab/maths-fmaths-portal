@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Fair die discrete random variable table</title>
+  <desc id="desc">Defines a discrete random variable using a fair die. X is the random variable representing the score. Lowercase x is a particular outcome from 1 to 6. Each probability P of X equals x is one sixth.</desc>
+  <metadata>Asset ID: FAS2DiscreteRandomVariablesSVG-002; Source: FS1 PDF recap slide and screenshot PDF fair die table.</metadata>
+  <rect x="0" y="0" width="1200" height="720" fill="#FAF9F6"/>
+  <text x="70" y="72" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2C2C2E">A fair die as a discrete random variable</text>
+  <text x="70" y="118" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">Let X be the score on the uppermost face when a fair die is rolled.</text>
+  <rect x="90" y="210" width="650" height="170" rx="14" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <line x1="90" y1="295" x2="740" y2="295" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="126" y="263" font-family="Georgia, serif" font-size="28" font-style="italic" fill="#2C2C2E">x</text>
+  <text x="230" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">1</text><text x="320" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">2</text><text x="410" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">3</text><text x="500" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">4</text><text x="590" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">5</text><text x="680" y="263" font-family="Arial" font-size="28" fill="#2C2C2E">6</text>
+  <text x="106" y="345" font-family="Georgia, serif" font-size="25" font-style="italic" fill="#2C2C2E">P(X=x)</text>
+  <text x="218" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text><text x="308" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text><text x="398" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text><text x="488" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text><text x="578" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text><text x="668" y="345" font-family="Arial" font-size="25" fill="#2C2C2E">1/6</text>
+  <rect x="90" y="430" width="480" height="95" rx="12" fill="#FFFFF0" stroke="#C5A059" stroke-width="2"/>
+  <text x="115" y="468" font-family="Arial" font-size="21" fill="#2C2C2E">X is the random variable: the whole experiment.</text>
+  <text x="115" y="501" font-family="Arial" font-size="21" fill="#2C2C2E">x is one possible outcome, such as x = 5.</text>
+  <text x="90" y="600" font-family="Arial" font-size="24" font-weight="700" fill="#C5A059">Probability total: 1/6+1/6+1/6+1/6+1/6+1/6=1</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Cumulative Frequency Diagram</title>
+<desc id="desc">Read Q₁, median and Q₃ from cumulative frequency positions.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Cumulative Frequency Diagram</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Read Q₁, median and Q₃ from cumulative frequency positions.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-003; Source: Cumulative frequency evidence; Section: Core Theory; Purpose: Show quartile reading lines.</metadata>
+<rect x="120" y="110" width="640" height="330" fill="#fbfdff" stroke="#cbd5e1"/>
+<line x1="120" y1="440" x2="780" y2="440" stroke="#222" stroke-width="3"/><line x1="120" y1="440" x2="120" y2="100" stroke="#222" stroke-width="3"/>
+<polyline points="160,440 240,430 400,388 520,285 640,110" fill="none" stroke="#111827" stroke-width="4"/>
+<g fill="#111827"><circle cx="160" cy="440" r="6"/><circle cx="240" cy="430" r="6"/><circle cx="400" cy="388" r="6"/><circle cx="520" cy="285" r="6"/><circle cx="640" cy="110" r="6"/></g>
+<g stroke="#9b2226" stroke-width="2.5" stroke-dasharray="8 5"><line x1="120" y1="358" x2="435" y2="358"/><line x1="435" y1="358" x2="435" y2="440"/><line x1="120" y1="275" x2="528" y2="275"/><line x1="528" y1="275" x2="528" y2="440"/><line x1="120" y1="193" x2="583" y2="193"/><line x1="583" y1="193" x2="583" y2="440"/></g>
+<g font-family="Arial" font-size="16" fill="#9b2226" font-weight="700"><text x="445" y="354">Q₁ ≈ 9.95</text><text x="538" y="270">Median ≈ 10.07</text><text x="593" y="188">Q₃ ≈ 10.13</text></g>
+<text x="450" y="510" font-family="Arial" font-size="18" text-anchor="middle">Time, t seconds</text><text x="42" y="280" font-family="Arial" font-size="18" transform="rotate(-90 42 280)" text-anchor="middle">Cumulative frequency</text>
+
+</svg>

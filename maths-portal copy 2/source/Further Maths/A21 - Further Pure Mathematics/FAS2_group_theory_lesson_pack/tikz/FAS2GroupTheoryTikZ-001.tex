@@ -1,0 +1,10 @@
+% Asset ID: FAS2GroupTheoryTikZ-001
+% Purpose: Cayley table template.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}
+\node at (0,0) {$\begin{array}{c|cccc} *&e&a&b&c\\\hline e&e&a&b&c\\ a&a&a*a&a*b&a*c\\ b&b&b*a&b*b&b*c\\ c&c&c*a&c*b&c*c\end{array}$};
+\node at (0,-2.5) {Read each entry as row element $*$ column element.};
+\end{tikzpicture}
+\end{document}

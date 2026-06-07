@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="820" viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Quickfire vector impacts with a horizontal smooth surface</title><desc id="desc">Four vector examples show unchanged horizontal component and scaled vertical rebound.</desc><metadata>Asset ID: FA22RestitutionElasticCollisionsInTwoDimensionsSVG-003</metadata>
+<rect width="1280" height="820" fill="#FAF9F6"/><rect x="40" y="38" width="1200" height="744" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="78" y="92" font-family="Georgia, serif" font-size="36" font-weight="700" fill="#2C2C2E">Quickfire vector impacts</text><text x="78" y="128" font-family="Arial" font-size="20" fill="#2C2C2E">Horizontal component unchanged. Vertical component rebounds with magnitude multiplied by e.</text>
+<g font-family="Georgia, serif" font-size="24" fill="#2C2C2E">
+<rect x="90" y="200" width="520" height="220" rx="22" fill="#FAF9F6" stroke="#E5E5EA"/><text x="120" y="245">u = (3, -3), e = 1/3</text><text x="380" y="335">v = (3, 1)</text>
+<rect x="670" y="200" width="520" height="220" rx="22" fill="#FAF9F6" stroke="#E5E5EA"/><text x="700" y="245">u = (1, -1), e = 1</text><text x="960" y="335">v = (1, 1)</text>
+<rect x="90" y="490" width="520" height="220" rx="22" fill="#FAF9F6" stroke="#E5E5EA"/><text x="120" y="535">u = (7, -6), e = 1/2</text><text x="380" y="625">v = (7, 3)</text>
+<rect x="670" y="490" width="520" height="220" rx="22" fill="#FAF9F6" stroke="#E5E5EA"/><text x="700" y="535">u = (5, -3), e = 0</text><text x="960" y="625">v = (5, 0)</text>
+</g>
+<g stroke="#2C2C2E" stroke-width="4"><line x1="150" y1="370" x2="320" y2="370"/><line x1="730" y1="370" x2="900" y2="370"/><line x1="150" y1="660" x2="320" y2="660"/><line x1="730" y1="660" x2="900" y2="660"/></g>
+<text x="90" y="754" font-family="Arial" font-size="18" fill="#2C2C2E">Method mantra: keep the parallel component, flip and scale the perpendicular component by e.</text>
+</svg>

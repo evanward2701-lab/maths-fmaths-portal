@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720" role="img" aria-labelledby="title desc">
+<title id="title">Population, sample, sampling unit and sampling frame</title>
+<desc id="desc">A labelled population rectangle containing individual sampling units. A smaller rectangle highlights a sample. Arrows identify one sampling unit and the sampling frame.</desc>
+<metadata>Asset ID: AS2StatisticalSamplingSVG-001; Unit: AS2; Topic: AS2-SAMP; Source: Data Collection PDF pages 5-6 and transcript Data Collection 1; Purpose: Show population, sample, sampling unit and sampling frame.</metadata>
+<rect width="1100" height="720" fill="#fbfaf7"/>
+<text x="50" y="58" font-family="Arial" font-size="34" font-weight="700" fill="#111827">Population, Sample and Sampling Vocabulary</text>
+<text x="50" y="88" font-family="Arial" font-size="18" fill="#374151">A sample is a subset of the population, chosen to represent it.</text>
+<rect x="110" y="130" width="760" height="390" rx="16" fill="#fff" stroke="#6d28d9" stroke-width="4"/>
+<text x="130" y="165" font-family="Arial" font-size="22" font-weight="700" fill="#6d28d9">Population / sampling frame</text>
+<text x="130" y="190" font-family="Arial" font-size="15" fill="#374151">The whole set of items of interest, listed or numbered where possible.</text>
+<rect x="560" y="250" width="275" height="215" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+<text x="620" y="240" font-family="Arial" font-size="22" font-weight="700" fill="#16a34a">Sample</text>
+<g fill="#fef3c7" stroke="#92400e" stroke-width="2">
+<circle cx="170" cy="235" r="20"/><circle cx="235" cy="235" r="20"/><circle cx="300" cy="235" r="20"/><circle cx="365" cy="235" r="20"/><circle cx="430" cy="235" r="20"/><circle cx="495" cy="235" r="20"/>
+<circle cx="170" cy="305" r="20"/><circle cx="235" cy="305" r="20"/><circle cx="300" cy="305" r="20"/><circle cx="365" cy="305" r="20"/><circle cx="430" cy="305" r="20"/><circle cx="495" cy="305" r="20"/>
+<circle cx="170" cy="375" r="20"/><circle cx="235" cy="375" r="20"/><circle cx="300" cy="375" r="20"/><circle cx="365" cy="375" r="20"/><circle cx="430" cy="375" r="20"/><circle cx="495" cy="375" r="20"/>
+<circle cx="625" cy="285" r="20"/><circle cx="690" cy="285" r="20"/><circle cx="755" cy="285" r="20"/>
+<circle cx="625" cy="355" r="20"/><circle cx="690" cy="355" r="20"/><circle cx="755" cy="355" r="20"/>
+<circle cx="625" cy="425" r="20"/><circle cx="690" cy="425" r="20"/><circle cx="755" cy="425" r="20"/>
+</g>
+<g font-family="Arial" font-size="15" fill="#111827" text-anchor="middle"><text x="300" y="635">Sampling unit: one individual item that can be sampled.</text><text x="650" y="635">Sample: subset intended to represent the population.</text><text x="910" y="635">Sampling frame: named or numbered list of sampling units.</text></g>
+<path d="M300 610 C295 530 300 460 300 395" fill="none" stroke="#111827" stroke-width="3"/>
+<path d="M650 610 C660 540 680 490 700 455" fill="none" stroke="#111827" stroke-width="3"/>
+<path d="M910 610 C900 500 885 420 870 250" fill="none" stroke="#111827" stroke-width="3"/>
+<text x="50" y="700" font-family="Arial" font-size="13" fill="#374151">Exam language: population = whole group, sample = subset, sampling unit = one item, sampling frame = list of items.</text>
+</svg>

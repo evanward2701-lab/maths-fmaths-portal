@@ -1,0 +1,46 @@
+% Asset ID: FAS1ConicSections1TikZ-001
+% Source: FP1-Chp2-ConicSections1.pdf parabola summary
+% Related lesson section: Section 9 Visual Asset Integration
+% Purpose: Precise labelled diagram of the standard horizontal parabola y^2 = 4ax.
+\documentclass[tikz,border=6pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,calc,backgrounds}
+\definecolor{canvas}{HTML}{FAF9F6}
+\definecolor{ivory}{HTML}{FFFFF0}
+\definecolor{linegray}{HTML}{E5E5EA}
+\definecolor{gold}{HTML}{C5A059}
+\definecolor{deepgold}{HTML}{D4AF37}
+\definecolor{ink}{HTML}{2C2C2E}
+\definecolor{rose}{HTML}{FBEFEF}
+\definecolor{teal}{HTML}{6B9FA3}
+\definecolor{purple}{HTML}{8F6C9F}
+\begin{document}
+\begin{tikzpicture}[x=1.05cm,y=1.05cm,>=Latex,background rectangle/.style={fill=canvas},show background rectangle,
+axis/.style={->,thick,draw=ink},gridline/.style={draw=linegray,line width=0.25pt},curve/.style={draw=gold,very thick,line cap=round},directrix/.style={draw=purple,thick,dashed},distance/.style={draw=teal,thick,dashed},point/.style={circle,fill=ink,draw=ivory,line width=0.6pt,inner sep=1.7pt},focus/.style={circle,fill=deepgold,draw=ink,line width=0.5pt,inner sep=2pt},labelbox/.style={fill=ivory,draw=linegray,rounded corners=3pt,inner sep=3pt,align=left,text=ink},warnbox/.style={fill=rose,draw=gold,rounded corners=3pt,inner sep=4pt,align=left,text=ink}]
+\fill[ivory,rounded corners=8pt,draw=linegray] (-2.05,-4.25) rectangle (5.55,4.25);
+\foreach \x in {-2,-1,...,5}{\draw[gridline] (\x,-4)--(\x,4);}
+\foreach \y in {-4,-3,...,4}{\draw[gridline] (-2,\y)--(5.35,\y);}
+\draw[axis] (-2,0)--(5.35,0) node[below right] {$x$};
+\draw[axis] (0,-4)--(0,4) node[above left] {$y$};
+\draw[draw=gold,line width=0.7pt,dashed] (-0.05,0)--(5.15,0);
+\node[labelbox] at (4.15,-0.45) {axis of symmetry\\[-1pt] $y=0$};
+\draw[directrix] (-1,-3.85)--(-1,3.85);
+\node[labelbox,anchor=east] at (-1.08,3.45) {directrix\\[-1pt] $x=-a$};
+\draw[curve,domain=0:4,samples=140,smooth,variable=\x] plot ({\x},{2*sqrt(\x)});
+\draw[curve,domain=0:4,samples=140,smooth,variable=\x] plot ({\x},{-2*sqrt(\x)});
+\coordinate (V) at (0,0); \coordinate (F) at (1,0); \coordinate (P) at (2.25,3); \coordinate (D) at (-1,3);
+\node[point,label={[labelbox,yshift=-2pt]below left:{$V(0,0)$}}] at (V) {};
+\node[focus,label={[labelbox]below right:{focus\\[-1pt] $(a,0)$}}] at (F) {};
+\node[point] at (P) {};
+\node[labelbox,anchor=west] at ($(P)+(0.12,0.25)$) {$P(at^2,2at)$\\[-1pt] here $t=\dfrac32$};
+\draw[distance] (P)--(F);
+\draw[distance] (P)--(D);
+\node[point,fill=teal] at (D) {};
+\node[labelbox] at (2.25,1.65) {$PF$};
+\node[labelbox] at (0.58,3.27) {perpendicular distance\\[-1pt] to directrix};
+\node[labelbox,anchor=west] at (-1.82,4.05) {\Large $\boldsymbol{y^2=4ax}$};
+\node[labelbox,anchor=west] at (1.25,4.05) {$x=at^2,\quad y=2at,\quad t\in\mathbb{R}$};
+\node[warnbox,anchor=west] at (-1.82,-3.82) {Locus definition: every point on the parabola is equidistant\\[-1pt] from the focus and the directrix.};
+\end{tikzpicture}
+\end{document}

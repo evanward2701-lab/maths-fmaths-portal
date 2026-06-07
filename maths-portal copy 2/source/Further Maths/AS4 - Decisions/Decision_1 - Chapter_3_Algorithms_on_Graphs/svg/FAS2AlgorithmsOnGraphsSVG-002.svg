@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Prim's Algorithm from a Distance Matrix</title><desc id="desc">A distance matrix showing Prim's algorithm from A with crossed rows, numbered columns, and selected entries AB, AC and CD.</desc><metadata>Asset ID: FAS2AlgorithmsOnGraphsSVG-002; Source: Supplied PDF Prim's algorithm matrix method.</metadata>
+<rect width="1200" height="760" fill="#FAF9F6"/><rect x="56" y="42" width="1088" height="676" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="600" y="86" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#2C2C2E">Prim’s Algorithm from a Distance Matrix</text>
+<text x="600" y="124" text-anchor="middle" font-family="Arial" font-size="18" fill="#5B5B60">Start at A. Cross the row, number the column, then choose the lowest valid entry.</text>
+<g transform="translate(120,180)" font-family="Arial" font-size="24" fill="#2C2C2E" text-anchor="middle" dominant-baseline="middle">
+<g fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"><rect x="0" y="0" width="100" height="70"/><rect x="100" y="0" width="100" height="70"/><rect x="200" y="0" width="100" height="70"/><rect x="300" y="0" width="100" height="70"/><rect x="400" y="0" width="100" height="70"/></g>
+<text x="150" y="35" font-weight="700">A</text><text x="250" y="35" font-weight="700">B</text><text x="350" y="35" font-weight="700">C</text><text x="450" y="35" font-weight="700">D</text>
+<g fill="none" stroke="#E5E5EA" stroke-width="2">
+<rect x="0" y="70" width="500" height="70"/><rect x="0" y="140" width="500" height="70"/><rect x="0" y="210" width="500" height="70"/><rect x="0" y="280" width="500" height="70"/>
+<line x1="100" y1="0" x2="100" y2="350"/><line x1="200" y1="0" x2="200" y2="350"/><line x1="300" y1="0" x2="300" y2="350"/><line x1="400" y1="0" x2="400" y2="350"/>
+</g>
+<g font-weight="700"><text x="50" y="105">A</text><text x="50" y="175">B</text><text x="50" y="245">C</text><text x="50" y="315">D</text></g>
+<text x="150" y="105">–</text><text x="250" y="105">8</text><text x="350" y="105">10</text><text x="450" y="105">–</text>
+<text x="150" y="175">8</text><text x="250" y="175">–</text><text x="350" y="175">23</text><text x="450" y="175">14</text>
+<text x="150" y="245">10</text><text x="250" y="245">23</text><text x="350" y="245">–</text><text x="450" y="245">7</text>
+<text x="150" y="315">–</text><text x="250" y="315">14</text><text x="350" y="315">7</text><text x="450" y="315">–</text>
+<g fill="#FBEFEF" stroke="#C5A059" stroke-width="2"><circle cx="150" cy="-42" r="18"/><circle cx="250" cy="-42" r="18"/><circle cx="350" cy="-42" r="18"/><circle cx="450" cy="-42" r="18"/></g>
+<text x="150" y="-41" font-size="17" font-weight="700">1</text><text x="250" y="-41" font-size="17" font-weight="700">2</text><text x="350" y="-41" font-size="17" font-weight="700">3</text><text x="450" y="-41" font-size="17" font-weight="700">4</text>
+<g stroke="#D4AF37" stroke-width="5" stroke-linecap="round" opacity="0.72"><line x1="0" y1="105" x2="500" y2="105"/><line x1="0" y1="175" x2="500" y2="175"/><line x1="0" y1="245" x2="500" y2="245"/><line x1="0" y1="315" x2="500" y2="315"/></g>
+<g fill="none" stroke="#C5A059" stroke-width="5"><ellipse cx="150" cy="175" rx="34" ry="25"/><ellipse cx="350" cy="105" rx="38" ry="25"/><ellipse cx="350" cy="315" rx="34" ry="25"/></g>
+</g>
+<g transform="translate(720,190)" font-family="Arial" fill="#2C2C2E"><rect x="0" y="0" width="360" height="352" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/><text x="180" y="42" text-anchor="middle" font-size="24" font-weight="700">Selected arcs</text><text x="44" y="94" font-size="20">1. Start at A</text><text x="44" y="138" font-size="20">2. Choose AB = 8</text><text x="44" y="182" font-size="20">3. Choose AC = 10</text><text x="44" y="226" font-size="20">4. Choose CD = 7</text><rect x="42" y="266" width="276" height="52" rx="14" fill="#FBEFEF" stroke="#E5E5EA"/><text x="180" y="300" text-anchor="middle" font-size="24" font-weight="700">8 + 10 + 7 = 25</text></g>
+<text x="600" y="670" text-anchor="middle" font-family="Arial" font-size="17" fill="#5B5B60">Valid entries must lie in numbered columns and uncrossed rows: the tree must stay connected as it grows.</text>
+</svg>

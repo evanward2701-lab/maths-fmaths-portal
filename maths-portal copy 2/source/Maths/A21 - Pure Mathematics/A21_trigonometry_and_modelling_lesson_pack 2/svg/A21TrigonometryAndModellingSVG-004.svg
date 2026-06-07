@@ -1,0 +1,16 @@
+<svg role="img" aria-label="Harmonic Identity Coefficient Triangle" xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760">
+<rect width="1000" height="760" fill="white"/>
+<text x="500" y="55" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700">Harmonic Identity Coefficient Triangle</text>
+<text x="500" y="100" text-anchor="middle" font-family="Arial" font-size="22">a sinx + b cosx = R sin(x+α)</text>
+<line x1="240" y1="560" x2="760" y2="560" stroke="#111" stroke-width="4"/>
+<line x1="240" y1="560" x2="760" y2="250" stroke="#111" stroke-width="4"/>
+<line x1="760" y1="250" x2="760" y2="560" stroke="#111" stroke-width="4"/>
+<rect x="725" y="525" width="35" height="35" fill="none" stroke="#111" stroke-width="3"/>
+<text x="500" y="605" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700">a=R cosα</text>
+<text x="805" y="415" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700">b=R sinα</text>
+<text x="500" y="365" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">R</text>
+<path d="M310 560 A70 70 0 0 1 360 520" fill="none" stroke="#111" stroke-width="3"/>
+<text x="355" y="545" font-family="Arial" font-size="24" font-weight="700">α</text>
+<rect x="135" y="155" width="730" height="70" rx="14" fill="#f7f7f7" stroke="#111" stroke-width="2"/>
+<text x="500" y="200" text-anchor="middle" font-family="Arial" font-size="24">R=√(a²+b²), tanα=b/a</text>
+</svg>

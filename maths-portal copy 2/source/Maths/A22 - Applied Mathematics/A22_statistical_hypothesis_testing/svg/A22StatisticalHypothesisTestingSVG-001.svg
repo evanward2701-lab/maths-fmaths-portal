@@ -1,0 +1,39 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingSVG-001
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Core Theory, What regression means
+Source: Lesson transcript and Stats Yr2 Chapter 1 PDF
+Purpose: Show a scatter diagram of exam mark against revision time with regression line y = 20 + 3x.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Regression line y equals 20 plus 3x</title>
+  <desc id="desc">Scatter diagram showing time spent revising on the x-axis and exam mark on the y-axis, with a positive regression line labelled y equals 20 plus 3x.</desc>
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700">Regression line as a model</text>
+  <line x1="120" y1="455" x2="780" y2="455" stroke="#111111" stroke-width="4"/>
+  <line x1="120" y1="455" x2="120" y2="95" stroke="#111111" stroke-width="4"/>
+  <polygon points="780,455 760,445 760,465" fill="#111111"/>
+  <polygon points="120,95 110,115 130,115" fill="#111111"/>
+  <text x="450" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="22">Time spent revising, x</text>
+  <text x="55" y="285" text-anchor="middle" transform="rotate(-90 55 285)" font-family="Arial, sans-serif" font-size="22">Exam mark, y</text>
+  <line x1="120" y1="380" x2="730" y2="145" stroke="#333333" stroke-width="3"/>
+  <text x="605" y="220" font-family="Arial, sans-serif" font-size="26" font-style="italic">y = 20 + 3x</text>
+  <g fill="#ffffff" stroke="#111111" stroke-width="3">
+    <line x1="170" y1="372" x2="200" y2="342"/><line x1="170" y1="342" x2="200" y2="372"/>
+    <line x1="245" y1="372" x2="275" y2="342"/><line x1="245" y1="342" x2="275" y2="372"/>
+    <line x1="315" y1="305" x2="345" y2="275"/><line x1="315" y1="275" x2="345" y2="305"/>
+    <line x1="390" y1="335" x2="420" y2="305"/><line x1="390" y1="305" x2="420" y2="335"/>
+    <line x1="450" y1="225" x2="480" y2="195"/><line x1="450" y1="195" x2="480" y2="225"/>
+    <line x1="560" y1="260" x2="590" y2="230"/><line x1="560" y1="230" x2="590" y2="260"/>
+    <line x1="625" y1="140" x2="655" y2="110"/><line x1="625" y1="110" x2="655" y2="140"/>
+  </g>
+  <rect x="170" y="62" width="560" height="82" rx="12" fill="#f6f6f6" stroke="#333333" stroke-width="2"/>
+  <text x="450" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">Regression chooses the model parameters</text>
+  <text x="450" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">so predicted y-values are close to the observed y-values.</text>
+  <rect x="540" y="390" width="285" height="92" rx="10" fill="#ffffff" stroke="#555555" stroke-width="2"/>
+  <text x="682" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">Extrapolation warning</text>
+  <text x="682" y="447" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">Predictions outside the data range</text>
+  <text x="682" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">may be unreliable.</text>
+</svg>

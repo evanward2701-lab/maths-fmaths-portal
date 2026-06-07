@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Identity and inverse elements</title><desc id="desc">Identity does nothing; inverse undoes.</desc>
+<metadata>Asset ID: FAS2GroupTheorySVG-004</metadata>
+<rect width="900" height="560" fill="#FAF9F6"/>
+<rect x="40" y="40" width="820" height="480" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="70" y="95" font-family="Georgia, serif" font-size="30" fill="#2C2C2E" font-weight="700">Identity and inverse</text>
+<text x="90" y="230" font-family="Georgia" font-size="32" fill="#2C2C2E">a * e = e * a = a</text><text x="90" y="310" font-family="Georgia" font-size="32" fill="#2C2C2E">a * a⁻¹ = a⁻¹ * a = e</text><text x="90" y="400" font-family="Arial" font-size="22" fill="#2C2C2E">a⁻¹ means inverse under the operation, not always 1/a.</text>
+</svg>

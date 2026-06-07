@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS1 Algebraic Methods Proof Widget</title>
+  <!-- Asset ID: AS1AlgebraicMethodsProofWidget-001 -->
+  <style>
+    :root{--ink:#141414;--muted:#555;--paper:#fff;--soft:#f6f6f6;--line:#252525;--shadow:rgba(0,0,0,.12);--warning:#fff6d7;--future:#eee;--success:#e9f7ee;--error:#fdecec}*{box-sizing:border-box}body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f1f1f1;line-height:1.5}.app{max-width:1180px;margin:0 auto;background:var(--paper);border:2px solid var(--line);border-radius:18px;box-shadow:0 12px 32px var(--shadow);overflow:hidden}header{padding:28px 32px;border-bottom:2px solid var(--line);background:var(--soft)}h1{margin:0 0 8px;font-size:2rem;line-height:1.15}.subtitle{margin:0;color:var(--muted);font-size:1rem}.metadata{padding:18px 32px;border-bottom:2px solid var(--line);background:#fff}.metadata-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;font-size:.95rem}.metadata strong{display:inline-block;min-width:112px}main{padding:28px 32px 34px}.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}button,select{font:inherit}.tab-button,.choice-button,.check-button{border:2px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;cursor:pointer;transition:transform .08s ease,background .08s ease}.tab-button:hover,.choice-button:hover,.check-button:hover{transform:translateY(-1px);background:var(--soft)}.tab-button.active{background:var(--ink);color:#fff}.panel{display:none}.panel.active{display:block}.card{border:2px solid var(--line);border-radius:16px;padding:20px;background:#fff;margin-bottom:18px;box-shadow:0 4px 14px var(--shadow)}.card h2,.card h3{margin-top:0}.two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}label{display:block;font-weight:700;margin-bottom:8px}select{width:100%;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff}.result{min-height:180px;border:2px dashed #777;border-radius:16px;padding:18px;background:var(--soft)}.badge{display:inline-block;padding:5px 9px;border-radius:999px;border:1px solid var(--line);font-size:.85rem;font-weight:700;margin-bottom:10px;background:#fff}.badge.future{background:var(--future);border-style:dashed}.warning{border-left:6px solid #111;background:var(--warning);padding:12px 14px;margin-top:14px;border-radius:10px}.success{background:var(--success);border:2px solid #1f7a3d;padding:12px 14px;border-radius:12px}.error{background:var(--error);border:2px solid #9b2226;padding:12px 14px;border-radius:12px}.math-box{font-family:"Courier New",monospace;background:#f7f7f7;border:1px solid #aaa;border-radius:12px;padding:12px;white-space:pre-wrap;overflow-x:auto}.button-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.mini-question{padding:12px;border:2px solid var(--line);border-radius:12px;margin-top:12px;background:#fff}input[type="text"]{width:100%;padding:12px;border:2px solid var(--line);border-radius:12px;font:inherit}.footer-note{color:var(--muted);font-size:.9rem;margin-top:18px}@media(max-width:820px){body{padding:12px}header,.metadata,main{padding-left:18px;padding-right:18px}.metadata-grid,.two-col,.button-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="app"><header><h1>AS1 Algebraic Methods: Proof Navigator</h1><p class="subtitle">Choose a proof situation, build the right algebraic form, and test counterexamples without letting the logic ferret run off with your marks.</p></header><section class="metadata" aria-label="Widget metadata"><div class="metadata-grid"><div><strong>Asset ID:</strong> AS1AlgebraicMethodsProofWidget-001</div><div><strong>Source:</strong> Chapter 7b Algebraic Methods, Proof transcript</div><div><strong>Section:</strong> Core Theory, Worked Examples, Exam Technique</div><div><strong>Purpose:</strong> Proof-method selector and practice widget</div></div></section><main><nav class="tabs" aria-label="Widget tabs"><button class="tab-button active" data-panel="method">Proof Method Selector</button><button class="tab-button" data-panel="forms">Integer Form Builder</button><button class="tab-button" data-panel="counter">Counterexample Lab</button><button class="tab-button" data-panel="practice">Quick Practice</button></nav><section id="method" class="panel active"><div class="two-col"><div class="card"><h2>1. Choose the question type</h2><label for="methodSelect">What does the question look like?</label><select id="methodSelect"><option value="deductionOdd">Prove the product of two odd numbers is odd</option><option value="deductionPositive">Prove a quadratic is positive for all x</option><option value="exhaustionEvenOdd">Prove n² + n is even for all integers n</option><option value="exhaustionMod3">Prove a cube-number result involving multiples of 9</option><option value="counterexample">Disprove a statement using one example</option><option value="alwaysSometimes">Always, sometimes or never true</option><option value="contradiction">Proof by contradiction</option></select><div class="warning"><strong>Exam warning:</strong> Do not start by assuming the conclusion. Proof is a path from known facts to the result.</div></div><div class="card"><h2>Recommended route</h2><div id="methodResult" class="result" aria-live="polite"></div></div></div></section><section id="forms" class="panel"><div class="card"><h2>2. Build the algebraic form</h2><p>Select the kind of number pattern you need.</p><div class="button-grid"><button class="choice-button" data-form="even">Even integer</button><button class="choice-button" data-form="odd">Odd integer</button><button class="choice-button" data-form="twoOdd">Any two odd integers</button><button class="choice-button" data-form="consecutive">Consecutive integers</button><button class="choice-button" data-form="consecutiveOdd">Consecutive odd integers</button><button class="choice-button" data-form="mod3">Modulo 3 split</button></div></div><div class="card"><h2>Form output</h2><div id="formResult" class="result" aria-live="polite"></div></div></section><section id="counter" class="panel"><div class="two-col"><div class="card"><h2>3. Counterexample Lab</h2><p>A counterexample must satisfy the question's conditions and make the conclusion false.</p><label for="counterSelect">Choose a statement to test</label><select id="counterSelect"><option value="prime2p">For every prime p, 2p + 1 is prime</option><option value="euler41">n² - n + 41 is prime for all integers n</option><option value="irrationalProduct">If m and n are irrational and m ≠ n, then mn is irrational</option></select><label for="counterInput" style="margin-top:14px;">Enter a suggested counterexample</label><input id="counterInput" type="text" placeholder="Example: 7"/><button class="check-button" id="checkCounter" style="margin-top:12px;">Check counterexample</button></div><div class="card"><h2>Counterexample feedback</h2><div id="counterResult" class="result" aria-live="polite">Pick a statement and enter a value.</div></div></div></section><section id="practice" class="panel"><div class="card"><h2>4. Quick Practice Generator</h2><p>Press a button to reveal a compact practice prompt and the first line of the proof setup.</p><div class="button-grid"><button class="choice-button" data-practice="p1">Parity proof</button><button class="choice-button" data-practice="p2">Divisibility proof</button><button class="choice-button" data-practice="p3">Counterexample</button></div><div id="practiceResult" class="mini-question" aria-live="polite">Choose a practice type.</div></div><p class="footer-note">This widget supports AS1 proof skills. Proof by contradiction is shown only as future context and is not part of the core practice here.</p></section></main></div>
+<script>
+const methodData={deductionOdd:{badge:"Proof by deduction",title:"Direct algebra is the clean route.",why:"You can represent arbitrary odd numbers and multiply them.",template:`Let the odd numbers be 2m + 1 and 2n + 1, where m,n are integers.
+
+(2m + 1)(2n + 1)
+= 4mn + 2m + 2n + 1
+= 2(2mn + m + n) + 1
+
+This has the form 2(integer) + 1, so it is odd.`,warning:"Use different letters m and n for any two odd numbers."},deductionPositive:{badge:"Proof by deduction",title:"Complete the square.",why:"A square is always non-negative, so completing the square creates a positivity proof.",template:`x² + 4x + 5
+= (x + 2)² - 4 + 5
+= (x + 2)² + 1
+
+Since (x + 2)² ≥ 0,
+(x + 2)² + 1 ≥ 1 > 0.`,warning:"The key phrase is: anything squared is at least zero."},exhaustionEvenOdd:{badge:"Proof by exhaustion",title:"Split into even and odd cases.",why:"Every integer is either even or odd, so the cases cover all possibilities.",template:`Case 1: n = 2k
+n² + n = (2k)² + 2k
+= 4k² + 2k
+= 2(2k² + k)
+
+Case 2: n = 2k + 1
+n² + n = (2k + 1)² + (2k + 1)
+= 4k² + 6k + 2
+= 2(2k² + 3k + 1)
+
+Both cases are even.`,warning:"A proof by exhaustion is only valid if every possible case is covered."},exhaustionMod3:{badge:"Proof by exhaustion",title:"Split into 3n, 3n + 1, and 3n - 1.",why:"Even and odd cases do not naturally reveal multiples of 9. Cubing expressions based on 3n does.",template:`Case 1: (3n)³ = 27n³ = 9(3n³)
+
+Case 2:
+(3n + 1)³
+= 27n³ + 27n² + 9n + 1
+= 9(3n³ + 3n² + n) + 1
+
+Case 3:
+(3n - 1)³
+= 27n³ - 27n² + 9n - 1
+= 9(3n³ - 3n² + n) - 1`,warning:"Proof by exhaustion does not always mean even and odd."},counterexample:{badge:"Disproof by counterexample",title:"One legal example is enough.",why:"A universal statement is false if one allowed input breaks it.",template:`Example statement:
+For every prime p, 2p + 1 is prime.
+
+Take p = 7.
+2p + 1 = 2(7) + 1 = 15.
+15 = 3 × 5, so it is not prime.
+
+Therefore the statement is false.`,warning:"The counterexample must satisfy the condition."},alwaysSometimes:{badge:"Classification",title:"Always, sometimes or never true.",why:"You need enough evidence to classify the statement.",template:`For a statement such as:
+(x + 3)² > x²
+
+Expand:
+x² + 6x + 9 > x²
+6x + 9 > 0
+x > -3/2
+
+So it is true for some values and false for others.
+Therefore it is sometimes true.`,warning:"Sometimes true usually needs a true case and a false case, or an algebraic range."},contradiction:{badge:"A2 / future context",title:"Not AS1 core in this lesson.",why:"The transcript treats proof by contradiction as an A2 topic, so this widget labels it as future context only.",template:`Future example:
+Prove that √2 is irrational by assuming the opposite and deriving a contradiction.
+
+This is not used as core AS1 content in this lesson pack.`,warning:"For this AS1 lesson, focus on deduction, exhaustion and counterexample."}};
+const formData={even:{title:"Even integer",formula:"2k, where k ∈ Z",use:"Use this when the question is about evenness, divisibility by 2, or parity cases."},odd:{title:"Odd integer",formula:"2k + 1 or 2k - 1, where k ∈ Z",use:"Use this when proving something about odd numbers."},twoOdd:{title:"Any two odd integers",formula:"2m + 1 and 2n + 1, where m,n ∈ Z",use:"Use different letters when the two odd numbers do not have to be equal or consecutive."},consecutive:{title:"Consecutive integers",formula:"n, n + 1 or x, x + 1, x + 2",use:"Use this for next-to-each-other integer questions."},consecutiveOdd:{title:"Consecutive odd integers",formula:"2n - 1 and 2n + 1",use:"This version is tidy because middle terms often cancel when expanding squares."},mod3:{title:"Modulo 3 split",formula:"3n, 3n + 1, 3n - 1",use:"Use this for proof by exhaustion when multiples of 3 or 9 are involved."}};
+const practiceData={p1:`Prompt:
+Prove that the square of an odd integer is odd.
+
+First line:
+Let the odd integer be 2n + 1, where n is an integer.`,p2:`Prompt:
+Prove that n³ - n is divisible by 6.
+
+First line:
+n³ - n = n(n² - 1) = n(n - 1)(n + 1).`,p3:`Prompt:
+Disprove: for every prime p, p + 2 is prime.
+
+First line:
+Take p = 2. Then p + 2 = 4, which is not prime.`};
+function setActivePanel(panelId){document.querySelectorAll(".tab-button").forEach(b=>b.classList.toggle("active",b.dataset.panel===panelId));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active",p.id===panelId))}function renderMethod(value){const item=methodData[value];const isFuture=value==="contradiction";document.getElementById("methodResult").innerHTML=`<span class="badge ${isFuture?"future":""}">${item.badge}</span><h3>${item.title}</h3><p><strong>Why:</strong> ${item.why}</p><div class="math-box">${item.template}</div><div class="warning"><strong>Watch:</strong> ${item.warning}</div>`}function renderForm(value){const item=formData[value];document.getElementById("formResult").innerHTML=`<span class="badge">${item.title}</span><h3>${item.formula}</h3><p>${item.use}</p>`}function checkCounterexample(){const statement=document.getElementById("counterSelect").value;const raw=document.getElementById("counterInput").value.trim().toLowerCase();const output=document.getElementById("counterResult");if(!raw){output.innerHTML=`<div class="error"><strong>No value entered.</strong> Try entering a candidate counterexample.</div>`;return}if(statement==="prime2p"){const p=Number(raw);if(p===7){output.innerHTML=`<div class="success"><strong>Valid counterexample.</strong><br>p = 7 is prime. Then 2p + 1 = 15, and 15 = 3 × 5, so it is not prime.</div>`}else if(p===3){output.innerHTML=`<div class="error">p = 3 gives 2p + 1 = 7, which is prime. This does not disprove the statement.</div>`}else{output.innerHTML=`<div class="warning">For this example, try p = 7.</div>`}}if(statement==="euler41"){const n=Number(raw);if(n===41){output.innerHTML=`<div class="success"><strong>Valid counterexample.</strong><br>n = 41 gives 41² - 41 + 41 = 41², which is not prime because it has 41 as a factor.</div>`}else{output.innerHTML=`<div class="warning">This classic one is sneaky. Try n = 41.</div>`}}if(statement==="irrationalProduct"){const accepted=raw.replace(/\s+/g,"");if(accepted==="sqrt12,sqrt3"||accepted==="√12,√3"||accepted==="sqrt(12),sqrt(3)"){output.innerHTML=`<div class="success"><strong>Valid counterexample.</strong><br>m = √12 and n = √3 are irrational and unequal, but mn = √36 = 6, which is rational.</div>`}else{output.innerHTML=`<div class="warning">Try entering: sqrt12,sqrt3. Their product is √36 = 6.</div>`}}}
+document.querySelectorAll(".tab-button").forEach(b=>b.addEventListener("click",()=>setActivePanel(b.dataset.panel)));document.getElementById("methodSelect").addEventListener("change",e=>renderMethod(e.target.value));document.querySelectorAll("[data-form]").forEach(b=>b.addEventListener("click",()=>renderForm(b.dataset.form)));document.querySelectorAll("[data-practice]").forEach(b=>b.addEventListener("click",()=>{document.getElementById("practiceResult").textContent=practiceData[b.dataset.practice]}));document.getElementById("checkCounter").addEventListener("click",checkCounterexample);renderMethod("deductionOdd");renderForm("even");
+</script>
+</body>
+</html>

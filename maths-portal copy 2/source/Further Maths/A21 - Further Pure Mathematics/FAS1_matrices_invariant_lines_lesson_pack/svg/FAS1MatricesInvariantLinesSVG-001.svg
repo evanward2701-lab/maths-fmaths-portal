@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS1MatricesInvariantLinesSVG-001: Determinant as area scale factor</title>
+  <desc id="desc">A CCEA FAS1 Matrices teaching diagram showing the unit square transformed into a parallelogram. The determinant ad minus bc is labelled as the signed area scale factor.</desc>
+  <!-- Asset ID: FAS1MatricesInvariantLinesSVG-001; Source: CCEA FAS1-MAT specification boundary + AI-proposed teaching visual; Related lesson section: # 9. Visual Asset Integration; Purpose: Show determinant as signed area scale factor of a 2 x 2 matrix transformation. -->
+  <defs>
+    <marker id="arrowGold" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C5A059"/></marker>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E5E5EA" stroke-width="1"/></pattern>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <text x="600" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E">Determinant as area scale factor</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5A5A5E">A 2 x 2 matrix transforms the unit square into a parallelogram. Its signed area is det A = ad - bc.</text>
+  <rect x="70" y="130" width="470" height="500" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="305" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">Before transformation</text>
+  <rect x="115" y="205" width="380" height="340" fill="url(#gridPattern)" opacity="0.9"/>
+  <line x1="155" y1="505" x2="480" y2="505" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <line x1="155" y1="505" x2="155" y2="220" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <polygon points="155,505 275,505 275,385 155,385" fill="#FBEFEF" stroke="#C5A059" stroke-width="3"/>
+  <line x1="155" y1="505" x2="275" y2="505" stroke="#C5A059" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <line x1="155" y1="505" x2="155" y2="385" stroke="#C5A059" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <text x="215" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">i</text>
+  <text x="132" y="445" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">j</text>
+  <text x="305" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">Unit square area = 1</text>
+  <line x1="560" y1="380" x2="640" y2="380" stroke="#D4AF37" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <text x="600" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">A</text>
+  <rect x="660" y="130" width="470" height="500" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="895" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">After transformation</text>
+  <rect x="705" y="205" width="380" height="340" fill="url(#gridPattern)" opacity="0.9"/>
+  <line x1="745" y1="505" x2="1070" y2="505" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <line x1="745" y1="505" x2="745" y2="220" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <polygon points="745,505 930,455 1015,270 830,320" fill="#FBEFEF" stroke="#C5A059" stroke-width="3"/>
+  <line x1="745" y1="505" x2="930" y2="455" stroke="#C5A059" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <line x1="745" y1="505" x2="830" y2="320" stroke="#C5A059" stroke-width="4" marker-end="url(#arrowGold)"/>
+  <text x="842" y="495" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">A i</text>
+  <text x="775" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">A j</text>
+  <rect x="735" y="570" width="320" height="42" rx="12" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="895" y="598" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#2C2C2E">signed area = det A = ad - bc</text>
+  <rect x="230" y="660" width="740" height="58" rx="18" fill="#FFFFF0" stroke="#D4AF37" stroke-width="2"/>
+  <text x="600" y="696" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">A = [[a, b], [c, d]],  det A = ad - bc,  area scale factor = |det A|</text>
+</svg>

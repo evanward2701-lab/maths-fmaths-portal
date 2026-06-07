@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22GraphTheoryBipartiteMatchingsWidget-001</title>
+  <!--
+    Widget Asset: FA22GraphTheoryBipartiteMatchingsWidget-001
+    Asset ID: FA22GraphTheoryBipartiteMatchingsWidget-001
+    Topic ID: FA22GraphTheoryBipartiteMatchings
+    Unit: FA22
+    Topic code: FA22-GRAPH
+    Related lesson file: FA22_graph_theory_bipartite_matchings_lesson.md
+    Related lesson section: Section 10.1 Matching Builder Widget
+    Source: AI-proposed teaching enhancement based on CCEA FA22-GRAPH-LO003.
+    Purpose: Let the student select edges and test whether the chosen edges form a matching or a complete matching.
+    Off-spec guard: This widget does not use cost matrices, the Hungarian algorithm, row reduction, column reduction, dummy entries, maximum allocation or weighted optimisation.
+  -->
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--soft-gold:#C5A059;--blush:#FBEFEF;--text:#2C2C2E;--muted:#6E6E73;--soft-line:#A9A9B2;--good-bg:#F4F8ED;--bad-bg:#FFF0F0;--focus:#8A6D1D}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}.wrap{max-width:1100px;margin:0 auto;padding:24px}.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px}h1{margin:0 0 8px;font-size:clamp(1.5rem,3vw,2.15rem);letter-spacing:-.03em}.subtitle{margin:0 0 18px;color:var(--muted);max-width:820px}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:start}@media(max-width:850px){.grid{grid-template-columns:1fr}}.panel{background:rgba(255,255,240,.78);border:1px solid var(--line);border-radius:18px;padding:16px}.panel h2{margin:0 0 12px;font-size:1.05rem}.edge-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.edge-row:last-child{border-bottom:none}label{cursor:pointer}input[type=checkbox]{width:18px;height:18px;accent-color:var(--gold)}.edge-name{font-weight:700}.small{font-size:.9rem;color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}button{border:1px solid var(--soft-gold);background:var(--panel);color:var(--text);border-radius:999px;padding:9px 14px;font-weight:700;cursor:pointer}button:hover{border-color:var(--gold);background:var(--blush)}button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.graphBox{background:var(--canvas);border:1px solid var(--line);border-radius:18px;padding:8px;overflow:hidden}svg{width:100%;height:auto;display:block}.result{margin-top:16px;border-radius:18px;padding:16px;border:1px solid var(--line);background:var(--canvas)}.result.good{background:var(--good-bg);border-color:#B8C99D}.result.bad{background:var(--bad-bg);border-color:#E0A0A0}.result h3{margin:0 0 8px}.result ul{margin:8px 0 0;padding-left:20px}code{background:var(--blush);padding:2px 6px;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:.9rem;color:var(--muted)}.swatch{display:inline-block;width:34px;height:5px;vertical-align:middle;border-radius:999px;margin-right:6px}.swatch.allowed{background:var(--soft-line)}.swatch.selected{background:var(--gold);height:7px}.footer-note{margin-top:16px;color:var(--muted);font-size:.92rem}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Matching Builder</h1>
+      <p class="subtitle">Choose which pairings are allowed, then select a proposed matching. The checker tests whether your selected edges form a matching and whether it is complete from <strong>U</strong> to <strong>W</strong>.</p>
+      <div class="grid">
+        <section class="panel" aria-labelledby="controls-title">
+          <h2 id="controls-title">Edges</h2>
+          <p class="small">“Allowed” means the edge exists. “Selected” means you want to use that edge in the matching.</p>
+          <div id="edgeControls"></div>
+          <div class="actions">
+            <button type="button" id="loadComplete">Load complete matching</button>
+            <button type="button" id="loadNotMatching">Load repeated vertex example</button>
+            <button type="button" id="clearSelected">Clear selected edges</button>
+            <button type="button" id="resetAllowed">Reset allowed graph</button>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="graph-title">
+          <h2 id="graph-title">Bipartite graph</h2>
+          <div class="graphBox">
+            <svg viewBox="0 0 700 430" role="img" aria-labelledby="svgTitle svgDesc">
+              <title id="svgTitle">Interactive bipartite graph</title>
+              <desc id="svgDesc">A bipartite graph with left set U equal to A, B, C and right set W equal to 1, 2, 3. Allowed and selected edges are drawn dynamically.</desc>
+              <rect x="0" y="0" width="700" height="430" rx="20" fill="#FAF9F6"></rect>
+              <text x="120" y="44" text-anchor="middle" fill="#2C2C2E" font-size="18" font-weight="700">U = {A, B, C}</text>
+              <text x="580" y="44" text-anchor="middle" fill="#2C2C2E" font-size="18" font-weight="700">W = {1, 2, 3}</text>
+              <g id="edgeLayer"></g><g id="vertexLayer"></g>
+            </svg>
+          </div>
+          <div class="legend"><span><span class="swatch allowed"></span>allowed edge</span><span><span class="swatch selected"></span>selected edge</span></div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </section>
+      </div>
+      <p class="footer-note">CCEA FA22-GRAPH-LO003 focus: bipartite graphs, matchings and complete matchings. This widget checks graph matching only, not weighted allocation.</p>
+    </section>
+  </main>
+  <script>
+    const U=["A","B","C"],W=["1","2","3"];const allEdges=[["A","1"],["A","2"],["A","3"],["B","1"],["B","2"],["B","3"],["C","1"],["C","2"],["C","3"]];const defaultAllowed=new Set(["A-1","A-2","B-1","C-2","C-3"]);let allowed=new Set(defaultAllowed),selected=new Set();const coords={A:{x:120,y:110},B:{x:120,y:210},C:{x:120,y:310},"1":{x:580,y:110},"2":{x:580,y:210},"3":{x:580,y:310}};const edgeKey=(u,w)=>`${u}-${w}`;const edgeControls=document.getElementById("edgeControls"),edgeLayer=document.getElementById("edgeLayer"),vertexLayer=document.getElementById("vertexLayer"),result=document.getElementById("result");
+    function renderControls(){edgeControls.innerHTML="";allEdges.forEach(([u,w])=>{const key=edgeKey(u,w),row=document.createElement("div");row.className="edge-row";const name=document.createElement("div");name.innerHTML=`<span class="edge-name">(${u}, ${w})</span>`;const allowedLabel=document.createElement("label"),allowedBox=document.createElement("input");allowedBox.type="checkbox";allowedBox.checked=allowed.has(key);allowedBox.addEventListener("change",()=>{allowedBox.checked?allowed.add(key):allowed.delete(key);render()});allowedLabel.appendChild(allowedBox);allowedLabel.append(" Allowed");const selectedLabel=document.createElement("label"),selectedBox=document.createElement("input");selectedBox.type="checkbox";selectedBox.checked=selected.has(key);selectedBox.addEventListener("change",()=>{selectedBox.checked?selected.add(key):selected.delete(key);render()});selectedLabel.appendChild(selectedBox);selectedLabel.append(" Selected");row.appendChild(name);row.appendChild(allowedLabel);row.appendChild(selectedLabel);edgeControls.appendChild(row)})}
+    function makeSvg(tag,attrs={}){const el=document.createElementNS("http://www.w3.org/2000/svg",tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));return el}
+    function renderGraph(){edgeLayer.innerHTML="";vertexLayer.innerHTML="";allEdges.forEach(([u,w])=>{const key=edgeKey(u,w);if(!allowed.has(key)&&!selected.has(key))return;const p1=coords[u],p2=coords[w];edgeLayer.appendChild(makeSvg("line",{x1:p1.x,y1:p1.y,x2:p2.x,y2:p2.y,stroke:selected.has(key)?"#D4AF37":"#A9A9B2","stroke-width":selected.has(key)?"8":"3","stroke-linecap":"round",opacity:allowed.has(key)?"1":"0.35"}))});[...U,...W].forEach(v=>{const p=coords[v];const circle=makeSvg("circle",{cx:p.x,cy:p.y,r:"28",fill:"#FFFFF0",stroke:"#2C2C2E","stroke-width":"2"});const text=makeSvg("text",{x:p.x,y:p.y+1,"text-anchor":"middle","dominant-baseline":"middle",fill:"#2C2C2E","font-size":"22","font-weight":"700"});text.textContent=v;vertexLayer.appendChild(circle);vertexLayer.appendChild(text)})}
+    function analyse(){const pairs=[...selected].map(k=>k.split("-")),messages=[];let ok=true;if(!pairs.length)return{status:"neutral",title:"No edges selected yet",messages:["Select some edges to test whether they form a matching."],pairs};const nonEdges=pairs.filter(([u,w])=>!allowed.has(edgeKey(u,w)));if(nonEdges.length){ok=false;messages.push(`Selected non-edge(s): ${nonEdges.map(([u,w])=>`(${u}, ${w})`).join(", ")}. A matching may only use edges that exist.`)}const left={},right={};pairs.forEach(([u,w])=>{left[u]=(left[u]||0)+1;right[w]=(right[w]||0)+1});Object.entries(left).filter(([,c])=>c>1).forEach(([v,c])=>{ok=false;messages.push(`Vertex ${v} in U is used ${c} times.`)});Object.entries(right).filter(([,c])=>c>1).forEach(([v,c])=>{ok=false;messages.push(`Vertex ${v} in W is used ${c} times.`)});const unmatched=U.filter(u=>!left[u]);if(ok&&unmatched.length===0){messages.push("No vertex is used twice.","Every vertex in U is matched.","Therefore this is a complete matching from U to W.");return{status:"good",title:"Complete matching",messages,pairs}}if(ok){messages.push("No vertex is used twice, so this is a matching.",`It is not complete from U to W because ${unmatched.join(", ")} is unmatched.`);return{status:"good",title:"Valid matching, but not complete",messages,pairs}}return{status:"bad",title:"Not a matching",messages,pairs}}
+    function renderResult(){const a=analyse();result.className="result"+(a.status==="good"?" good":a.status==="bad"?" bad":"");const selectedText=a.pairs.length?`{${a.pairs.map(([u,w])=>`(${u}, ${w})`).join(", ")}}`:"∅";result.innerHTML=`<h3>${a.title}</h3><p>Selected edge set: <code>${selectedText}</code></p><ul>${a.messages.map(m=>`<li>${m}</li>`).join("")}</ul>`}
+    function render(){renderControls();renderGraph();renderResult()}document.getElementById("loadComplete").addEventListener("click",()=>{selected=new Set(["A-2","B-1","C-3"]);render()});document.getElementById("loadNotMatching").addEventListener("click",()=>{allowed=new Set(defaultAllowed);selected=new Set(["A-1","B-1"]);render()});document.getElementById("clearSelected").addEventListener("click",()=>{selected.clear();render()});document.getElementById("resetAllowed").addEventListener("click",()=>{allowed=new Set(defaultAllowed);selected.clear();render()});render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Approximation Workflow</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 007.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Approximation Workflow</text>
+  <text x="600" y="130" text-anchor="middle" font-family="Arial" font-size="26">1. Start with a truncated expansion.</text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial" font-size="26">2. Substitute x into both sides.</text>
+  <text x="600" y="290" text-anchor="middle" font-family="Arial" font-size="26">3. Simplify the left-hand side.</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Arial" font-size="26">4. Rearrange to isolate the required surd.</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Arial" font-size="26">5. Check the chosen x is inside the valid interval.</text>
+  <text x="600" y="570" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Smaller |x| usually means omitted higher powers are smaller.</text>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Composite body mass-moment table</title>
+  <desc id="desc">Table for composite centre of mass calculations including removed solids as negative mass.</desc>
+  <!-- Asset ID: FA22FurtherCentreOfMassSVG-004 -->
+  <!-- Source: Teacher transcript composite-body approach -->
+  <!-- Related lesson section: #9 Visual Asset Integration; #8.11 -->
+  <!-- Purpose: Show how component mass ratios, centre coordinates and moments combine. -->
+  <defs>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .soft{fill:#FBEFEF;stroke:#2C2C2E;stroke-width:3}
+      .gold{stroke:#C5A059;stroke-width:4;fill:none} .line{stroke:#2C2C2E;stroke-width:3;fill:none} .dash{stroke:#2C2C2E;stroke-width:2;stroke-dasharray:8 8;fill:none}
+      .txt{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:30px} .small{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:22px} .math{font-family:Georgia,'Times New Roman',serif;fill:#2C2C2E;font-size:26px}
+      .box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:18} .warn{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="panel" x="40" y="36" width="1120" height="688" rx="28"/>
+  <text class="txt" x="80" y="90">Composite mass-moment table</text>
+  
+  <rect class="box" x="90" y="155" width="1020" height="300"/><text class="small" x="130" y="215">Component</text><text class="small" x="420" y="215">m</text><text class="small" x="610" y="215">x</text><text class="small" x="800" y="215">mx</text><text class="small" x="980" y="215">Sign</text>
+  <line class="line" x1="110" y1="240" x2="1085" y2="240"/><text class="math" x="130" y="300">Large solid</text><text class="math" x="420" y="300">M₁</text><text class="math" x="610" y="300">x₁</text><text class="math" x="800" y="300">M₁x₁</text><text class="math" x="980" y="300">+</text>
+  <text class="math" x="130" y="370">Removed solid</text><text class="math" x="420" y="370">M₂</text><text class="math" x="610" y="370">x₂</text><text class="math" x="800" y="370">M₂x₂</text><text class="math" x="980" y="370">−</text>
+  <rect class="warn" x="190" y="520" width="820" height="90"/><text class="math" x="335" y="575">M₁x₁ − M₂x₂ = (M₁ − M₂)x̄</text><text class="small" x="285" y="655">Subtract removed pieces in both mass and moment.</text>
+
+</svg>

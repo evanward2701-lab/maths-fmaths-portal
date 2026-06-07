@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AS2ForcesAndNewtonsLawsWidget-003</title>
+<!-- Asset ID: AS2ForcesAndNewtonsLawsWidget-003
+Source: Chapter 10 Forces and Motion evidence
+Related lesson section: Connected Particles Equation Builder
+Purpose: Treat two connected particles as a system, then isolate one particle for tension. -->
+<style>
+body{font-family:Arial,sans-serif;background:#f3f4f6;color:#111827;margin:0;padding:24px}
+.card{max-width:900px;margin:auto;background:white;border:2px solid #111827;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+h1{margin-top:0} .meta{background:#eef2ff;border-left:6px solid #4f46e5;border-radius:10px;padding:12px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px} label{font-weight:700;display:block} input{width:100%;box-sizing:border-box;padding:10px;border:2px solid #d1d5db;border-radius:10px;margin-top:6px}
+button{margin-top:16px;padding:12px 18px;border:0;border-radius:10px;background:#111827;color:white;font-weight:700;cursor:pointer}
+#out{margin-top:18px;padding:16px;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;line-height:1.7}
+.warn{margin-top:16px;background:#fff7ed;border-left:6px solid #f97316;border-radius:10px;padding:12px}
+</style></head><body><main class="card"><h1>Connected Particles Equation Builder</h1><div class="meta"><b>Asset ID:</b> AS2ForcesAndNewtonsLawsWidget-003<br><b>Purpose:</b> Treat two connected particles as a system, then isolate one particle for tension.</div><div class="grid"><label>Mass Q / kg<input id="mQ" type="number" value="3" step="0.1"></label>
+<label>Mass P / kg<input id="mP" type="number" value="5" step="0.1"></label>
+<label>Pull on P / N<input id="pull" type="number" value="40" step="0.1"></label>
+<label>Resistance on Q / N<input id="fQ" type="number" value="6" step="0.1"></label>
+<label>Resistance on P / N<input id="fP" type="number" value="10" step="0.1"></label></div><button onclick="calc()">Calculate</button><div id="out" aria-live="polite"></div><div class="warn"><b>Mechanics reminder:</b> choose directions before using equations and keep forces attached to the body being considered.</div></main><script>function calc(){
+const mQ=+document.getElementById('mQ').value, mP=+document.getElementById('mP').value, pull=+document.getElementById('pull').value, fQ=+document.getElementById('fQ').value, fP=+document.getElementById('fP').value;
+const a=(pull-fQ-fP)/(mQ+mP), T=mQ*a+fQ;
+document.getElementById('out').innerHTML=`Whole system: ${pull}-${fQ}-${fP}=${(mQ+mP).toFixed(3)}a<br>a=${a.toFixed(3)} m s⁻²<br>For Q: T-${fQ}=${mQ}(${a.toFixed(3)})<br><b>T=${T.toFixed(3)} N</b>`;} calc();</script></body></html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Gaps and True Class Boundaries</title>
+<desc id="desc">Convert rounded classes to true continuous intervals.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Gaps and True Class Boundaries</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Convert rounded classes to true continuous intervals.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-005; Source: Histogram gaps evidence; Section: Gaps and True Class Widths; Purpose: True boundaries.</metadata>
+<rect x="50" y="130" width="360" height="240" rx="10" fill="#f8fafc" stroke="#cbd5e1"/><text x="230" y="162" font-family="Arial" font-size="20" text-anchor="middle" font-weight="700">Written classes</text>
+<g font-family="Arial" font-size="18" text-anchor="middle"><text x="230" y="219">1 to 2</text><text x="230" y="274">3 to 6</text><text x="230" y="329">7 to 9</text></g>
+<line x1="430" y1="250" x2="540" y2="250" stroke="#222" stroke-width="4"/><polygon points="540,250 522,240 522,260" fill="#222"/>
+<rect x="560" y="130" width="350" height="240" rx="10" fill="#f8fafc" stroke="#cbd5e1"/><text x="735" y="162" font-family="Arial" font-size="20" text-anchor="middle" font-weight="700">True intervals</text>
+<g font-family="Arial" font-size="18" text-anchor="middle"><text x="735" y="219">0.5 ≤ w &lt; 2.5</text><text x="735" y="274">2.5 ≤ w &lt; 6.5</text><text x="735" y="329">6.5 ≤ w &lt; 9.5</text></g>
+<line x1="120" y1="440" x2="840" y2="440" stroke="#222" stroke-width="3"/><rect x="160" y="400" width="120" height="40" fill="#d8ecff" stroke="#111"/><rect x="280" y="380" width="240" height="60" fill="#d8ecff" stroke="#111"/><rect x="520" y="390" width="180" height="50" fill="#d8ecff" stroke="#111"/>
+<text x="480" y="515" font-family="Arial" font-size="18" text-anchor="middle" font-weight="700">Class width uses true boundaries.</text>
+
+</svg>

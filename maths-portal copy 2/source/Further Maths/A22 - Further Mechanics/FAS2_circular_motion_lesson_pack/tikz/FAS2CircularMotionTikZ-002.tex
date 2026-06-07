@@ -1,0 +1,83 @@
+% Asset ID: FAS2CircularMotionTikZ-002
+% Topic ID: FAS2CircularMotion
+% Unit: FAS2 Further AS 2 Applied Mathematics
+% Topic codes: FAS2-CM, FAS2-FCM
+% Related lesson file: FAS2_circular_motion_lesson.md
+% Related lesson section: # 9. Visual Asset Integration
+% Used placeholder:
+% [VISUAL PLACEHOLDER: FAS2CircularMotionTikZ-002 | Source: Lesson PDF vertical-circle energy example | Insert from tikz/FAS2CircularMotionTikZ-002.tex | Purpose: Provide precise vertical-circle height geometry for r-r cos theta.]
+% Source: Lesson PDF vertical-circle energy example plus teacher transcript
+% Purpose: Provide precise vertical-circle height geometry for r - r cos theta.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathreplacing}
+
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Panel}{HTML}{FFFFF0}
+\definecolor{Line}{HTML}{2C2C2E}
+\definecolor{SoftLine}{HTML}{E5E5EA}
+\definecolor{Gold}{HTML}{C5A059}
+\definecolor{PaleRose}{HTML}{FBEFEF}
+
+\begin{document}
+\begin{tikzpicture}[
+    every node/.style={font=\sffamily},
+    mainline/.style={draw=Line, line width=1.2pt},
+    guide/.style={draw=SoftLine, line width=0.8pt, dashed},
+    force/.style={draw=Line, line width=1.1pt, -{Latex[length=3mm]}},
+    heightbrace/.style={decorate, decoration={brace, amplitude=7pt}, draw=Gold, line width=1.1pt}
+]
+\fill[Canvas] (-6.3,-5.2) rectangle (8.4,5.0);
+\fill[Panel, draw=SoftLine, line width=0.9pt, rounded corners=10pt] (-5.9,-4.8) rectangle (8.0,4.55);
+
+\node[anchor=west, font=\sffamily\bfseries\Large, text=Line] at (-5.45,4.08) {Vertical circle height geometry};
+\node[anchor=west, font=\sffamily\small, text=Line] at (-5.45,3.65) {If \(\theta\) is measured from the downward vertical, the height gain is \(r-r\cos\theta\).};
+
+\coordinate (B) at (-1.8,0.1);
+\coordinate (L) at (-1.8,-3.4);
+\coordinate (P) at ($(B)+({3.5*sin(55)},{-3.5*cos(55)})$);
+\coordinate (Q) at (-1.8,{-3.5*cos(55)+0.1});
+
+\draw[mainline] (B) circle (3.5);
+\fill[Line] (B) circle (2.4pt);
+\node[above left=3pt, text=Line] at (B) {\(B\)};
+\fill[Line] (L) circle (2.4pt);
+\node[below=4pt, text=Line] at (L) {lowest point};
+
+\draw[mainline] (B) -- (L);
+\draw[mainline] (B) -- (P);
+\node[text=Line] at ($(B)!0.5!(P)+(0.25,0.20)$) {\(r\)};
+\node[text=Line] at ($(B)!0.48!(L)+(-0.25,0)$) {\(r\)};
+
+\fill[PaleRose, draw=Line, line width=1pt] (P) circle (4pt);
+\node[right=4pt, text=Line] at (P) {particle};
+
+\draw[guide] (P) -- (Q);
+\draw[guide] (Q) -- (L);
+\fill[SoftLine] (Q) circle (1.8pt);
+
+\pic[draw=Gold, line width=1.1pt, angle radius=0.75cm, "$\theta$", angle eccentricity=1.45, text=Gold] {angle=L--B--P};
+
+\draw[Gold, line width=1.3pt] ($(B)+(-0.28,0)$) -- ($(Q)+(-0.28,0)$);
+\draw[heightbrace] ($(B)+(-0.50,0)$) -- node[left=9pt, text=Gold] {\(r\cos\theta\)} ($(Q)+(-0.50,0)$);
+\draw[heightbrace] ($(Q)+(0.45,0)$) -- node[right=10pt, text=Gold] {\(r-r\cos\theta\)} ($(L)+(0.45,0)$);
+
+\draw[SoftLine] (-5.2,-3.4) -- (3.0,-3.4);
+\node[anchor=west, text=Line, font=\sffamily\small] at (3.1,-3.4) {\(\mathrm{G.P.E.}=0\) at lowest point};
+
+\draw[force] (P) -- ($(P)+(0,-1.1)$);
+\node[right=3pt, text=Line] at ($(P)+(0,-0.95)$) {\(mg\)};
+\draw[force] (P) -- ($(P)!0.32!(B)$);
+\node[above=2pt, text=Line] at ($(P)!0.22!(B)$) {towards centre};
+
+\fill[Canvas, draw=SoftLine, line width=0.8pt, rounded corners=8pt] (3.3,-2.55) rectangle (7.45,2.55);
+\node[anchor=west, font=\sffamily\bfseries\large, text=Line] at (3.62,2.10) {Energy height};
+\node[anchor=west, text=Line, font=\sffamily\large] at (3.62,1.30) {\[h=r-r\cos\theta\]};
+\node[anchor=west, text=Gold, font=\sffamily\bfseries\large] at (3.62,0.25) {\[h=r(1-\cos\theta)\]};
+\node[anchor=west, text=Line, font=\sffamily\large] at (3.62,-0.95) {\[\Delta\mathrm{G.P.E.}=mg\,r(1-\cos\theta)\]};
+\node[draw=SoftLine, fill=PaleRose, rounded corners=5pt, inner sep=6pt, text width=11.0cm, anchor=west, text=Line] at (-5.35,-4.35)
+{\textbf{Evidence link:} in the \(0.3\text{ m}\) string example, this becomes \(0.3-0.3\cos\theta=0.3(1-\cos\theta)\).};
+\end{tikzpicture}
+\end{document}

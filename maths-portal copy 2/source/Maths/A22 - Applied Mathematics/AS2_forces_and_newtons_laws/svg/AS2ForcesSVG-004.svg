@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-004
+Source: Chapter 5/7 Forces transcript + MechYr2 Chapter 5 Friction PDF
+Related lesson section: Core Theory: Newton’s Second Law
+Purpose: Show F = ma as resultant force in the direction of acceleration.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Newton’s Second Law</title>
+  <desc id="desc">Show F = ma as resultant force in the direction of acceleration.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Newton’s Second Law</text>
+  <line x1="120" y1="340" x2="780" y2="340" stroke="#111" stroke-width="4"/><rect x="350" y="250" width="180" height="90" fill="#f7f7f7" stroke="#111"/><text x="440" y="303" text-anchor="middle" font-family="Arial" font-size="24">mass m</text><line x1="530" y1="295" x2="700" y2="295" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="615.0" y="285.0" font-family="Arial" font-size="20" text-anchor="middle">pull</text><line x1="440" y1="250" x2="440" y2="150" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="440.0" y="190.0" font-family="Arial" font-size="20" text-anchor="middle">R</text><line x1="440" y1="340" x2="440" y2="450" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="440.0" y="385.0" font-family="Arial" font-size="20" text-anchor="middle">mg</text><line x1="530" y1="205" x2="700" y2="205" stroke="#111" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/><text x="615" y="185" font-family="Arial" font-size="20" text-anchor="middle">acceleration a</text><text x="450" y="485" text-anchor="middle" font-family="Arial" font-size="22">resultant force in direction of a = ma</text>
+</svg>

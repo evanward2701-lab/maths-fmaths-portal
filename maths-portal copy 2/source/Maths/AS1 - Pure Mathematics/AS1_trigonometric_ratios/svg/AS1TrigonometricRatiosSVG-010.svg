@@ -1,0 +1,13 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Graph of y = cos x</title>
+<desc id="desc">Graph of y = cos x with key features.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Graph of y = cos x</text>
+
+<line x1="80" y1="280" x2="820" y2="280" stroke="#172033" stroke-width="2"/><line x1="80" y1="100" x2="80" y2="460" stroke="#172033" stroke-width="2"/>
+<polyline points="80,280 172,160 264,280 356,400 448,280 540,160 632,280 724,400 820,280" fill="none" stroke="#6d28d9" stroke-width="4"/>
+<text x="95" y="510" font-family="Arial" font-size="20">Key features: period, roots, range and symmetry.</text>
+<rect x="520" y="90" width="310" height="105" rx="14" fill="#f8fafc" stroke="#94a3b8"/><text x="545" y="130" font-family="Arial" font-size="20">Use graph symmetry</text><text x="545" y="160" font-family="Arial" font-size="20">to find related angles.</text>
+
+</svg>

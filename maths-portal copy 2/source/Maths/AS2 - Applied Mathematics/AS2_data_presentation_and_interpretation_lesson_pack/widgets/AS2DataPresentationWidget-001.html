@@ -1,0 +1,44 @@
+<!--
+Asset ID: AS2DataPresentationWidget-001
+Source: Chapter_3_Representations_of_Data_🤖_(Applied_Year_1)_Transcript.md, box plots and outliers.
+Related lesson section: Core Theory, Outliers and Cleaning Data.
+Purpose: Interactive calculator for outlier boundaries using either the 1.5IQR rule or the mean ± 2σ rule.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AS2 Outlier Boundary Calculator</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f8fafc;color:#172033;line-height:1.45}.wrap{max-width:980px;margin:24px auto;padding:20px}.card{background:white;border:1px solid #d7dee8;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(15,23,42,.06)}h1{margin:0 0 6px;font-size:28px}.sub{margin:0 0 20px;color:#5f6b7a}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.full{grid-column:1/-1}label{display:block;font-weight:700;margin-bottom:6px}input,textarea{width:100%;box-sizing:border-box;border:1px solid #d7dee8;border-radius:12px;padding:10px 12px;font-size:16px}textarea{min-height:86px}.tabs,.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.tabs button,.actions button{border:1px solid #d7dee8;background:#fff;color:#172033;border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer}.tabs button.active,.actions button.primary{background:#2457d6;color:#fff;border-color:#2457d6}.output{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{border:1px solid #d7dee8;border-radius:14px;padding:16px;background:#edf4ff}.pill{display:inline-block;border-radius:999px;padding:4px 9px;margin:4px;font-size:14px;font-weight:700;background:#edfff5;color:#1f7a4d}.pill.out{background:#fff0ed;color:#b42318}.numberline{width:100%;height:120px;border:1px solid #d7dee8;border-radius:14px;background:white}.hide{display:none}.note{margin-top:14px;padding:12px;border-left:4px solid #2457d6;background:#f4f7ff;border-radius:10px}@media(max-width:760px){.grid,.output{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap"><section class="card">
+<h1>Outlier Boundary Calculator</h1>
+<p class="sub">Choose the rule stated in the question. Values outside the boundaries are outliers, but they are not automatically anomalies.</p>
+<div class="tabs"><button id="iqrTab" class="active">Use Q₁, Q₃ and 1.5IQR</button><button id="sdTab">Use mean ± 2σ</button></div>
+<div id="iqrInputs" class="grid"><div><label for="q1">Lower quartile, Q₁</label><input id="q1" type="number" step="any" value="2.7"></div><div><label for="q3">Upper quartile, Q₃</label><input id="q3" type="number" step="any" value="3.2"></div></div>
+<div id="sdInputs" class="grid hide"><div><label for="mean">Mean, x̄</label><input id="mean" type="number" step="any" value="21"></div><div><label for="sigma">Standard deviation, σ</label><input id="sigma" type="number" step="any" value="3.83"></div></div>
+<div class="grid"><div class="full"><label for="values">Data values to test</label><textarea id="values">2.2, 2.5, 2.7, 2.7, 2.8, 3.0, 3.1, 3.1, 3.2, 4.0, 4.7</textarea></div></div>
+<div class="actions"><button class="primary" onclick="calculateOutliers()">Calculate boundaries</button><button onclick="loadRomanCoins()">Roman coins example</button><button onclick="loadSnails()">Snails example</button></div>
+<div class="output"><div class="box"><h2>Boundary working</h2><div id="working"></div></div><div class="box"><h2>Classified values</h2><div id="classified"></div></div><div class="full"><svg id="numberline" class="numberline" viewBox="0 0 900 120"></svg></div></div>
+<div class="note">Exam phrasing: “This value is an outlier by the stated rule.” Only call it an anomaly if the context suggests an error.</div>
+</section></main>
+<script>
+let mode='iqr';
+const iqrTab=document.getElementById('iqrTab'),sdTab=document.getElementById('sdTab'),iqrInputs=document.getElementById('iqrInputs'),sdInputs=document.getElementById('sdInputs');
+iqrTab.onclick=()=>setMode('iqr'); sdTab.onclick=()=>setMode('sd');
+function setMode(m){mode=m;iqrTab.classList.toggle('active',m==='iqr');sdTab.classList.toggle('active',m==='sd');iqrInputs.classList.toggle('hide',m!=='iqr');sdInputs.classList.toggle('hide',m!=='sd');calculateOutliers();}
+function vals(){return document.getElementById('values').value.split(/[\s,;]+/).map(Number).filter(Number.isFinite)}
+function fmt(x){return Math.round(x*1000)/1000}
+function calculateOutliers(){let lower,upper,html; const v=vals(); if(mode==='iqr'){const q1=+q1El().value,q3=+q3El().value,iqr=q3-q1;lower=q1-1.5*iqr;upper=q3+1.5*iqr;html=`<p>IQR = ${fmt(q3)} - ${fmt(q1)} = ${fmt(iqr)}</p><p>Lower = Q₁ - 1.5IQR = ${fmt(lower)}</p><p>Upper = Q₃ + 1.5IQR = ${fmt(upper)}</p>`;} else {const mean=+document.getElementById('mean').value,sigma=+document.getElementById('sigma').value;lower=mean-2*sigma;upper=mean+2*sigma;html=`<p>Lower = x̄ - 2σ = ${fmt(lower)}</p><p>Upper = x̄ + 2σ = ${fmt(upper)}</p>`;} document.getElementById('working').innerHTML=html; document.getElementById('classified').innerHTML=v.map(x=>`<span class="pill ${x<lower||x>upper?'out':''}">${fmt(x)} ${x<lower||x>upper?'outlier':'not outlier'}</span>`).join(''); draw(v,lower,upper);}
+function q1El(){return document.getElementById('q1')} function q3El(){return document.getElementById('q3')}
+function draw(v,lower,upper){const svg=document.getElementById('numberline');svg.innerHTML='';let all=v.concat([lower,upper]);let min=Math.min(...all),max=Math.max(...all),pad=(max-min||1)*.12,lo=min-pad,hi=max+pad;let sx=x=>50+((x-lo)/(hi-lo))*800;function el(t,a,text){let n=document.createElementNS('http://www.w3.org/2000/svg',t);Object.entries(a).forEach(([k,v])=>n.setAttribute(k,v));if(text)n.textContent=text;svg.appendChild(n)}el('line',{x1:50,y1:70,x2:850,y2:70,stroke:'#172033','stroke-width':3});[lower,upper].forEach((b,i)=>{let x=sx(b);el('line',{x1:x,y1:20,x2:x,y2:96,stroke:'#b42318','stroke-width':2,'stroke-dasharray':'5 5'});el('text',{x:x,y:112,'text-anchor':'middle','font-size':13,fill:'#b42318'},fmt(b));});v.forEach(x=>el('circle',{cx:sx(x),cy:70,r:6,fill:(x<lower||x>upper)?'#b42318':'#1f7a4d'}));}
+function loadRomanCoins(){setMode('iqr');q1El().value=2.7;q3El().value=3.2;document.getElementById('values').value='2.2, 2.5, 2.7, 2.7, 2.8, 3.0, 3.1, 3.1, 3.2, 4.0, 4.7';calculateOutliers();}
+function loadSnails(){setMode('sd');document.getElementById('mean').value=21;document.getElementById('sigma').value=3.83;document.getElementById('values').value='17, 18, 18, 19, 20, 20, 20, 20, 21, 23, 24, 32';calculateOutliers();}
+calculateOutliers();
+</script>
+</body>
+</html>

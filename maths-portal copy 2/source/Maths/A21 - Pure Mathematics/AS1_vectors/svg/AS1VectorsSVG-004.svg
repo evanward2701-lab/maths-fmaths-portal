@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="620" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">AS1VectorsSVG-004: Magnitude and direction</title>
+  <desc id="desc">A right-angled triangle showing a vector, its magnitude, and its direction angle from the positive x-axis.</desc>
+  <!-- Asset ID: AS1VectorsSVG-004 | Source: CCEA AS1-VEC-LO002 | Purpose: Magnitude and direction | Boundary: 2D only -->
+  <rect width="920" height="620" fill="white"/>
+  <text x="40" y="55" font-family="Arial" font-size="30" font-weight="700">Magnitude and direction</text>
+  <line x1="140" y1="500" x2="760" y2="500" stroke="black" stroke-width="3"/>
+  <line x1="140" y1="500" x2="140" y2="130" stroke="black" stroke-width="3"/>
+  <polygon points="760,500 742,491 742,509" fill="black"/><polygon points="140,130 131,148 149,148" fill="black"/>
+  <line x1="140" y1="500" x2="560" y2="500" stroke="black" stroke-width="4"/>
+  <line x1="560" y1="500" x2="560" y2="260" stroke="black" stroke-width="4"/>
+  <line x1="140" y1="500" x2="560" y2="260" stroke="black" stroke-width="5"/><polygon points="560,260 535,264 548,284" fill="black"/>
+  <text x="335" y="532" font-family="Arial" font-size="24">x</text><text x="580" y="385" font-family="Arial" font-size="24">y</text><text x="330" y="350" font-family="Arial" font-size="26" font-weight="700">|a|</text>
+  <path d="M 210 500 A 70 70 0 0 1 200 463" fill="none" stroke="black" stroke-width="3"/><text x="215" y="472" font-family="Arial" font-size="24">θ</text>
+  <rect x="130" y="150" width="320" height="120" rx="10" fill="white" stroke="black" stroke-width="2"/>
+  <text x="150" y="185" font-family="Arial" font-size="22" font-weight="700">Magnitude</text><text x="150" y="225" font-family="Arial" font-size="22">|a| = √(x² + y²)</text>
+  <rect x="570" y="145" width="290" height="135" rx="10" fill="white" stroke="black" stroke-width="2"/>
+  <text x="590" y="180" font-family="Arial" font-size="22" font-weight="700">Direction</text><text x="590" y="218" font-family="Arial" font-size="22">tan θ = y / x</text><text x="590" y="253" font-family="Arial" font-size="18">Check the quadrant.</text>
+</svg>

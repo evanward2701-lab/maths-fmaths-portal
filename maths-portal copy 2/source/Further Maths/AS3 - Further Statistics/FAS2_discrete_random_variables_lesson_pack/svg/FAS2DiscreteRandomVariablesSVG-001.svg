@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Game A and Game B expected value comparison</title>
+  <desc id="desc">Compares two game profit distributions. Game A has outcomes minus 10, 0, 15 and 40 with probabilities 0.40, 0.25, 0.30 and 0.05. Game B has outcomes minus 10, 40 and 990 with probabilities 0.94, 0.05 and 0.01. Both have expected profit 2.5 per game, but Game B has much larger spread.</desc>
+  <metadata>Asset ID: FAS2DiscreteRandomVariablesSVG-001; Source: screenshot PDF visible motivation slides plus uploaded transcript explanation; Purpose: compare same expected value with different spread.</metadata>
+  <rect x="0" y="0" width="1200" height="720" fill="#FAF9F6"/>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="36" font-weight="700" fill="#2C2C2E">Same expected value, different spread</text>
+  <text x="60" y="108" font-family="Arial, sans-serif" font-size="18" fill="#2C2C2E">The random variable is net profit per game after the £10 entry cost.</text>
+  <rect x="60" y="150" width="500" height="420" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text x="90" y="200" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#2C2C2E">Game A</text>
+  <text x="90" y="245" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">x: −10, 0, 15, 40</text>
+  <text x="90" y="285" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">P: 0.40, 0.25, 0.30, 0.05</text>
+  <text x="90" y="350" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E">E(X)=−10(0.40)+0(0.25)+15(0.30)+40(0.05)</text>
+  <text x="90" y="400" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#C5A059">E(X)=£2.50</text>
+  <rect x="640" y="150" width="500" height="420" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text x="670" y="200" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#2C2C2E">Game B</text>
+  <text x="670" y="245" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">y: −10, 40, 990</text>
+  <text x="670" y="285" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">P: 0.94, 0.05, 0.01</text>
+  <text x="670" y="350" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E">E(Y)=−10(0.94)+40(0.05)+990(0.01)</text>
+  <text x="670" y="400" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#C5A059">E(Y)=£2.50</text>
+  <rect x="350" y="610" width="500" height="58" rx="14" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <text x="390" y="647" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">Equal centre does not mean equal risk: variance measures spread.</text>
+</svg>

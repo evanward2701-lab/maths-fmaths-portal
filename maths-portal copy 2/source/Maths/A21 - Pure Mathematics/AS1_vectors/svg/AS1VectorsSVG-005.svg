@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="620" viewBox="0 0 940 620" role="img" aria-labelledby="title desc">
+  <title id="title">AS1VectorsSVG-005: Finding a unit vector</title>
+  <desc id="desc">A flow diagram showing how to find a unit vector by dividing a vector by its magnitude.</desc>
+  <!-- Asset ID: AS1VectorsSVG-005 | Source: CCEA AS1-VEC-LO002 | Purpose: Unit vector process | Boundary: 2D only -->
+  <rect width="940" height="620" fill="white"/>
+  <text x="40" y="55" font-family="Arial" font-size="30" font-weight="700">Finding a unit vector</text>
+  <text x="40" y="95" font-family="Arial" font-size="18">A unit vector points in the same direction as the original vector, but has length 1.</text>
+  <rect x="80" y="150" width="250" height="95" rx="12" fill="white" stroke="black" stroke-width="2"/>
+  <text x="105" y="185" font-family="Arial" font-size="21" font-weight="700">1. Start with a vector</text><text x="105" y="220" font-family="Arial" font-size="22">a = (x, y)</text>
+  <rect x="345" y="150" width="250" height="95" rx="12" fill="white" stroke="black" stroke-width="2"/>
+  <text x="370" y="185" font-family="Arial" font-size="21" font-weight="700">2. Find magnitude</text><text x="370" y="220" font-family="Arial" font-size="22">|a| = √(x² + y²)</text>
+  <rect x="610" y="150" width="250" height="95" rx="12" fill="white" stroke="black" stroke-width="2"/>
+  <text x="635" y="185" font-family="Arial" font-size="21" font-weight="700">3. Divide by |a|</text><text x="635" y="220" font-family="Arial" font-size="22">â = a / |a|</text>
+  <line x1="330" y1="198" x2="345" y2="198" stroke="black" stroke-width="3"/><polygon points="345,198 333,190 333,206" fill="black"/>
+  <line x1="595" y1="198" x2="610" y2="198" stroke="black" stroke-width="3"/><polygon points="610,198 598,190 598,206" fill="black"/>
+  <rect x="170" y="320" width="600" height="120" rx="12" fill="white" stroke="black" stroke-width="2"/>
+  <text x="205" y="360" font-family="Arial" font-size="24" font-weight="700">General result</text>
+  <text x="205" y="405" font-family="Arial" font-size="24">â = ( x / √(x² + y²), y / √(x² + y²) )</text>
+  <rect x="255" y="480" width="430" height="80" rx="12" fill="white" stroke="black" stroke-width="2"/>
+  <text x="290" y="515" font-family="Arial" font-size="22" font-weight="700">Check:</text><text x="370" y="515" font-family="Arial" font-size="22">|â| = 1</text>
+  <text x="290" y="548" font-family="Arial" font-size="18">So â is a unit vector in the direction of a.</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Integration by parts</title>
+<desc id="desc">Integration by parts for A21 Integration.</desc>
+<!-- Asset ID: A21IntegrationSVG-007 | Source: CCEA A21 Integration + lesson evidence | Purpose: teaching visual -->
+<rect x="20" y="20" width="860" height="520" rx="24" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="450" y="65" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#0f172a">Integration by parts</text>
+<text x="450" y="160" text-anchor="middle" font-family="Arial" font-size="25">Product rule: d(uv)/dx = u dv/dx + v du/dx</text><text x="450" y="250" text-anchor="middle" font-family="Arial" font-size="25">∫u(dv/dx)dx = uv - ∫v(du/dx)dx</text><text x="450" y="340" text-anchor="middle" font-family="Arial" font-size="22">Example: ∫xcosx dx = xsinx + cosx + C</text>
+</svg>

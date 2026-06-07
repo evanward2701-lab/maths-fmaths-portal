@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AS2ForcesAndNewtonsLawsWidget-004</title>
+<!-- Asset ID: AS2ForcesAndNewtonsLawsWidget-004
+Source: Chapter 10 Forces and Motion evidence
+Related lesson section: Pulley Equation Builder
+Purpose: Build equations for two hanging masses over a smooth pulley. -->
+<style>
+body{font-family:Arial,sans-serif;background:#f3f4f6;color:#111827;margin:0;padding:24px}
+.card{max-width:900px;margin:auto;background:white;border:2px solid #111827;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+h1{margin-top:0} .meta{background:#eef2ff;border-left:6px solid #4f46e5;border-radius:10px;padding:12px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px} label{font-weight:700;display:block} input{width:100%;box-sizing:border-box;padding:10px;border:2px solid #d1d5db;border-radius:10px;margin-top:6px}
+button{margin-top:16px;padding:12px 18px;border:0;border-radius:10px;background:#111827;color:white;font-weight:700;cursor:pointer}
+#out{margin-top:18px;padding:16px;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;line-height:1.7}
+.warn{margin-top:16px;background:#fff7ed;border-left:6px solid #f97316;border-radius:10px;padding:12px}
+</style></head><body><main class="card"><h1>Pulley Equation Builder</h1><div class="meta"><b>Asset ID:</b> AS2ForcesAndNewtonsLawsWidget-004<br><b>Purpose:</b> Build equations for two hanging masses over a smooth pulley.</div><div class="grid"><label>Left mass / kg<input id="mL" type="number" value="2" step="0.1"></label>
+<label>Right mass / kg<input id="mR" type="number" value="3" step="0.1"></label>
+<label>g / m s^-2<input id="g" type="number" value="9.8" step="0.1"></label></div><button onclick="calc()">Calculate</button><div id="out" aria-live="polite"></div><div class="warn"><b>Mechanics reminder:</b> choose directions before using equations and keep forces attached to the body being considered.</div></main><script>function calc(){
+const mL=+document.getElementById('mL').value, mR=+document.getElementById('mR').value, g=+document.getElementById('g').value;
+const a=Math.abs(mR-mL)*g/(mL+mR); const T=(mR>mL)?mL*(g+a):mR*(g+a);
+document.getElementById('out').innerHTML=`Acceleration magnitude: a=|${mR}-${mL}|g/(${mL}+${mR})=${a.toFixed(3)} m s⁻²<br>Tension T=${T.toFixed(3)} N<br>Write separate equations for each hanging mass.`;} calc();</script></body></html>

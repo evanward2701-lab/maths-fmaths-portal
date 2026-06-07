@@ -1,0 +1,31 @@
+% Asset ID: FA22ElasticCollisionsInOneDimensionTikZ-001
+% Source: Transcript algebraic example and screenshot evidence
+% Related lesson section: Section 9.5 Algebraic 3m,4m,3u,2u collision diagram
+% Purpose: Precise before-and-after collision diagram for the algebraic example.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing}
+\definecolor{Canvas}{HTML}{FAF9F6}\definecolor{Ink}{HTML}{2C2C2E}\definecolor{SoftLine}{HTML}{E5E5EA}\definecolor{Gold}{HTML}{D4AF37}\definecolor{MutedGold}{HTML}{C5A059}\definecolor{Cream}{HTML}{FFFFF0}\definecolor{SoftRose}{HTML}{FBEFEF}
+\tikzset{velocity/.style={-{Latex[length=4mm,width=3mm]},line width=1.4pt,draw=Ink}, particle/.style={circle,draw=MutedGold,line width=1.2pt,fill=Cream,minimum size=17mm,inner sep=0pt}, panel/.style={draw=SoftLine,line width=0.8pt,rounded corners=8pt,fill=Cream}, lawbox/.style={draw=SoftLine,line width=0.8pt,rounded corners=6pt,fill=SoftRose}}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily,text=Ink]
+\fill[Canvas] (-0.8,-4.8) rectangle (15.2,7);
+\node[anchor=west,font=\bfseries\Large] at (-0.2,6.45) {Algebraic direct collision: \(3m,4m,3u,2u\)};
+\node[panel,minimum width=7cm,minimum height=4.1cm,anchor=north west] at (-0.2,5.55) {};
+\node[panel,minimum width=7cm,minimum height=4.1cm,anchor=north west] at (7.7,5.55) {};
+\node[font=\bfseries\large] at (3.3,5.15) {Before impact};\node[font=\bfseries\large] at (11.2,5.15) {After impact};
+\draw[SoftLine,line width=1pt] (0.45,2.75)--(6.2,2.75);\draw[SoftLine,line width=1pt] (8.35,2.75)--(14.1,2.75);
+\node[particle] (Pbefore) at (2,2.75) {\(\boldsymbol P\)};\node[particle] (Qbefore) at (4.7,2.75) {\(\boldsymbol Q\)};
+\node[below=6mm of Pbefore] {\(3m\)};\node[below=6mm of Qbefore] {\(4m\)};
+\draw[velocity] (1.25,3.75)--(2.75,3.75) node[midway,above] {\(3u\)};\draw[velocity] (5.45,3.75)--(3.95,3.75) node[midway,above] {\(2u\)};
+\draw[decorate,decoration={brace,amplitude=5pt},draw=Gold,line width=1.1pt] (1.55,1.45)--(5.15,1.45) node[midway,below=8pt,text=Ink] {\(\text{speed of approach}=5u\)};
+\node[particle] (Pafter) at (9.9,2.75) {\(\boldsymbol P\)};\node[particle] (Qafter) at (12.6,2.75) {\(\boldsymbol Q\)};
+\node[below=6mm of Pafter] {\(3m\)};\node[below=6mm of Qafter] {\(4m\)};
+\draw[velocity] (9.15,3.75)--(10.65,3.75) node[midway,above] {\(x\)};\draw[velocity] (11.85,3.75)--(13.35,3.75) node[midway,above] {\(y\)};
+\draw[decorate,decoration={brace,amplitude=5pt},draw=Gold,line width=1.1pt] (9.55,1.45)--(12.95,1.45) node[midway,below=8pt,text=Ink] {\(\text{speed of separation}=y-x\)};
+\node[lawbox,minimum width=6.6cm,minimum height=1.2cm,anchor=north west] at (0,0.45) {\begin{minipage}{6.1cm}\centering \(\textbf{NLR}\)\\ \[e=\frac{y-x}{5u}\Rightarrow 5eu=y-x\]\end{minipage}};
+\node[lawbox,minimum width=6.6cm,minimum height=1.2cm,anchor=north west] at (7.9,0.45) {\begin{minipage}{6.1cm}\centering \(\textbf{PCLM}\)\\ \[3m(3u)+4m(-2u)=3mx+4my\]\end{minipage}};
+\node[anchor=west] at (0,-3.6) {\(\star\) Results: \(y=\frac{u}{7}(15e+1)\), \(x=\frac{u}{7}(1-20e)\).};
+\end{tikzpicture}
+\end{document}

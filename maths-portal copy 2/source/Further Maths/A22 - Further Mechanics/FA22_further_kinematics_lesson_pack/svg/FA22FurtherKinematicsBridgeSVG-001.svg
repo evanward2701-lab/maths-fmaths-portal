@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bridge from ordinary A-Level kinematics to Further Maths kinematics</title>
+  <desc id="desc">A two-panel bridge diagram showing ordinary A-Level kinematics with x, v and a linked by differentiation and integration, then the Further Maths extension to functions of time, displacement and velocity.</desc>
+  <metadata>Asset ID: FA22FurtherKinematicsBridgeSVG-001; Source: Ordinary A-Level Maths bridge plus CCEA Further Mathematics specification; Related lesson section: Explicit Prerequisite Recap; Visual Asset Integration; Purpose: Compare prior ordinary Maths method with Further Maths variable acceleration extensions.</metadata>
+  <defs>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 12 6 L 0 12 z" fill="#C5A059"/></marker>
+    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 12 6 L 0 12 z" fill="#2C2C2E"/></marker>
+    <style>.bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:3;rx:30}.inner{fill:#FAF9F6;stroke:#E5E5EA;stroke-width:2;rx:24}.title{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:36px;font-weight:700;fill:#2C2C2E}.subtitle{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:20px;fill:#3A3A3C}.heading{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:27px;font-weight:700;fill:#2C2C2E}.label{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:20px;fill:#2C2C2E}.small{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;fill:#3A3A3C}.math{font-family:"Times New Roman",serif;font-size:30px;font-style:italic;fill:#2C2C2E}.formula{font-family:"Times New Roman",serif;font-size:27px;fill:#2C2C2E}.goldLine{stroke:#C5A059;stroke-width:4.5;stroke-linecap:round}.darkLine{stroke:#2C2C2E;stroke-width:4;stroke-linecap:round}.divider{stroke:#E5E5EA;stroke-width:4}.chip{fill:#FBEFEF;stroke:#E5E5EA;stroke-width:2;rx:16}</style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="760"/><rect class="panel" x="50" y="45" width="1100" height="675"/>
+  <text class="title" x="95" y="102">A-Level Maths Bridge: ordinary kinematics to Further kinematics</text><text class="subtitle" x="95" y="140">Same motion quantities. Stronger calculus. Sharper method choice.</text>
+  <rect class="inner" x="95" y="185" width="480" height="430"/><text class="heading" x="130" y="235">Ordinary A-Level Mechanics</text><text class="small" x="130" y="268">The familiar ladder: differentiate down, integrate up.</text>
+  <circle cx="235" cy="360" r="42" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><circle cx="365" cy="360" r="42" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><circle cx="495" cy="360" r="42" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text class="math" x="226" y="370">x</text><text class="math" x="356" y="370">v</text><text class="math" x="486" y="370">a</text>
+  <line class="darkLine" x1="277" y1="360" x2="323" y2="360" marker-end="url(#arrowDark)"/><line class="darkLine" x1="407" y1="360" x2="453" y2="360" marker-end="url(#arrowDark)"/><text class="small" x="255" y="315">differentiate with respect to t</text>
+  <line class="goldLine" x1="453" y1="420" x2="407" y2="420" marker-end="url(#arrowGold)"/><line class="goldLine" x1="323" y1="420" x2="277" y2="420" marker-end="url(#arrowGold)"/><text class="small" x="263" y="465">integrate with respect to t</text>
+  <text class="formula" x="145" y="535">v = dx/dt</text><text class="formula" x="315" y="535">a = dv/dt = d²x/dt²</text>
+  <line class="divider" x1="595" y1="400" x2="650" y2="400"/><line class="goldLine" x1="600" y1="400" x2="650" y2="400" marker-end="url(#arrowGold)"/>
+  <rect class="inner" x="670" y="185" width="435" height="430"/><text class="heading" x="705" y="235">Further Maths upgrade</text><text class="small" x="705" y="268">Now the variable inside the function decides the route.</text>
+  <rect class="chip" x="705" y="305" width="360" height="54"/><text class="formula" x="730" y="340">a = f(t): use a = dv/dt</text>
+  <rect class="chip" x="705" y="378" width="360" height="54"/><text class="formula" x="730" y="413">v = f(x): use dx/dt = f(x)</text>
+  <rect class="chip" x="705" y="451" width="360" height="54"/><text class="formula" x="730" y="486">a = f(x): use a = v dv/dx</text>
+  <rect class="chip" x="705" y="524" width="360" height="54"/><text class="formula" x="730" y="559">a = f(v): choose by target</text>
+  <rect x="155" y="650" width="890" height="42" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="2"/><text class="label" x="185" y="678">Key upgrade:</text><text class="formula" x="310" y="678">a = dv/dt = (dv/dx)(dx/dt) = v dv/dx</text>
+</svg>

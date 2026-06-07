@@ -1,0 +1,78 @@
+<!--
+asset_id: AS1BinomialExpansionWIDGET-001
+source: CCEA AS1 Sequences and series specification boundary; Dr Frost Maths Chapter 8 Binomial Expansion evidence
+related_lesson_section: Core Theory 8.8; Worked Examples 6-9; Exam Technique 13.1-13.2
+purpose: Let the student choose n, a and b for (a + bx)^n, then see coefficients, powers and terms generated step by step.
+linked_LOs: AS1-SS-LO001, AS1-SS-LO002
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS1 Binomial Expansion Builder</title>
+  <style>
+    :root { --bg:#f7f7fb; --panel:#fff; --ink:#151515; --muted:#555; --border:#d8d8e2; --accent:#2f5f9f; --accent-soft:#eaf1ff; --warn:#8a4b00; --warn-bg:#fff4df; --good:#0b6b38; --good-bg:#e8f7ef; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:24px; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); line-height:1.45; }
+    .widget { max-width:1100px; margin:0 auto; background:var(--panel); border:1px solid var(--border); border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.08); overflow:hidden; }
+    header { padding:24px 28px; border-bottom:1px solid var(--border); background:linear-gradient(180deg,#fff,#f1f5ff); }
+    h1 { margin:0 0 8px; font-size:30px; }
+    .subtitle { margin:0; color:var(--muted); font-size:16px; }
+    .content { padding:24px 28px 30px; }
+    .grid { display:grid; grid-template-columns:repeat(4,minmax(130px,1fr)); gap:16px; margin-bottom:18px; }
+    label { display:block; font-weight:700; margin-bottom:6px; }
+    input, select, button { width:100%; font:inherit; border-radius:10px; border:1px solid var(--border); padding:10px 12px; background:#fff; }
+    button { cursor:pointer; background:var(--accent); color:#fff; border-color:var(--accent); font-weight:700; }
+    .note { margin:16px 0; padding:14px 16px; border-radius:12px; border:1px solid var(--border); background:#fafafa; }
+    .boundary { background:var(--warn-bg); border-color:#f3c77e; color:var(--warn); }
+    .success { background:var(--good-bg); border-color:#9fd8b7; color:var(--good); }
+    .formula { font-family:"Cambria Math", "Times New Roman", serif; font-size:22px; overflow-x:auto; padding:10px 0; }
+    table { width:100%; border-collapse:collapse; margin-top:16px; font-size:15px; }
+    th, td { border:1px solid var(--border); padding:10px; text-align:center; vertical-align:middle; }
+    th { background:var(--accent-soft); }
+    .left { text-align:left; }
+    .mono { font-family:"Courier New", Courier, monospace; }
+    .answer-box { margin-top:18px; padding:16px; border-radius:14px; background:var(--accent-soft); border:1px solid #bdd0f6; }
+    .small { font-size:13px; color:var(--muted); }
+    @media (max-width:800px) { .grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:520px) { body { padding:12px; } .grid { grid-template-columns:1fr; } h1 { font-size:24px; } table { font-size:13px; } }
+  </style>
+</head>
+<body>
+  <main class="widget">
+    <header><h1>AS1 Binomial Expansion Builder</h1><p class="subtitle">Build terms of <strong>(a + bx)<sup>n</sup></strong> using Pascal coefficients and <strong>nCr</strong>.</p></header>
+    <section class="content">
+      <div class="note boundary"><strong>AS1 boundary:</strong> this widget uses the finite binomial expansion for positive integer powers only. Fractional and negative powers are Year 2 territory, so the widget politely shuts that gate.</div>
+      <div class="grid">
+        <div><label for="aValue">a</label><input id="aValue" type="number" step="any" value="2" /></div>
+        <div><label for="bValue">b in bx</label><input id="bValue" type="number" step="any" value="3" /></div>
+        <div><label for="nValue">n</label><input id="nValue" type="number" min="1" max="12" step="1" value="4" /></div>
+        <div><label for="mode">Display mode</label><select id="mode"><option value="all">Full expansion</option><option value="first">First few terms</option><option value="single">Single coefficient</option></select></div>
+        <div><label for="termCount">Number of terms</label><input id="termCount" type="number" min="1" max="13" step="1" value="4" /></div>
+        <div><label for="targetPower">Target power of x</label><input id="targetPower" type="number" min="0" max="12" step="1" value="2" /></div>
+        <div><label>&nbsp;</label><button id="buildBtn">Build expansion</button></div>
+      </div>
+      <div id="status" class="note success"></div>
+      <div class="answer-box"><div class="formula" id="formulaLine"></div><div class="formula" id="answerLine"></div></div>
+      <table id="termsTable"><thead><tr><th>r</th><th>nCr</th><th>Power of a</th><th>Power of bx</th><th>Term before simplification</th><th>Simplified term</th></tr></thead><tbody></tbody></table>
+      <div class="note"><strong>Exam check:</strong> in the term <span class="mono">nCr × a^(n-r) × (bx)^r</span>, the powers <span class="mono">(n-r)</span> and <span class="mono">r</span> always add to <span class="mono">n</span>. If they do not, the algebra gremlin has moved a bracket.</div>
+      <p class="small">Tip: try a = 2, b = 3, n = 4 to reproduce (2 + 3x)<sup>4</sup> = 16 + 96x + 216x<sup>2</sup> + 216x<sup>3</sup> + 81x<sup>4</sup>.</p>
+    </section>
+  </main>
+  <script>
+    const aInput=document.getElementById("aValue"), bInput=document.getElementById("bValue"), nInput=document.getElementById("nValue"), modeInput=document.getElementById("mode"), termCountInput=document.getElementById("termCount"), targetPowerInput=document.getElementById("targetPower"), buildBtn=document.getElementById("buildBtn");
+    const statusBox=document.getElementById("status"), formulaLine=document.getElementById("formulaLine"), answerLine=document.getElementById("answerLine"), tableBody=document.querySelector("#termsTable tbody");
+    function factorial(n){let product=1; for(let i=2;i<=n;i++) product*=i; return product;}
+    function nCr(n,r){if(r<0||r>n)return 0; return factorial(n)/(factorial(r)*factorial(n-r));}
+    function roundSmart(value){const rounded=Math.round((value+Number.EPSILON)*1e10)/1e10; return Object.is(rounded,-0)?0:rounded;}
+    function superscriptPower(power){const map={"0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹","-":"⁻"}; return String(power).split("").map(ch=>map[ch]||ch).join("");}
+    function formatXTerm(coefficient,power){const c=roundSmart(coefficient); if(power===0)return `${c}`; const xPart=power===1?"x":`x${superscriptPower(power)}`; if(c===1)return xPart; if(c===-1)return `-${xPart}`; return `${c}${xPart}`;}
+    function joinTerms(terms){if(!terms.length)return""; let output=terms[0]; for(let i=1;i<terms.length;i++){const term=terms[i]; output += term.startsWith("-") ? " - "+term.slice(1) : " + "+term;} return output;}
+    function buildTerms(a,b,n){const terms=[]; for(let r=0;r<=n;r++){const coefficient=nCr(n,r), aPower=n-r, bxPower=r, numericCoefficient=coefficient*Math.pow(a,aPower)*Math.pow(b,bxPower); terms.push({r,coefficient,aPower,bxPower,before:`C(${n},${r}) × ${a}${superscriptPower(aPower)} × (${b}x)${superscriptPower(bxPower)}`, simplified:formatXTerm(numericCoefficient,r), numericCoefficient:roundSmart(numericCoefficient)});} return terms;}
+    function validateInputs(a,b,n,termCount,targetPower){if(!Number.isFinite(a)||!Number.isFinite(b))return"Please enter numerical values for a and b."; if(!Number.isInteger(n)||n<1)return"n must be a positive integer for this AS1 finite expansion."; if(n>12)return"For this classroom widget, keep n at 12 or below so the table stays readable."; if(!Number.isInteger(termCount)||termCount<1)return"The number of terms must be a positive integer."; if(!Number.isInteger(targetPower)||targetPower<0||targetPower>n)return"The target power of x must be an integer from 0 to n."; return"";}
+    function render(){const a=Number(aInput.value), b=Number(bInput.value), n=Number(nInput.value), mode=modeInput.value, termCount=Number(termCountInput.value), targetPower=Number(targetPowerInput.value); const error=validateInputs(a,b,n,termCount,targetPower); if(error){statusBox.className="note boundary"; statusBox.textContent=error; formulaLine.textContent=""; answerLine.textContent=""; tableBody.innerHTML=""; return;} const terms=buildTerms(a,b,n); let shownTerms=terms; if(mode==="first") shownTerms=terms.slice(0,Math.min(termCount,n+1)); if(mode==="single") shownTerms=[terms[targetPower]]; tableBody.innerHTML=""; for(const term of shownTerms){const row=document.createElement("tr"); row.innerHTML=`<td>${term.r}</td><td>C(${n},${term.r}) = ${term.coefficient}</td><td>${term.aPower}</td><td>${term.bxPower}</td><td class="left">${term.before}</td><td class="left">${term.simplified}</td>`; tableBody.appendChild(row);} formulaLine.innerHTML=`Expansion form: (${a} + ${b}x)<sup>${n}</sup>`; if(mode==="all"){statusBox.className="note success"; statusBox.textContent="Full expansion shown. Check that the powers of x run from 0 up to n."; answerLine.textContent=`= ${joinTerms(terms.map(t=>t.simplified))}`;} if(mode==="first"){statusBox.className="note success"; statusBox.textContent="First terms shown. The dots matter because omitted terms still exist."; const needsDots=shownTerms.length<terms.length; answerLine.textContent=`= ${joinTerms(shownTerms.map(t=>t.simplified))}${needsDots?" + ...":""}`;} if(mode==="single"){const term=terms[targetPower]; statusBox.className="note success"; statusBox.textContent=`Single-term method: match x^${targetPower}, so use r = ${targetPower}.`; answerLine.innerHTML=`Coefficient of x<sup>${targetPower}</sup> is <strong>${term.numericCoefficient}</strong>.`;}}
+    buildBtn.addEventListener("click",render); [aInput,bInput,nInput,modeInput,termCountInput,targetPowerInput].forEach(input=>{input.addEventListener("change",render); input.addEventListener("input",render);}); render();
+  </script>
+</body>
+</html>

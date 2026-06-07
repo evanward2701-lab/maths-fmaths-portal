@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Hooke's Law force-extension graph with elastic limit</title>
+<desc id="desc">Force-extension graph showing the proportional Hooke's Law region up to the elastic limit and a non-linear region beyond it.</desc>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker></defs>
+<rect width="1200" height="760" fill="#FAF9F6"/><rect x="48" y="44" width="1104" height="672" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="88" y="96" fill="#2C2C2E" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Hooke's Law applies only up to the elastic limit</text>
+<line x1="150" y1="610" x2="1015" y2="610" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrow)"/><line x1="150" y1="610" x2="150" y2="145" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrow)"/>
+<text x="895" y="668" fill="#2C2C2E" font-family="Inter, Arial" font-size="30" font-weight="600">Extension, x</text><text transform="translate(95 245) rotate(-90)" fill="#2C2C2E" font-family="Inter, Arial" font-size="30" font-weight="600">Force, T</text>
+<path d="M150 610 L480 300" stroke="#C5A059" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M480 300 C560 245,690 228,840 208 C910 199,955 188,995 178" stroke="#D4AF37" stroke-width="6" fill="none" stroke-dasharray="10 8" stroke-linecap="round"/>
+<circle cx="480" cy="300" r="11" fill="#C5A059" stroke="#2C2C2E" stroke-width="3"/><line x1="480" y1="610" x2="480" y2="170" stroke="#2C2C2E" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="505" y="270" fill="#C5A059" font-family="Inter, Arial" font-size="23" font-weight="700">Elastic limit</text>
+<rect x="215" y="170" width="310" height="104" rx="18" fill="#FBEFEF" stroke="#E5E5EA"/><text x="239" y="208" fill="#2C2C2E" font-family="Inter, Arial" font-size="23">Hooke's Law region</text><text x="239" y="238" fill="#2C2C2E" font-family="Inter, Arial" font-size="19">Straight line through origin</text><text x="239" y="264" fill="#C5A059" font-family="Inter, Arial" font-size="19" font-weight="700">T = λx / l</text>
+<rect x="650" y="360" width="370" height="122" rx="18" fill="#FBEFEF" stroke="#E5E5EA"/><text x="674" y="398" fill="#2C2C2E" font-family="Inter, Arial" font-size="23">Beyond the elastic limit</text><text x="674" y="428" fill="#2C2C2E" font-family="Inter, Arial" font-size="19">Force is no longer modelled as</text><text x="674" y="456" fill="#C5A059" font-family="Inter, Arial" font-size="19" font-weight="700">directly proportional to extension.</text>
+</svg>

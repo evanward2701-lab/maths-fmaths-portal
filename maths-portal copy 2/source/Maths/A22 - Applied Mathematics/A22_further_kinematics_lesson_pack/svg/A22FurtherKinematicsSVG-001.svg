@@ -1,0 +1,24 @@
+<!--
+Asset ID: A22FurtherKinematicsSVG-001
+Asset type: SVG diagram
+Unit: A22: A2 2 Applied Mathematics
+Topic: Further Kinematics
+Topic code: A22-KIN
+Related lesson section: Core Theory - Constant velocity vector motion
+Source: Transcript; MechYr2-Chp8-FurtherKinematics.pdf p.3
+Purpose: Show r = r0 + vt using repeated vector steps.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-label="A22FurtherKinematicsSVG-001">
+<defs>
+<marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/></marker>
+<marker id="redarr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker>
+<style>
+.title{font:700 32px Arial,sans-serif;fill:#111827}.text{font:400 20px Arial,sans-serif;fill:#374151}.label{font:700 22px Arial,sans-serif;fill:#111827}.axis{stroke:#374151;stroke-width:3;marker-end:url(#arr)}.line{stroke:#2563eb;stroke-width:5;fill:none;marker-end:url(#arr)}.red{stroke:#dc2626;stroke-width:5;fill:none;marker-end:url(#redarr)}.box{fill:#fff;stroke:#9ca3af;stroke-width:2;rx:14}.dash{stroke:#9ca3af;stroke-width:3;stroke-dasharray:8 8}
+</style></defs>
+<rect width="1000" height="620" fill="#f9fafb"/>
+
+<text x="40" y="55" class="title">Constant velocity vector motion</text><text x="40" y="88" class="text">Starting position plus repeated velocity steps gives r = r₀ + vt.</text>
+<g transform="translate(90,510)"><line x1="0" y1="0" x2="540" y2="0" class="axis"/><line x1="0" y1="0" x2="0" y2="-380" class="axis"/><text x="550" y="8" class="label">i</text><text x="-8" y="-395" class="label">j</text><line x1="120" y1="-40" x2="280" y2="-120" class="line"/><line x1="280" y1="-120" x2="440" y2="-200" class="line"/><circle cx="120" cy="-40" r="13" fill="#ef4444"/><circle cx="280" cy="-120" r="13" fill="#ef4444"/><circle cx="440" cy="-200" r="13" fill="#ef4444"/><text x="70" y="-10" class="label">r₀=(3,1)</text><text x="250" y="-150" class="label">(7,3)</text><text x="400" y="-230" class="label">(11,5)</text><text x="175" y="-85" class="label">v=(4,2)</text></g>
+<rect x="660" y="160" width="285" height="270" class="box"/><text x="690" y="215" class="label">r = r₀ + vt</text><text x="690" y="270" class="text">r₀ = start</text><text x="690" y="310" class="text">v = velocity</text><text x="690" y="350" class="text">t = scalar time</text><text x="690" y="400" class="label">r=(3+4t,1+2t)</text>
+
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">A-Level Maths Bridge to Further Maths Sampling and Estimation</title>
+  <desc id="desc">A bridge diagram comparing ordinary A-Level Maths with Further Maths sampling and estimation.</desc>
+  <defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker>
+  <style>.canvas{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2}.panelSoft{fill:#FBEFEF;stroke:#E5E5EA;stroke-width:2}.header{fill:#2C2C2E;font-family:Georgia,serif;font-size:34px;font-weight:700}.subheader,.text,.small{fill:#2C2C2E;font-family:Arial,sans-serif}.subheader{font-size:18px}.label{fill:#2C2C2E;font-family:Arial,sans-serif;font-size:20px;font-weight:700}.text{font-size:17px}.small{font-size:15px}.math{fill:#2C2C2E;font-family:Georgia,serif;font-size:20px}.goldLine{stroke:#C5A059;stroke-width:3;fill:none;marker-end:url(#arrowGold)}.divider{stroke:#E5E5EA;stroke-width:2}.chip{fill:#FBEFEF;stroke:#D4AF37;stroke-width:1.5}</style></defs>
+  <rect class="canvas" width="1200" height="760"/>
+  <text class="header" x="60" y="70">A-Level Maths Bridge: Sampling becomes estimation</text>
+  <text class="subheader" x="60" y="105">Ordinary Maths gives the tools. Further Maths turns the sample statistic into a random variable with uncertainty.</text>
+  <rect class="panel" x="60" y="145" width="495" height="495" rx="22"/><rect class="panelSoft" x="645" y="145" width="495" height="495" rx="22"/>
+  <text class="label" x="90" y="190">Ordinary A-Level Maths</text><line class="divider" x1="90" y1="205" x2="525" y2="205"/>
+  <text class="text" x="95" y="250">AS2 Sampling</text><text class="small" x="120" y="278">Population, sample and sampling bias</text><text class="small" x="120" y="302">Samples help describe a larger group</text>
+  <text class="text" x="95" y="360">AS2 Data summaries</text><text class="small" x="120" y="388">Mean, variance and standard deviation</text><text class="math" x="120" y="420">x̄ = Σx / n</text>
+  <text class="text" x="95" y="510">A22 Normal distribution</text><text class="small" x="120" y="538">Standardise a single normal variable</text><text class="math" x="120" y="570">Z = (X − μ) / σ</text>
+  <text class="label" x="675" y="190">Further Maths: FA22-EST</text><line class="divider" x1="675" y1="205" x2="1110" y2="205"/>
+  <text class="text" x="680" y="250">Random sample as variables</text><text class="math" x="705" y="282">X₁, X₂, ..., Xₙ</text>
+  <text class="text" x="680" y="360">Statistic becomes estimator</text><text class="math" x="705" y="392">X̄ estimates μ</text><text class="math" x="705" y="424">S² estimates σ²</text>
+  <text class="text" x="680" y="482">Sampling distribution and error</text><text class="math" x="705" y="514">Var(X̄) = σ² / n</text><text class="math" x="705" y="546">SE(X̄) = σ / √n</text>
+  <text class="text" x="680" y="600">Confidence interval for μ</text><text class="math" x="705" y="632">x̄ ± zσ / √n</text>
+  <path class="goldLine" d="M555,392 C585,392 615,392 645,392"/><text class="small" x="565" y="365">upgrade</text>
+  <rect class="chip" x="205" y="675" width="790" height="44" rx="18"/><text class="small" x="235" y="703">Bridge warning: do not treat one sample mean as the exact population mean. It is an estimate with uncertainty.</text>
+</svg>

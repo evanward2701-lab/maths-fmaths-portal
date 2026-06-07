@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Asset ID: OffSpecTransportationProblemsEnrichmentSVG-005
+Source: Teacher transcript Transportation Problems 3
+Related lesson section: Section 9.5
+Purpose: Show degeneracy repair.
+CCEA status: Off-spec enrichment only
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">Degenerate Solution Repair</title>
+  <desc id="desc">Before and after showing zero allocation repair.</desc>
+  <rect width="1100" height="760" fill="#FAF9F6"/>
+  <text x="550" y="55" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#2C2C2E" font-weight="700">Degenerate Solution Repair</text>
+  <text x="550" y="88" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Off-spec enrichment only</text>
+  <g font-family="Inter, Arial, sans-serif"><g transform="translate(120,170)"><rect width="380" height="380" rx="22" fill="#FFFFF0" stroke="#E5E5EA"/><text x="190" y="45" text-anchor="middle" font-size="23" fill="#2C2C2E" font-weight="700">Before</text><text x="190" y="115" text-anchor="middle" font-size="28" fill="#C5A059" font-weight="700">5 &lt; 4 + 3 - 1</text><text x="190" y="180" text-anchor="middle" fill="#2C2C2E">Degenerate: too few occupied cells</text></g><line x1="520" y1="360" x2="580" y2="360" stroke="#C5A059" stroke-width="6"/><path d="M580 360 L562 348 L562 372 Z" fill="#C5A059"/><g transform="translate(600,170)"><rect width="380" height="380" rx="22" fill="#FFFFF0" stroke="#E5E5EA"/><text x="190" y="45" text-anchor="middle" font-size="23" fill="#2C2C2E" font-weight="700">After</text><text x="190" y="115" text-anchor="middle" font-size="28" fill="#C5A059" font-weight="700">6 = 4 + 3 - 1</text><text x="190" y="180" text-anchor="middle" fill="#2C2C2E">Add a zero allocation and treat it as occupied</text></g></g><text x="550" y="660" text-anchor="middle" font-family="Inter, Arial, sans-serif" fill="#2C2C2E">The zero is not transported stock. It is an occupied placeholder.</text>
+</svg>

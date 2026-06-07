@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="650" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2GeometricDistributionSVG-001: Trial strip for first success</title><desc id="desc">Trial strip showing x minus 1 failures followed by success on trial x.</desc>
+<metadata>asset_id: FAS2GeometricDistributionSVG-001</metadata>
+<rect width="1200" height="650" fill="#FAF9F6"/>
+<rect x="60" y="50" width="1080" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="100" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Geometric distribution: first success on trial x</text>
+<text x="100" y="160" font-family="Arial" font-size="22" fill="#2C2C2E">To have X = x: fail x − 1 times, then succeed.</text>
+<g transform="translate(110,250)">
+<rect x="0" y="0" width="110" height="80" rx="12" fill="#FBEFEF" stroke="#E5E5EA"/><text x="55" y="50" text-anchor="middle" font-size="34" font-family="Arial" font-weight="700">F</text><text x="55" y="115" text-anchor="middle" font-size="18" font-family="Arial">1 − p</text>
+<rect x="140" y="0" width="110" height="80" rx="12" fill="#FBEFEF" stroke="#E5E5EA"/><text x="195" y="50" text-anchor="middle" font-size="34" font-family="Arial" font-weight="700">F</text><text x="195" y="115" text-anchor="middle" font-size="18" font-family="Arial">1 − p</text>
+<rect x="280" y="0" width="110" height="80" rx="12" fill="#FBEFEF" stroke="#E5E5EA"/><text x="335" y="50" text-anchor="middle" font-size="34" font-family="Arial" font-weight="700">...</text>
+<rect x="420" y="0" width="110" height="80" rx="12" fill="#FBEFEF" stroke="#E5E5EA"/><text x="475" y="50" text-anchor="middle" font-size="34" font-family="Arial" font-weight="700">F</text><text x="475" y="115" text-anchor="middle" font-size="18" font-family="Arial">1 − p</text>
+<rect x="585" y="0" width="120" height="80" rx="12" fill="#FFF8DC" stroke="#D4AF37" stroke-width="3"/><text x="645" y="50" text-anchor="middle" font-size="34" font-family="Arial" font-weight="700" fill="#C5A059">S</text><text x="645" y="115" text-anchor="middle" font-size="18" font-family="Arial">p</text>
+</g><text x="600" y="500" text-anchor="middle" font-family="Arial" font-size="26" fill="#2C2C2E">P(X = x) = (1 − p)^(x − 1) × p = p(1 − p)^(x − 1)</text>
+</svg>

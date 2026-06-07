@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Enter and Leave Pairs Give Even Degree</title><desc id="desc">Enter/leave pairs force even degree in an Eulerian circuit.</desc>
+<rect width="1200" height="760" fill="#FAF9F6"/>
+<rect x="36" y="36" width="1128" height="688" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="70" y="95" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#2C2C2E">Enter and Leave Pairs Give Even Degree</text>
+<text x="70" y="140" font-family="Arial" font-size="20" fill="#2C2C2E">In a closed trail, entries and exits come in pairs.</text><circle cx="600" cy="370" r="45" fill="#FBEFEF" stroke="#C5A059" stroke-width="4"/><text x="589" y="383" font-family="Georgia" font-size="38" fill="#2C2C2E">v</text><g stroke-width="7" fill="none"><path d="M260 250 C390 260 480 310 555 350" stroke="#7CB342"/><path d="M640 350 C720 300 830 270 950 260" stroke="#C75B5B"/><path d="M260 500 C390 480 480 430 555 390" stroke="#7CB342"/><path d="M640 390 C720 445 830 500 950 520" stroke="#C75B5B"/></g><text x="250" y="220" font-family="Arial" font-size="20">enter</text><text x="950" y="240" font-family="Arial" font-size="20">leave</text><rect x="270" y="610" width="660" height="55" rx="18" fill="#FFFFF0" stroke="#C5A059"/><text x="310" y="645" font-family="Georgia" font-size="25" fill="#2C2C2E">(enter, leave) pairs ⇒ deg(v)=2k</text>
+</svg>

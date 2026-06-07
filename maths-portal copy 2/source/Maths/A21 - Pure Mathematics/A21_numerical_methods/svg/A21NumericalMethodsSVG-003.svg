@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-003; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: An even number of roots can be hidden.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">No sign change warning</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">An even number of roots can be hidden.</text>
+  <line x1="90" y1="300" x2="810" y2="300" stroke="#222" stroke-width="3"/><line x1="140" y1="430" x2="140" y2="120" stroke="#222" stroke-width="3"/><path d="M130,420 C220,390 270,190 390,230 C500,270 500,410 760,415" fill="none" stroke="#1f77b4" stroke-width="5"/><circle cx="280" cy="300" r="8" fill="#111"/><circle cx="520" cy="300" r="8" fill="#111"/><text x="255" y="285" font-family="Arial" font-size="18">root</text><text x="500" y="285" font-family="Arial" font-size="18">root</text>
+</svg>

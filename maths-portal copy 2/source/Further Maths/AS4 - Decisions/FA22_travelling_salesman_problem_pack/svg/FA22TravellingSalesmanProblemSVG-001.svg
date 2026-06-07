@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Walk, tour and Hamiltonian cycle comparison</title>
+  <desc id="desc">Three panels compare a walk, a tour and a Hamiltonian cycle.</desc>
+  <metadata>
+    asset_id: FA22TravellingSalesmanProblemSVG-001
+    asset_type: svg
+    topic_id: FA22TravellingSalesmanProblem
+    unit_code: FA22
+    topic_code: FA22-ALGGRAPH
+    lesson_file: FA22_travelling_salesman_problem_lesson.md
+  </metadata>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:22}
+      .title{font-family:Arial,sans-serif;font-size:32px;font-weight:700;fill:#2C2C2E}
+      .text{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E}
+      .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E}
+      .edge{stroke:#8E8E93;stroke-width:3;fill:none} .route{stroke:#C5A059;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .node{fill:#FAF9F6;stroke:#2C2C2E;stroke-width:2.5} .gold{fill:#FBEFEF;stroke:#C5A059;stroke-width:3}
+      .cell{fill:#FAF9F6;stroke:#E5E5EA;stroke-width:1.2} .hi{fill:#FBEFEF;stroke:#C5A059;stroke-width:2.5}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  
+  <text class="title" x="60" y="60">Walk, Tour and Hamiltonian Cycle</text>
+  <rect class="card" x="60" y="110" width="330" height="540"/>
+  <rect class="card" x="435" y="110" width="330" height="540"/>
+  <rect class="card" x="810" y="110" width="330" height="540"/>
+  <text class="text" x="90" y="155">Walk</text><text class="small" x="90" y="185">Connected edge sequence.</text>
+  <text class="text" x="465" y="155">Tour</text><text class="small" x="465" y="185">Visits every vertex and returns.</text>
+  <text class="text" x="840" y="155">Hamiltonian cycle</text><text class="small" x="840" y="185">Visits every vertex exactly once.</text>
+  <g transform="translate(0,0)"><line class="edge" x1="160" y1="300" x2="270" y2="300"/><line class="edge" x1="270" y1="300" x2="310" y2="410"/><line class="edge" x1="310" y1="410" x2="215" y2="500"/><line class="edge" x1="215" y1="500" x2="120" y2="410"/><line class="edge" x1="120" y1="410" x2="160" y2="300"/><polyline class="route" points="160,300 270,300 310,410"/><circle class="gold" cx="160" cy="300" r="17"/><circle class="node" cx="270" cy="300" r="17"/><circle class="node" cx="310" cy="410" r="17"/><circle class="node" cx="215" cy="500" r="17"/><circle class="node" cx="120" cy="410" r="17"/><text class="small" x="95" y="585">A → B → C; may miss vertices.</text></g>
+  <g transform="translate(375,0)"><line class="edge" x1="160" y1="300" x2="270" y2="300"/><line class="edge" x1="270" y1="300" x2="310" y2="410"/><line class="edge" x1="310" y1="410" x2="215" y2="500"/><line class="edge" x1="215" y1="500" x2="120" y2="410"/><line class="edge" x1="120" y1="410" x2="160" y2="300"/><polyline class="route" points="160,300 270,300 310,410 270,300 215,500 120,410 160,300"/><circle class="gold" cx="160" cy="300" r="17"/><circle class="node" cx="270" cy="300" r="17"/><circle class="node" cx="310" cy="410" r="17"/><circle class="node" cx="215" cy="500" r="17"/><circle class="node" cx="120" cy="410" r="17"/><text class="small" x="90" y="585">A → B → C → B → D → E → A.</text></g>
+  <g transform="translate(750,0)"><line class="edge" x1="160" y1="300" x2="270" y2="300"/><line class="edge" x1="270" y1="300" x2="310" y2="410"/><line class="edge" x1="310" y1="410" x2="215" y2="500"/><line class="edge" x1="215" y1="500" x2="120" y2="410"/><line class="edge" x1="120" y1="410" x2="160" y2="300"/><polyline class="route" points="160,300 270,300 215,500 120,410 310,410 160,300"/><circle class="gold" cx="160" cy="300" r="17"/><circle class="node" cx="270" cy="300" r="17"/><circle class="node" cx="310" cy="410" r="17"/><circle class="node" cx="215" cy="500" r="17"/><circle class="node" cx="120" cy="410" r="17"/><text class="small" x="88" y="585">A → B → D → E → C → A.</text></g>
+
+</svg>

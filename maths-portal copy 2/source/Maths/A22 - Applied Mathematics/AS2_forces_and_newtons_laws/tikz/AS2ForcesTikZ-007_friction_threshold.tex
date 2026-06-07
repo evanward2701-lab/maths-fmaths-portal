@@ -1,0 +1,16 @@
+% Asset ID: AS2ForcesTikZ-007
+% Source: Chapter 5/7 Forces Transcript
+% Related lesson section: Core Theory: The friction model
+% Purpose: Show friction increasing to its maximum value mu R.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, angles, quotes, decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}[force/.style={-{Latex[length=3mm]}, thick}, comp/.style={-{Latex[length=3mm]}, thick, dashed}, label/.style={font=\large}, note/.style={font=\normalsize}]
+
+\draw[-{Latex[length=3mm]}, thick] (0,0)--(8,0) node[right,label] {applied force};
+\draw[-{Latex[length=3mm]}, thick] (0,0)--(0,5) node[above,label] {friction};
+\draw[thick] (0,0)--(4,3)--(7.2,3); \draw[thick,dashed] (0,3)--(7.2,3); \draw[thick,dashed] (4,0)--(4,3);
+\node[label] at (6.2,3.35) {$F=\mu R$}; \node[note,align=center] at (4,-0.55) {limiting\\point};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,35 @@
+{
+  "placeholder_ids": [
+    "FA22CentralLimitTheoremSVG-001",
+    "FA22CentralLimitTheoremSVG-002",
+    "FA22CentralLimitTheoremSVG-003",
+    "FA22CentralLimitTheoremBridgeSVG-001",
+    "FA22CentralLimitTheoremTikZ-001",
+    "FA22CentralLimitTheoremTikZ-002",
+    "FA22CentralLimitTheoremMermaid-001",
+    "FA22CentralLimitTheoremWidget-001",
+    "FA22CentralLimitTheoremWidget-002",
+    "FA22CentralLimitTheoremWidget-003"
+  ],
+  "missing_assets_for_placeholders": [],
+  "svg_parse": {
+    "FA22CentralLimitTheoremSVG-001.svg": true,
+    "FA22CentralLimitTheoremSVG-002.svg": true,
+    "FA22CentralLimitTheoremSVG-003.svg": true,
+    "FA22CentralLimitTheoremBridgeSVG-001.svg": true
+  },
+  "html_valid": {
+    "FA22CentralLimitTheoremWidget-001.html": true,
+    "FA22CentralLimitTheoremWidget-002.html": true,
+    "FA22CentralLimitTheoremWidget-003.html": true
+  },
+  "lo_present": {
+    "FA22-EST-LO001": true,
+    "FA22-EST-LO003": true,
+    "FA22-LINCOMB-LO002": true,
+    "FAS2-DIST-LO002": true,
+    "FAS2-DIST-LO003": true,
+    "FAS2-DIST-LO008": true
+  },
+  "old_references_found": []
+}

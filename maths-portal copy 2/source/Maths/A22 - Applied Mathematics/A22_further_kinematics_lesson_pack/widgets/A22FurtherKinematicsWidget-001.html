@@ -1,0 +1,74 @@
+<!--
+Asset ID: A22FurtherKinematicsWidget-001
+Asset type: Interactive HTML/CSS/JS widget
+Unit: A22: A2 2 Applied Mathematics
+Topic: Further Kinematics
+Topic code: A22-KIN
+Related LO IDs: A22-KIN-LO003, A22-KIN-LO004
+Related lesson section: Core Theory - Projectiles using vectors; Worked Example 5
+Source: CCEA A22 Kinematics specification map; Chapter 8 Further Kinematics transcript; MechYr2-Chp8-FurtherKinematics.pdf p.9
+Purpose: Let students vary initial height and velocity to see how r = r0 + ut + 1/2at^2 changes projectile motion under gravity.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A22 Further Kinematics Projectile Vector Widget</title>
+<style>
+:root{--bg:#f8fafc;--panel:#fff;--ink:#111827;--muted:#4b5563;--line:#d1d5db;--accent:#2563eb;--green:#059669;--red:#dc2626;--orange:#d97706;--shadow:0 14px 36px rgba(15,23,42,.12)}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,#e0f2fe,var(--bg) 42%);color:var(--ink)}
+.app{width:min(1180px,calc(100% - 32px));margin:24px auto} header,.card,.formula{background:var(--panel);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+header{padding:22px 26px;margin-bottom:18px} h1{margin:0 0 8px;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.1}.subtitle{margin:0;color:var(--muted);font-size:1.02rem}
+.grid{display:grid;grid-template-columns:360px 1fr;gap:18px;align-items:start}.card{padding:18px}.card h2{margin:0 0 14px;font-size:1.25rem}.control{margin-bottom:18px}
+label{display:flex;justify-content:space-between;gap:12px;font-weight:700;margin-bottom:7px} label span{color:#1d4ed8;font-variant-numeric:tabular-nums} input[type=range]{width:100%;accent-color:var(--accent)}
+.hint{margin-top:5px;color:var(--muted);font-size:.88rem}.button-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px} button{border:0;border-radius:12px;padding:10px 13px;font-weight:700;cursor:pointer;color:#fff;background:var(--accent)}button.secondary{background:#64748b}
+.visual-card{padding:0;overflow:hidden}.svg-wrap{background:#fff;border-bottom:1px solid var(--line);padding:12px}svg{width:100%;height:auto;display:block;border-radius:18px;background:#fff}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px}.metric{border:1px solid var(--line);border-radius:16px;padding:13px;background:#fff}.metric strong{display:block;margin-bottom:7px;font-size:.9rem;color:var(--muted)}.metric span{font-size:1.1rem;font-weight:800;font-variant-numeric:tabular-nums}
+.formula-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}.formula{padding:15px}.formula h3{margin:0 0 8px}.formula p{margin:0;color:var(--muted);line-height:1.45}code{font-family:"Courier New",monospace;font-weight:700;background:rgba(255,255,255,.7);padding:2px 5px;border-radius:6px}
+.exam-note{margin-top:18px;border-left:5px solid var(--orange);background:#fffbeb;padding:14px 15px;border-radius:14px;color:#78350f;line-height:1.45}
+@media(max-width:900px){.grid,.info,.formula-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="app">
+<header><h1>A22 Further Kinematics: Projectile Vector Explorer</h1><p class="subtitle">Adjust the initial position and velocity, then watch <strong>r = r₀ + ut + ½at²</strong> draw the motion under gravity.</p></header>
+<section class="grid">
+<aside class="card"><h2>Controls</h2>
+<div class="control"><label>Initial height h / m <span id="heightValue"></span></label><input id="height" type="range" min="0" max="40" step="0.5" value="20"><div class="hint">Initial j-component of r₀.</div></div>
+<div class="control"><label>Horizontal velocity uᵢ / ms⁻¹ <span id="uxValue"></span></label><input id="ux" type="range" min="0" max="20" step="0.5" value="5"><div class="hint">Horizontal acceleration is 0.</div></div>
+<div class="control"><label>Vertical velocity uⱼ / ms⁻¹ <span id="uyValue"></span></label><input id="uy" type="range" min="-10" max="25" step="0.5" value="8"><div class="hint">Positive values mean initially upwards.</div></div>
+<div class="control"><label>Gravity g / ms⁻² <span id="gValue"></span></label><input id="g" type="range" min="1" max="15" step="0.1" value="9.8"><div class="hint">In exam work, use the value in the question.</div></div>
+<div class="control"><label>Time t / s <span id="timeValue"></span></label><input id="time" type="range" min="0" max="10" step="0.05" value="1.5"><div class="hint">The marker shows the projectile at this time.</div></div>
+<div class="button-row"><button id="snapImpact" type="button">Set t to impact</button><button id="reset" type="button" class="secondary">Reset example</button></div>
+</aside>
+<section class="card visual-card">
+<div class="svg-wrap">
+<svg id="plot" viewBox="0 0 820 470" role="img" aria-label="Projectile trajectory graph">
+<defs><marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#374151"/></marker><marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#059669"/></marker><marker id="redArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/></marker></defs>
+<rect width="820" height="470" fill="#fff"/><g id="gridLines"></g>
+<line x1="60" y1="410" x2="775" y2="410" stroke="#374151" stroke-width="3" marker-end="url(#arrowHead)"/><line x1="60" y1="410" x2="60" y2="40" stroke="#374151" stroke-width="3" marker-end="url(#arrowHead)"/>
+<text x="784" y="416" font-family="Arial" font-size="18" font-weight="700" fill="#111827">i</text><text x="52" y="28" font-family="Arial" font-size="18" font-weight="700" fill="#111827">j</text>
+<path id="trajectory" d="" fill="none" stroke="#2563eb" stroke-width="4"/><line id="velocityVector" x1="0" y1="0" x2="0" y2="0" stroke="#059669" stroke-width="4" marker-end="url(#greenArrow)"/><line id="gravityVector" x1="0" y1="0" x2="0" y2="0" stroke="#dc2626" stroke-width="4" marker-end="url(#redArrow)"/>
+<circle id="startPoint" cx="0" cy="0" r="7" fill="#f59e0b" stroke="#92400e" stroke-width="2"/><circle id="movingPoint" cx="0" cy="0" r="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/><circle id="impactPoint" cx="0" cy="0" r="7" fill="#111827"/>
+<text id="startText" x="0" y="0" font-family="Arial" font-size="15" font-weight="700" fill="#92400e">r₀</text><text id="pointText" x="0" y="0" font-family="Arial" font-size="15" font-weight="700" fill="#7f1d1d">r(t)</text><text id="impactText" x="0" y="0" font-family="Arial" font-size="15" font-weight="700" fill="#111827">impact</text>
+</svg></div>
+<div class="info">
+<div class="metric"><strong>Position vector r(t)</strong><span id="positionOut"></span></div><div class="metric"><strong>Velocity vector v(t)</strong><span id="velocityOut"></span></div><div class="metric"><strong>Speed |v|</strong><span id="speedOut"></span></div><div class="metric"><strong>Impact time</strong><span id="impactTimeOut"></span></div><div class="metric"><strong>Horizontal distance</strong><span id="rangeOut"></span></div><div class="metric"><strong>Maximum height</strong><span id="maxHeightOut"></span></div>
+</div></section></section>
+<section class="formula-grid"><article class="formula"><h3>Vector model</h3><p>With <code>r₀=(0,h)</code>, <code>u=(uᵢ,uⱼ)</code> and <code>a=(0,-g)</code>, the position vector is <code>r=r₀+ut+½at²</code>.</p></article><article class="formula"><h3>Position components</h3><p>The widget uses <code>x=uᵢt</code> and <code>y=h+uⱼt-½gt²</code>. Impact occurs when <code>y=0</code>.</p></article><article class="formula"><h3>Velocity and speed</h3><p>Velocity is <code>v=(uᵢ,uⱼ-gt)</code>. Speed is <code>|v|=√(vᵢ²+vⱼ²)</code>.</p></article><article class="formula"><h3>Exam note</h3><p>Show the vector equation, substitute values, solve the vertical equation for impact time, then use the horizontal component.</p></article></section>
+<div class="exam-note"><strong>Model assumptions:</strong> projectile as particle, constant downward gravity, no air resistance.</div>
+</main>
+<script>
+const controls={height:document.getElementById("height"),ux:document.getElementById("ux"),uy:document.getElementById("uy"),g:document.getElementById("g"),time:document.getElementById("time")};
+const values={height:document.getElementById("heightValue"),ux:document.getElementById("uxValue"),uy:document.getElementById("uyValue"),g:document.getElementById("gValue"),time:document.getElementById("timeValue")};
+const output={position:document.getElementById("positionOut"),velocity:document.getElementById("velocityOut"),speed:document.getElementById("speedOut"),impactTime:document.getElementById("impactTimeOut"),range:document.getElementById("rangeOut"),maxHeight:document.getElementById("maxHeightOut")};
+const svg={gridLines:document.getElementById("gridLines"),trajectory:document.getElementById("trajectory"),startPoint:document.getElementById("startPoint"),movingPoint:document.getElementById("movingPoint"),impactPoint:document.getElementById("impactPoint"),velocityVector:document.getElementById("velocityVector"),gravityVector:document.getElementById("gravityVector"),startText:document.getElementById("startText"),pointText:document.getElementById("pointText"),impactText:document.getElementById("impactText")};
+const plot={left:60,right:775,top:40,bottom:410,width:715,height:370};
+function n(id){return Number(controls[id].value)} function f(x,dp=2){return Number.isFinite(x)?x.toFixed(dp):"not real"} function pos(t,h,ux,uy,g){return{x:ux*t,y:h+uy*t-.5*g*t*t}} function vel(t,ux,uy,g){return{x:ux,y:uy-g*t}} function sp(t,ux,uy,g){const v=vel(t,ux,uy,g);return Math.sqrt(v.x*v.x+v.y*v.y)} function impact(h,uy,g){const d=uy*uy+2*g*h;return g>0&&d>=0?(uy+Math.sqrt(d))/g:NaN} function hmax(h,uy,g){return uy<=0?h:h+uy*uy/(2*g)}
+function grid(){svg.gridLines.innerHTML="";for(let i=0;i<=10;i++){let x=plot.left+plot.width*i/10;let l=document.createElementNS("http://www.w3.org/2000/svg","line");l.setAttribute("x1",x);l.setAttribute("x2",x);l.setAttribute("y1",plot.top);l.setAttribute("y2",plot.bottom);l.setAttribute("stroke","#e5e7eb");svg.gridLines.appendChild(l)}for(let i=0;i<=8;i++){let y=plot.top+plot.height*i/8;let l=document.createElementNS("http://www.w3.org/2000/svg","line");l.setAttribute("x1",plot.left);l.setAttribute("x2",plot.right);l.setAttribute("y1",y);l.setAttribute("y2",y);l.setAttribute("stroke","#e5e7eb");svg.gridLines.appendChild(l)}}
+function update(){const h=n("height"),ux=n("ux"),uy=n("uy"),g=n("g");let t=n("time");const ti=impact(h,uy,g);controls.time.max=Number.isFinite(ti)?Math.max(1,Math.ceil(ti+1)):10;if(t>Number(controls.time.max)){t=Number(controls.time.max);controls.time.value=String(t)}values.height.textContent=f(h,1);values.ux.textContent=f(ux,1);values.uy.textContent=f(uy,1);values.g.textContent=f(g,1);values.time.textContent=f(t,2);const p=pos(t,h,ux,uy,g),v=vel(t,ux,uy,g),speed=sp(t,ux,uy,g),xi=ux*ti,ym=hmax(h,uy,g);output.position.textContent=`(${f(p.x)}, ${f(p.y)}) m`;output.velocity.textContent=`(${f(v.x)}, ${f(v.y)}) ms⁻¹`;output.speed.textContent=`${f(speed)} ms⁻¹`;output.impactTime.textContent=`${f(ti)} s`;output.range.textContent=`${f(xi)} m`;output.maxHeight.textContent=`${f(ym)} m`;const xMax=Math.max(10,xi*1.08,p.x*1.08),yMax=Math.max(10,ym*1.15,h*1.15,p.y*1.15);const px=x=>plot.left+x/xMax*plot.width, py=y=>plot.bottom-y/yMax*plot.height;let d="",tEnd=Number.isFinite(ti)?ti:Number(controls.time.max);for(let i=0;i<=160;i++){let tt=tEnd*i/160,pp=pos(tt,h,ux,uy,g);d+=(i?"L":"M")+` ${px(pp.x)} ${py(Math.max(0,pp.y))} `}svg.trajectory.setAttribute("d",d.trim());const s=pos(0,h,ux,uy,g),safeY=Math.max(0,p.y);svg.startPoint.setAttribute("cx",px(s.x));svg.startPoint.setAttribute("cy",py(s.y));svg.startText.setAttribute("x",px(s.x)+10);svg.startText.setAttribute("y",py(s.y)-10);svg.movingPoint.setAttribute("cx",px(p.x));svg.movingPoint.setAttribute("cy",py(safeY));svg.pointText.setAttribute("x",px(p.x)+11);svg.pointText.setAttribute("y",py(safeY)-10);svg.impactPoint.setAttribute("cx",px(xi));svg.impactPoint.setAttribute("cy",py(0));svg.impactText.setAttribute("x",px(xi)-30);svg.impactText.setAttribute("y",py(0)-15);const vs=Math.min(2.4,80/Math.max(1,speed));svg.velocityVector.setAttribute("x1",px(p.x));svg.velocityVector.setAttribute("y1",py(safeY));svg.velocityVector.setAttribute("x2",px(p.x)+v.x*vs);svg.velocityVector.setAttribute("y2",py(safeY)-v.y*vs);svg.gravityVector.setAttribute("x1",px(p.x)+34);svg.gravityVector.setAttribute("y1",py(safeY)-60);svg.gravityVector.setAttribute("x2",px(p.x)+34);svg.gravityVector.setAttribute("y2",py(safeY)-8)}
+Object.values(controls).forEach(c=>c.addEventListener("input",update));document.getElementById("reset").addEventListener("click",()=>{controls.height.value=20;controls.ux.value=5;controls.uy.value=8;controls.g.value=9.8;controls.time.value=1.5;update()});document.getElementById("snapImpact").addEventListener("click",()=>{const ti=impact(n("height"),n("uy"),n("g"));if(Number.isFinite(ti)){controls.time.value=String(ti);update()}});grid();update();
+</script>
+</body>
+</html>

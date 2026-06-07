@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Asset ID: FAS2CircularMotionWidget-001
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 10. Interactive Learning Widgets
+    Purpose: Convert angular speed units and calculate v = rω and a = rω² or v²/r.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAS2 Circular Motion Widget 001</title>
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--accent:#C5A059;--rose:#FBEFEF;--text:#2C2C2E;--muted:#6B6B70}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--canvas);color:var(--text)}
+    main{max-width:980px;margin:24px auto;padding:22px;background:var(--panel);border:2px solid var(--line);border-radius:24px}
+    h1{margin:0 0 8px;font-size:clamp(1.7rem,4vw,2.5rem)} .subtitle{margin:0 0 22px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+    section,.result{background:#fffdf4;border:1.5px solid var(--line);border-radius:18px;padding:16px}
+    label{display:block;margin:12px 0 6px;font-weight:700} input,select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:12px;font-size:1rem}
+    button{margin-top:16px;width:100%;border:0;border-radius:14px;padding:13px 16px;background:var(--accent);color:white;font-weight:800;cursor:pointer}
+    .formula{padding:12px 14px;background:var(--rose);border:1px solid var(--line);border-radius:14px;font-family:"Times New Roman",serif;font-size:1.15rem;margin:10px 0}
+    .line{padding:10px 0;border-bottom:1px solid var(--line)}.line:last-child{border-bottom:0}.value{color:var(--accent);font-weight:800}
+    .warning{margin-top:12px;padding:12px;border-radius:14px;background:var(--rose);border:1px solid var(--line);font-weight:700}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Angular Speed Converter</h1>
+    <p class="subtitle">Convert angular speed, then calculate linear speed and radial acceleration.</p>
+    <div class="grid">
+      <section>
+        <h2>Inputs</h2>
+        <label for="omegaValue">Angular speed value</label><input id="omegaValue" type="number" step="any" value="90" />
+        <label for="omegaUnit">Angular speed unit</label>
+        <select id="omegaUnit"><option value="revmin">revolutions per minute</option><option value="revs">revolutions per second</option><option value="rads">radians per second</option></select>
+        <label for="radius">Radius r in metres</label><input id="radius" type="number" step="any" value="0.8" />
+        <label for="linearSpeed">Optional: linear speed v in m s⁻¹</label><input id="linearSpeed" type="number" step="any" placeholder="Leave blank to use v = rω" />
+        <button id="calculate">Calculate</button>
+      </section>
+      <section>
+        <h2>Results</h2>
+        <div class="formula">1 revolution = 2π radians</div>
+        <div class="formula">v = rω</div>
+        <div class="formula">a = rω² = v²/r</div>
+        <div id="output" class="result" aria-live="polite">Enter values and press calculate.</div>
+      </section>
+    </div>
+  </main>
+  <script>
+    const omegaValue=document.getElementById("omegaValue"), omegaUnit=document.getElementById("omegaUnit"), radius=document.getElementById("radius"), linearSpeed=document.getElementById("linearSpeed"), output=document.getElementById("output");
+    function fmt(x){return Number.isFinite(x)?x.toPrecision(6).replace(/\.?0+$/,""):"not defined"}
+    function toRad(v,u){return u==="rads"?v:u==="revs"?v*2*Math.PI:v*2*Math.PI/60}
+    function run(){
+      const wIn=Number(omegaValue.value), r=Number(radius.value), raw=linearSpeed.value.trim();
+      if(!Number.isFinite(wIn)||!Number.isFinite(r)||r<=0){output.innerHTML='<div class="warning">Use a numerical angular speed and a positive radius.</div>';return}
+      const w=toRad(wIn,omegaUnit.value), v=r*w, a1=r*w*w;
+      let supplied="", a2=v*v/r;
+      if(raw!==""){const vv=Number(raw); if(!Number.isFinite(vv)||vv<0){output.innerHTML='<div class="warning">Optional speed must be non-negative.</div>';return} a2=vv*vv/r; supplied=" using supplied v";}
+      output.innerHTML=`<div class="line">ω = <span class="value">${fmt(w)}</span> rad s⁻¹</div><div class="line">v = rω = <span class="value">${fmt(v)}</span> m s⁻¹</div><div class="line">a = rω² = <span class="value">${fmt(a1)}</span> m s⁻² towards the centre</div><div class="line">a = v²/r${supplied} = <span class="value">${fmt(a2)}</span> m s⁻² towards the centre</div>`;
+    }
+    document.getElementById("calculate").addEventListener("click",run); run();
+  </script>
+</body>
+</html>

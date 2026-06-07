@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAS1 Complex Loci Classifier</title>
+<style>
+body{margin:0;background:#FAF9F6;color:#2C2C2E;font-family:Inter,system-ui,sans-serif}.card{max-width:950px;margin:28px auto;background:#FFFFF0;border:1px solid #E5E5EA;border-radius:28px;padding:24px}h1{font-family:Georgia,serif;text-align:center}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:white;border:1px solid #E5E5EA;border-radius:18px;padding:16px}select,input,button{width:100%;padding:11px;border-radius:12px;border:1px solid #E5E5EA;margin:8px 0}button{background:#C5A059;color:white;font-weight:800}.math{font-family:Georgia,serif}.box{background:#FBEFEF;border-radius:14px;padding:12px;margin-top:12px}
+</style></head>
+<body><main class="card"><h1>Complex Loci Classifier</h1><p>Choose a CCEA FAS1-style condition. The widget classifies the locus and reminds you how to sketch it.</p>
+<div class="grid"><section class="panel"><label>Condition type</label><select id="type">
+<option value="circle">|z-a|=r</option><option value="inside">|z-a|≤r</option><option value="bisector">|z-a|=|z-b|</option><option value="arg">arg(z-a)=θ</option><option value="sector">α&lt;arg(z-a)&lt;β</option>
+</select><button onclick="update()">Classify</button><div class="box math" id="eq"></div></section>
+<section class="panel"><h2 id="title"></h2><p id="meaning"></p><ul id="steps"></ul><div class="box" id="trap"></div></section></div></main>
+<script>
+function update(){const t=document.getElementById('type').value;let title='',eq='',meaning='',steps=[],trap='';
+if(t==='circle'){title='Circle locus';eq='|z-a|=r';meaning='All points z are distance r from the fixed point a.';steps=['Plot a','Draw a circle centred at a','Use radius r'];trap='Centre a+bi is plotted at (a,b).';}
+if(t==='inside'){title='Inside/on circle region';eq='|z-a|≤r';meaning='All points z are distance at most r from a.';steps=['Draw boundary circle |z-a|=r','Shade inside','Use a solid boundary'];trap='≤ includes the boundary.';}
+if(t==='bisector'){title='Perpendicular bisector';eq='|z-a|=|z-b|';meaning='All points z are equidistant from a and b.';steps=['Plot a and b','Join them','Draw the perpendicular bisector'];trap='The final Cartesian equation is a line.';}
+if(t==='arg'){title='Argument ray';eq='arg(z-a)=θ';meaning='A ray from a at angle θ to the positive real direction.';steps=['Plot a','Draw the ray','Use an open circle at a'];trap='arg(0) is undefined, so a is excluded.';}
+if(t==='sector'){title='Argument sector';eq='α<arg(z-a)<β';meaning='The sector between two rays from a.';steps=['Draw both boundary rays','Shade between them','Check boundary inclusion'];trap='Strict inequalities exclude the boundary rays.';}
+document.getElementById('title').textContent=title;document.getElementById('eq').textContent=eq;document.getElementById('meaning').textContent=meaning;document.getElementById('steps').innerHTML=steps.map(s=>'<li>'+s+'</li>').join('');document.getElementById('trap').textContent=trap;}
+update();
+</script></body></html>

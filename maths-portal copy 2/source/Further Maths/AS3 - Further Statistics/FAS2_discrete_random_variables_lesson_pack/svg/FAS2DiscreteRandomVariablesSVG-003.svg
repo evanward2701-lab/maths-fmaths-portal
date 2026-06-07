@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Expected value as a probability weighted mean</title>
+  <desc id="desc">Compares the ordinary frequency table mean formula sum fx divided by sum f with the Further Maths expected value formula E of X equals sum x p of x.</desc>
+  <metadata>Asset ID: FAS2DiscreteRandomVariablesSVG-003; Source: FS1 PDF expected value slides plus transcript frequency table bridge.</metadata>
+  <rect x="0" y="0" width="1200" height="720" fill="#FAF9F6"/>
+  <text x="70" y="70" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2C2C2E">Expected value is the probability version of a mean</text>
+  <rect x="70" y="165" width="500" height="390" rx="18" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="105" y="215" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#2C2C2E">Ordinary A-Level Maths</text>
+  <text x="105" y="300" font-family="Arial" font-size="25" fill="#2C2C2E">x̄ = Σfx / Σf</text>
+  <text x="105" y="355" font-family="Arial" font-size="22" fill="#2C2C2E">x̄ = [1(2)+2(6)+3(2)] / 10 = 2</text>
+  <rect x="630" y="165" width="500" height="390" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text x="665" y="215" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#2C2C2E">Further Maths</text>
+  <text x="665" y="300" font-family="Arial" font-size="25" fill="#2C2C2E">E(X) = Σxp(x)</text>
+  <text x="665" y="355" font-family="Arial" font-size="22" fill="#2C2C2E">E(X) = 1(0.2)+2(0.6)+3(0.2) = 2</text>
+  <path d="M565 355 C595 335, 605 335, 635 355" fill="none" stroke="#C5A059" stroke-width="4"/>
+  <polygon points="633,355 615,345 618,367" fill="#C5A059"/>
+  <rect x="310" y="600" width="580" height="62" rx="14" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <text x="338" y="638" font-family="Arial" font-size="22" fill="#2C2C2E">Probabilities are relative frequencies, and their total is 1.</text>
+</svg>

@@ -1,0 +1,30 @@
+<!--
+Asset ID: AS1DifferentiationSVG-005
+Source: CCEA AS1-DIFF-LO008 and Chapter 12 overview
+Related section: Core Theory 17
+Purpose: Show sign chart for f'(x)=3x^2-1 and increasing intervals for f(x)=x^3-x.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img" aria-labelledby="title desc">
+  <title id="title">Increasing and decreasing sign chart</title>
+  <desc id="desc">A sign chart for f prime of x equals 3x squared minus 1, showing where f is increasing and decreasing.</desc>
+  <rect width="900" height="430" fill="#ffffff"/>
+  <text x="40" y="45" font-family="Arial" font-size="28" font-weight="700">Increasing and Decreasing: f(x) = x³ - x</text>
+  <g transform="translate(80,105)" font-family="Arial">
+    <text x="0" y="0" font-size="20">f'(x) = 3x² - 1</text>
+    <text x="0" y="35" font-size="18">Critical values from f'(x)=0:</text>
+    <text x="0" y="65" font-size="20" font-weight="700">x = -√3/3 and x = √3/3</text>
+    <line x1="80" y1="150" x2="760" y2="150" stroke="#111" stroke-width="3"/>
+    <polygon points="760,150 742,142 742,158" fill="#111"/>
+    <polygon points="80,150 98,142 98,158" fill="#111"/>
+    <line x1="310" y1="130" x2="310" y2="170" stroke="#111" stroke-width="3"/>
+    <line x1="530" y1="130" x2="530" y2="170" stroke="#111" stroke-width="3"/>
+    <text x="270" y="205" font-size="18">-√3/3</text>
+    <text x="500" y="205" font-size="18">√3/3</text>
+    <text x="165" y="135" font-size="28" font-weight="700">+</text>
+    <text x="410" y="135" font-size="28" font-weight="700">-</text>
+    <text x="635" y="135" font-size="28" font-weight="700">+</text>
+    <rect x="120" y="235" width="620" height="75" rx="12" fill="#f7f7f7" stroke="#333"/>
+    <text x="145" y="265" font-size="19">f'(x) &gt; 0 means f(x) is increasing.</text>
+    <text x="145" y="295" font-size="19" font-weight="700">Increasing when x &lt; -√3/3 or x &gt; √3/3.</text>
+  </g>
+</svg>

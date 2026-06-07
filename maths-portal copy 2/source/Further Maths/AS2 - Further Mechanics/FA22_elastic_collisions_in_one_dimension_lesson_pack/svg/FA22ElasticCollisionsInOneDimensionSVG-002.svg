@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Asset ID: FA22ElasticCollisionsInOneDimensionSVG-002
+Source: Lesson PDF fixed vertical plane example + transcript wall examples
+Related lesson section: Section 9.3 Wall impact visual
+Used placeholder: [VISUAL PLACEHOLDER: FA22ElasticCollisionsInOneDimensionSVG-002 | Source: Lesson PDF fixed vertical plane example + transcript wall examples | Insert from svg/FA22ElasticCollisionsInOneDimensionSVG-002.svg | Purpose: Show that a fixed plane impact uses rebound speed divided by approach speed.]
+Purpose: Show fixed plane impact formula.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Direct impact with a fixed smooth plane</title>
+  <desc id="desc">A sphere approaches and rebounds from a fixed vertical plane.</desc>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <text x="60" y="70" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Direct impact with a fixed smooth plane</text>
+  <rect x="60" y="110" width="1080" height="90" rx="20" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="162" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#2C2C2E">e = rebound speed ÷ approach speed = v ÷ u</text>
+  
+  <line x1="900" y1="250" x2="900" y2="580" stroke="#2C2C2E" stroke-width="8"/>
+  <g stroke="#C5A059" stroke-width="3"><line x1="900" y1="260" x2="940" y2="220"/><line x1="900" y1="320" x2="940" y2="280"/><line x1="900" y1="380" x2="940" y2="340"/><line x1="900" y1="440" x2="940" y2="400"/><line x1="900" y1="500" x2="940" y2="460"/><line x1="900" y1="560" x2="940" y2="520"/></g>
+  <circle cx="390" cy="430" r="62" fill="#FFFFF0" stroke="#C5A059" stroke-width="6"/><text x="390" y="440" text-anchor="middle" font-family="Inter, Arial" font-size="26" font-weight="700" fill="#2C2C2E">sphere</text>
+  <line x1="160" y1="330" x2="530" y2="330" stroke="#2C2C2E" stroke-width="6" stroke-linecap="round"/><polygon points="530,330 506,316 506,344" fill="#2C2C2E"/><text x="345" y="305" text-anchor="middle" font-family="Inter, Arial" font-size="30" font-weight="700" fill="#2C2C2E">approach speed u</text>
+  <line x1="530" y1="505" x2="160" y2="505" stroke="#D4AF37" stroke-width="6" stroke-linecap="round"/><polygon points="160,505 184,491 184,519" fill="#D4AF37"/><text x="345" y="485" text-anchor="middle" font-family="Inter, Arial" font-size="30" font-weight="700" fill="#2C2C2E">rebound speed v</text>
+  <text x="955" y="410" font-family="Inter, Arial" font-size="26" font-weight="700" fill="#2C2C2E">fixed smooth plane</text>
+  <text x="600" y="670" text-anchor="middle" font-family="Inter, Arial" font-size="26" font-weight="700" fill="#2C2C2E">Example: u = 8, v = 2, so e = 2/8 = 1/4</text>
+
+</svg>

@@ -1,0 +1,69 @@
+% Asset ID: FAS2CircularMotionTikZ-001
+% Topic ID: FAS2CircularMotion
+% Unit: FAS2 Further AS 2 Applied Mathematics
+% Topic codes: FAS2-CM, FAS2-FCM
+% Related lesson file: FAS2_circular_motion_lesson.md
+% Related lesson section: # 9. Visual Asset Integration
+% Used placeholder:
+% [VISUAL PLACEHOLDER: FAS2CircularMotionTikZ-001 | Source: Lesson PDF arc-length derivation | Insert from tikz/FAS2CircularMotionTikZ-001.tex | Purpose: Provide a precise mathematical diagram for s=rtheta and v=romega.]
+% Source: Lesson PDF arc-length derivation plus teacher transcript
+% Purpose: Provide a precise mathematical diagram for s = r theta and v = r omega.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Panel}{HTML}{FFFFF0}
+\definecolor{Line}{HTML}{2C2C2E}
+\definecolor{SoftLine}{HTML}{E5E5EA}
+\definecolor{Gold}{HTML}{C5A059}
+\definecolor{PaleRose}{HTML}{FBEFEF}
+
+\begin{document}
+\begin{tikzpicture}[
+    every node/.style={font=\sffamily},
+    mainline/.style={draw=Line, line width=1.2pt},
+    velocity/.style={draw=Line, line width=1.2pt, -{Latex[length=3mm]}},
+    arcmark/.style={draw=Gold, line width=1.5pt, -{Latex[length=3mm]}}
+]
+\fill[Canvas] (-6.2,-4.8) rectangle (8.2,5.2);
+\fill[Panel, draw=SoftLine, line width=0.9pt, rounded corners=10pt] (-5.8,-4.4) rectangle (7.8,4.8);
+
+\node[anchor=west, font=\sffamily\bfseries\Large, text=Line] at (-5.4,4.35) {Arc length to linear speed};
+\node[anchor=west, font=\sffamily\small, text=Line] at (-5.4,3.92) {When \(\theta\) is measured in radians, \(s=r\theta\). Differentiate with respect to time.};
+
+\coordinate (O) at (-2.2,-0.3);
+\coordinate (A) at ($(O)+(3.1,0)$);
+\coordinate (B) at ($(O)+({3.1*cos(55)},{3.1*sin(55)})$);
+
+\draw[mainline] (O) circle (3.1);
+\fill[Line] (O) circle (2pt);
+\node[below left=2pt, text=Line] at (O) {\(\,O\)};
+\draw[mainline] (O) -- (A);
+\draw[mainline] (O) -- (B);
+\fill[Line] (A) circle (2.4pt);
+\fill[Line] (B) circle (2.4pt);
+\node[right=3pt, text=Line] at (A) {\(A\)};
+\node[above right=3pt, text=Line] at (B) {\(B\)};
+
+\draw[arcmark] ($(O)+(3.1,0)$) arc[start angle=0,end angle=55,radius=3.1];
+\node[text=Gold, font=\sffamily\bfseries] at ($(O)+({3.55*cos(28)},{3.55*sin(28)})$) {\(s\)};
+\pic[draw=Gold, line width=1.1pt, angle radius=0.72cm, "$\theta$", angle eccentricity=1.45, text=Gold] {angle=A--O--B};
+\node[text=Line] at ($(O)!0.52!(B)+(-0.18,0.18)$) {\(r\)};
+\coordinate (TangentEnd) at ($(B)+({-0.95*sin(55)},{0.95*cos(55)})$);
+\draw[velocity] (B) -- (TangentEnd);
+\node[above=4pt, text=Line] at (TangentEnd) {\(v\)};
+
+\fill[Canvas, draw=SoftLine, line width=0.8pt, rounded corners=8pt] (2.0,-2.05) rectangle (7.15,2.45);
+\node[anchor=west, font=\sffamily\bfseries\large, text=Line] at (2.35,2.02) {Formula chain};
+\node[anchor=west, text=Line, font=\sffamily\large] at (2.35,1.35) {\[s=r\theta\]};
+\node[anchor=west, text=Line, font=\sffamily\large] at (2.35,0.35) {\[\frac{ds}{dt}=r\frac{d\theta}{dt}\]};
+\node[anchor=west, text=Gold, font=\sffamily\bfseries\large] at (2.35,-0.75) {\[v=r\omega\]};
+\node[anchor=west, text=Line, font=\sffamily\small] at (2.55,-1.55) {where \(\omega=\dfrac{d\theta}{dt}\).};
+
+\node[draw=SoftLine, fill=PaleRose, rounded corners=5pt, inner sep=6pt, text width=10.8cm, anchor=west, text=Line] at (-5.25,-3.75)
+{\textbf{Bridge warning:} \(r\) stays outside the differentiation only because the radius is constant for a circle.};
+\end{tikzpicture}
+\end{document}

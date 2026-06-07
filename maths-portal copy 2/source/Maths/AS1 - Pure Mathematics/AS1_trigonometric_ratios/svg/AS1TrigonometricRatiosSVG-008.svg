@@ -1,0 +1,13 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Four-mast multi-step problem</title>
+<desc id="desc">Quadrilateral split into triangles.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Four-mast multi-step problem</text>
+
+<circle cx="170" cy="430" r="6" fill="#172033"/><circle cx="310" cy="130" r="6" fill="#172033"/><circle cx="650" cy="175" r="6" fill="#172033"/><circle cx="580" cy="430" r="6" fill="#172033"/>
+<text x="150" y="465" font-family="Arial" font-size="26">A</text><text x="295" y="112" font-family="Arial" font-size="26">B</text><text x="665" y="175" font-family="Arial" font-size="26">C</text><text x="595" y="465" font-family="Arial" font-size="26">D</text>
+<line x1="170" y1="430" x2="310" y2="130" stroke="#2563eb" stroke-width="4"/><line x1="310" y1="130" x2="650" y2="175" stroke="#0f766e" stroke-width="4"/><line x1="650" y1="175" x2="580" y2="430" stroke="#6d28d9" stroke-width="4"/><line x1="580" y1="430" x2="170" y2="430" stroke="#b91c1c" stroke-width="4"/><line x1="310" y1="130" x2="580" y2="430" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="450" y="135" font-family="Arial" font-size="22">75 m</text><text x="660" y="310" font-family="Arial" font-size="22">80 m</text><text x="365" y="290" font-family="Arial" font-size="22">BD</text>
+
+</svg>

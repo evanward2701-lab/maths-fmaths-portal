@@ -1,0 +1,29 @@
+<!--
+Asset ID: A22MomentsSVG-003
+Source: MechYr2 Chapter 4 Moments, page 12; Rigid Bodies transcript section 2.
+Related lesson section: Core Theory 2; Core Theory 3.
+Purpose: Rigid-body equilibrium summary.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Rigid-body equilibrium summary">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111827"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:28px;font-weight:700;fill:#111827}
+      .label{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+      .small{font-family:Arial,sans-serif;font-size:15px;fill:#374151}
+      .rod{stroke:#111827;stroke-width:10;stroke-linecap:round}
+      .beam{fill:#F3F4F6;stroke:#111827;stroke-width:3}
+      .support{fill:#D1D5DB;stroke:#111827;stroke-width:2}
+      .up{stroke:#2563EB;stroke-width:4;marker-end:url(#arrow)}
+      .down{stroke:#DC2626;stroke-width:4;marker-end:url(#arrow)}
+      .force{stroke:#7C3AED;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#6B7280;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="40" y="55" class="title">Rigid body equilibrium summary</text>
+  <rect x="230" y="230" width="440" height="34" rx="8" class="beam"/><polygon points="300,264 260,330 340,330" class="support"/><polygon points="600,264 560,330 640,330" class="support"/><line x1="300" y1="330" x2="300" y2="285" class="up"/><line x1="600" y1="330" x2="600" y2="285" class="up"/><line x1="450" y1="190" x2="450" y2="228" class="down"/><text x="260" y="356" class="label">RA</text><text x="612" y="356" class="label">RB</text><text x="462" y="206" class="label">W</text><rect x="55" y="160" width="300" height="120" class="note"/><text x="82" y="202" class="label">Resultant force = 0</text><text x="82" y="240" class="small">Forces up = forces down</text><rect x="545" y="160" width="310" height="120" class="note"/><text x="572" y="202" class="label">Resultant moment = 0</text><text x="572" y="240" class="small">Clockwise = anticlockwise</text>
+</svg>

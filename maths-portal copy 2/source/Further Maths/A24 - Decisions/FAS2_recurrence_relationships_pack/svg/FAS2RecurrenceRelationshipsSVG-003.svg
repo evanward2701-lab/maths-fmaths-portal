@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="760"
+     viewBox="0 0 1200 760"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">FAS2RecurrenceRelationshipsSVG-003: Second-order recurrence dependency</title>
+  <desc id="desc">Diagram showing u_n depending on u_{n-1} and u_{n-2}, with two initial conditions and a Fibonacci-type sequence strip.</desc>
+
+  <metadata>
+    <![CDATA[
+    Asset ID: FAS2RecurrenceRelationshipsSVG-003
+    Source: Uploaded recurrence transcript examples for Fibonacci, bacteria growth and staircase counting.
+    Related lesson section: # 9. Visual Asset Integration
+    Used placeholder: FAS2RecurrenceRelationshipsSVG-003
+    Purpose: Show how second-order recurrence relations depend on two previous terms.
+    ]]>
+  </metadata>
+
+  <defs>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+    <style>
+      .bg { fill: #FAF9F6; }
+      .card { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; rx: 24; }
+      .accentCard { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 2; rx: 24; }
+      .node { fill: #FFFFF0; stroke: #C5A059; stroke-width: 2; }
+      .nodeCurrent { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 3; }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #2C2C2E; }
+      .subtitle { font-family: Inter, Arial, sans-serif; font-size: 17px; fill: #2C2C2E; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 19px; fill: #2C2C2E; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 15px; fill: #2C2C2E; }
+      .math { font-family: Georgia, 'Times New Roman', serif; font-size: 32px; fill: #2C2C2E; }
+      .mathMid { font-family: Georgia, 'Times New Roman', serif; font-size: 25px; fill: #2C2C2E; }
+      .mathSmall { font-family: Georgia, 'Times New Roman', serif; font-size: 21px; fill: #2C2C2E; }
+      .arrow { stroke: #C5A059; stroke-width: 3; fill: none; marker-end: url(#arrowGold); }
+      .thin { stroke: #E5E5EA; stroke-width: 2; fill: none; }
+      .gold { fill: #C5A059; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+
+  <text x="600" y="58" text-anchor="middle" class="title">Second-Order Recurrence Dependency</text>
+  <text x="600" y="88" text-anchor="middle" class="subtitle">The present term listens to two earlier terms</text>
+
+  <rect class="accentCard" x="210" y="120" width="780" height="90" rx="24"/>
+  <text x="600" y="177" text-anchor="middle" class="math">uₙ = a uₙ₋₁ + b uₙ₋₂</text>
+
+  <circle class="node" cx="310" cy="340" r="72"/>
+  <text x="310" y="335" text-anchor="middle" class="mathMid">uₙ₋₂</text>
+  <text x="310" y="364" text-anchor="middle" class="small">two steps back</text>
+
+  <circle class="node" cx="600" cy="340" r="72"/>
+  <text x="600" y="335" text-anchor="middle" class="mathMid">uₙ₋₁</text>
+  <text x="600" y="364" text-anchor="middle" class="small">one step back</text>
+
+  <circle class="nodeCurrent" cx="890" cy="340" r="82"/>
+  <text x="890" y="335" text-anchor="middle" class="mathMid">uₙ</text>
+  <text x="890" y="364" text-anchor="middle" class="small">current term</text>
+
+  <path class="arrow" d="M380,340 C475,300 520,300 575,320"/>
+  <path class="arrow" d="M672,340 C740,340 780,340 805,340"/>
+
+  <text x="455" y="285" text-anchor="middle" class="small">weighted by b</text>
+  <text x="735" y="315" text-anchor="middle" class="small">weighted by a</text>
+
+  <rect class="card" x="145" y="485" width="420" height="150" rx="24"/>
+  <text x="355" y="525" text-anchor="middle" class="label">Initial conditions</text>
+  <text x="355" y="570" text-anchor="middle" class="mathSmall">needs two starting values</text>
+  <text x="355" y="610" text-anchor="middle" class="mathSmall">example: x₀ = 1, x₁ = 1</text>
+
+  <rect class="card" x="635" y="485" width="420" height="150" rx="24"/>
+  <text x="845" y="525" text-anchor="middle" class="label">Fibonacci-type example</text>
+  <text x="845" y="570" text-anchor="middle" class="mathSmall">xₙ = xₙ₋₁ + xₙ₋₂</text>
+  <text x="845" y="610" text-anchor="middle" class="mathSmall">1, 1, 2, 3, 5, 8, 13, …</text>
+
+  <line class="thin" x1="220" y1="690" x2="980" y2="690"/>
+  <text x="600" y="720" text-anchor="middle" class="small">One previous term gives first order. Two previous terms give second order. Two starting values are required.</text>
+</svg>

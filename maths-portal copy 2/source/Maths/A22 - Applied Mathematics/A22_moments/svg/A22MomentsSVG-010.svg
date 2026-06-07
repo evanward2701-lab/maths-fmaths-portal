@@ -1,0 +1,29 @@
+<!--
+Asset ID: A22MomentsSVG-010
+Source: MechYr2 Chapter 7 Applications of Forces, page 16; Rigid Bodies transcript ladder sections.
+Related lesson section: Worked Example 12.
+Purpose: Ladder model.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Ladder model">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111827"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:28px;font-weight:700;fill:#111827}
+      .label{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+      .small{font-family:Arial,sans-serif;font-size:15px;fill:#374151}
+      .rod{stroke:#111827;stroke-width:10;stroke-linecap:round}
+      .beam{fill:#F3F4F6;stroke:#111827;stroke-width:3}
+      .support{fill:#D1D5DB;stroke:#111827;stroke-width:2}
+      .up{stroke:#2563EB;stroke-width:4;marker-end:url(#arrow)}
+      .down{stroke:#DC2626;stroke-width:4;marker-end:url(#arrow)}
+      .force{stroke:#7C3AED;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#6B7280;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="40" y="55" class="title">Ladder against smooth wall</text>
+  <line x1="110" y1="480" x2="790" y2="480" stroke="#111827" stroke-width="4"/><line x1="790" y1="110" x2="790" y2="480" stroke="#111827" stroke-width="4"/><line x1="260" y1="480" x2="790" y2="175" class="rod"/><line x1="260" y1="480" x2="260" y2="405" class="up"/><text x="275" y="435" class="label">R</text><line x1="215" y1="480" x2="295" y2="480" class="force"/><text x="225" y="458" class="label">mu R</text><line x1="790" y1="175" x2="710" y2="175" class="force"/><text x="715" y="160" class="label">P</text><line x1="525" y1="285" x2="525" y2="360" class="down"/><text x="540" y="330" class="label">mg</text><text x="75" y="150" class="label">smooth wall: no wall friction</text><text x="75" y="180" class="small">rough ground: friction at A</text>
+</svg>

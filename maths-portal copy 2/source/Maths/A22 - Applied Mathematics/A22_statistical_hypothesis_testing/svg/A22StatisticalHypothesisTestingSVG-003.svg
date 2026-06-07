@@ -1,0 +1,31 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingSVG-003
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Key Definitions and Notation, PMCC
+Source: CCEA specification map; AS2 PMCC support; lesson transcript
+Purpose: Show the PMCC scale from -1 to 1, including direction and strength of linear correlation.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">PMCC scale from minus one to one</title>
+  <desc id="desc">A horizontal scale showing r equals minus one as perfect negative linear correlation, r equals zero as no linear correlation, and r equals one as perfect positive linear correlation.</desc>
+  <rect width="960" height="420" fill="#ffffff"/>
+  <text x="480" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700">Product Moment Correlation Coefficient, r</text>
+  <line x1="130" y1="190" x2="830" y2="190" stroke="#111111" stroke-width="5"/>
+  <polygon points="830,190 810,180 810,200" fill="#111111"/><polygon points="130,190 150,180 150,200" fill="#111111"/>
+  <g stroke="#111111" stroke-width="3"><line x1="130" y1="170" x2="130" y2="210"/><line x1="305" y1="175" x2="305" y2="205"/><line x1="480" y1="165" x2="480" y2="215"/><line x1="655" y1="175" x2="655" y2="205"/><line x1="830" y1="170" x2="830" y2="210"/></g>
+  <text x="130" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700">-1</text>
+  <text x="305" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">negative</text>
+  <text x="480" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700">0</text>
+  <text x="655" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="20">positive</text>
+  <text x="830" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700">1</text>
+  <text x="130" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">perfect negative</text><text x="130" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">linear correlation</text>
+  <text x="480" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">no linear</text><text x="480" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">correlation</text>
+  <text x="830" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">perfect positive</text><text x="830" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="16">linear correlation</text>
+  <rect x="195" y="80" width="570" height="70" rx="12" fill="#f6f6f6" stroke="#333333" stroke-width="2"/>
+  <text x="480" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">PMCC measures linear correlation only</text>
+  <text x="480" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">A low value of r does not prove there is no relationship.</text>
+  <rect x="345" y="340" width="270" height="45" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="480" y="369" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">-1 ≤ r ≤ 1</text>
+</svg>

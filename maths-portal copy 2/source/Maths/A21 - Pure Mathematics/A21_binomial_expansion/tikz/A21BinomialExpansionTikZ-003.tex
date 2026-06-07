@@ -1,0 +1,14 @@
+% Asset ID: A21BinomialExpansionTikZ-003
+% Unit: A21
+% Topic code: A21-SS
+% Topic ID: A21BinomialExpansion
+% Purpose: Rewriting (a+bx)^n
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\sffamily}]
+\node[font=\sffamily\bfseries\Large] at (0,3) {Rewriting (a+bx)^n};
+\node[draw,rounded corners,align=center] at (0,1) {$(a+bx)^n=[a(1+\frac{bx}{a})]^n=a^n(1+\frac{bx}{a})^n$};\node[draw,rounded corners,align=center] at (0,-1) {Example: $(4+x)^{1/2}=2(1+\frac{x}{4})^{1/2}$};
+\end{tikzpicture}
+\end{document}

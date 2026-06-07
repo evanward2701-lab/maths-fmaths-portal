@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Vertex Testing Method</title>
+  <desc id="desc">Feasible-region vertices linked to an objective-value table.</desc>
+  <metadata>asset_id: FA22LinearProgrammingFoundationsSVG-004; source: Chapter 6 PDF vertex testing method; purpose: Link graph vertices to vertex testing.</metadata>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="40" width="1100" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E">Vertex Testing Method</text>
+  
+  <text x="600" y="130" text-anchor="middle" font-family="Arial" font-size="17" fill="#2C2C2E">Test every vertex in the objective function.</text>
+  <polygon points="130,540 130,250 260,310 410,450 470,520" fill="#FFFFF0" stroke="#D4AF37" stroke-width="4"/>
+  <text x="250" y="395" font-family="Georgia" font-size="48" fill="#2C2C2E">R</text>
+  <circle cx="130" cy="250" r="8" fill="#2C2C2E"/><text x="145" y="245" font-family="Arial" font-size="18">A</text>
+  <circle cx="260" cy="310" r="8" fill="#2C2C2E"/><text x="275" y="305" font-family="Arial" font-size="18">B</text>
+  <circle cx="410" cy="450" r="8" fill="#D4AF37"/><text x="425" y="445" font-family="Arial" font-size="18">C</text>
+  <circle cx="470" cy="520" r="8" fill="#2C2C2E"/><text x="485" y="515" font-family="Arial" font-size="18">D</text>
+  <rect x="650" y="210" width="420" height="330" rx="18" fill="#FFFFFF" stroke="#E5E5EA"/>
+  <text x="860" y="250" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">Minimise C = 140x + 170y</text>
+  <text x="700" y="310" font-family="Arial" font-size="18">A (0,25): 4250</text>
+  <text x="700" y="360" font-family="Arial" font-size="18">B (6,7): 2030</text>
+  <rect x="680" y="390" width="330" height="45" fill="#FBEFEF"/>
+  <text x="700" y="420" font-family="Arial" font-size="18" font-weight="700">C (11,2): 1880 minimum</text>
+  <text x="700" y="470" font-family="Arial" font-size="18">D (13,1): 1990</text>
+</svg>

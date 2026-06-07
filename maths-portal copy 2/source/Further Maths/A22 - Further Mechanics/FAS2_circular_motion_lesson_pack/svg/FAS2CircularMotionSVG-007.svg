@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical circles: radial plus tangential thinking</title>
+  <desc id="desc">Show radial and tangential acceleration in a vertical circle.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-007
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show radial and tangential acceleration in a vertical circle.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Vertical circles: radial plus tangential thinking</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">Speed usually changes: fastest at the bottom, slowest at the top.</text>
+  <circle cx="410" cy="410" r="220" fill="none" stroke="#2C2C2E" stroke-width="5"/>
+  <circle cx="410" cy="410" r="7" fill="#2C2C2E"/>
+  <circle cx="410" cy="190" r="12" fill="#2C2C2E"/><circle cx="630" cy="410" r="12" fill="#2C2C2E"/><circle cx="410" cy="630" r="12" fill="#2C2C2E"/><circle cx="190" cy="410" r="12" fill="#2C2C2E"/>
+  <line x1="410" y1="190" x2="410" y2="330" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="630" y1="410" x2="490" y2="410" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="410" y1="630" x2="410" y2="490" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="190" y1="410" x2="330" y2="410" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="250" y1="260" x2="250" y2="350" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="265" y="336" font-family="Arial" font-size="24" fill="#2C2C2E">mg</text>
+  <rect x="730" y="235" width="360" height="265" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="760" y="350" font-family="Arial" font-size="28" fill="#C5A059">a_radial = v²/r</text>
+  <text x="760" y="410" font-family="Arial" font-size="28" fill="#C5A059">|a_tangential| = g sin θ</text>
+
+</svg>

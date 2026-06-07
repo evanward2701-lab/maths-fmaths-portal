@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="620" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22CentreOfMassSVG-010: Wire framework components</title>
+  <desc id="desc">Wire framework components</desc>
+  <style>
+    .bg { fill:#FAF9F6; } .card { fill:#FFFFF0; stroke:#E5E5EA; stroke-width:2; rx:22; }
+    .ink { fill:#2C2C2E; font-family: Georgia, 'Times New Roman', serif; }
+    .line { stroke:#2C2C2E; stroke-width:3; fill:none; } .gold { stroke:#C5A059; stroke-width:4; fill:none; }
+    .fill { fill:#FBEFEF; stroke:#C5A059; stroke-width:3; } .dot { fill:#D4AF37; stroke:#2C2C2E; stroke-width:1.5; }
+    .dash { stroke:#C5A059; stroke-width:3; stroke-dasharray:8 6; fill:none; } .small { font-size:18px; } .title { font-size:28px; font-weight:700; } .label { font-size:21px; font-weight:700; }
+  </style>
+  <rect class="bg" width="100%" height="100%"/>
+  <rect class="card" x="35" y="35" width="1030" height="550"/>
+  <text class="ink title" x="550.0" y="80" text-anchor="middle">Wire framework components</text>
+  
+  <line class="gold" x1="300" y1="450" x2="300" y2="250"/><line class="gold" x1="300" y1="450" x2="500" y2="450"/><path class="gold" d="M300 450 A200 200 0 0 1 500 250"/><circle class="dot" cx="300" cy="350" r="8"/><text class="ink small" x="320" y="350">vertical rod midpoint</text><circle class="dot" cx="400" cy="450" r="8"/><text class="ink small" x="400" y="490">horizontal rod midpoint</text><circle class="dot" cx="380" cy="370" r="8"/><text class="ink small" x="405" y="373">arc centre on symmetry line</text>
+  <text class="ink label" x="820" y="210">Framework/wire = use length</text><text class="ink label" x="820" y="260">Lamina = use area</text><text class="ink small" x="820" y="330">Diagrams mislead. Read the wording.</text><text class="ink small" x="820" y="380">Split into rods/arcs and treat each component as a particle at its own centre.</text>
+
+</svg>

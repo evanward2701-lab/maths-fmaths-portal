@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-011
+Source: Chapter 5/7 Forces Transcript and supporting PDFs
+Related lesson section: Worked Example 4
+Purpose: Show two separate strings with separate tensions T1 and T2.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Separate String Tensions</title>
+  <desc id="desc">Show two separate strings with separate tensions T1 and T2.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Separate String Tensions</text>
+  <line x1="160" y1="100" x2="740" y2="100" stroke="#111" stroke-width="4"/><circle cx="450" cy="320" r="7" fill="#111"/><line x1="450" y1="320" x2="250" y2="100" stroke="#111" stroke-width="3"/><line x1="450" y1="320" x2="650" y2="100" stroke="#111" stroke-width="3"/><line x1="450" y1="320" x2="345" y2="205" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="397.5" y="252.5" font-family="Arial" font-size="20" text-anchor="middle">T1</text><line x1="450" y1="320" x2="555" y2="205" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="502.5" y="252.5" font-family="Arial" font-size="20" text-anchor="middle">T2</text><line x1="450" y1="320" x2="450" y2="455" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="450.0" y="377.5" font-family="Arial" font-size="20" text-anchor="middle">8 N</text><text x="450" y="480" text-anchor="middle" font-family="Arial" font-size="20">T1 cos35° = T2 cos25°</text>
+</svg>

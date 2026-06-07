@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Angle in a semicircle and circumcircle</title><desc id="desc">A triangle ABC inscribed in a circle where AC is a diameter and angle ABC is ninety degrees.</desc>
+  <rect width="900" height="560" fill="#ffffff"/><text x="45" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Angle in a Semicircle</text>
+  <text x="45" y="88" font-family="Arial, sans-serif" font-size="17">If AC is the diameter of the circumcircle, then angle ABC is 90°.</text>
+  <circle cx="450" cy="295" r="170" fill="none" stroke="#111827" stroke-width="4"/><circle cx="280" cy="295" r="8" fill="#2563eb"/><circle cx="620" cy="295" r="8" fill="#2563eb"/><circle cx="455" cy="125" r="8" fill="#2563eb"/>
+  <text x="258" y="320" font-family="Arial, sans-serif" font-size="23" fill="#2563eb">A</text><text x="630" y="320" font-family="Arial, sans-serif" font-size="23" fill="#2563eb">C</text><text x="462" y="120" font-family="Arial, sans-serif" font-size="23" fill="#2563eb">B</text>
+  <line x1="280" y1="295" x2="620" y2="295" stroke="#ef4444" stroke-width="5"/><text x="415" y="285" font-family="Arial, sans-serif" font-size="21" fill="#ef4444">diameter AC</text>
+  <line x1="280" y1="295" x2="455" y2="125" stroke="#16a34a" stroke-width="5"/><line x1="455" y1="125" x2="620" y2="295" stroke="#16a34a" stroke-width="5"/>
+  <circle cx="450" cy="295" r="7" fill="#111827"/><text x="430" y="323" font-family="Arial, sans-serif" font-size="20">centre</text><text x="487" y="160" font-family="Arial, sans-serif" font-size="22" font-weight="700">90°</text>
+  <rect x="65" y="420" width="770" height="90" rx="16" fill="#f3f4f6" stroke="#d1d5db"/><text x="90" y="455" font-family="Arial, sans-serif" font-size="21" font-weight="700">Reverse use:</text><text x="225" y="455" font-family="Arial, sans-serif" font-size="18">If ∠ABC = 90°, then AC is the diameter of the circumcircle.</text><text x="90" y="485" font-family="Arial, sans-serif" font-size="18">Then the centre is the midpoint of AC.</text>
+</svg>

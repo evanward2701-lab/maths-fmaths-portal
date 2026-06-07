@@ -1,0 +1,24 @@
+{
+  "missing_files": [],
+  "placeholder_paths": [
+    "mermaid/FAS1MatricesInvariantLinesMermaid-001.md",
+    "svg/FAS1MatricesInvariantLinesSVG-001.svg",
+    "svg/FAS1MatricesInvariantLinesSVG-002.svg",
+    "svg/FAS1MatricesInvariantLinesBridgeSVG-001.svg",
+    "tikz/FAS1MatricesInvariantLinesTikZ-001.tex",
+    "widgets/FAS1MatricesInvariantLinesWidget-001.html",
+    "widgets/FAS1MatricesInvariantLinesWidget-002.html",
+    "widgets/FAS1MatricesInvariantLinesWidget-003.html"
+  ],
+  "missing_placeholder_files": [],
+  "svg_ok": [
+    "FAS1MatricesInvariantLinesSVG-001.svg",
+    "FAS1MatricesInvariantLinesSVG-002.svg",
+    "FAS1MatricesInvariantLinesBridgeSVG-001.svg"
+  ],
+  "svg_bad": [],
+  "html_bad": [],
+  "forbidden_chat_wrappers_found": [],
+  "lo_missing": [],
+  "old_reference_markers_found": []
+}

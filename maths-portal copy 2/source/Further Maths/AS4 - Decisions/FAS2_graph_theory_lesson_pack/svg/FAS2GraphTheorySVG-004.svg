@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2GraphTheorySVG-004: Required graph families</title>
+  <desc id="desc">Side by side comparison of K5, K3,2 and S5.</desc>
+  <!-- asset_id: FAS2GraphTheorySVG-004 | unit_code: FAS2 | topic_code: FAS2-GRAPH | topic_id: FAS2GraphTheory -->
+  <rect width="1100" height="720" fill="#FAF9F6"/>
+  <rect x="40" y="34" width="1020" height="650" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  
+  <text x="80" y="86" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#2C2C2E">Required basic graph families</text>
+  <text x="80" y="124" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">Compare what is connected to what. The formulas come from careful counting.</text>
+  <rect x="70" y="160" width="300" height="470" rx="20" fill="#FAF9F6" stroke="#E5E5EA"/><rect x="400" y="160" width="300" height="470" rx="20" fill="#FAF9F6" stroke="#E5E5EA"/><rect x="730" y="160" width="300" height="470" rx="20" fill="#FAF9F6" stroke="#E5E5EA"/>
+  <text x="110" y="210" font-family="Inter, Arial" font-size="24" font-weight="700" fill="#2C2C2E">Complete graph K₅</text>
+  <text x="430" y="210" font-family="Inter, Arial" font-size="24" font-weight="700" fill="#2C2C2E">Complete bipartite K₃,₂</text>
+  <text x="790" y="210" font-family="Inter, Arial" font-size="24" font-weight="700" fill="#2C2C2E">Star graph S₅</text>
+  <g transform="translate(70,160)" stroke="#2C2C2E" stroke-width="3"><line x1="150" y1="100" x2="80" y2="175"/><line x1="150" y1="100" x2="105" y2="280"/><line x1="150" y1="100" x2="195" y2="280"/><line x1="150" y1="100" x2="220" y2="175"/><line x1="80" y1="175" x2="105" y2="280"/><line x1="80" y1="175" x2="195" y2="280"/><line x1="80" y1="175" x2="220" y2="175"/><line x1="105" y1="280" x2="195" y2="280"/><line x1="105" y1="280" x2="220" y2="175"/><line x1="195" y1="280" x2="220" y2="175"/><g fill="#D4AF37" stroke="#2C2C2E"><circle cx="150" cy="100" r="12"/><circle cx="80" cy="175" r="12"/><circle cx="105" cy="280" r="12"/><circle cx="195" cy="280" r="12"/><circle cx="220" cy="175" r="12"/></g></g>
+  <g transform="translate(400,160)" stroke="#2C2C2E" stroke-width="3"><line x1="90" y1="115" x2="220" y2="150"/><line x1="90" y1="115" x2="220" y2="260"/><line x1="90" y1="190" x2="220" y2="150"/><line x1="90" y1="190" x2="220" y2="260"/><line x1="90" y1="265" x2="220" y2="150"/><line x1="90" y1="265" x2="220" y2="260"/><g fill="#D4AF37" stroke="#2C2C2E"><circle cx="90" cy="115" r="12"/><circle cx="90" cy="190" r="12"/><circle cx="90" cy="265" r="12"/><circle cx="220" cy="150" r="12"/><circle cx="220" cy="260" r="12"/></g></g>
+  <g transform="translate(730,160)" stroke="#2C2C2E" stroke-width="4"><line x1="150" y1="200" x2="150" y2="110"/><line x1="150" y1="200" x2="75" y2="155"/><line x1="150" y1="200" x2="225" y2="155"/><line x1="150" y1="200" x2="95" y2="290"/><line x1="150" y1="200" x2="205" y2="290"/><g fill="#D4AF37" stroke="#2C2C2E"><circle cx="150" cy="200" r="15"/><circle cx="150" cy="110" r="12"/><circle cx="75" cy="155" r="12"/><circle cx="225" cy="155" r="12"/><circle cx="95" cy="290" r="12"/><circle cx="205" cy="290" r="12"/></g></g>
+  <g font-family="Inter, Arial" font-size="17" fill="#2C2C2E"><text x="105" y="560">Edges in Kₙ: n(n - 1) / 2</text><text x="440" y="560">Edges in Kₘ,ₙ: mn</text><text x="780" y="560">Edges in Sₙ: n</text></g>
+
+</svg>

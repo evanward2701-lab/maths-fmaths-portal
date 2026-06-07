@@ -1,0 +1,23 @@
+{
+  "missing_placeholders": [],
+  "svg_errors": [],
+  "html_errors": [],
+  "old_refs": [],
+  "lo_ids_preserved": true,
+  "files": [
+    "FA22_elastic_collisions_in_one_dimension_lesson.md",
+    "manifest.md",
+    "mermaid/FA22ElasticCollisionsInOneDimensionMermaid-001.md",
+    "source_reference.md",
+    "svg/FA22ElasticCollisionsInOneDimensionBridgeSVG-001.svg",
+    "svg/FA22ElasticCollisionsInOneDimensionSVG-001.svg",
+    "svg/FA22ElasticCollisionsInOneDimensionSVG-002.svg",
+    "svg/FA22ElasticCollisionsInOneDimensionSVG-003.svg",
+    "svg/FA22ElasticCollisionsInOneDimensionSVG-004.svg",
+    "tikz/FA22ElasticCollisionsInOneDimensionTikZ-001.tex",
+    "tikz/FA22ElasticCollisionsInOneDimensionTikZ-002.tex",
+    "widgets/FA22ElasticCollisionsInOneDimensionWidget-001.html",
+    "widgets/FA22ElasticCollisionsInOneDimensionWidget-002.html",
+    "widgets/FA22ElasticCollisionsInOneDimensionWidget-003.html"
+  ]
+}

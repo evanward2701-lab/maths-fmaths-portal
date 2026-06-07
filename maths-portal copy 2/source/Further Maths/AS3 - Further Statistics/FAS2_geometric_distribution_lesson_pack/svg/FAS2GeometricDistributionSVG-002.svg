@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="650" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2GeometricDistributionSVG-002: Geometric probability sequence</title><desc id="desc">Probability sequence for the geometric distribution.</desc>
+<metadata>asset_id: FAS2GeometricDistributionSVG-002</metadata>
+<rect width="1200" height="650" fill="#FAF9F6"/>
+<rect x="60" y="50" width="1080" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="100" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Why is it called a geometric distribution?</text>
+<text x="100" y="165" font-family="Arial" font-size="22" fill="#2C2C2E">The probabilities form a geometric sequence with first term p and common ratio 1 − p.</text>
+<text x="120" y="280" font-family="Arial" font-size="30" fill="#2C2C2E">p  →  p(1 − p)  →  p(1 − p)²  →  p(1 − p)³  →  ...</text>
+<text x="120" y="360" font-family="Arial" font-size="24" fill="#2C2C2E">a = p,   r = 1 − p</text>
+<text x="120" y="425" font-family="Arial" font-size="24" fill="#2C2C2E">S∞ = a/(1 − r) = p/[1 − (1 − p)] = p/p = 1</text>
+</svg>

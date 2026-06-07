@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="FA21MaclaurinSeriesEnrichmentSVG-001" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 590" role="img" aria-labelledby="title desc">
+  <title id="title">Optional enrichment: Maclaurin centre zero versus Taylor centre four</title>
+  <desc id="desc">Graph comparing e to the x with a Maclaurin cubic centred at zero and a Taylor cubic centred at four. It is marked as enrichment, not CCEA core.</desc>
+  <metadata><![CDATA[
+Asset ID: FA21MaclaurinSeriesEnrichmentSVG-001
+Topic ID: FA21MaclaurinSeries
+Unit: FA21 - Further A2 1 Pure Mathematics
+Topic code: FA21-FAF
+Related lesson file: FA21_maclaurin_series_lesson.md
+Related section: Section 9.6 Visual Asset Integration
+Source: Cross-board Taylor evidence from uploaded DrFrost/Pearson chapter
+Purpose: Optional enrichment comparing Maclaurin at 0 with Taylor about a=4.
+Evidence status: Optional enrichment, not CCEA core for this lesson.
+  ]]></metadata>
+  <defs><style><![CDATA[
+    .bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5}.grid{stroke:#E5E5EA;stroke-width:1}.axis{stroke:#2C2C2E;stroke-width:2}.title{font:700 24px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.sub{font:400 14px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.label{font:500 13px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.math{font:500 15px Georgia,serif;fill:#2C2C2E}.note{font:400 12px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.exp{fill:none;stroke:#2C2C2E;stroke-width:4}.mac{fill:none;stroke:#C5A059;stroke-width:3;stroke-dasharray:9 7}.tay{fill:none;stroke:#8A7A47;stroke-width:3.5;stroke-dasharray:2 6}.zone0{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.5;stroke-dasharray:6 5;opacity:.65}.zone4{fill:#FFFFF0;stroke:#D4AF37;stroke-width:1.7;stroke-dasharray:4 4;opacity:.88}.warning{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.6}.box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.4}
+  ]]></style><clipPath id="clip"><rect x="80" y="120" width="680" height="320" rx="8"/></clipPath></defs>
+  <rect class="bg" width="940" height="590"/><rect class="panel" x="40" y="35" width="860" height="510" rx="22"/>
+  <text class="title" x="70" y="70">Optional enrichment: moving the centre of expansion</text><text class="sub" x="70" y="96">Maclaurin is centred at 0. Taylor about a shifts the local focus. This is not CCEA core here.</text>
+  <rect x="80" y="120" width="680" height="320" fill="#FFFFF0" stroke="#E5E5EA"/>
+  <line class="axis" x1="80" y1="382" x2="760" y2="382"/><line class="axis" x1="170" y1="120" x2="170" y2="440"/>
+  <line class="grid" x1="260" y1="120" x2="260" y2="440"/><line class="grid" x1="350" y1="120" x2="350" y2="440"/><line class="grid" x1="440" y1="120" x2="440" y2="440"/><line class="grid" x1="530" y1="120" x2="530" y2="440"/><line class="grid" x1="620" y1="120" x2="620" y2="440"/>
+  <ellipse class="zone0" cx="170" cy="381" rx="70" ry="44"/><ellipse class="zone4" cx="530" cy="350" rx="88" ry="70"/>
+  <g clip-path="url(#clip)"><path class="mac" d="M80 382 C250 380 430 376 760 338"/><path class="tay" d="M80 774 C250 456 405 382 530 350 C610 328 700 200 760 88"/><path class="exp" d="M80 382 C250 380 430 374 530 350 C615 320 690 175 760 -5"/></g>
+  <circle cx="170" cy="381" r="5" fill="#C5A059"/><circle cx="530" cy="350" r="5" fill="#D4AF37"/><text class="label" x="150" y="410">centre 0</text><text class="label" x="507" y="330">centre a=4</text><text class="label" x="764" y="386">x</text><text class="label" x="178" y="116">y</text>
+  <g transform="translate(82,462)"><line x1="0" y1="0" x2="38" y2="0" stroke="#2C2C2E" stroke-width="4"/><text class="math" x="48" y="5">y = eˣ</text><line x1="158" y1="0" x2="196" y2="0" stroke="#C5A059" stroke-width="3" stroke-dasharray="9 7"/><text class="math" x="206" y="5">Maclaurin cubic at 0</text><line x1="430" y1="0" x2="468" y2="0" stroke="#8A7A47" stroke-width="3.5" stroke-dasharray="2 6"/><text class="math" x="478" y="5">Taylor cubic at 4</text></g>
+  <rect class="warning" x="612" y="500" width="250" height="42" rx="12"/><text class="note" x="628" y="518">Optional enrichment only:</text><text class="note" x="628" y="535">Taylor about a is not CCEA core here.</text>
+  <rect class="box" x="70" y="500" width="500" height="42" rx="12"/><text class="note" x="88" y="518">Core lesson boundary: Maclaurin is the special case centred at x = 0.</text><text class="note" x="88" y="535">This diagram explains the uploaded Taylor evidence without importing it into core content.</text>
+</svg>

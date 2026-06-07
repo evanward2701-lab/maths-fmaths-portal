@@ -1,0 +1,9 @@
+placeholder_ok: True
+svg_ok: True
+svg_errors: []
+html_ok: True
+html_errors: []
+old_refs_ok: True
+lo_ok: True
+bridge_ok: True
+offspec_ok: True

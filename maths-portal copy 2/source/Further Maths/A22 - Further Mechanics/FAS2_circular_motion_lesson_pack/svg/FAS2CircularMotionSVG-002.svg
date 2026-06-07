@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">From arc length to linear speed</title>
+  <desc id="desc">Show the geometry behind s equals r theta and the calculus step leading to v equals r omega.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-002
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show the geometry behind s equals r theta and the calculus step leading to v equals r omega.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">From arc length to linear speed</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">When theta is in radians, arc length is s = r theta. Differentiate with respect to time.</text>
+  <circle cx="370" cy="410" r="215" fill="none" stroke="#2C2C2E" stroke-width="5"/>
+  <circle cx="370" cy="410" r="7" fill="#2C2C2E"/>
+  <text x="345" y="444" font-family="Arial" font-size="28" font-style="italic" fill="#2C2C2E">O</text>
+  <line x1="370" y1="410" x2="585" y2="410" stroke="#2C2C2E" stroke-width="3"/>
+  <line x1="370" y1="410" x2="477" y2="224" stroke="#2C2C2E" stroke-width="3"/>
+  <circle cx="585" cy="410" r="9" fill="#2C2C2E"/>
+  <circle cx="477" cy="224" r="9" fill="#2C2C2E"/>
+  <text x="598" y="418" font-family="Arial" font-size="30" font-style="italic" fill="#2C2C2E">A</text>
+  <text x="486" y="218" font-family="Arial" font-size="30" font-style="italic" fill="#2C2C2E">B</text>
+  <path d="M585 410 A215 215 0 0 0 477 224" fill="none" stroke="#C5A059" stroke-width="7" marker-end="url(#goldArrow)"/>
+  <text x="548" y="289" font-family="Arial" font-size="28" font-style="italic" fill="#C5A059">s</text>
+  <path d="M415 410 A45 45 0 0 0 392 371" fill="none" stroke="#C5A059" stroke-width="4"/>
+  <text x="424" y="385" font-family="Arial" font-size="30" font-style="italic" fill="#C5A059">θ</text>
+  <text x="465" y="340" font-family="Arial" font-size="28" font-style="italic" fill="#2C2C2E">r</text>
+  <line x1="477" y1="224" x2="548" y2="265" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="556" y="270" font-family="Arial" font-size="30" font-style="italic" fill="#2C2C2E">v</text>
+  <rect x="700" y="220" width="410" height="305" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="735" y="280" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Formula chain</text>
+  <text x="735" y="340" font-family="Arial" font-size="32" fill="#2C2C2E">s = rθ</text>
+  <text x="735" y="400" font-family="Arial" font-size="30" fill="#2C2C2E">ds/dt = r dθ/dt</text>
+  <text x="735" y="460" font-family="Arial" font-size="34" font-weight="700" fill="#C5A059">v = rω</text>
+
+</svg>

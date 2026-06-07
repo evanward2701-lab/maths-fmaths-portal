@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Scaling Drawn Histogram Bars</title>
+<desc id="desc">Use one known bar to scale drawn width and area.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Scaling Drawn Histogram Bars</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Use one known bar to scale drawn width and area.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-006; Source: Width/height of bars evidence; Section: Worked Examples 15 and 16; Purpose: Drawn bar scaling.</metadata>
+<text x="250" y="130" font-family="Arial" font-size="20" font-weight="700" text-anchor="middle">Known bar: 0 to 4 seconds</text>
+<line x1="100" y1="420" x2="420" y2="420" stroke="#222" stroke-width="3"/><line x1="100" y1="420" x2="100" y2="170" stroke="#222" stroke-width="3"/><rect x="160" y="220" width="180" height="200" fill="#d8ecff" stroke="#111" stroke-width="3"/>
+<text x="250" y="326" font-family="Arial" font-size="18" text-anchor="middle" font-weight="700">Area = 48 cm²</text>
+<line x1="450" y1="300" x2="520" y2="300" stroke="#222" stroke-width="4"/><polygon points="520,300 502,290 502,310" fill="#222"/>
+<text x="720" y="130" font-family="Arial" font-size="20" font-weight="700" text-anchor="middle">New bar: 4 to 6 seconds</text>
+<line x1="580" y1="420" x2="900" y2="420" stroke="#222" stroke-width="3"/><line x1="580" y1="420" x2="580" y2="120" stroke="#222" stroke-width="3"/><rect x="670" y="120" width="90" height="300" fill="#bee3db" stroke="#111" stroke-width="3"/>
+<text x="715" y="284" font-family="Arial" font-size="18" text-anchor="middle" font-weight="700">Area = 54 cm²</text><text x="480" y="400" font-family="Arial" font-size="15" text-anchor="middle">Width: 2 s is half of 4 s. Area scale: 48 ÷ 8 = 6, so 9 × 6 = 54.</text>
+
+</svg>

@@ -1,0 +1,20 @@
+<!--
+Asset ID: A21TrigonometryAndModellingWidget-002
+Source: Chapter 7 Trigonometry and Modelling transcript; P2 Chapter 7 slide PDF
+Related lesson section: A21 Trigonometry and Modelling
+Purpose: Double Angle Formula Selector
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Double Angle Formula Selector</title>
+<style>body{font-family:Arial;padding:24px}.widget{max-width:920px;margin:auto;border:2px solid #111;border-radius:18px;padding:24px;background:#f8f8f8}.panel{background:white;border:1px solid #222;border-radius:14px;padding:18px;margin:16px 0}button{padding:10px 16px;border:2px solid #111;background:white;border-radius:10px;margin:8px;cursor:pointer}.target{font-size:1.25rem;font-weight:bold;text-align:center;padding:12px;background:#eee;border-radius:10px}.feedback{font-weight:bold;margin-top:14px}</style></head>
+<body><main class="widget"><h1>Double Angle Formula Selector</h1><section class="panel"><div class="target" id="target"></div><div style="text-align:center"><button onclick="choose('mixed')">cos²A − sin²A</button><button onclick="choose('sine')">1 − 2sin²A</button><button onclick="choose('cosine')">2cos²A − 1</button></div><div class="feedback" id="feedback"></div><button onclick="newPrompt()">New prompt</button></section></main>
+<script>
+const prompts=[
+{text:"Rewrite cos2A using only sinA.",ans:"sine",exp:"Use cos2A = 1 − 2sin²A."},
+{text:"Rewrite cos2A using only cosA.",ans:"cosine",exp:"Use cos2A = 2cos²A − 1."},
+{text:"Expression already has cos²A − sin²A.",ans:"mixed",exp:"Use cos2A = cos²A − sin²A."},
+{text:"Form a quadratic in sinθ from cos2θ + sinθ = 1.",ans:"sine",exp:"Use cos2θ = 1 − 2sin²θ."},
+{text:"Form a quadratic in cosx.",ans:"cosine",exp:"Use cos2x = 2cos²x − 1."}];
+let cur=0; function newPrompt(){cur=Math.floor(Math.random()*prompts.length);target.textContent=prompts[cur].text;feedback.textContent=""}
+function choose(x){feedback.textContent=(x===prompts[cur].ans?"Correct. ":"Not this time. ")+prompts[cur].exp}
+newPrompt();
+</script></body></html>

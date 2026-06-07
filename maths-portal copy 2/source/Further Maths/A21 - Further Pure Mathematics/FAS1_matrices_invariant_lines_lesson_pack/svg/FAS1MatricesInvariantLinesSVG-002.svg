@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS1MatricesInvariantLinesSVG-002: Invariant line versus line of invariant points</title>
+  <desc id="desc">A CCEA FAS1 Matrices diagram showing the difference between an invariant line where a point moves along the line and a line of invariant points where every point stays fixed.</desc>
+  <!-- Asset ID: FAS1MatricesInvariantLinesSVG-002; Source: CCEA FAS1-MAT specification boundary + transcript visual intuition; Purpose: Distinguish an invariant line from a line of invariant points. -->
+  <defs><marker id="arrowGold" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#C5A059"/></marker><pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E5E5EA" stroke-width="1"/></pattern></defs>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <text x="600" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E">Invariant line does not always mean fixed points</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#5A5A5E">A line is invariant if points on it remain on the same line after transformation.</text>
+  <rect x="70" y="125" width="680" height="540" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="410" y="168" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">Invariant line: P moves, but stays on the line</text>
+  <rect x="120" y="205" width="580" height="380" fill="url(#gridPattern)" opacity="0.9"/>
+  <line x1="150" y1="520" x2="680" y2="520" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <line x1="170" y1="565" x2="170" y2="230" stroke="#7A7A7A" stroke-width="2" marker-end="url(#arrowGold)"/>
+  <line x1="150" y1="540" x2="665" y2="255" stroke="#C5A059" stroke-width="5"/>
+  <text x="610" y="282" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">y = mx</text>
+  <circle cx="320" cy="446" r="8" fill="#2C2C2E"/><text x="300" y="432" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">P</text>
+  <circle cx="515" cy="338" r="8" fill="#D4AF37"/><text x="529" y="334" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">P'</text>
+  <path d="M 332 438 C 385 385, 435 355, 500 342" fill="none" stroke="#D4AF37" stroke-width="3" marker-end="url(#arrowGold)"/>
+  <rect x="210" y="600" width="400" height="40" rx="12" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="410" y="626" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#2C2C2E">P lies on y = mx and P' also lies on y = mx</text>
+  <rect x="790" y="125" width="340" height="540" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="960" y="168" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#2C2C2E">Line of invariant points</text>
+  <rect x="825" y="215" width="270" height="245" fill="url(#gridPattern)" opacity="0.9"/>
+  <line x1="845" y1="430" x2="1082" y2="270" stroke="#C5A059" stroke-width="5"/>
+  <circle cx="960" cy="352" r="9" fill="#D4AF37"/><circle cx="960" cy="352" r="16" fill="none" stroke="#2C2C2E" stroke-width="2"/>
+  <text x="985" y="348" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">P = P'</text>
+  <rect x="825" y="500" width="270" height="100" rx="16" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="960" y="532" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">Every point on the line</text>
+  <text x="960" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">maps to itself:</text>
+  <text x="960" y="587" text-anchor="middle" font-family="Georgia, serif" font-size="21" fill="#2C2C2E">A[x, y]^T = [x, y]^T</text>
+  <rect x="170" y="690" width="860" height="42" rx="14" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="717" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#2C2C2E">Invariant line: P' remains on the same line.  Line of invariant points: P' = P for every point.</text>
+</svg>

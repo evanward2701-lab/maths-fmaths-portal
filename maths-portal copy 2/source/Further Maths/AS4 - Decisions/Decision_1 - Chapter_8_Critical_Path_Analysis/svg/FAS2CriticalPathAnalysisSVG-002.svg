@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="620" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2CriticalPathAnalysisSVG-002: Early and Late Event Time Boxes</title>
+<desc id="desc">Event-time boxes, forward pass and backward pass rules.</desc>
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+<style>
+.bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FFFFF0;stroke:#2C2C2E;stroke-width:3} .arc{stroke:#2C2C2E;stroke-width:4;fill:none;marker-end:url(#arrow)} .dummy{stroke:#2C2C2E;stroke-width:4;stroke-dasharray:10 8;fill:none;marker-end:url(#arrow)} .accent{fill:#FBEFEF;stroke:#C5A059;stroke-width:2} .text{fill:#2C2C2E;font-family:Arial,Helvetica,sans-serif} .title{font-size:30px;font-weight:700} .label{font-size:20px;font-weight:700} .small{font-size:16px}
+</style>
+</defs>
+<rect class="bg" width="1000" height="620"/><rect class="panel" x="30" y="30" width="940" height="560" rx="24"/>
+
+<text class="text title" x="70" y="85">Early and Late Event Times</text>
+<text class="text small" x="70" y="120">Top = early event time. Bottom = late event time.</text>
+<rect class="node" x="110" y="260" width="70" height="90" rx="6"/><line x1="110" y1="305" x2="180" y2="305" stroke="#2C2C2E" stroke-width="2"/><text class="text label" x="136" y="292">0</text><text class="text label" x="136" y="337">0</text>
+<rect class="node" x="330" y="160" width="70" height="90" rx="6"/><line x1="330" y1="205" x2="400" y2="205" stroke="#2C2C2E" stroke-width="2"/><text class="text label" x="356" y="192">4</text><text class="text label" x="356" y="237">4</text>
+<rect class="node" x="330" y="360" width="70" height="90" rx="6"/><line x1="330" y1="405" x2="400" y2="405" stroke="#2C2C2E" stroke-width="2"/><text class="text label" x="356" y="392">6</text><text class="text label" x="356" y="437">6</text>
+<rect class="node" x="560" y="260" width="70" height="90" rx="6"/><line x1="560" y1="305" x2="630" y2="305" stroke="#2C2C2E" stroke-width="2"/><text class="text label" x="586" y="292">9</text><text class="text label" x="586" y="337">9</text>
+<rect class="node" x="790" y="260" width="80" height="90" rx="6"/><line x1="790" y1="305" x2="870" y2="305" stroke="#2C2C2E" stroke-width="2"/><text class="text label" x="812" y="292">16</text><text class="text label" x="812" y="337">16</text>
+<path class="arc" d="M180 270 L330 205"/><path class="arc" d="M180 340 L330 405"/><path class="arc" d="M400 205 L560 285"/><path class="arc" d="M400 405 L560 325"/><path class="arc" d="M630 305 L790 305"/>
+<text class="text label" x="235" y="220">A(4)</text><text class="text label" x="235" y="395">B(6)</text><text class="text label" x="460" y="240">C(5)</text><text class="text label" x="460" y="410">D(3)</text><text class="text label" x="690" y="285">E(7)</text>
+<rect class="accent" x="80" y="475" width="380" height="70" rx="12"/><text class="text label" x="100" y="510">Forward: add, choose largest</text>
+<rect class="accent" x="540" y="475" width="380" height="70" rx="12"/><text class="text label" x="560" y="510">Backward: subtract, choose smallest</text>
+
+</svg>

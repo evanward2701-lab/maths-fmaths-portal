@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Population Parameter versus Sample Statistic</title>
+  <desc id="desc">A visual distinction between population parameters and sample statistics.</desc>
+  <defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker>
+  <style>.canvas{fill:#FAF9F6}.population{fill:#FFFFF0;stroke:#C5A059;stroke-width:3}.sample{fill:#FBEFEF;stroke:#D4AF37;stroke-width:3}.rule{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2}.title{fill:#2C2C2E;font-family:Georgia,serif;font-size:34px;font-weight:700}.subtitle,.heading,.text,.small{fill:#2C2C2E;font-family:Arial,sans-serif}.subtitle{font-size:18px}.heading{font-size:23px;font-weight:700}.text{font-size:17px}.small{font-size:15px}.math{fill:#2C2C2E;font-family:Georgia,serif;font-size:23px}.mathSmall{fill:#2C2C2E;font-family:Georgia,serif;font-size:19px}.arrow{stroke:#C5A059;stroke-width:3;fill:none;marker-end:url(#arrowGold)}.warning{fill:#FBEFEF;stroke:#D4AF37;stroke-width:2}.good{fill:#FFFFF0;stroke:#C5A059;stroke-width:2}.badge{fill:#C5A059}.badgeText{fill:#FAF9F6;font-family:Arial,sans-serif;font-size:14px;font-weight:700}</style></defs>
+  <rect class="canvas" width="1200" height="800"/>
+  <text class="title" x="60" y="70">Population parameter vs sample statistic</text>
+  <text class="subtitle" x="60" y="105">A statistic belongs to the sample. A parameter belongs to the whole population.</text>
+  <rect class="population" x="70" y="155" width="465" height="330" rx="24"/><text class="heading" x="105" y="200">Population</text><text class="text" x="105" y="235">The entire group being studied</text>
+  <text class="math" x="105" y="445">parameters: μ, σ, σ²</text><text class="small" x="105" y="470">Fixed for the population, but usually unknown</text>
+  <rect class="sample" x="665" y="155" width="465" height="330" rx="24"/><text class="heading" x="700" y="200">Sample</text><text class="text" x="700" y="235">A random selection from the population</text>
+  <text class="math" x="700" y="370">random variables: X₁, X₂, ..., Xₙ</text><text class="math" x="700" y="405">observed values: x₁, x₂, ..., xₙ</text><text class="math" x="700" y="445">statistics: X̄, x̄, S², s²</text><text class="small" x="700" y="470">Calculated only from the sample</text>
+  <path class="arrow" d="M535,315 C575,315 620,315 665,315"/><text class="small" x="565" y="295">take sample</text>
+  <rect class="rule" x="115" y="545" width="970" height="175" rx="20"/><text class="heading" x="145" y="590">Statistic test</text>
+  <rect class="good" x="150" y="615" width="395" height="75" rx="14"/><rect class="badge" x="162" y="625" width="48" height="28" rx="10"/><text class="badgeText" x="170" y="644">YES</text><text class="mathSmall" x="230" y="644">ΣXᵢ / n = X̄</text><text class="small" x="230" y="672">sample observations only</text>
+  <rect class="warning" x="655" y="615" width="395" height="75" rx="14"/><rect class="badge" x="667" y="625" width="48" height="28" rx="10"/><text class="badgeText" x="682" y="644">NO</text><text class="mathSmall" x="735" y="644">Σ((Xᵢ − μ) / σ)²</text><text class="small" x="735" y="672">contains population parameters μ and σ</text>
+  <text class="small" x="145" y="740">Exam warning: a statistic cannot contain unknown population parameters. If μ or σ appears, check very carefully.</text>
+</svg>

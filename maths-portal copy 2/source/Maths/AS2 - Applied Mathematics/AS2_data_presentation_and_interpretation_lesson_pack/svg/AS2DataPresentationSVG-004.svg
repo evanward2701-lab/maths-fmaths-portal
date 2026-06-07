@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Histograms Need Density</title>
+<desc id="desc">Same frequency, different class widths: use frequency density.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Histograms Need Density</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Same frequency, different class widths: use frequency density.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-004; Source: Histogram introduction evidence; Section: Core Theory, Histograms; Purpose: Show unequal class width issue.</metadata>
+<text x="240" y="125" font-family="Arial" font-size="20" text-anchor="middle" font-weight="700">Misleading raw frequency</text>
+<line x1="90" y1="410" x2="410" y2="410" stroke="#222" stroke-width="3"/><line x1="90" y1="410" x2="90" y2="170" stroke="#222" stroke-width="3"/>
+<rect x="170" y="250" width="48" height="160" fill="#d8ecff" stroke="#111" stroke-width="2"/><rect x="218" y="250" width="288" height="160" fill="#d8ecff" stroke="#111" stroke-width="2"/>
+<text x="720" y="125" font-family="Arial" font-size="20" text-anchor="middle" font-weight="700">Correct frequency density</text>
+<line x1="570" y1="410" x2="890" y2="410" stroke="#222" stroke-width="3"/><line x1="570" y1="410" x2="570" y2="170" stroke="#222" stroke-width="3"/>
+<rect x="650" y="230" width="48" height="180" fill="#bee3db" stroke="#111" stroke-width="2"/><rect x="698" y="380" width="288" height="30" fill="#bee3db" stroke="#111" stroke-width="2"/>
+<text x="480" y="232" font-family="Arial" font-size="18" text-anchor="middle">frequency density = frequency ÷ width</text>
+
+</svg>

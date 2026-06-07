@@ -1,0 +1,22 @@
+{
+  "asset_ids_in_lesson": [
+    "OffSpecNumericalMethodsMermaid-001",
+    "OffSpecNumericalMethodsMermaid-002",
+    "OffSpecNumericalMethodsBridgeSVG-001",
+    "OffSpecNumericalMethodsSVG-001",
+    "OffSpecNumericalMethodsSVG-002",
+    "OffSpecNumericalMethodsSVG-003",
+    "OffSpecNumericalMethodsSVG-004",
+    "OffSpecNumericalMethodsSVG-005",
+    "OffSpecNumericalMethodsTikZ-001",
+    "OffSpecNumericalMethodsTikZ-002",
+    "OffSpecNumericalMethodsTikZ-003",
+    "OffSpecNumericalMethodsWidget-001",
+    "OffSpecNumericalMethodsWidget-002",
+    "OffSpecNumericalMethodsWidget-003",
+    "OffSpecNumericalMethodsWidget-004",
+    "OffSpecNumericalMethodsWidget-005"
+  ],
+  "expected_asset_count": 16,
+  "errors": []
+}

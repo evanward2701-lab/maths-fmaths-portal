@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AS1 Integration Power Rule Checker</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;padding:24px;background:#f8fafc;color:#1f2937}
+main{max-width:900px;margin:auto;background:white;border:1px solid #d0d5dd;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+h1{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.card{background:#f7fafc;border:1px solid #d0d5dd;border-radius:14px;padding:16px}
+label{display:block;font-weight:700;margin-top:10px}input{width:100%;padding:9px;border:1px solid #d0d5dd;border-radius:10px}
+button{margin-top:14px;padding:10px 14px;border:0;border-radius:999px;background:#2563eb;color:white;font-weight:700;cursor:pointer}
+.output{font-size:1.35rem;background:#fff;border:1px solid #d0d5dd;border-radius:14px;padding:16px;margin-top:16px;line-height:1.6}
+.warn{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}
+.good{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+</style>
+</head>
+<body>
+<main>
+<h1>AS1 Integration Power Rule Checker</h1>
+<p>Enter a term \(ax^n\). The widget applies \(\int ax^n dx=\frac{a}{n+1}x^{n+1}+C\), blocking \(n=-1\) because this is not AS1 power-rule integration.</p>
+<div class="grid">
+<div class="card">
+<h2>Input</h2>
+<label>Coefficient a <input id="a" type="number" step="any" value="3"></label>
+<label>Power n <input id="n" type="number" step="any" value="0.5"></label>
+<button onclick="calc()">Integrate</button>
+</div>
+<div class="card">
+<h2>Examples</h2>
+<button onclick="setEx(4,3)">4x³</button>
+<button onclick="setEx(3,0.5)">3x^(1/2)</button>
+<button onclick="setEx(4,-0.5)">4x^(-1/2)</button>
+<button onclick="setEx(1,-1)">x⁻¹ boundary</button>
+</div>
+</div>
+<div id="status" class="output good"></div>
+<div id="out" class="output"></div>
+</main>
+<script>
+function fmt(v){return Math.abs(v-Math.round(v))<1e-10 ? String(Math.round(v)) : String(Number(v.toFixed(6)))}
+function setEx(a,n){document.getElementById('a').value=a;document.getElementById('n').value=n;calc()}
+function calc(){
+ const a=parseFloat(document.getElementById('a').value);
+ const n=parseFloat(document.getElementById('n').value);
+ const status=document.getElementById('status'), out=document.getElementById('out');
+ if(!isFinite(a)||!isFinite(n)){status.className='output warn'; status.textContent='Enter numerical values.'; out.textContent=''; return}
+ if(Math.abs(n+1)<1e-10){status.className='output warn'; status.textContent='Blocked for AS1: n = -1 gives ∫ a/x dx, not handled by the AS1 power rule.'; out.textContent='Reason: n+1=0, so the power rule would divide by zero.'; return}
+ const np=n+1, coeff=a/np;
+ status.className='output good'; status.textContent='AS1 power rule applied. Add + C because this is indefinite integration.';
+ out.innerHTML=`Increase power: ${fmt(n)} + 1 = ${fmt(np)}<br>Divide coefficient by new power: ${fmt(a)} ÷ ${fmt(np)} = ${fmt(coeff)}<br><strong>∫ ${fmt(a)}x^${fmt(n)} dx = ${fmt(coeff)}x^${fmt(np)} + C</strong>`;
+}
+calc();
+</script>
+</body>
+</html>

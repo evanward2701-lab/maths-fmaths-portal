@@ -1,0 +1,7 @@
+Placeholder IDs: ['FAS2AlgorithmsOnGraphsBridgeSVG-001', 'FAS2AlgorithmsOnGraphsMermaid-001', 'FAS2AlgorithmsOnGraphsSVG-001', 'FAS2AlgorithmsOnGraphsTikZ-001', 'FAS2AlgorithmsOnGraphsSVG-002', 'FAS2AlgorithmsOnGraphsTikZ-002', 'FAS2AlgorithmsOnGraphsSVG-003', 'FAS2AlgorithmsOnGraphsSVG-004', 'FAS2AlgorithmsOnGraphsWidget-001', 'FAS2AlgorithmsOnGraphsWidget-002', 'FAS2AlgorithmsOnGraphsWidget-003', 'FAS2AlgorithmsOnGraphsWidget-004']
+Missing placeholder files: []
+SVG parse errors: []
+HTML basic structure errors: []
+Old/chat wrapper refs: []
+LO present: {'FAS2-ALGGRAPH-LO001': True, 'FAS2-ALGGRAPH-LO002': True, 'FAS2-ALGGRAPH-LO003': True, 'FAS2-ALGGRAPH-LO004': True, 'FAS2-ALGGRAPH-LO005': True}
+Verification complete.

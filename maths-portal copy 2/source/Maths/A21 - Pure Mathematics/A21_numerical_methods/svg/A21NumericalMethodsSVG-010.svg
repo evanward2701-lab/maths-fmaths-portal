@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-010; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: Required by CCEA but evidence pending.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Trapezium rule placeholder</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">Required by CCEA but evidence pending.</text>
+  <line x1="100" y1="420" x2="810" y2="420" stroke="#222" stroke-width="3"/><line x1="140" y1="450" x2="140" y2="130" stroke="#222" stroke-width="3"/><path d="M160,385 C260,300 355,250 470,240 C590,230 700,175 790,140" fill="none" stroke="#1f77b4" stroke-width="5"/><polygon points="220,420 220,335 340,270 340,420" fill="#dbeafe" stroke="#222" stroke-width="2"/><polygon points="340,420 340,270 460,243 460,420" fill="#dbeafe" stroke="#222" stroke-width="2"/><polygon points="460,420 460,243 580,225 580,420" fill="#dbeafe" stroke="#222" stroke-width="2"/><rect x="110" y="105" width="430" height="90" rx="12" fill="#fff3cd" stroke="#222" stroke-width="2"/><text x="130" y="145" font-family="Arial" font-size="18">Evidence-pending placeholder only.</text>
+</svg>

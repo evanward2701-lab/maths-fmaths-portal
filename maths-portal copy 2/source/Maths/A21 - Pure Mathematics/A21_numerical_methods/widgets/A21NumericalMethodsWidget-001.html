@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A21 Numerical Methods Widget 001 | Trapezium Rule Evidence Lock</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#172033;margin:0;padding:24px}
+.widget{max-width:980px;margin:auto;background:white;border:1px solid #d8e0ec;border-radius:18px;box-shadow:0 12px 30px rgba(23,32,51,.08);overflow:hidden}
+header{padding:24px 28px;background:linear-gradient(135deg,#eef5ff,#fff);border-bottom:1px solid #d8e0ec}
+h1{margin:0 0 8px;font-size:28px}.subtitle{margin:0;color:#5b6475;line-height:1.5}
+.meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:20px 28px;border-bottom:1px solid #d8e0ec}
+.meta-card{background:#f4f7fb;border:1px solid #d8e0ec;border-radius:12px;padding:12px 14px}.meta-card strong{display:block;color:#5b6475;text-transform:uppercase;font-size:13px;margin-bottom:5px}
+main{padding:24px 28px}.notice{border:2px solid #d8a800;background:#fff3cd;border-radius:14px;padding:16px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid #d8e0ec;border-radius:14px;padding:18px;background:#fff}
+label{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #edf1f6;line-height:1.4}
+.status{border-radius:14px;padding:16px;border:2px solid #d64545;background:#fdecec;margin-top:14px}.status.ready{border-color:#2f9e59;background:#e8f7ef}
+button{border:0;background:#2f6fda;color:#fff;padding:11px 14px;border-radius:10px;font-weight:700;cursor:pointer;margin-top:12px}
+button.secondary{background:#eef2f7;color:#172033;border:1px solid #d8e0ec}
+.log{margin-top:14px;padding:12px;border-radius:10px;background:#f7f9fc;border:1px solid #d8e0ec;color:#5b6475;font-size:14px;min-height:42px}
+canvas{width:100%;height:260px;border:1px solid #d8e0ec;border-radius:12px;background:#fff}
+footer{padding:18px 28px;border-top:1px solid #d8e0ec;color:#5b6475;background:#fbfcfe}
+@media(max-width:780px){.meta,.grid{grid-template-columns:1fr}body{padding:12px}}
+</style>
+</head>
+<body>
+<section class="widget">
+<header><h1>A21 Numerical Methods: Trapezium Rule Evidence Lock</h1><p class="subtitle">This scaffold prevents the pack from treating A21-NUM-LO003 as complete before trapezium-rule teaching evidence is supplied.</p></header>
+<section class="meta">
+<div class="meta-card"><strong>Asset ID</strong>A21NumericalMethodsWidget-001</div>
+<div class="meta-card"><strong>Related section</strong>Syllabus Gap Check, A21-NUM-LO003</div>
+<div class="meta-card"><strong>Source</strong>CCEA specification map only; lesson evidence pending</div>
+<div class="meta-card"><strong>Purpose</strong>Future trapezium-rule approximation widget scaffold</div>
+</section>
+<main>
+<div class="notice"><h2>Evidence-pending status</h2><p>A21-NUM-LO003 requires numerical integration using the trapezium rule, including approximate area under a curve. The uploaded Chapter 10 evidence did not fully teach this strand, so this widget is deliberately locked.</p></div>
+<div class="grid"><section class="panel"><h2>Evidence checklist</h2>
+<label><input type="checkbox" class="check">Teacher explanation or transcript supplied.</label>
+<label><input type="checkbox" class="check">Worked trapezium-rule example supplied.</label>
+<label><input type="checkbox" class="check">Diagram/table/slide for area approximation supplied.</label>
+<label><input type="checkbox" class="check">Cross-board material checked against CCEA boundary.</label>
+<div id="statusBox" class="status"><h3>Locked</h3><p>The trapezium-rule widget should not be treated as completed core content yet.</p></div>
+<button id="copyStatus">Copy status note</button> <button id="resetChecks" class="secondary">Reset checklist</button><div id="logBox" class="log">Status note will appear here.</div>
+</section><section class="panel"><h2>Locked future-widget preview</h2><canvas id="previewCanvas" width="500" height="260"></canvas></section></div>
+</main>
+<footer>This file is complete as a scaffold, but not as a completed trapezium-rule learning widget.</footer>
+</section>
+<script>
+const checks=[...document.querySelectorAll('.check')],statusBox=document.getElementById('statusBox'),logBox=document.getElementById('logBox');
+function updateStatus(){const count=checks.filter(c=>c.checked).length,ready=count===checks.length;if(ready){statusBox.classList.add('ready');statusBox.innerHTML='<h3>Ready for evidence-backed build</h3><p>All required evidence checks are ticked. Replace this scaffold with a full widget after evidence is supplied.</p>';logBox.textContent='A21NumericalMethodsWidget-001 status: evidence checks complete.';}else{statusBox.classList.remove('ready');statusBox.innerHTML='<h3>Locked</h3><p>'+count+' of '+checks.length+' checks complete. Do not treat A21-NUM-LO003 as completed core content yet.</p>';logBox.textContent='A21NumericalMethodsWidget-001 status: locked. Trapezium-rule evidence is incomplete.'}}
+checks.forEach(c=>c.addEventListener('change',updateStatus));
+document.getElementById('resetChecks').addEventListener('click',()=>{checks.forEach(c=>c.checked=false);updateStatus()});
+document.getElementById('copyStatus').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(logBox.textContent);logBox.textContent+=' Copied.'}catch(e){logBox.textContent+=' Clipboard unavailable.'}});
+const canvas=document.getElementById('previewCanvas'),ctx=canvas.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,500,260);ctx.strokeStyle='#172033';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(40,220);ctx.lineTo(460,220);ctx.moveTo(60,235);ctx.lineTo(60,35);ctx.stroke();ctx.strokeStyle='#2f6fda';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(70,190);ctx.bezierCurveTo(150,110,230,100,300,125);ctx.bezierCurveTo(360,145,400,90,445,65);ctx.stroke();ctx.fillStyle='rgba(47,111,218,.12)';ctx.strokeStyle='#8aaee8';[[110,170,185,145],[185,145,260,122],[260,122,335,130],[335,130,410,85]].forEach(([x1,y1,x2,y2])=>{ctx.beginPath();ctx.moveTo(x1,220);ctx.lineTo(x1,y1);ctx.lineTo(x2,y2);ctx.lineTo(x2,220);ctx.closePath();ctx.fill();ctx.stroke();});ctx.fillStyle='rgba(23,32,51,.78)';ctx.fillRect(120,95,270,58);ctx.fillStyle='#fff';ctx.font='bold 16px Arial';ctx.fillText('LOCKED',220,120);ctx.font='13px Arial';ctx.fillText('Supply lesson evidence to activate.',165,142);updateStatus();
+</script>
+</body>
+</html>

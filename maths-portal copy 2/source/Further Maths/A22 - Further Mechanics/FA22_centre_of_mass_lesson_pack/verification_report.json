@@ -1,0 +1,171 @@
+{
+  "placeholder_checks": [
+    {
+      "path": "mermaid/FA22CentreOfMassMermaid-001.md",
+      "exists": true
+    },
+    {
+      "path": "mermaid/FA22CentreOfMassBridgeMermaid-001.md",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-001.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-002.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-003.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-004.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-005.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-006.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-007.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-008.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-009.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-010.svg",
+      "exists": true
+    },
+    {
+      "path": "svg/FA22CentreOfMassSVG-011.svg",
+      "exists": true
+    },
+    {
+      "path": "tikz/FA22CentreOfMassTikZ-001.tex",
+      "exists": true
+    },
+    {
+      "path": "tikz/FA22CentreOfMassTikZ-002.tex",
+      "exists": true
+    },
+    {
+      "path": "tikz/FA22CentreOfMassTikZ-003.tex",
+      "exists": true
+    },
+    {
+      "path": "tikz/FA22CentreOfMassTikZ-004.tex",
+      "exists": true
+    },
+    {
+      "path": "widgets/FA22CentreOfMassWidget-001.html",
+      "exists": true
+    },
+    {
+      "path": "widgets/FA22CentreOfMassWidget-002.html",
+      "exists": true
+    },
+    {
+      "path": "widgets/FA22CentreOfMassWidget-003.html",
+      "exists": true
+    },
+    {
+      "path": "widgets/FA22CentreOfMassWidget-004.html",
+      "exists": true
+    }
+  ],
+  "svg_parse": [
+    {
+      "file": "svg/FA22CentreOfMassSVG-001.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-002.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-003.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-004.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-005.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-006.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-007.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-008.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-009.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-010.svg",
+      "ok": true,
+      "error": ""
+    },
+    {
+      "file": "svg/FA22CentreOfMassSVG-011.svg",
+      "ok": true,
+      "error": ""
+    }
+  ],
+  "widget_html": [
+    {
+      "file": "widgets/FA22CentreOfMassWidget-001.html",
+      "ok": true
+    },
+    {
+      "file": "widgets/FA22CentreOfMassWidget-002.html",
+      "ok": true
+    },
+    {
+      "file": "widgets/FA22CentreOfMassWidget-003.html",
+      "ok": true
+    },
+    {
+      "file": "widgets/FA22CentreOfMassWidget-004.html",
+      "ok": true
+    }
+  ],
+  "lo_ids": {
+    "FA22-COM-LO001": true,
+    "FA22-COM-LO002": true,
+    "FA22-COM-LO003": true,
+    "FA22-COM-LO004": true,
+    "FA22-COM-LO005": true
+  },
+  "old_refs": []
+}

@@ -1,0 +1,26 @@
+<!--
+Asset ID: A21TrigonometryAndModellingWidget-001
+Source: Chapter 7 Trigonometry and Modelling transcript; P2 Chapter 7 slide PDF
+Related lesson section: A21 Trigonometry and Modelling
+Purpose: Addition Formulae Reconstruction Drill
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Addition Formulae Reconstruction Drill</title>
+<style>body{font-family:Arial,sans-serif;margin:0;padding:24px;background:white;color:#111}.widget{max-width:980px;margin:auto;border:2px solid #111;border-radius:18px;padding:24px;background:#f8f8f8}select,button{font-size:1rem;padding:8px;margin:6px 0;width:100%}button{border:2px solid #111;border-radius:10px;background:white;cursor:pointer}.card{background:white;border:1px solid #222;border-radius:14px;padding:18px;margin:16px 0}.feedback{font-weight:bold;margin-top:12px}.formula{background:#eee;padding:12px;border-radius:10px;margin-top:12px}</style></head>
+<body><main class="widget"><h1>Addition Formulae Reconstruction Drill</h1><p>Choose the missing right-hand side.</p><div id="score">Score: 0 / 0</div><section class="card"><label>Formula:</label><select id="q"></select><label>Right-hand side:</label><select id="a"></select><button onclick="check()">Check</button><button onclick="newQ()">New question</button><button onclick="hint()">Show hint</button><div class="feedback" id="f"></div><div class="formula" id="formula"></div></section></main>
+<script>
+const qs=[
+{lhs:"sin(A + B)",ans:"sinA cosB + cosA sinB",h:"For sine, sign stays the same and terms mix sine/cosine."},
+{lhs:"sin(A - B)",ans:"sinA cosB - cosA sinB",h:"For sine, sign stays the same."},
+{lhs:"cos(A + B)",ans:"cosA cosB - sinA sinB",h:"For cosine, sign switches."},
+{lhs:"cos(A - B)",ans:"cosA cosB + sinA sinB",h:"For cosine, sign switches."},
+{lhs:"tan(A + B)",ans:"(tanA + tanB)/(1 - tanA tanB)",h:"Tangent keeps sign on top and switches below."},
+{lhs:"tan(A - B)",ans:"(tanA - tanB)/(1 + tanA tanB)",h:"Tangent keeps sign on top and switches below."}];
+const opts=qs.map(x=>x.ans).concat(["sinA sinB + cosA cosB","cosA sinB - sinA cosB"]);
+let cur=0,c=0,t=0;
+function init(){q.innerHTML=qs.map((x,i)=>`<option value="${i}">${x.lhs}</option>`).join("");a.innerHTML=opts.map(x=>`<option>${x}</option>`).join("");q.onchange=()=>{cur=+q.value;clear()};newQ();}
+function clear(){f.textContent="";formula.textContent="";}
+function newQ(){cur=Math.floor(Math.random()*qs.length);q.value=cur;a.selectedIndex=Math.floor(Math.random()*opts.length);clear();}
+function check(){t++; if(a.value===qs[cur].ans){c++; f.textContent="Correct."} else f.textContent="Not quite. "+qs[cur].h; formula.textContent=qs[cur].lhs+" = "+qs[cur].ans; score.textContent=`Score: ${c} / ${t}`;}
+function hint(){f.textContent=qs[cur].h;}
+init();
+</script></body></html>

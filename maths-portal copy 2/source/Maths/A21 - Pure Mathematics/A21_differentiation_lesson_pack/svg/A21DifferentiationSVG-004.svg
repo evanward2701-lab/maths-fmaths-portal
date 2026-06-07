@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="680" viewBox="0 0 1150 680">
+<title>A21DifferentiationSVG-004: Parametric curve tangent diagram</title>
+<metadata>Asset ID: A21DifferentiationSVG-004; Source: Chapter 9 parametric differentiation evidence; Section: Core Theory 7; Purpose: Visualise dx/dt, dy/dt and dy/dx.</metadata>
+<rect width="1150" height="680" fill="white"/>
+<text x="575" y="48" text-anchor="middle" font-family="Arial" font-size="30" font-weight="bold">Parametric differentiation</text>
+<rect x="70" y="120" width="620" height="470" fill="#fbfbfb" stroke="#222" stroke-width="2"/>
+<line x1="120" y1="520" x2="650" y2="520" stroke="#333" stroke-width="2"/>
+<line x1="120" y1="540" x2="120" y2="160" stroke="#333" stroke-width="2"/>
+<path d="M150,500 C240,410 310,470 380,350 C450,230 540,260 630,165" fill="none" stroke="#6a1b9a" stroke-width="6"/>
+<circle cx="405" cy="323" r="8" fill="#d32f2f"/>
+<text x="418" y="315" font-family="Arial" font-size="20" font-weight="bold">P</text>
+<line x1="330" y1="385" x2="505" y2="245" stroke="#111" stroke-width="4"/>
+<line x1="405" y1="323" x2="505" y2="323" stroke="#1976d2" stroke-width="4"/>
+<text x="455" y="307" text-anchor="middle" font-family="Arial" font-size="18" fill="#1976d2" font-weight="bold">dx/dt</text>
+<line x1="505" y1="323" x2="505" y2="243" stroke="#2e7d32" stroke-width="4"/>
+<text x="530" y="285" font-family="Arial" font-size="18" fill="#2e7d32" font-weight="bold">dy/dt</text>
+<rect x="735" y="145" width="350" height="385" rx="14" fill="#eef6ff" stroke="#1976d2" stroke-width="2"/>
+<text x="910" y="185" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">Parametric rule</text>
+<text x="910" y="345" text-anchor="middle" font-family="Arial" font-size="25" font-weight="bold">dy/dx = (dy/dt) / (dx/dt)</text>
+<text x="910" y="430" text-anchor="middle" font-family="Arial" font-size="17">Do not reverse the fraction.</text>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Angular speed: same rotation rate, different linear speed</title>
+  <desc id="desc">Show that points at different radii can have the same angular speed but different linear speeds.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-001
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show that points at different radii can have the same angular speed but different linear speeds.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Angular speed: same rotation rate, different linear speed</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">Both points sweep out the same angle in the same time, so they share the same omega.</text>
+  <circle cx="390" cy="405" r="215" fill="none" stroke="#2C2C2E" stroke-width="5"/>
+  <circle cx="390" cy="405" r="6" fill="#2C2C2E"/>
+  <line x1="390" y1="405" x2="538" y2="508" stroke="#2C2C2E" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="448" cy="445" r="14" fill="#C5A059" stroke="#2C2C2E" stroke-width="3"/>
+  <circle cx="538" cy="508" r="16" fill="#D4AF37" stroke="#2C2C2E" stroke-width="3"/>
+  <path d="M424 370 A70 70 0 0 1 478 394" fill="none" stroke="#C5A059" stroke-width="4" marker-end="url(#goldArrow)"/>
+  <text x="482" y="390" font-family="Arial" font-size="30" font-weight="700" fill="#C5A059">ω</text>
+  <path d="M454 463 A92 92 0 0 1 431 492" fill="none" stroke="#2C2C2E" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M553 525 A168 168 0 0 1 503 582" fill="none" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <rect x="710" y="225" width="370" height="300" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="742" y="275" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Key idea</text>
+  <text x="742" y="330" font-family="Arial" font-size="28" font-weight="700" fill="#C5A059">ω is the same</text>
+  <text x="742" y="390" font-family="Arial" font-size="28" font-weight="700" fill="#C5A059">v = rω</text>
+  <text x="742" y="450" font-family="Arial" font-size="22" fill="#2C2C2E">Larger r gives larger v.</text>
+
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Conical pendulum: vertical balance, horizontal acceleration</title>
+  <desc id="desc">Show a conical pendulum with tension components and horizontal circular acceleration.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-005
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show a conical pendulum with tension components and horizontal circular acceleration.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Conical pendulum: vertical balance, horizontal acceleration</text>
+  
+  <line x1="320" y1="170" x2="320" y2="590" stroke="#E5E5EA" stroke-width="3" stroke-dasharray="8 8"/>
+  <circle cx="320" cy="170" r="8" fill="#2C2C2E"/><text x="300" y="150" font-family="Arial" font-size="28" fill="#2C2C2E">A</text>
+  <line x1="320" y1="170" x2="515" y2="520" stroke="#2C2C2E" stroke-width="5"/>
+  <ellipse cx="320" cy="520" rx="195" ry="48" fill="none" stroke="#C5A059" stroke-width="4"/>
+  <line x1="320" y1="520" x2="515" y2="520" stroke="#C5A059" stroke-width="4"/>
+  <circle cx="515" cy="520" r="20" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="4"/>
+  <path d="M338 210 A48 48 0 0 1 363 252" fill="none" stroke="#C5A059" stroke-width="4"/>
+  <text x="370" y="246" font-family="Arial" font-size="26" fill="#C5A059">α</text>
+  <line x1="515" y1="520" x2="420" y2="350" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="515" y1="520" x2="515" y2="625" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="515" y1="520" x2="395" y2="520" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <line x1="515" y1="520" x2="515" y2="430" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <text x="535" y="455" font-family="Arial" font-size="24" fill="#C5A059">T cos α</text>
+  <text x="400" y="505" font-family="Arial" font-size="24" fill="#C5A059">T sin α</text>
+  <rect x="700" y="250" width="385" height="250" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="735" y="300" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Equations</text>
+  <text x="735" y="360" font-family="Arial" font-size="28" fill="#2C2C2E">T cos α = 2g</text>
+  <text x="735" y="420" font-family="Arial" font-size="28" fill="#2C2C2E">T sin α = 2(0.4)ω²</text>
+
+</svg>

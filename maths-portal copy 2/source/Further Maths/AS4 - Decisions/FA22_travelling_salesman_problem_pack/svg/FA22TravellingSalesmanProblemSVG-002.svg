@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Complete network of least distances and symmetric distance matrix</title>
+  <desc id="desc">A weighted graph and distance matrix show that AB equals BA.</desc>
+  <metadata>
+    asset_id: FA22TravellingSalesmanProblemSVG-002
+    asset_type: svg
+    topic_id: FA22TravellingSalesmanProblem
+    unit_code: FA22
+    topic_code: FA22-ALGGRAPH
+    lesson_file: FA22_travelling_salesman_problem_lesson.md
+  </metadata>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:22}
+      .title{font-family:Arial,sans-serif;font-size:32px;font-weight:700;fill:#2C2C2E}
+      .text{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E}
+      .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E}
+      .edge{stroke:#8E8E93;stroke-width:3;fill:none} .route{stroke:#C5A059;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .node{fill:#FAF9F6;stroke:#2C2C2E;stroke-width:2.5} .gold{fill:#FBEFEF;stroke:#C5A059;stroke-width:3}
+      .cell{fill:#FAF9F6;stroke:#E5E5EA;stroke-width:1.2} .hi{fill:#FBEFEF;stroke:#C5A059;stroke-width:2.5}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  
+  <text class="title" x="60" y="60">Complete Network of Least Distances</text>
+  <rect class="card" x="60" y="110" width="470" height="560"/><rect class="card" x="570" y="110" width="570" height="560"/>
+  <text class="text" x="90" y="155">Network view</text><text class="small" x="90" y="185">Highlighted edge: AB = 51.</text>
+  <line class="route" x1="210" y1="280" x2="340" y2="280"/><line class="edge" x1="210" y1="280" x2="165" y2="420"/><line class="edge" x1="340" y1="280" x2="390" y2="420"/><line class="edge" x1="165" y1="420" x2="275" y2="530"/><line class="edge" x1="275" y1="530" x2="390" y2="420"/><circle class="gold" cx="210" cy="280" r="18"/><circle class="gold" cx="340" cy="280" r="18"/><circle class="node" cx="165" cy="420" r="18"/><circle class="node" cx="390" cy="420" r="18"/><circle class="node" cx="275" cy="530" r="18"/><text class="small" x="205" y="286">A</text><text class="small" x="335" y="286">B</text><text class="small" x="160" y="426">C</text><text class="small" x="385" y="426">D</text><text class="small" x="270" y="536">E</text><text class="text" x="266" y="260">51</text>
+  <text class="text" x="600" y="155">Least-distance matrix</text><text class="small" x="600" y="185">AB and BA are equal in a non-directional table.</text>
+  <g transform="translate(620,240)">
+    <rect class="cell" x="0" y="0" width="80" height="50"/><text class="small" x="110" y="30">A</text><text class="small" x="190" y="30">B</text><text class="small" x="270" y="30">C</text><text class="small" x="350" y="30">D</text><text class="small" x="430" y="30">E</text>
+    <text class="small" x="30" y="80">A</text><text class="small" x="30" y="130">B</text><text class="small" x="30" y="180">C</text><text class="small" x="30" y="230">D</text><text class="small" x="30" y="280">E</text>
+    <!-- grid -->
+    <g>
+      <rect class="cell" x="80" y="50" width="80" height="50"/><rect class="hi" x="160" y="50" width="80" height="50"/><rect class="cell" x="240" y="50" width="80" height="50"/><rect class="cell" x="320" y="50" width="80" height="50"/><rect class="cell" x="400" y="50" width="80" height="50"/>
+      <rect class="hi" x="80" y="100" width="80" height="50"/><rect class="cell" x="160" y="100" width="80" height="50"/><rect class="cell" x="240" y="100" width="80" height="50"/><rect class="cell" x="320" y="100" width="80" height="50"/><rect class="cell" x="400" y="100" width="80" height="50"/>
+      <rect class="cell" x="80" y="150" width="80" height="50"/><rect class="cell" x="160" y="150" width="80" height="50"/><rect class="cell" x="240" y="150" width="80" height="50"/><rect class="cell" x="320" y="150" width="80" height="50"/><rect class="cell" x="400" y="150" width="80" height="50"/>
+      <rect class="cell" x="80" y="200" width="80" height="50"/><rect class="cell" x="160" y="200" width="80" height="50"/><rect class="cell" x="240" y="200" width="80" height="50"/><rect class="cell" x="320" y="200" width="80" height="50"/><rect class="cell" x="400" y="200" width="80" height="50"/>
+      <rect class="cell" x="80" y="250" width="80" height="50"/><rect class="cell" x="160" y="250" width="80" height="50"/><rect class="cell" x="240" y="250" width="80" height="50"/><rect class="cell" x="320" y="250" width="80" height="50"/><rect class="cell" x="400" y="250" width="80" height="50"/>
+    </g>
+    <text class="text" x="185" y="83">51</text><text class="text" x="105" y="133">51</text><text class="small" x="100" y="83">-</text><text class="small" x="270" y="83">12</text><text class="small" x="350" y="83">44</text><text class="small" x="430" y="83">30</text>
+  </g>
+  <text class="text" x="650" y="600">For non-directional networks, copy across the diagonal.</text>
+
+</svg>

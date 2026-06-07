@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Euclid primes proof</title>
+<desc id="desc">Flow diagram for infinitely many primes proof.</desc>
+<metadata>Asset ID: A21AlgebraicMethodsProofByContradictionSVG-005; Source: Euclid example from transcript/PDF; Section: Worked Example 6; Purpose: prime proof flow.</metadata>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#222"/></marker></defs>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#111">There are infinitely many primes</text>
+<rect x="90" y="135" width="330" height="90" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="255.0" y="173" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Assume finite list</text>
+<text x="255.0" y="209" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">p₁, p₂, ..., pₙ</text><line x1="255" y1="225" x2="255" y2="300" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="90" y="300" width="330" height="90" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="255.0" y="338" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Construct</text>
+<text x="255.0" y="374" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">N = p₁p₂...pₙ + 1</text><line x1="255" y1="390" x2="255" y2="465" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="90" y="465" width="330" height="100" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="255.0" y="503" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Divide by pᵢ</text>
+<text x="255.0" y="539" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">remainder is 1</text><line x1="420" y1="515" x2="520" y2="360" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="520" y="310" width="300" height="100" rx="18" fill="#fff0f0" stroke="#a00020" stroke-width="3"/>
+<text x="670.0" y="348" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Escape result</text>
+<text x="670.0" y="384" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">N divisible by no listed prime</text><line x1="820" y1="360" x2="920" y2="250" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="920" y="205" width="220" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="1030.0" y="243" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Case 1</text>
+<text x="1030.0" y="279" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">N prime</text><line x1="820" y1="370" x2="920" y2="480" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="920" y="440" width="220" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="1030.0" y="478" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Case 2</text>
+<text x="1030.0" y="514" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">N composite</text><line x1="1030" y1="285" x2="1030" y2="595" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><line x1="1030" y1="520" x2="1030" y2="595" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="870" y="595" width="320" height="90" rx="18" fill="#fff0f0" stroke="#a00020" stroke-width="3"/>
+<text x="1030.0" y="633" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Contradiction</text>
+<text x="1030.0" y="669" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">new prime not in list</text><line x1="870" y1="640" x2="690" y2="640" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="370" y="600" width="320" height="80" rx="18" fill="#effced" stroke="#2b7a2b" stroke-width="3"/>
+<text x="530.0" y="638" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Conclusion</text>
+<text x="530.0" y="674" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">infinitely many primes</text>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22FlowsInNetworksBridgeSVG-001: Ordinary Maths Bridge to Network Flows</title>
+  <desc id="desc">Bridge from ordinary diagram interpretation to Further Maths network-flow proof.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .arc{stroke:#2C2C2E;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .cut{stroke:#C5A059;stroke-width:5;stroke-dasharray:14 10;fill:none} .hi{stroke:#D4AF37;stroke-width:10;opacity:.38;fill:none}
+      .node{fill:#D4AF37;stroke:#2C2C2E;stroke-width:2} .source{fill:#FBEFEF;stroke:#C5A059;stroke-width:3} .sink{fill:#FFF8DC;stroke:#C5A059;stroke-width:3}
+      .title{font-family:Georgia,serif;font-size:30px;font-weight:700;fill:#2C2C2E} .text{font-family:Arial,sans-serif;font-size:22px;fill:#2C2C2E} .math{font-family:Georgia,serif;font-size:25px;fill:#2C2C2E} .box{fill:white;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="720"/><rect class="panel" x="40" y="40" width="1020" height="640" rx="24"/>
+  <text class="title" x="70" y="95">A-Level Maths Bridge</text>
+  <text class="text" x="70" y="132">Ordinary diagram reading becomes Further Maths flow proof.</text>
+  <rect class="box" x="90" y="170" width="360" height="360"/><text class="math" x="120" y="220">Ordinary A-Level Maths</text><text class="text" x="120" y="280">Read a diagram</text><text class="text" x="120" y="330">Model a context</text><text class="text" x="120" y="380">Use equations and inequalities</text><text class="text" x="120" y="430">Give a reasoned conclusion</text><path class="cut" d="M480 350 C540 300 600 300 660 350"/><rect class="box" x="690" y="170" width="340" height="360"/><text class="math" x="720" y="220">Further Maths</text><text class="text" x="720" y="280">Capacities and flows</text><text class="text" x="720" y="330">Conservation at vertices</text><text class="text" x="720" y="380">Cut capacity bounds flow</text><text class="text" x="720" y="430">Max-flow min-cut proof</text>
+</svg>

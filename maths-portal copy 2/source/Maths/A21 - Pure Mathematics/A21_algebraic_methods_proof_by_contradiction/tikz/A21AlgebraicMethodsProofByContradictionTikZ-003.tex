@@ -1,0 +1,20 @@
+% Asset ID: A21AlgebraicMethodsProofByContradictionTikZ-003
+% Source: Teacher transcript and slide proof of sqrt(2) irrationality; Phase 1 Worked Example 5
+% Related lesson section: Worked Example 5
+% Purpose: Show the contradiction chain in the standard proof that sqrt(2) is irrational.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily, step/.style={rectangle, rounded corners=5pt, draw=black, very thick, align=center, text width=4.6cm, minimum height=1.15cm}, arrow/.style={-{Latex[length=3mm]}, very thick}]
+\node[step, fill=orange!12] (a) {Assume $\sqrt2$ rational:\\ $\sqrt2=\frac ab$ in simplest form};
+\node[step, fill=blue!7, right=2.2cm of a] (b) {Square:\\ $2=\frac{a^2}{b^2}$};
+\node[step, fill=blue!7, below=1.5cm of b] (c) {$2b^2=a^2$};
+\node[step, fill=green!10, left=2.2cm of c] (d) {$a^2$ even, so $a$ even. Let $a=2k$.};
+\node[step, fill=blue!7, below=1.5cm of d] (e) {$2b^2=(2k)^2=4k^2$};
+\node[step, fill=green!10, right=2.2cm of e] (f) {$b^2=2k^2$, so $b$ even};
+\node[step, fill=red!10, below=1.5cm of f] (g) {$a$ and $b$ both even: contradiction};
+\node[step, fill=green!12, left=2.2cm of g] (h) {Therefore $\sqrt2$ is irrational};
+\draw[arrow] (a)--(b); \draw[arrow] (b)--(c); \draw[arrow] (c)--(d); \draw[arrow] (d)--(e); \draw[arrow] (e)--(f); \draw[arrow] (f)--(g); \draw[arrow] (g)--(h);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,56 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingWIDGET-002
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Core Theory, Critical value method for correlation tests
+Source: CCEA specification map; lesson transcript; Stats Yr2 Chapter 1 PDF
+Purpose: Let the student decide whether to reject H0 in a PMCC correlation hypothesis test using r, tail type and a critical value.
+Status: Phase 5 widget draft
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A22 Correlation Hypothesis Test Checker</title>
+<style>
+:root{--ink:#111827;--muted:#4b5563;--panel:#f9fafb;--line:#d1d5db;--accent:#111827;--reject:#991b1b;--retain:#065f46;--card:#fff}*{box-sizing:border-box}body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.5}.widget{max-width:1100px;margin:0 auto;border:2px solid var(--ink);border-radius:18px;padding:24px;background:var(--card)}h1{margin:0 0 8px;font-size:1.8rem}h2{margin:0 0 12px;font-size:1.2rem}.subtitle{margin:0 0 20px;color:var(--muted)}.grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:20px}@media(max-width:850px){.grid{grid-template-columns:1fr}}.panel{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--panel)}.field{margin-bottom:14px}label{display:block;font-weight:700;margin-bottom:6px}input,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:1rem;background:#fff}button{display:inline-block;padding:10px 14px;border:2px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;margin-right:8px;margin-top:8px}button.secondary{background:#fff;color:var(--accent)}button:hover{opacity:.9}.output{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}.output-title{font-weight:800;margin-bottom:6px}.math{font-family:"Courier New",monospace;font-size:1rem;background:#eef2f7;border-radius:8px;padding:8px;white-space:pre-wrap}.decision{font-size:1.35rem;font-weight:900;padding:14px;border-radius:12px;background:#fff;border:2px solid var(--line);margin-bottom:12px}.decision.reject{border-color:var(--reject);color:var(--reject)}.decision.retain{border-color:var(--retain);color:var(--retain)}.note{margin-top:12px;padding:12px;border-left:5px solid var(--accent);background:#fff;border-radius:8px}.warning{border-left-color:var(--reject)}.error{color:var(--reject);font-weight:700;margin-top:10px}svg{width:100%;min-height:250px;background:#fff;border:1px solid var(--line);border-radius:14px}
+</style>
+</head>
+<body>
+<main class="widget">
+<h1>A22 Correlation Hypothesis Test Checker</h1>
+<p class="subtitle">Use this when you already have the sample PMCC r and the correct positive critical value from the table.</p>
+<div class="grid">
+<section class="panel"><h2>1. Test details</h2>
+<div class="field"><label for="rInput">Sample PMCC, r</label><input id="rInput" type="number" step="0.0001" value="0.219" /></div>
+<div class="field"><label for="nInput">Sample size, n</label><input id="nInput" type="number" step="1" value="10" /></div>
+<div class="field"><label for="sigInput">Significance level</label><input id="sigInput" type="text" value="10%" /></div>
+<div class="field"><label for="criticalInput">Positive critical value, c</label><input id="criticalInput" type="number" step="0.0001" value="0.4428" /></div>
+<div class="field"><label for="tailInput">Alternative hypothesis</label><select id="tailInput"><option value="positive">Positive correlation: H1: rho &gt; 0</option><option value="negative">Negative correlation: H1: rho &lt; 0</option><option value="two">Any correlation: H1: rho ≠ 0</option></select></div>
+<button id="checkBtn">Check test</button><button id="examplePositiveBtn" class="secondary">Example 1</button><button id="exampleTwoBtn" class="secondary">Example 2</button><button id="exampleHumidityBtn" class="secondary">Example 3</button><div id="errorBox" class="error" aria-live="polite"></div>
+<div class="note warning">This widget does not choose the critical value table entry for you. Enter the positive critical value c, then choose the correct tail type.</div>
+</section>
+<section class="panel"><h2>2. Decision and wording</h2><div id="decisionBox" class="decision">-</div><div class="output"><div class="output-title">Hypotheses</div><div id="hypOut" class="math">-</div></div><div class="output"><div class="output-title">Critical region</div><div id="regionOut" class="math">-</div></div><div class="output"><div class="output-title">Comparison</div><div id="compareOut" class="math">-</div></div><div class="output"><div class="output-title">Conclusion template</div><div id="conclusionOut" class="math">-</div></div></section>
+</div>
+<section class="panel" style="margin-top:20px"><h2>3. Critical region picture</h2><svg id="regionSvg" viewBox="0 0 800 260" role="img" aria-label="Critical region diagram"></svg></section>
+</main>
+<script>
+const rInput=document.getElementById('rInput'),nInput=document.getElementById('nInput'),sigInput=document.getElementById('sigInput'),criticalInput=document.getElementById('criticalInput'),tailInput=document.getElementById('tailInput');
+const checkBtn=document.getElementById('checkBtn'),examplePositiveBtn=document.getElementById('examplePositiveBtn'),exampleTwoBtn=document.getElementById('exampleTwoBtn'),exampleHumidityBtn=document.getElementById('exampleHumidityBtn');
+const errorBox=document.getElementById('errorBox'),decisionBox=document.getElementById('decisionBox'),hypOut=document.getElementById('hypOut'),regionOut=document.getElementById('regionOut'),compareOut=document.getElementById('compareOut'),conclusionOut=document.getElementById('conclusionOut'),regionSvg=document.getElementById('regionSvg');
+function round(v,dp=4){return Number(v).toFixed(dp)}
+function readInputs(){const r=Number(rInput.value),n=Number(nInput.value),c=Number(criticalInput.value),sig=sigInput.value.trim()||'the stated',tail=tailInput.value;if(!Number.isFinite(r)||r<-1||r>1)throw new Error('r must be a number between -1 and 1.');if(!Number.isFinite(n)||n<2)throw new Error('n must be a whole number at least 2.');if(!Number.isFinite(c)||c<=0||c>=1)throw new Error('The positive critical value c must be between 0 and 1.');return{r,n,c,sig,tail};}
+function evaluateTest({r,c,tail}){if(tail==='positive')return r>c;if(tail==='negative')return r<-c;return r<-c||r>c;}
+function hypotheses(tail){if(tail==='positive')return 'H0: rho = 0\nH1: rho > 0';if(tail==='negative')return 'H0: rho = 0\nH1: rho < 0';return 'H0: rho = 0\nH1: rho ≠ 0';}
+function criticalRegion(tail,c){if(tail==='positive')return 'Critical region: r > '+round(c);if(tail==='negative')return 'Critical region: r < -'+round(c);return 'Critical regions: r < -'+round(c)+' or r > '+round(c);}
+function comparisonText(r,c,tail){if(tail==='positive')return round(r)+(r>c?' > ':' ≤ ')+round(c);if(tail==='negative')return round(r)+(r<-c?' < ':' ≥ ')+'-'+round(c);if(r<-c)return round(r)+' < -'+round(c);if(r>c)return round(r)+' > '+round(c);return '-'+round(c)+' ≤ '+round(r)+' ≤ '+round(c);}
+function conclusionText(reject,tail,sig){if(reject){if(tail==='positive')return 'Reject H0.\nThere is evidence at the '+sig+' significance level of positive correlation in the population.';if(tail==='negative')return 'Reject H0.\nThere is evidence at the '+sig+' significance level of negative correlation in the population.';return 'Reject H0.\nThere is evidence at the '+sig+' significance level of correlation in the population.';}if(tail==='positive')return 'Do not reject H0.\nThere is insufficient evidence at the '+sig+' significance level of positive correlation in the population.';if(tail==='negative')return 'Do not reject H0.\nThere is insufficient evidence at the '+sig+' significance level of negative correlation in the population.';return 'Do not reject H0.\nThere is insufficient evidence at the '+sig+' significance level of correlation in the population.';}
+function drawRegion({r,c,tail}){regionSvg.innerHTML='';const ns='http://www.w3.org/2000/svg';function el(n,a={}){const e=document.createElementNS(ns,n);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);return e}function xs(v){return 80+((v+1)/2)*640}function addText(text,x,y,size=15,weight='400'){const e=el('text',{x,y,'text-anchor':'middle','font-family':'Arial, Helvetica, sans-serif','font-size':size,'font-weight':weight});e.textContent=text;regionSvg.appendChild(e)}regionSvg.appendChild(el('rect',{x:0,y:0,width:800,height:260,fill:'#fff'}));regionSvg.appendChild(el('line',{x1:80,y1:135,x2:720,y2:135,stroke:'#111827','stroke-width':4}));[-1,-c,0,c,1].forEach(v=>{const x=xs(v);regionSvg.appendChild(el('line',{x1:x,y1:115,x2:x,y2:155,stroke:'#111827','stroke-width':v===0?3:2}));addText(v===-c?'-c':v===c?'+c':String(v),x,182,14)});function shade(a,b){regionSvg.appendChild(el('rect',{x:Math.min(xs(a),xs(b)),y:122,width:Math.abs(xs(b)-xs(a)),height:26,fill:'#111827',opacity:.18}))}if(tail==='positive'){shade(c,1);addText('critical region: r > c',555,80,16,'700')}else if(tail==='negative'){shade(-1,-c);addText('critical region: r < -c',245,80,16,'700')}else{shade(-1,-c);shade(c,1);addText('critical regions: r < -c or r > c',400,80,16,'700')}const rx=xs(r);regionSvg.appendChild(el('circle',{cx:rx,cy:135,r:9,fill:'#111827'}));addText('r = '+round(r),rx,105,15,'700');addText('-1',80,220,13);addText('0',400,220,13);addText('1',720,220,13);}
+function runCheck(){try{errorBox.textContent='';const inputs=readInputs(),reject=evaluateTest(inputs);decisionBox.classList.remove('reject','retain');decisionBox.textContent=reject?'Reject H0':'Do not reject H0';decisionBox.classList.add(reject?'reject':'retain');hypOut.textContent=hypotheses(inputs.tail);regionOut.textContent=criticalRegion(inputs.tail,inputs.c);compareOut.textContent=comparisonText(inputs.r,inputs.c,inputs.tail);conclusionOut.textContent=conclusionText(reject,inputs.tail,inputs.sig);drawRegion(inputs);}catch(e){errorBox.textContent=e.message;}}
+function setExample(x){rInput.value=x.r;nInput.value=x.n;sigInput.value=x.sig;criticalInput.value=x.c;tailInput.value=x.tail;runCheck()}
+checkBtn.addEventListener('click',runCheck);examplePositiveBtn.addEventListener('click',()=>setExample({r:.219,n:10,sig:'10%',c:.4428,tail:'positive'}));exampleTwoBtn.addEventListener('click',()=>setExample({r:-.45,n:30,sig:'10%',c:.3061,tail:'two'}));exampleHumidityBtn.addEventListener('click',()=>setExample({r:.1149,n:8,sig:'10%',c:.5067,tail:'positive'}));runCheck();
+</script>
+</body>
+</html>

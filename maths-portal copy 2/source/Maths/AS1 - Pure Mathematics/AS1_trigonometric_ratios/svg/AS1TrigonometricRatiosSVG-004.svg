@@ -1,0 +1,15 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Bearings and cosine rule</title>
+<desc id="desc">Bearing setup with included angle 42 degrees.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Bearings and cosine rule</text>
+
+<line x1="210" y1="480" x2="210" y2="95" stroke="#555" stroke-width="2" stroke-dasharray="8 8"/><text x="190" y="85" font-family="Arial" font-size="24">N</text>
+<circle cx="210" cy="480" r="6" fill="#172033"/><text x="185" y="520" font-family="Arial" font-size="28">A</text>
+<line x1="210" y1="480" x2="610" y2="250" stroke="#2563eb" stroke-width="4"/><circle cx="610" cy="250" r="6" fill="#2563eb"/><text x="625" y="255" font-family="Arial" font-size="28">B</text><text x="410" y="390" font-family="Arial" font-size="22">8 km</text>
+<line x1="210" y1="480" x2="340" y2="100" stroke="#0f766e" stroke-width="4"/><circle cx="340" cy="100" r="6" fill="#0f766e"/><text x="355" y="105" font-family="Arial" font-size="28">C</text><text x="250" y="290" font-family="Arial" font-size="22">4.8 km</text>
+<line x1="340" y1="100" x2="610" y2="250" stroke="#b91c1c" stroke-width="3" stroke-dasharray="8 6"/><text x="465" y="145" font-family="Arial" font-size="22">a km</text>
+<text x="290" y="430" font-family="Arial" font-size="24" fill="#b45309">60° − 18° = 42°</text>
+
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="640" viewBox="0 0 1100 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">A21ParametricEquationsSVG-006 Plane Motion Model</title>
+<desc id="desc">Shows plane motion with x=v cos theta t and y=v sin theta t.</desc>
+<metadata>
+Asset ID: A21ParametricEquationsSVG-006
+Source: Transcript modelling section; PowerPoint modelling slide; CCEA A21-CG-LO002.
+Related lesson section: Worked Example 7; Modelling.
+Purpose: Show time as a parameter in a two-dimensional motion model.
+</metadata>
+<rect width="1100" height="640" fill="#ffffff"/>
+<text x="55" y="55" font-family="Georgia, serif" font-size="34" font-weight="700">Parametric modelling with time as the parameter</text>
+<text x="55" y="92" font-family="Arial, sans-serif" font-size="17">A plane’s horizontal and vertical positions can be modelled using x = v cos θ t and y = v sin θ t.</text>
+
+<rect x="70" y="125" width="620" height="455" rx="18" fill="#f7f9fc" stroke="#c7d2e5" stroke-width="2"/>
+<line x1="130" y1="500" x2="640" y2="500" stroke="#333" stroke-width="3"/>
+<line x1="130" y1="500" x2="130" y2="170" stroke="#333" stroke-width="3"/>
+<line x1="130" y1="500" x2="570" y2="245" stroke="#2d5be3" stroke-width="5"/>
+<line x1="130" y1="500" x2="570" y2="500" stroke="#d61f69" stroke-width="4" stroke-dasharray="10 8"/>
+<line x1="570" y1="500" x2="570" y2="245" stroke="#d61f69" stroke-width="4" stroke-dasharray="10 8"/>
+<circle cx="570" cy="245" r="18" fill="#ffffff" stroke="#2d5be3" stroke-width="4"/>
+<text x="325" y="530" font-family="Georgia" font-size="20">x = v cos θ · t</text>
+<text x="585" y="380" font-family="Georgia" font-size="20">y = v sin θ · t</text>
+<text x="205" y="485" font-family="Georgia" font-size="22">θ</text>
+<rect x="735" y="145" width="315" height="390" rx="18" fill="#fff8e6" stroke="#e2ad37" stroke-width="2"/>
+<text x="765" y="190" font-family="Arial" font-size="22" font-weight="700">Model language</text>
+<text x="765" y="235" font-family="Arial" font-size="17">Parameter: t = time</text>
+<text x="765" y="275" font-family="Arial" font-size="17">Horizontal: x(t)</text>
+<text x="765" y="315" font-family="Arial" font-size="17">Vertical: y(t)</text>
+<text x="765" y="385" font-family="Arial" font-size="16">If t has no upper limit,</text>
+<text x="765" y="412" font-family="Arial" font-size="16">the model may become unrealistic.</text>
+
+</svg>

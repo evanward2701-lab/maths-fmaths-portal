@@ -1,0 +1,16 @@
+% Asset ID: A22VariableAccelerationTikZ-004
+% Source: CCEA A22-KIN-LO001 and Variable Acceleration lesson evidence
+% Related lesson section: Core Theory / Worked Examples
+% Purpose: Variable acceleration teaching visual.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily,axis/.style={-{Latex[length=3mm]},thick},curve/.style={very thick,blue}]
+\node at (3,4.2) {\Large \textbf{A22 Variable Acceleration TikZ-004}};
+\draw[axis] (0,0) -- (7,0) node[right] {$};
+\draw[axis] (0,-2) -- (0,3) node[above] {$ or $};
+\draw[curve,domain=0:6.5,smooth,variable=\x] plot ({\x},{0.06*(\x-2.2)*(\x-4.8)*(\x+0.4)});
+\node[draw,rounded corners,align=center,fill=gray!10,text width=9cm] at (3.5,-2.8) {Use =\frac{ds}{dt}$, =\frac{dv}{dt}=\frac{d^2s}{dt^2}$, =\int v\,dt$ and =\int a\,dt$.};
+\end{tikzpicture}
+\end{document}

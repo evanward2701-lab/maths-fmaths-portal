@@ -1,0 +1,37 @@
+% Asset ID: FAS2LinearRegressionTikZ-002
+% Source: Teacher transcript prediction reliability example.
+% Related lesson section: Section 9.7 TikZ interpolation/extrapolation range diagram.
+% Purpose: Show the observed x-range and classify prediction points.
+% Requires: \usepackage{tikz}
+
+\begin{tikzpicture}[
+    x=0.085cm,
+    y=1cm,
+    axis/.style={->, line width=0.8pt},
+    range/.style={line width=4pt, draw={rgb,255:red,197;green,160;blue,89}, line cap=round},
+    tick/.style={line width=0.8pt},
+    marker/.style={circle, fill={rgb,255:red,44;green,44;blue,46}, draw=white, inner sep=2.5pt},
+    outside/.style={circle, fill={rgb,255:red,251;green,239;blue,239}, draw={rgb,255:red,44;green,44;blue,46}, inner sep=2.5pt},
+    labelbox/.style={rounded corners=3pt, fill={rgb,255:red,255;green,255;blue,240}, draw={rgb,255:red,212;green,175;blue,55}, inner sep=4pt},
+    warnbox/.style={rounded corners=3pt, fill={rgb,255:red,251;green,239;blue,239}, draw={rgb,255:red,229;green,229;blue,234}, inner sep=4pt},
+    note/.style={font=\small}
+]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-8,-2.25) rectangle (158,5.3);
+\draw[{rgb,255:red,229;green,229;blue,234}, rounded corners=8pt] (-6,-2.05) rectangle (156,5.05);
+\node[font=\bfseries\large, anchor=west] at (-2,4.55) {Interpolation and extrapolation on the explanatory-variable range};
+\node[note, anchor=west] at (-2,4.18) {Use the regression line for prediction, then check whether the new \(x\)-value lies inside the observed range.};
+\draw[axis] (0,0) -- (150,0) node[right] {$x$};
+\draw[range] (20,0) -- (100,0);
+\node[labelbox, anchor=south] at (60,0.35) {observed data range: \(20\leq x\leq 100\)};
+\fill[{rgb,255:red,251;green,239;blue,239}, opacity=0.75] (0,-0.28) rectangle (20,0.28);
+\fill[{rgb,255:red,251;green,239;blue,239}, opacity=0.75] (100,-0.28) rectangle (150,0.28);
+\foreach \x/\lab in {0/0,20/20,58/58,100/100,130/130,150/150} {\draw[tick] (\x,-0.15) -- (\x,0.15);\node[note, anchor=north] at (\x,-0.22) {\(\lab\)};}
+\node[marker] at (58,0) {};
+\draw[dashed, draw={rgb,255:red,212;green,175;blue,55}] (58,0.12) -- (58,2.0);
+\node[labelbox, anchor=south, align=center] at (58,2.05) {\(x=58\)\\inside range\\interpolation\\more reliable};
+\node[outside] at (130,0) {};
+\draw[dashed] (130,0.12) -- (130,2.0);
+\node[warnbox, anchor=south, align=center] at (130,2.05) {\(x=130\)\\outside range\\extrapolation\\may be unreliable};
+\node[labelbox, anchor=west, align=left, text width=8.4cm] at (-2,-1.75) {Exam sentence: the prediction at \(x=58\) is more reliable because it is inside the observed range, so it is interpolation.};
+\node[warnbox, anchor=west, align=left, text width=8.4cm] at (73,-1.75) {Exam sentence: the prediction at \(x=130\) may be unreliable because it is outside the observed range, so it is extrapolation.};
+\end{tikzpicture}

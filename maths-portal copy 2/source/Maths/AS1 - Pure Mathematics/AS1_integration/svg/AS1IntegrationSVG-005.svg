@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">Area between y equals x times 4 minus x and y equals x by triangle subtraction</title>
+<desc id="desc">A parabola and a line meet at x=0 and x=3; the desired region is area under the curve minus triangle under the line.</desc>
+<rect width="1000" height="650" fill="#ffffff"/>
+
+<text x="60" y="60" font-family="Arial" font-size="30" font-weight="700">Line-curve area: triangle subtraction</text>
+<line x1="110" y1="520" x2="750" y2="520" stroke="#222" stroke-width="3"/>
+<line x1="110" y1="520" x2="110" y2="120" stroke="#222" stroke-width="3"/>
+<path d="M130,520 C250,260 430,150 600,320 L600,520 Z" fill="#8ecae6" opacity="0.35"/>
+<path d="M130,520 L600,320 L600,520 Z" fill="#f4a261" opacity="0.45"/>
+<path d="M130,520 C250,260 430,150 600,320 L130,520 Z" fill="#90be6d" opacity="0.55"/>
+<path d="M130,520 C250,260 430,150 600,320 C670,390 710,455 735,520" fill="none" stroke="#126782" stroke-width="5"/>
+<line x1="130" y1="520" x2="600" y2="320" stroke="#d62828" stroke-width="5"/>
+<line x1="600" y1="520" x2="600" y2="320" stroke="#444" stroke-width="2" stroke-dasharray="7 7"/>
+<text x="118" y="555" font-family="Arial" font-size="22">0</text><text x="592" y="555" font-family="Arial" font-size="22">3</text>
+<text x="410" y="185" font-family="Arial" font-size="24" fill="#126782">y = x(4 − x)</text>
+<text x="425" y="375" font-family="Arial" font-size="24" fill="#d62828">y = x</text>
+<rect x="780" y="135" width="190" height="280" rx="14" fill="#f7f7f7" stroke="#ccc"/>
+<text x="800" y="175" font-family="Arial" font-size="22" font-weight="700">Method</text>
+<text x="800" y="225" font-family="Arial" font-size="20">∫₀³(4x−x²) dx = 9</text>
+<text x="800" y="280" font-family="Arial" font-size="20">Triangle = 1/2×3×3</text>
+<text x="800" y="335" font-family="Arial" font-size="20">Area = 9 − 9/2</text>
+<text x="800" y="380" font-family="Arial" font-size="24" font-weight="700">= 9/2</text>
+
+</svg>

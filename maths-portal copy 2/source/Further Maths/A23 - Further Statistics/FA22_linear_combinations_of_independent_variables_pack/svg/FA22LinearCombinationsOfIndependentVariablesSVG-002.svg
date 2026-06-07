@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Dice Sum and Dice Difference</title>
+<desc id="desc">Tables for X plus Y and X minus Y for two fair dice.</desc>
+<metadata>asset_id: FA22LinearCombinationsOfIndependentVariablesSVG-002; unit_code: FA22; topic_code: FA22-LINCOMB; topic_id: FA22LinearCombinationsOfIndependentVariables; source: FS2-Chp4-CombiningVars.pdf page 4 starter; purpose: Show X+Y and X-Y as new random variables.</metadata>
+<rect width="1200" height="720" fill="#FAF9F6"/>
+<text x="600" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#2C2C2E" font-weight="700">Dice Sum and Dice Difference</text>
+<rect x="70" y="100" width="1060" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="600" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#2C2C2E">E(X)=3.5, Var(X)=35/12</text><g font-family="Arial,sans-serif" font-size="18" fill="#2C2C2E" text-anchor="middle"><text x="330" y="190" font-size="30" font-weight="700">X + Y</text><text x="870" y="190" font-size="30" font-weight="700">X − Y</text><text x="330" y="560" font-size="23">E(X+Y)=7, Var(X+Y)=70/12</text><text x="870" y="560" font-size="23">E(X−Y)=0, Var(X−Y)=70/12</text></g><g transform="translate(150,220)" font-family="Arial" font-size="22" text-anchor="middle"><rect width="360" height="300" fill="#FAF9F6" stroke="#2C2C2E"/><text x="180" y="150">6×6 outcome table for sums 2 to 12</text></g><g transform="translate(690,220)" font-family="Arial" font-size="22" text-anchor="middle"><rect width="360" height="300" fill="#FAF9F6" stroke="#2C2C2E"/><text x="180" y="150">6×6 outcome table for differences −5 to 5</text></g>
+<text x="600" y="690" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#5B5B60">FA22-LINCOMB • Linear combinations of independent variables</text>
+</svg>

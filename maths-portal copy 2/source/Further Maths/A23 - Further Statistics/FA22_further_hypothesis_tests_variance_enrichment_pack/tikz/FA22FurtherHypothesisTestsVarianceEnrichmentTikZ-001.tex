@@ -1,0 +1,140 @@
+% File: tikz/FA22FurtherHypothesisTestsVarianceEnrichmentTikZ-001.tex
+% Asset ID: FA22FurtherHypothesisTestsVarianceEnrichmentTikZ-001
+% Unit code: FA22
+% Topic ID: FA22FurtherHypothesisTestsVarianceEnrichment
+% Related lesson file: FA22_further_hypothesis_tests_variance_enrichment_lesson.md
+% Related lesson section: Section 9 Visual Asset Integration
+% Used placeholder:
+% [VISUAL PLACEHOLDER: FA22FurtherHypothesisTestsVarianceEnrichmentTikZ-001 | Source: Teacher transcript confidence interval derivation | Insert from tikz/FA22FurtherHypothesisTestsVarianceEnrichmentTikZ-001.tex | Purpose: Precise mathematical number-line diagram showing reciprocal inequality reversal when solving for sigma^2.]
+% Source: Teacher transcript confidence interval derivation
+% Source status: Off-spec enrichment, not CCEA core
+% Purpose:
+% Precise mathematical number-line diagram showing why reciprocal inequalities reverse
+% when solving for the population variance sigma^2 in a chi-squared confidence interval.
+%
+% Boundary note:
+% This asset supports an off-spec enrichment lesson. It must not be used to imply
+% that chi-squared confidence intervals for variance are required CCEA FA22 content.
+
+\documentclass[tikz,border=8pt]{standalone}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Panel}{HTML}{FFFFF0}
+\definecolor{Line}{HTML}{E5E5EA}
+\definecolor{TextDark}{HTML}{2C2C2E}
+\definecolor{Gold}{HTML}{C5A059}
+\definecolor{SoftGold}{HTML}{D4AF37}
+\definecolor{Blush}{HTML}{FBEFEF}
+
+\begin{document}
+
+\begin{tikzpicture}[
+    font=\sffamily,
+    every node/.style={text=TextDark},
+    box/.style={rounded corners=10pt, draw=Line, line width=1pt, fill=Panel, inner sep=12pt, align=center},
+    goldbox/.style={rounded corners=10pt, draw=Line, line width=1pt, fill=Blush, inner sep=12pt, align=center},
+    arrow/.style={-{Latex[length=3mm,width=2mm]}, line width=1.1pt, draw=Gold},
+    emphasis/.style={draw=Gold, line width=1.2pt, rounded corners=8pt, fill=Blush}
+]
+
+\fill[Canvas] (-8.4,-6.1) rectangle (8.4,5.7);
+\draw[Line, line width=1.2pt, rounded corners=18pt, fill=Panel] (-8.0,-5.7) rectangle (8.0,5.3);
+
+\node[align=center, font=\sffamily\bfseries\Large] at (0,4.85) {Reciprocal Inequality Reversal in the Variance Confidence Interval};
+\node[align=center, font=\sffamily\small, text=TextDark] at (0,4.45) {Off-spec enrichment: the algebraic trapdoor when solving for $\sigma^2$};
+
+\node[box, minimum width=14.0cm] (defs) at (0,3.62) {
+    Let
+    \[
+        \nu=n-1,\qquad
+        A=\chi^2_{\nu}(0.975),\qquad
+        B=\chi^2_{\nu}(0.025).
+    \]
+    With upper-tail notation, \(A\) is the smaller critical value and \(B\) is the larger critical value.
+};
+
+\node[goldbox, minimum width=13.6cm] (row1) at (0,2.25) {
+    Start from the middle probability statement:
+    \[
+        A
+        <
+        \frac{\nu S^2}{\sigma^2}
+        <
+        B
+    \]
+};
+
+\draw[Line, line width=1pt] (-5.8,1.38) -- (5.8,1.38);
+\foreach \x/\lab in {-4.2/$A=\chi^2_{\nu}(0.975)$,0/$\dfrac{\nu S^2}{\sigma^2}$,4.2/$B=\chi^2_{\nu}(0.025)$}
+{
+    \draw[Gold, line width=1pt] (\x,1.22) -- (\x,1.54);
+    \node[font=\sffamily\small, align=center] at (\x,0.92) {\lab};
+}
+\draw[SoftGold, line width=2pt] (-4.2,1.38) -- (4.2,1.38);
+\node[font=\sffamily\small, text=Gold] at (0,1.72) {Increasing order before reciprocals};
+
+\draw[arrow] (0,0.62) -- (0,0.05);
+\node[font=\sffamily\small, text=Gold, fill=Panel, inner sep=3pt] at (2.55,0.34) {take reciprocals};
+
+\node[box, minimum width=13.6cm] (row2) at (0,-0.72) {
+    Reciprocals reverse the inequality signs:
+    \[
+        \frac{1}{A}
+        >
+        \frac{\sigma^2}{\nu S^2}
+        >
+        \frac{1}{B}
+    \]
+};
+
+\draw[arrow] (0,-1.45) -- (0,-2.02);
+\node[font=\sffamily\small, text=Gold, fill=Panel, inner sep=3pt] at (2.52,-1.74) {rewrite in increasing order};
+
+\node[goldbox, minimum width=13.6cm] (row3) at (0,-2.78) {
+    In increasing order:
+    \[
+        \frac{1}{B}
+        <
+        \frac{\sigma^2}{\nu S^2}
+        <
+        \frac{1}{A}
+    \]
+};
+
+\draw[Line, line width=1pt] (-5.8,-3.62) -- (5.8,-3.62);
+\foreach \x/\lab in {-4.2/$\dfrac{1}{B}$,0/$\dfrac{\sigma^2}{\nu S^2}$,4.2/$\dfrac{1}{A}$}
+{
+    \draw[Gold, line width=1pt] (\x,-3.78) -- (\x,-3.46);
+    \node[font=\sffamily\small, align=center] at (\x,-4.08) {\lab};
+}
+\draw[SoftGold, line width=2pt] (-4.2,-3.62) -- (4.2,-3.62);
+\node[font=\sffamily\small, text=Gold] at (0,-3.26) {Increasing order after reciprocals};
+
+\node[emphasis, minimum width=13.8cm] (final) at (0,-5.0) {
+    Multiply throughout by \(\nu S^2=(n-1)S^2\):
+    \[
+        \boxed{
+        \frac{(n-1)S^2}{\chi^2_{n-1}(0.025)}
+        <
+        \sigma^2
+        <
+        \frac{(n-1)S^2}{\chi^2_{n-1}(0.975)}
+        }
+    \]
+};
+
+\node[rounded corners=10pt, draw=Line, fill=TextDark, text=Panel, align=center, font=\sffamily\small, inner sep=9pt, text width=4.4cm] at (5.45,0.02) {
+    Memory ember:\\
+    \(0.025\) is the right-tail probability for the large \(\chi^2\) value, so it sits in the lower-bound denominator.
+};
+
+\draw[decorate, decoration={brace, amplitude=6pt, mirror}, Gold, line width=1pt] (-5.7,-5.52) -- (5.7,-5.52) node[midway, below=8pt, font=\sffamily\small, text=Gold] {confidence interval for the population variance};
+
+\end{tikzpicture}
+
+\end{document}

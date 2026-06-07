@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Cubic sketching routine: shape, roots, y-intercept</title>
+  <desc id="desc">A flow diagram showing the steps for sketching a cubic graph: identify shape, roots, repeated roots, y-intercept, then draw and label the sketch.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#222"/></marker>
+    <style>.title{font:700 28px Arial,sans-serif;fill:#111}.subtitle{font:16px Arial,sans-serif;fill:#333}.box{fill:#f7f9ff;stroke:#2f5597;stroke-width:2}.box2{fill:#fff9e8;stroke:#b36b00;stroke-width:2}.box3{fill:#effaf2;stroke:#3c8d40;stroke-width:2}.text{font:16px Arial,sans-serif;fill:#111}.small{font:13px Arial,sans-serif;fill:#333}.math{font:italic 16px Georgia,serif;fill:#111}.axis{stroke:#111;stroke-width:2}.curve{fill:none;stroke:#7030a0;stroke-width:4;stroke-linecap:round}.dot{fill:#d62828}.arrow{stroke:#222;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1000" height="620" fill="#fff"/>
+  <text x="40" y="48" class="title">Cubic graph sketching routine</text>
+  <text x="40" y="76" class="subtitle">For CCEA AS1: sketch simple polynomial curves up to degree 3.</text>
+  <rect x="40" y="115" width="180" height="90" rx="14" class="box"/><text x="60" y="145" class="text">1. Identify family</text><text x="60" y="174" class="math">degree 3 ⇒ cubic</text>
+  <path d="M220 160 L275 160" class="arrow"/>
+  <rect x="275" y="115" width="190" height="90" rx="14" class="box"/><text x="295" y="145" class="text">2. Shape</text><text x="295" y="174" class="math">+x³ uphill</text><text x="295" y="195" class="math">−x³ downhill</text>
+  <path d="M465 160 L520 160" class="arrow"/>
+  <rect x="520" y="115" width="190" height="90" rx="14" class="box2"/><text x="540" y="145" class="text">3. Roots</text><text x="540" y="174" class="math">set each factor = 0</text>
+  <path d="M710 160 L765 160" class="arrow"/>
+  <rect x="765" y="115" width="190" height="90" rx="14" class="box2"/><text x="785" y="145" class="text">4. Multiplicity</text><text x="785" y="174" class="small">cross, touch, or</text><text x="785" y="195" class="small">flat-cross at axis</text>
+  <path d="M860 205 L860 250" class="arrow"/>
+  <rect x="765" y="250" width="190" height="90" rx="14" class="box3"/><text x="785" y="280" class="text">5. y-intercept</text><text x="785" y="309" class="math">put x = 0</text>
+  <path d="M765 295 L700 295" class="arrow"/>
+  <rect x="510" y="250" width="190" height="90" rx="14" class="box3"/><text x="530" y="280" class="text">6. Draw sketch</text><text x="530" y="309" class="small">not to scale, but</text><text x="530" y="330" class="small">features must be true</text>
+  <path d="M510 295 L455 295" class="arrow"/>
+  <rect x="265" y="250" width="190" height="90" rx="14" class="box"/><text x="285" y="280" class="text">7. Label clearly</text><text x="285" y="309" class="small">axes, roots and</text><text x="285" y="330" class="small">y-intercept</text>
+  <rect x="60" y="265" width="155" height="55" fill="#fff0f0" stroke="#d62828" stroke-width="2" rx="12"/><text x="78" y="290" class="text">Exam trap</text><text x="78" y="311" class="small">Do not forget an intercept.</text>
+  <g transform="translate(245,385)">
+    <rect x="0" y="0" width="520" height="180" fill="#fbfbfb" stroke="#ccc" rx="12"/>
+    <text x="20" y="28" class="text">Example: negative cubic, roots −1, 1, 2 and y-intercept −2</text>
+    <line x1="60" y1="95" x2="465" y2="95" class="axis"/><line x1="210" y1="25" x2="210" y2="155" class="axis"/>
+    <text x="470" y="100" class="small">x</text><text x="215" y="22" class="small">y</text>
+    <path d="M70 42 C125 48 130 90 155 95 C185 101 185 134 210 136 C235 137 240 94 285 95 C330 96 315 62 360 95 C395 122 430 148 455 155" class="curve"/>
+    <circle cx="155" cy="95" r="5" class="dot"/><circle cx="285" cy="95" r="5" class="dot"/><circle cx="360" cy="95" r="5" class="dot"/><circle cx="210" cy="136" r="5" class="dot"/>
+    <text x="144" y="114" class="small">−1</text><text x="281" y="114" class="small">1</text><text x="356" y="114" class="small">2</text><text x="218" y="142" class="small">−2</text>
+  </g>
+</svg>

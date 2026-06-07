@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2 Algorithms on Graphs Bridge</title>
+  <desc id="desc">A three-stage bridge diagram showing how ordinary A-Level Mathematics skills extend into Further Mathematics graph algorithms, ending with Prim's algorithm and Dijkstra's algorithm.</desc>
+  <metadata>Asset ID: FAS2AlgorithmsOnGraphsBridgeSVG-001; Source: Ordinary A-Level Maths bridge + CCEA Further Mathematics specification; Purpose: Compare prior ordinary Maths method with Further Maths extension.</metadata>
+  <rect width="1200" height="720" fill="#FAF9F6"/>
+  <rect x="42" y="38" width="1116" height="644" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="600" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">A-Level Maths Bridge → Further Maths Graph Algorithms</text>
+  <text x="600" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#5B5B60">Ordinary skills become structured algorithmic decisions on networks.</text>
+  <defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker></defs>
+  <g font-family="Arial, sans-serif" fill="#2C2C2E">
+    <rect x="82" y="180" width="300" height="360" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+    <circle cx="232" cy="180" r="32" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="232" y="190" text-anchor="middle" font-size="24" font-weight="700">1</text>
+    <text x="232" y="240" text-anchor="middle" font-size="25" font-weight="700">Ordinary Maths</text>
+    <text x="122" y="292" font-size="20">• compare values</text><text x="122" y="334" font-size="20">• read tables</text><text x="122" y="376" font-size="20">• minimise totals</text><text x="122" y="418" font-size="20">• show clear steps</text>
+    <rect x="112" y="462" width="240" height="46" rx="10" fill="#FFFFF0" stroke="#E5E5EA"/><text x="232" y="492" text-anchor="middle" font-size="18" fill="#5B5B60">Useful, but not enough</text>
+    <line x1="392" y1="360" x2="472" y2="360" stroke="#C5A059" stroke-width="5" marker-end="url(#arrowGold)"/>
+    <rect x="482" y="180" width="300" height="360" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+    <circle cx="632" cy="180" r="32" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="632" y="190" text-anchor="middle" font-size="24" font-weight="700">2</text>
+    <text x="632" y="240" text-anchor="middle" font-size="25" font-weight="700">Further Maths Objects</text>
+    <text x="522" y="292" font-size="20">• vertices</text><text x="522" y="334" font-size="20">• edges or arcs</text><text x="522" y="376" font-size="20">• weights</text><text x="522" y="418" font-size="20">• paths and trees</text>
+    <rect x="512" y="462" width="240" height="46" rx="10" fill="#FFFFF0" stroke="#E5E5EA"/><text x="632" y="492" text-anchor="middle" font-size="18" fill="#5B5B60">Networks, not curves</text>
+    <line x1="792" y1="360" x2="872" y2="360" stroke="#C5A059" stroke-width="5" marker-end="url(#arrowGold)"/>
+    <rect x="882" y="180" width="300" height="360" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+    <circle cx="1032" cy="180" r="32" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="1032" y="190" text-anchor="middle" font-size="24" font-weight="700">3</text>
+    <text x="1032" y="240" text-anchor="middle" font-size="25" font-weight="700">FAS2 Algorithms</text>
+    <text x="922" y="292" font-size="20">• greedy choices</text><text x="922" y="334" font-size="20">• Prim: connect all</text><text x="922" y="376" font-size="20">• Dijkstra: shortest path</text><text x="922" y="418" font-size="20">• visible method trail</text>
+    <rect x="912" y="462" width="240" height="46" rx="10" fill="#FFFFF0" stroke="#E5E5EA"/><text x="1032" y="492" text-anchor="middle" font-size="18" fill="#5B5B60">Smallest legal move</text>
+    <rect x="164" y="590" width="872" height="58" rx="18" fill="#FBEFEF" stroke="#E5E5EA"/><text x="600" y="625" text-anchor="middle" font-size="20" font-weight="600">Key upgrade: the arithmetic is ordinary; the structure and algorithm rules are Further Maths.</text>
+  </g>
+</svg>

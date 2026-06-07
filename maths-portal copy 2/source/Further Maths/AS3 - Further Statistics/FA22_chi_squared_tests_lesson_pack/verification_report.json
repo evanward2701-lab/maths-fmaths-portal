@@ -1,0 +1,16 @@
+{
+  "errors": [],
+  "placeholder_paths": [
+    "mermaid/FA22ChiSquaredTestsMermaid-001.md ",
+    "mermaid/FA22ChiSquaredTestsMermaid-002.md ",
+    "svg/FA22ChiSquaredTestsSVG-001.svg ",
+    "svg/FA22ChiSquaredTestsSVG-002.svg ",
+    "svg/FA22ChiSquaredTestsSVG-003.svg ",
+    "svg/FA22ChiSquaredTestsBridgeSVG-001.svg ",
+    "tikz/FA22ChiSquaredTestsTikZ-001.tex ",
+    "tikz/FA22ChiSquaredTestsTikZ-002.tex ",
+    "widgets/FA22ChiSquaredTestsWidget-001.html ",
+    "widgets/FA22ChiSquaredTestsWidget-002.html ",
+    "widgets/FA22ChiSquaredTestsWidget-003.html "
+  ]
+}

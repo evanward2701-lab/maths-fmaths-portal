@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Half-angle range map</title>
+  <desc id="desc">FA21TFormulaeBoundaryEnrichmentSVG-003: Half-angle range map</desc>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="32" y="32" width="1136" height="696" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="72" y="88" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Half-angle range map</text>
+  <rect x="90" y="170" width="460" height="160" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="120" y="225" font-family="Arial" font-size="26" font-weight="700" fill="#2C2C2E">Original range</text>
+  <line x1="140" y1="285" x2="500" y2="285" stroke="#2C2C2E" stroke-width="4"/>
+  <circle cx="140" cy="285" r="8" fill="#C5A059"/><circle cx="500" cy="285" r="8" fill="#C5A059"/>
+  <text x="130" y="322" font-family="Arial" font-size="24" fill="#2C2C2E">0</text><text x="480" y="322" font-family="Arial" font-size="24" fill="#2C2C2E">2π</text>
+  <line x1="585" y1="250" x2="700" y2="250" stroke="#C5A059" stroke-width="6"/><polygon points="700,250 682,238 682,262" fill="#C5A059"/>
+  <text x="595" y="220" font-family="Arial" font-size="22" fill="#2C2C2E">divide by 2</text>
+  <rect x="735" y="170" width="380" height="160" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="765" y="225" font-family="Arial" font-size="26" font-weight="700" fill="#2C2C2E">Half-angle range</text>
+  <line x1="785" y1="285" x2="1065" y2="285" stroke="#2C2C2E" stroke-width="4"/>
+  <circle cx="785" cy="285" r="8" fill="#C5A059"/><circle cx="1065" cy="285" r="8" fill="#C5A059"/>
+  <text x="775" y="322" font-family="Arial" font-size="24" fill="#2C2C2E">0</text><text x="1055" y="322" font-family="Arial" font-size="24" fill="#2C2C2E">π</text>
+  <rect x="120" y="470" width="960" height="90" rx="16" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <text x="150" y="525" font-family="Arial" font-size="24" fill="#2C2C2E">Solve tan(θ/2)=t in the half-angle range, then double to get θ.</text>
+</svg>

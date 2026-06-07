@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">Poisson Distribution Motivation Contexts</title>
+<desc id="desc">Three rate-based contexts motivating the Poisson distribution: video game coins per hour, A&amp;E arrivals per half hour, and road accidents per month.</desc>
+<metadata>Asset ID: FAS2PoissonDistributionSVG-001; Source: Screenshot PDF motivation slide plus transcript motivation; Purpose: show rate-based contexts and the question of real change versus random variation.</metadata>
+<style>
+.bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:3}.pink{fill:#FBEFEF;stroke:#E5E5EA;stroke-width:3}.ink{fill:#2C2C2E}.muted{fill:#5B5B60}.gold{fill:#D4AF37}.deep{fill:#C5A059}.title{font:800 42px Arial}.sub{font:500 22px Arial}.head{font:800 27px Arial}.body{font:500 22px Arial}.small{font:500 18px Arial}.formula{font:italic 28px Georgia}
+</style>
+<rect class="bg" width="1400" height="900"/>
+<text class="title ink" x="70" y="90">Poisson Distribution: Why do we need it?</text>
+<text class="sub muted" x="70" y="130">Known average rate, observed count, and the question: real change or random variation?</text>
+<line x1="70" y1="165" x2="1330" y2="165" stroke="#C5A059" stroke-width="4"/>
+<rect class="panel" x="70" y="220" width="390" height="520" rx="28"/>
+<circle class="gold" cx="265" cy="315" r="70"/><circle fill="#F7E7A2" cx="265" cy="315" r="52"/><path class="deep" d="M265 270 L279 302 L314 305 L287 327 L296 361 L265 342 L234 361 L243 327 L216 305 L251 302 Z"/>
+<text class="head ink" x="110" y="430">Video game coins</text><text class="body ink" x="110" y="485">Average rate:</text><text class="formula ink" x="110" y="525">λ = 20 coins per hour</text><text class="body ink" x="110" y="580">Observed:</text><text class="formula ink" x="110" y="620">25 coins in one hour</text><rect class="pink" x="110" y="660" width="310" height="55" rx="18"/><text class="small ink" x="132" y="695">Improvement or fluke?</text>
+<rect class="pink" x="505" y="220" width="390" height="520" rx="28"/>
+<rect x="605" y="275" width="190" height="90" rx="18" fill="#FFFFF0" stroke="#2C2C2E" stroke-width="3"/><rect x="640" y="250" width="85" height="45" rx="10" fill="#FFFFF0" stroke="#2C2C2E" stroke-width="3"/><rect x="650" y="308" width="98" height="22" fill="#3A85B9"/><rect x="688" y="270" width="22" height="78" fill="#3A85B9"/><circle cx="635" cy="380" r="21" fill="#2C2C2E"/><circle cx="765" cy="380" r="21" fill="#2C2C2E"/>
+<text class="head ink" x="545" y="430">A&amp;E arrivals</text><text class="body ink" x="545" y="485">Average rate:</text><text class="formula ink" x="545" y="525">λ = 12 per half hour</text><text class="body ink" x="545" y="580">Observed after campaign:</text><text class="formula ink" x="545" y="620">16 in one hour</text><rect class="panel" x="545" y="660" width="310" height="55" rx="18"/><text class="small ink" x="568" y="695">Did the campaign work?</text>
+<rect class="panel" x="940" y="220" width="390" height="520" rx="28"/>
+<rect x="1095" y="250" width="90" height="230" rx="42" fill="#2C2C2E"/><circle cx="1140" cy="305" r="28" fill="#C85A54"/><circle cx="1140" cy="365" r="28" fill="#D4AF37"/><circle cx="1140" cy="425" r="28" fill="#6BAA75"/>
+<text class="head ink" x="980" y="520">Road accidents</text><text class="body ink" x="980" y="575">Average rate:</text><text class="formula ink" x="980" y="615">λ = 6 per month</text><text class="body ink" x="980" y="670">Observed next month:</text><text class="formula ink" x="980" y="710">3 accidents</text><rect class="pink" x="980" y="760" width="310" height="55" rx="18"/><text class="small ink" x="1002" y="795">Evidence or one-off?</text>
+<rect class="panel" x="190" y="790" width="1020" height="72" rx="24"/><text class="body ink" x="230" y="835">Poisson question shape: count of events in a fixed interval, given an average rate λ.</text>
+</svg>

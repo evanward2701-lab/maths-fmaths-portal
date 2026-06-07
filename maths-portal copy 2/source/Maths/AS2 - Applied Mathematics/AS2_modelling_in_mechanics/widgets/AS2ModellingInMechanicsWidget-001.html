@@ -1,0 +1,85 @@
+<!--
+asset_id: AS2ModellingInMechanicsWidget-001
+lesson_id: AS2ModellingInMechanics
+source: MechYr1-Chp8-Introduction.pdf pages 6-8; Chapter_8_Modelling_in_Mechanics transcript scalar-to-vector examples
+related_section: Visual Asset Integration; Worked Examples; Exam Technique
+purpose: Interactive vector resolver for converting magnitude and direction into horizontal and vertical components.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS2 Modelling in Mechanics: Vector Resolver</title>
+  <style>
+    :root { --ink:#1f2937; --muted:#6b7280; --panel:#ffffff; --soft:#f3f4f6; --line:#d1d5db; --accent:#2563eb; --good:#047857; --warning:#b45309; --bad:#b91c1c; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:24px; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#eef2f7; }
+    .widget { max-width:1100px; margin:0 auto; background:var(--panel); border:2px solid var(--line); border-radius:20px; box-shadow:0 12px 28px rgba(15,23,42,.12); overflow:hidden; }
+    .header { padding:22px 28px; background:#111827; color:white; }
+    .header h1 { margin:0 0 8px 0; font-size:1.75rem; line-height:1.2; }
+    .header p { margin:0; color:#d1d5db; line-height:1.5; }
+    .main { display:grid; grid-template-columns:360px 1fr; }
+    .controls { padding:24px; border-right:2px solid var(--line); background:#fafafa; }
+    .display { padding:24px; }
+    .control-group { margin-bottom:22px; }
+    label { display:block; font-weight:700; margin-bottom:8px; }
+    input[type="range"] { width:100%; }
+    input[type="number"], select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; font-size:1rem; background:white; }
+    .readout { margin-top:8px; color:var(--muted); font-size:.95rem; }
+    .button-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+    button { border:none; border-radius:10px; padding:11px 14px; font-weight:700; cursor:pointer; background:var(--accent); color:white; transition:transform .08s ease, opacity .15s ease; }
+    button:hover { opacity:.92; } button:active { transform:translateY(1px); } button.secondary { background:#374151; }
+    .result-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-bottom:20px; }
+    .result-card { border:1px solid var(--line); border-radius:16px; padding:16px; background:var(--soft); }
+    .result-card h2 { margin:0 0 8px 0; font-size:1.05rem; }
+    .value { font-size:1.45rem; font-weight:800; }
+    .math-box, .quiz { border:1px solid var(--line); border-radius:16px; padding:18px; margin:18px 0; background:white; }
+    .math-box h2, .quiz h2 { margin-top:0; font-size:1.15rem; }
+    .steps { line-height:1.75; font-size:1rem; }
+    .steps code { background:#eef2ff; padding:2px 5px; border-radius:5px; font-size:.95rem; }
+    .canvas-wrap { border:1px solid var(--line); border-radius:16px; background:white; padding:10px; margin-bottom:18px; }
+    svg { width:100%; height:auto; display:block; }
+    .quiz { background:#fffdf5; }
+    .quiz-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+    .feedback { margin-top:12px; padding:12px; border-radius:10px; background:#f3f4f6; font-weight:700; }
+    .feedback.good { background:#d1fae5; color:var(--good); }
+    .feedback.bad { background:#fee2e2; color:var(--bad); }
+    .note { margin-top:18px; padding:14px; border-left:5px solid var(--warning); background:#fffbeb; line-height:1.5; }
+    @media (max-width:850px) { .main{grid-template-columns:1fr;} .controls{border-right:none;border-bottom:2px solid var(--line);} .result-grid,.quiz-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <main class="widget">
+    <section class="header"><h1>Vector Resolver: Scalar Form ↔ Vector Form</h1><p>Move the sliders, choose a direction, and watch the horizontal and vertical components update.</p></section>
+    <section class="main">
+      <aside class="controls" aria-label="Vector controls">
+        <div class="control-group"><label for="magnitude">Magnitude</label><input id="magnitude" type="range" min="0" max="20" step="0.1" value="8" /><input id="magnitudeNumber" type="number" min="0" max="20" step="0.1" value="8" /><div class="readout">Use the size of the force, displacement, velocity or acceleration.</div></div>
+        <div class="control-group"><label for="angle">Angle, theta, in degrees</label><input id="angle" type="range" min="0" max="90" step="1" value="45" /><input id="angleNumber" type="number" min="0" max="90" step="1" value="45" /><div class="readout">The widget assumes the angle is measured from the horizontal.</div></div>
+        <div class="control-group"><label for="direction">Direction of the vector</label><select id="direction"><option value="right-up">Right and up</option><option value="right-down" selected>Right and down</option><option value="left-up">Left and up</option><option value="left-down">Left and down</option></select><div class="readout">Signs are added after finding the component sizes.</div></div>
+        <div class="control-group"><label for="unit">Unit</label><select id="unit"><option value="m">m</option><option value="m s⁻¹">m s⁻¹</option><option value="m s⁻²">m s⁻²</option><option value="N" selected>N</option></select></div>
+        <div class="button-row"><button type="button" id="exampleA">Example: 5 m at 60°</button><button type="button" id="exampleB" class="secondary">Example: 8 N at 45° down</button></div>
+      </aside>
+      <section class="display" aria-live="polite">
+        <div class="result-grid"><div class="result-card"><h2>Horizontal component</h2><div id="xComponent" class="value"></div></div><div class="result-card"><h2>Vertical component</h2><div id="yComponent" class="value"></div></div></div>
+        <div class="canvas-wrap"><svg id="diagram" viewBox="0 0 700 430" role="img" aria-label="Vector component diagram"><rect x="0" y="0" width="700" height="430" fill="#ffffff"></rect><line x1="80" y1="300" x2="620" y2="300" stroke="#111827" stroke-width="3"></line><line x1="350" y1="390" x2="350" y2="40" stroke="#111827" stroke-width="3"></line><polygon points="620,300 600,290 600,310" fill="#111827"></polygon><polygon points="350,40 340,60 360,60" fill="#111827"></polygon><text x="625" y="325" font-family="Arial" font-size="18">+x</text><text x="360" y="55" font-family="Arial" font-size="18">+y</text><line id="horizontalLine" x1="350" y1="300" x2="510" y2="300" stroke="#94a3b8" stroke-width="5" stroke-dasharray="8 6"></line><line id="verticalLine" x1="510" y1="300" x2="510" y2="180" stroke="#94a3b8" stroke-width="5" stroke-dasharray="8 6"></line><line id="vectorLine" x1="350" y1="300" x2="510" y2="180" stroke="#2563eb" stroke-width="7" stroke-linecap="round"></line><polygon id="arrowHead" points="510,180 490,188 503,203" fill="#2563eb"></polygon><path id="angleArc" d="" fill="none" stroke="#111827" stroke-width="3"></path><text id="angleLabel" x="390" y="282" font-family="Arial" font-size="20">θ</text><text id="horizontalLabel" x="430" y="325" font-family="Arial" font-size="18">F cos θ</text><text id="verticalLabel" x="520" y="245" font-family="Arial" font-size="18">F sin θ</text><text id="vectorLabel" x="440" y="185" font-family="Arial" font-size="20" fill="#1d4ed8">F</text></svg></div>
+        <div class="math-box"><h2>Calculation steps</h2><div id="steps" class="steps"></div></div>
+        <div class="quiz"><h2>Quick check</h2><p id="quizPrompt"></p><div class="quiz-row"><button type="button" id="choiceA"></button><button type="button" id="choiceB" class="secondary"></button></div><div id="feedback" class="feedback">Choose an answer.</div></div>
+        <div class="note"><strong>Exam habit:</strong> Find the component sizes first. Then add the signs using the direction: right +, up +, left -, down -.</div>
+      </section>
+    </section>
+  </main>
+<script>
+const magnitudeSlider=document.getElementById('magnitude'),magnitudeNumber=document.getElementById('magnitudeNumber'),angleSlider=document.getElementById('angle'),angleNumber=document.getElementById('angleNumber'),directionSelect=document.getElementById('direction'),unitSelect=document.getElementById('unit');
+const xComponent=document.getElementById('xComponent'),yComponent=document.getElementById('yComponent'),steps=document.getElementById('steps');
+const horizontalLine=document.getElementById('horizontalLine'),verticalLine=document.getElementById('verticalLine'),vectorLine=document.getElementById('vectorLine'),arrowHead=document.getElementById('arrowHead'),angleArc=document.getElementById('angleArc'),angleLabel=document.getElementById('angleLabel'),horizontalLabel=document.getElementById('horizontalLabel'),verticalLabel=document.getElementById('verticalLabel');
+const feedback=document.getElementById('feedback'),choiceA=document.getElementById('choiceA'),choiceB=document.getElementById('choiceB'),quizPrompt=document.getElementById('quizPrompt');
+function toRadians(d){return d*Math.PI/180} function round(v,p=2){const f=Math.pow(10,p);return Math.round(v*f)/f} function getSigns(d){return {'right-up':{x:1,y:1,text:'right and up'},'right-down':{x:1,y:-1,text:'right and down'},'left-up':{x:-1,y:1,text:'left and up'},'left-down':{x:-1,y:-1,text:'left and down'}}[d]}
+function makeArrowHead(x1,y1,x2,y2){const a=Math.atan2(y2-y1,x2-x1),s=18;return `${x2},${y2} ${x2-s*Math.cos(a-Math.PI/7)},${y2-s*Math.sin(a-Math.PI/7)} ${x2-s*Math.cos(a+Math.PI/7)},${y2-s*Math.sin(a+Math.PI/7)}`}
+function updateDiagram(x,y){const ox=350,oy=300,scale=11,ex=ox+x*scale,ey=oy-y*scale; horizontalLine.setAttribute('x2',ex); horizontalLine.setAttribute('y2',oy); verticalLine.setAttribute('x1',ex); verticalLine.setAttribute('x2',ex); verticalLine.setAttribute('y1',oy); verticalLine.setAttribute('y2',ey); vectorLine.setAttribute('x2',ex); vectorLine.setAttribute('y2',ey); arrowHead.setAttribute('points',makeArrowHead(ox,oy,ex,ey)); const s=getSigns(directionSelect.value),ang=Number(angleSlider.value),r=42; let st=0,en=s.y>=0?-ang:ang;if(s.x<0&&s.y>=0){st=180;en=180+ang} if(s.x<0&&s.y<0){st=180;en=180-ang} const sr=toRadians(st),er=toRadians(en); angleArc.setAttribute('d',`M ${ox+r*Math.cos(sr)} ${oy+r*Math.sin(sr)} A ${r} ${r} 0 0 ${s.y>=0?0:1} ${ox+r*Math.cos(er)} ${oy+r*Math.sin(er)}`); angleLabel.setAttribute('x',ox+(s.x>=0?55:-70)); angleLabel.setAttribute('y',oy+(s.y>=0?-14:34)); horizontalLabel.setAttribute('x',(ox+ex)/2-40); horizontalLabel.setAttribute('y',oy+28); verticalLabel.setAttribute('x',ex+12); verticalLabel.setAttribute('y',(oy+ey)/2);}
+function updateQuiz(x,y){quizPrompt.textContent='Which sign pattern should the vector have?'; const correct=`(${x>=0?'+':'-'}, ${y>=0?'+':'-'})`, incorrect=`(${x>=0?'-':'+'}, ${y>=0?'-':'+'})`; choiceA.textContent=correct; choiceB.textContent=incorrect; choiceA.onclick=()=>{feedback.className='feedback good';feedback.textContent='Correct. That sign pattern matches the direction of the vector.'}; choiceB.onclick=()=>{feedback.className='feedback bad';feedback.textContent='Not this time. Check the direction first: right/up are positive, left/down are negative.'}; feedback.className='feedback'; feedback.textContent='Choose an answer.';}
+function update(){const mag=Number(magnitudeSlider.value),ang=Number(angleSlider.value),unit=unitSelect.value,s=getSigns(directionSelect.value),adj=mag*Math.cos(toRadians(ang)),opp=mag*Math.sin(toRadians(ang)),x=s.x*adj,y=s.y*opp; xComponent.textContent=`${round(x,2)} ${unit}`; yComponent.textContent=`${round(y,2)} ${unit}`; steps.innerHTML=`<div>Magnitude: <code>${mag}</code> ${unit}</div><div>Angle: <code>${ang}°</code></div><div>Direction: <code>${s.text}</code></div><br><div>Horizontal component is adjacent to the angle:</div><div><code>${mag} cos(${ang}°) = ${round(adj,2)}</code></div><div>The vector points ${s.x===1?'right':'left'}, so <code>x = ${round(x,2)}</code> ${unit}</div><br><div>Vertical component is opposite the angle:</div><div><code>${mag} sin(${ang}°) = ${round(opp,2)}</code></div><div>The vector points ${s.y===1?'up':'down'}, so <code>y = ${round(y,2)}</code> ${unit}</div><br><div>Vector form: <code>(${round(x,2)}, ${round(y,2)}) ${unit}</code></div>`; updateDiagram(x,y); updateQuiz(x,y);}
+function sync(slider,number){slider.addEventListener('input',()=>{number.value=slider.value;update()}); number.addEventListener('input',()=>{slider.value=number.value;update()})} sync(magnitudeSlider,magnitudeNumber); sync(angleSlider,angleNumber); directionSelect.addEventListener('change',update); unitSelect.addEventListener('change',update); document.getElementById('exampleA').onclick=()=>{magnitudeSlider.value=magnitudeNumber.value=5; angleSlider.value=angleNumber.value=60; directionSelect.value='right-up'; unitSelect.value='m'; update()}; document.getElementById('exampleB').onclick=()=>{magnitudeSlider.value=magnitudeNumber.value=8; angleSlider.value=angleNumber.value=45; directionSelect.value='right-down'; unitSelect.value='N'; update()}; update();
+</script>
+</body>
+</html>

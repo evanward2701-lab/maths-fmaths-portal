@@ -1,0 +1,49 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingWIDGET-001
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Core Theory, PMCC and regression output
+Source: CCEA specification map; lesson transcript; Stats Yr2 Chapter 1 PDF
+Purpose: Allow the student to enter paired data and see a, b, r and the regression line y = a + bx.
+Status: Phase 5 widget draft
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A22 PMCC and Regression Line Widget</title>
+<style>
+:root{--ink:#111827;--muted:#4b5563;--panel:#f9fafb;--line:#d1d5db;--accent:#111827;--danger:#991b1b;--ok:#065f46;--card:#fff}*{box-sizing:border-box}body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--ink);line-height:1.5}.widget{max-width:1100px;margin:0 auto;border:2px solid var(--ink);border-radius:18px;padding:24px;background:var(--card)}h1{margin:0 0 8px;font-size:1.8rem}h2{margin-top:0;font-size:1.2rem}.subtitle{margin:0 0 20px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:850px){.grid{grid-template-columns:1fr}}.panel{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--panel)}label{display:block;font-weight:700;margin-bottom:8px}textarea{width:100%;min-height:210px;resize:vertical;padding:12px;border:1px solid var(--line);border-radius:10px;font-family:"Courier New",monospace;font-size:.98rem}button{display:inline-block;margin-top:12px;margin-right:8px;padding:10px 14px;border:2px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}button.secondary{background:#fff;color:var(--accent)}button:hover{opacity:.9}.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.result-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}.result-card .label{color:var(--muted);font-size:.85rem}.result-card .value{font-size:1.25rem;font-weight:800;margin-top:4px;word-break:break-word}.wide{grid-column:1/-1}.note{margin-top:12px;padding:12px;border-left:5px solid var(--accent);background:#fff;border-radius:8px}.warning{border-left-color:var(--danger)}svg{width:100%;min-height:360px;border:1px solid var(--line);border-radius:14px;background:#fff}.error{color:var(--danger);font-weight:700;margin-top:10px}code{background:#eef2f7;padding:2px 5px;border-radius:5px}
+</style>
+</head>
+<body>
+<main class="widget">
+<h1>A22 PMCC and Regression Line Widget</h1>
+<p class="subtitle">Enter paired data, then calculate the regression line y = a + bx and the sample PMCC r.</p>
+<div class="grid">
+<section class="panel"><h2>1. Enter paired data</h2><label for="dataInput">Use one pair per line, written as x,y</label><textarea id="dataInput">1,3
+2,6
+3,5
+4,8</textarea><button id="calculateBtn">Calculate</button><button id="resetBtn" class="secondary">Reset example</button><div id="errorBox" class="error" aria-live="polite"></div><div class="note">Example evidence data: <code>(1,3), (2,6), (3,5), (4,8)</code>. The regression model is written as y = a + bx.</div></section>
+<section class="panel"><h2>2. Results</h2><div class="results"><div class="result-card"><div class="label">Number of pairs, n</div><div class="value" id="nOut">-</div></div><div class="result-card"><div class="label">Sample PMCC, r</div><div class="value" id="rOut">-</div></div><div class="result-card"><div class="label">Intercept, a</div><div class="value" id="aOut">-</div></div><div class="result-card"><div class="label">Gradient, b</div><div class="value" id="bOut">-</div></div><div class="result-card wide"><div class="label">Regression line</div><div class="value" id="lineOut">-</div></div><div class="result-card wide"><div class="label">Interpretation of r</div><div class="value" id="interpretOut">-</div></div></div><div class="note warning">PMCC measures <strong>linear</strong> correlation only. A low value of r does not prove there is no relationship.</div></section>
+</div>
+<section class="panel" style="margin-top:20px"><h2>3. Scatter plot and regression line</h2><svg id="plotSvg" viewBox="0 0 800 420" role="img" aria-label="Scatter plot with regression line"></svg></section>
+</main>
+<script>
+const dataInput=document.getElementById('dataInput'),calculateBtn=document.getElementById('calculateBtn'),resetBtn=document.getElementById('resetBtn'),errorBox=document.getElementById('errorBox');
+const nOut=document.getElementById('nOut'),rOut=document.getElementById('rOut'),aOut=document.getElementById('aOut'),bOut=document.getElementById('bOut'),lineOut=document.getElementById('lineOut'),interpretOut=document.getElementById('interpretOut'),plotSvg=document.getElementById('plotSvg');
+const exampleData='1,3\n2,6\n3,5\n4,8';
+function parseData(text){const lines=text.split(/\n+/).map(x=>x.trim()).filter(Boolean);const pairs=[];for(const line of lines){const parts=line.split(',').map(x=>x.trim());if(parts.length!==2)throw new Error('Each line must contain exactly two values in the form x,y.');const x=Number(parts[0]),y=Number(parts[1]);if(!Number.isFinite(x)||!Number.isFinite(y))throw new Error('All x and y values must be valid numbers.');pairs.push({x,y});}if(pairs.length<2)throw new Error('At least two paired data values are needed.');return pairs;}
+function mean(v){return v.reduce((s,x)=>s+x,0)/v.length}
+function calculateStats(pairs){const xs=pairs.map(p=>p.x),ys=pairs.map(p=>p.y),xBar=mean(xs),yBar=mean(ys);let sxx=0,syy=0,sxy=0;for(const p of pairs){const dx=p.x-xBar,dy=p.y-yBar;sxx+=dx*dx;syy+=dy*dy;sxy+=dx*dy;}if(sxx===0)throw new Error('All x values are identical, so the regression line is not defined.');if(syy===0)throw new Error('All y values are identical, so r is not defined in this widget.');const b=sxy/sxx,a=yBar-b*xBar,r=sxy/Math.sqrt(sxx*syy);return{n:pairs.length,a,b,r};}
+function round(v,dp=4){return Number(v).toFixed(dp)}
+function formatSigned(v){return v>=0?'+ '+round(v):'- '+round(Math.abs(v))}
+function interpretR(r){const a=Math.abs(r),d=r>0?'positive':r<0?'negative':'no';if(a===1)return 'Perfect '+d+' linear correlation.';if(a>=.7)return 'Strong '+d+' linear correlation.';if(a>=.4)return 'Moderate '+d+' linear correlation.';if(a>0)return 'Weak '+d+' linear correlation.';return 'No linear correlation.';}
+function drawPlot(pairs,stats){const w=800,h=420,m={left:70,right:30,top:35,bottom:60},pw=w-m.left-m.right,ph=h-m.top-m.bottom;const xs=pairs.map(p=>p.x),ys=pairs.map(p=>p.y);let minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);if(minX===maxX){minX-=1;maxX+=1}if(minY===maxY){minY-=1;maxY+=1}const padX=(maxX-minX)*.12||1,padY=(maxY-minY)*.12||1;minX-=padX;maxX+=padX;minY-=padY;maxY+=padY;const sx=x=>m.left+((x-minX)/(maxX-minX))*pw,sy=y=>m.top+ph-((y-minY)/(maxY-minY))*ph;const ns='http://www.w3.org/2000/svg';function el(n,a={}){const e=document.createElementNS(ns,n);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);return e}plotSvg.innerHTML='';plotSvg.appendChild(el('rect',{x:0,y:0,width:w,height:h,fill:'#fff'}));plotSvg.appendChild(el('line',{x1:m.left,y1:m.top+ph,x2:m.left+pw,y2:m.top+ph,stroke:'#111827','stroke-width':3}));plotSvg.appendChild(el('line',{x1:m.left,y1:m.top,x2:m.left,y2:m.top+ph,stroke:'#111827','stroke-width':3}));const x1=minX,x2=maxX,y1=stats.a+stats.b*x1,y2=stats.a+stats.b*x2;plotSvg.appendChild(el('line',{x1:sx(x1),y1:sy(y1),x2:sx(x2),y2:sy(y2),stroke:'#111827','stroke-width':3}));for(const p of pairs)plotSvg.appendChild(el('circle',{cx:sx(p.x),cy:sy(p.y),r:5,fill:'#111827'}));const t=el('text',{x:m.left+18,y:m.top+24,'font-family':'Arial, Helvetica, sans-serif','font-size':16,fill:'#111827'});t.textContent='y = '+round(stats.a,3)+' '+formatSigned(stats.b)+'x';plotSvg.appendChild(t);}
+function runCalculation(){try{errorBox.textContent='';const pairs=parseData(dataInput.value),stats=calculateStats(pairs);nOut.textContent=stats.n;rOut.textContent=round(stats.r);aOut.textContent=round(stats.a);bOut.textContent=round(stats.b);lineOut.textContent='y = '+round(stats.a)+' '+formatSigned(stats.b)+'x';interpretOut.textContent=interpretR(stats.r);drawPlot(pairs,stats);}catch(e){errorBox.textContent=e.message;nOut.textContent=rOut.textContent=aOut.textContent=bOut.textContent=lineOut.textContent=interpretOut.textContent='-';plotSvg.innerHTML='';}}
+calculateBtn.addEventListener('click',runCalculation);resetBtn.addEventListener('click',()=>{dataInput.value=exampleData;runCalculation();});runCalculation();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Standard solids comparison</title>
+  <desc id="desc">Comparison of standard 3D centre-of-mass results and reference points.</desc>
+  <!-- Asset ID: FA22FurtherCentreOfMassSVG-003 -->
+  <!-- Source: CCEA FA22-FCOM boundary + supplied slide examples -->
+  <!-- Related lesson section: #9 Visual Asset Integration; #8.10 -->
+  <!-- Purpose: Compare standard 3D centre-of-mass results and reference points. -->
+  <defs>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .soft{fill:#FBEFEF;stroke:#2C2C2E;stroke-width:3}
+      .gold{stroke:#C5A059;stroke-width:4;fill:none} .line{stroke:#2C2C2E;stroke-width:3;fill:none} .dash{stroke:#2C2C2E;stroke-width:2;stroke-dasharray:8 8;fill:none}
+      .txt{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:30px} .small{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:22px} .math{font-family:Georgia,'Times New Roman',serif;fill:#2C2C2E;font-size:26px}
+      .box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:18} .warn{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="panel" x="40" y="36" width="1120" height="688" rx="28"/>
+  <text class="txt" x="80" y="90">Standard 3D results</text>
+  
+  <rect class="box" x="85" y="145" width="1030" height="475"/><text class="math" x="130" y="215">Solid cone: G is H/4 from base = 3H/4 from vertex</text><text class="math" x="130" y="285">Solid hemisphere: G is 3R/8 from centre of plane face</text><text class="math" x="130" y="355">Hemispherical shell: G is R/2 from centre of plane face</text><text class="math" x="130" y="425">Cylinder: G halfway along axis</text><text class="math" x="130" y="495">Sphere: G at centre</text><text class="math" x="130" y="565">Hollow cone: G is H/3 from base</text><rect class="warn" x="260" y="650" width="680" height="55"/><text class="small" x="385" y="687">Always state the reference point.</text>
+
+</svg>

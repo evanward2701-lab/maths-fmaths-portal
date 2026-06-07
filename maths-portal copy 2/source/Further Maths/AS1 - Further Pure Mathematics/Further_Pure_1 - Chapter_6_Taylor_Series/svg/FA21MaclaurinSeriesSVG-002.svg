@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="FA21MaclaurinSeriesSVG-002" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" role="img" aria-labelledby="title desc">
+  <title id="title">Maclaurin derivative matching coefficient ladder</title>
+  <desc id="desc">A diagram showing how substituting x equals zero into a power series and its derivatives exposes coefficients.</desc>
+  <metadata><![CDATA[
+Asset ID: FA21MaclaurinSeriesSVG-002
+Topic ID: FA21MaclaurinSeries
+Unit: FA21 - Further A2 1 Pure Mathematics
+Topic code: FA21-FAF
+Related lesson file: FA21_maclaurin_series_lesson.md
+Related section: Section 9.3 Visual Asset Integration
+Source: DrFrost/Pearson derivative-matching slides
+Purpose: Show how P(0), P'(0), P''(0), P'''(0) expose a0, a1, 2!a2, 3!a3 and lead to ar=f^(r)(0)/r!.
+Evidence status: Evidence-backed concept, redrawn in project style.
+  ]]></metadata>
+  <defs><style><![CDATA[
+    .bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5}.box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5}.accent{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.7}.title{font:700 25px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.sub{font:400 14px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.math{font:500 17px Georgia,serif;fill:#2C2C2E}.small{font:500 14px Georgia,serif;fill:#2C2C2E}.label{font:700 14px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.note{font:400 13px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.arrow{stroke:#C5A059;stroke-width:2;fill:none;marker-end:url(#arrow)}.thin{stroke:#E5E5EA;stroke-width:1}
+  ]]></style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C5A059"/></marker></defs>
+  <rect class="bg" width="980" height="640"/><rect class="panel" x="40" y="35" width="900" height="560" rx="22"/>
+  <text class="title" x="70" y="70">Why the Maclaurin coefficients contain factorials</text><text class="sub" x="70" y="96">Start with a power series P(x), differentiate, then substitute x = 0.</text>
+  <rect class="accent" x="70" y="120" width="840" height="72" rx="14"/><text class="math" x="96" y="150">P(x) = a₀ + a₁x + a₂x² + a₃x³ + a₄x⁴ + ...</text><text class="note" x="96" y="174">At x = 0, every positive power of x vanishes. The coefficient at that derivative level is exposed.</text>
+  <g transform="translate(70,225)">
+    <rect class="box" x="0" y="0" width="190" height="240" rx="14"/><rect class="box" x="220" y="0" width="190" height="240" rx="14"/><rect class="box" x="440" y="0" width="190" height="240" rx="14"/><rect class="box" x="660" y="0" width="180" height="240" rx="14"/>
+    <text class="label" x="20" y="32">Value match</text><text class="small" x="20" y="66">P(0) = a₀</text><line class="thin" x1="20" y1="88" x2="170" y2="88"/><text class="small" x="20" y="124">Set P(0)=f(0)</text><text class="small" x="20" y="158">a₀ = f(0)</text>
+    <text class="label" x="240" y="32">Gradient match</text><text class="small" x="240" y="66">P'(x)=a₁+2a₂x+...</text><text class="small" x="240" y="92">P'(0)=a₁</text><line class="thin" x1="240" y1="112" x2="390" y2="112"/><text class="small" x="240" y="148">Set P'(0)=f'(0)</text><text class="small" x="240" y="182">a₁ = f'(0)</text>
+    <text class="label" x="460" y="32">Second derivative</text><text class="small" x="460" y="66">P''(x)=2a₂+6a₃x+...</text><text class="small" x="460" y="92">P''(0)=2a₂=2!a₂</text><line class="thin" x1="460" y1="112" x2="610" y2="112"/><text class="small" x="460" y="148">Set P''(0)=f''(0)</text><text class="small" x="460" y="182">a₂ = f''(0)/2!</text>
+    <text class="label" x="680" y="32">Third derivative</text><text class="small" x="680" y="66">P'''(x)=6a₃+...</text><text class="small" x="680" y="92">P'''(0)=6a₃=3!a₃</text><line class="thin" x1="680" y1="112" x2="820" y2="112"/><text class="small" x="680" y="148">Set P'''(0)=f'''(0)</text><text class="small" x="680" y="182">a₃ = f'''(0)/3!</text>
+    <path class="arrow" d="M190,120 C205,120 205,120 220,120"/><path class="arrow" d="M410,120 C425,120 425,120 440,120"/><path class="arrow" d="M630,120 C645,120 645,120 660,120"/>
+  </g>
+  <rect class="accent" x="190" y="515" width="600" height="58" rx="16"/><text class="math" x="244" y="550">General coefficient: aᵣ = f⁽ʳ⁾(0) / r!</text>
+  <text class="note" x="70" y="588">Bridge note: ordinary differentiation gives value, gradient and curvature; Further Maths turns those derivative values into coefficients.</text>
+</svg>

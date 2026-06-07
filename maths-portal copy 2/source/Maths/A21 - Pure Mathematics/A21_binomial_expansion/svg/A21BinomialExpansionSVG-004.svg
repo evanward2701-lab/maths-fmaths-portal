@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Partial Fractions Before Expansion</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 004.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Partial Fractions Before Expansion</text>
+  <text x="600" y="140" text-anchor="middle" font-family="Arial" font-size="26">Example: (4 - 5x) / [(1 + x)(2 - x)]</text>
+  <text x="600" y="220" text-anchor="middle" font-family="Arial" font-size="26">= 3/(1 + x) - 2/(2 - x)</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Arial" font-size="26">= 3(1+x)^(-1) - (1 - x/2)^(-1)</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700">2 - (7/2)x + (11/4)x^2 - (25/8)x^3</text>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial" font-size="24">Final validity is the overlap of the valid ranges for every expanded part.</text>
+</svg>

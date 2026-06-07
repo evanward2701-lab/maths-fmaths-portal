@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Validity: |u| < 1</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 002.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Validity: |u| < 1</text>
+  <text x="600" y="145" text-anchor="middle" font-family="Arial" font-size="28">For (1 + u)^n, require -1 &lt; u &lt; 1.</text>
+  <line x1="190" y1="320" x2="1010" y2="320" stroke="#111111" stroke-width="4"/>
+  <line x1="350" y1="320" x2="850" y2="320" stroke="#111111" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="350" cy="320" r="15" fill="#ffffff" stroke="#111111" stroke-width="4"/>
+  <circle cx="850" cy="320" r="15" fill="#ffffff" stroke="#111111" stroke-width="4"/>
+  <text x="350" y="370" text-anchor="middle" font-family="Arial" font-size="24">-1</text>
+  <text x="850" y="370" text-anchor="middle" font-family="Arial" font-size="24">1</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Arial" font-size="22">Open endpoints: equality is not allowed.</text>
+  <text x="245" y="560" text-anchor="middle" font-family="Arial" font-size="24">(1+x)^n: |x|&lt;1</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Arial" font-size="24">(1+4x)^n: |x|&lt;1/4</text>
+  <text x="955" y="560" text-anchor="middle" font-family="Arial" font-size="24">(1+x/4)^n: |x|&lt;4</text>
+</svg>

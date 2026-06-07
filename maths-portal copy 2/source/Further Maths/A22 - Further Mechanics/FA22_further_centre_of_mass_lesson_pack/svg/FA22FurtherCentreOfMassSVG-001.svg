@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lamina strip model under y=f(x)</title>
+  <desc id="desc">Uniform lamina under a curve with a vertical strip of width dx, height y and centre at half y.</desc>
+  <!-- Asset ID: FA22FurtherCentreOfMassSVG-001 -->
+  <!-- Source: FM2 slide page 4 + teacher transcript -->
+  <!-- Related lesson section: #9 Visual Asset Integration; #8.2 Core Theory -->
+  <!-- Purpose: Show vertical strip model for a uniform lamina under y=f(x). -->
+  <defs>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .soft{fill:#FBEFEF;stroke:#2C2C2E;stroke-width:3}
+      .gold{stroke:#C5A059;stroke-width:4;fill:none} .line{stroke:#2C2C2E;stroke-width:3;fill:none} .dash{stroke:#2C2C2E;stroke-width:2;stroke-dasharray:8 8;fill:none}
+      .txt{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:30px} .small{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:22px} .math{font-family:Georgia,'Times New Roman',serif;fill:#2C2C2E;font-size:26px}
+      .box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:18} .warn{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="panel" x="40" y="36" width="1120" height="688" rx="28"/>
+  <text class="txt" x="80" y="90">Uniform lamina under y = f(x)</text>
+  
+  <line class="line" x1="120" y1="610" x2="760" y2="610" marker-end="url(#arrow)"/><line class="line" x1="120" y1="610" x2="120" y2="150" marker-end="url(#arrow)"/>
+  <path d="M190 610 L190 500 C320 320 520 210 720 390 L720 610 Z" fill="#FBEFEF" opacity="0.75"/>
+  <path class="gold" d="M190 500 C320 320 520 210 720 390"/><text class="small" x="570" y="230">y = f(x)</text>
+  <rect x="430" y="285" width="50" height="325" fill="#D4AF37" opacity="0.38" stroke="#C5A059" stroke-width="3"/><text class="math" x="435" y="650">dx</text>
+  <circle cx="455" cy="448" r="8" fill="#2C2C2E"/><text class="math" x="500" y="455">(x, 1/2 y)</text><line class="dash" x1="455" y1="448" x2="455" y2="610"/>
+  <rect class="box" x="820" y="175" width="300" height="330"/><text class="math" x="850" y="230">dA = y dx</text><text class="math" x="850" y="290">M = ∫ₐᵇ y dx</text><text class="math" x="850" y="350">M x̄ = ∫ₐᵇ xy dx</text><text class="math" x="850" y="410">M ȳ = 1/2 ∫ₐᵇ y² dx</text>
+
+</svg>

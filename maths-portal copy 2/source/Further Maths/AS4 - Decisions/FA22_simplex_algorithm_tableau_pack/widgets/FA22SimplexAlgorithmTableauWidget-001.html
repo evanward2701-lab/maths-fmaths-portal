@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22 Simplex Pivot Trainer</title>
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--accent:#C5A059;--soft:#FBEFEF;--text:#2C2C2E;--muted:#6E6E73;--success:#2F6F4E;--danger:#8A1F1F}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--text);font-family:Inter,Aptos,'Segoe UI',Arial,sans-serif;line-height:1.5}main{max-width:1180px;margin:28px auto;padding:24px}.shell{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:28px}h1{margin:0 0 6px;font-size:2rem}.meta{color:var(--muted);font-size:.95rem}.grid{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}.card{background:#fffefa;border:1px solid var(--line);border-radius:18px;padding:18px}table{width:100%;border-collapse:collapse;margin-top:14px}th,td{border:1px solid var(--line);padding:10px;text-align:center}th{background:var(--soft)}input{width:100%;min-width:66px;border:1px solid var(--line);border-radius:10px;padding:8px;background:#fff;text-align:center;font:inherit}button{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;margin:8px 8px 0 0}.secondary{background:transparent;color:var(--text)}.result{border:1px solid var(--line);border-radius:16px;background:var(--canvas);padding:14px;margin-top:14px}.pill{display:inline-block;border:1px solid var(--accent);background:var(--soft);border-radius:999px;padding:5px 10px;margin:4px}.ok{color:var(--success);font-weight:700}.bad{color:var(--danger);font-weight:700}.highlight-col{background:#fff7dc}.highlight-row{background:#fdf1ef}.pivot-cell{background:#F1D783;font-weight:800}.math{font-family:'Cambria Math','STIX Two Math',Georgia,serif}
+  </style>
+</head>
+<body>
+<main><section class="shell">
+<h1>Simplex Pivot Trainer</h1>
+<p class="meta">Asset ID: FA22SimplexAlgorithmTableauWidget-001 | Topic: FA22SimplexAlgorithmTableau | LO: FA22-ALGGRAPH-LO003</p>
+<div class="grid"><section class="card"><h2>Enter a simplex tableau</h2><p>This trainer uses <span class="math">P=ax+by</span> becoming <span class="math">P-ax-by=0</span>.</p>
+<table id="tableau"><thead><tr><th>Basic</th><th>x</th><th>y</th><th>r</th><th>s</th><th>Value</th></tr></thead><tbody>
+<tr><td><input value="r"></td><td><input value="5"></td><td><input value="7"></td><td><input value="1"></td><td><input value="0"></td><td><input value="70"></td></tr>
+<tr><td><input value="s"></td><td><input value="10"></td><td><input value="3"></td><td><input value="0"></td><td><input value="1"></td><td><input value="60"></td></tr>
+<tr><td><input value="P"></td><td><input value="-3"></td><td><input value="-2"></td><td><input value="0"></td><td><input value="0"></td><td><input value="0"></td></tr>
+</tbody></table><button id="analyse">Analyse pivot</button><button class="secondary" id="reset">Reset example</button></section>
+<section class="card"><h2>Diagnostic output</h2><div id="output" class="result">Press <strong>Analyse pivot</strong>.</div><h2>Rule card</h2><div class="result"><p><strong>Pivot column:</strong> choose the most negative entry in the objective row.</p><p><strong>Theta:</strong> value ÷ positive pivot-column entry.</p><p><strong>Pivot row:</strong> smallest positive theta.</p><p><strong>Optimal:</strong> no negative objective-row entries.</p></div></section></div>
+</section></main>
+<script>
+function parse(v){v=String(v).trim();if(v.includes('/')){let [a,b]=v.split('/').map(Number);return a/b}return Number(v)}
+const defaults=[['r','5','7','1','0','70'],['s','10','3','0','1','60'],['P','-3','-2','0','0','0']];
+const table=document.getElementById('tableau'),out=document.getElementById('output');
+function resetClasses(){table.querySelectorAll('td,th').forEach(c=>c.classList.remove('highlight-col','highlight-row','pivot-cell'))}
+function read(){return [...table.querySelectorAll('tbody tr')].map(r=>[...r.querySelectorAll('input')].map(i=>i.value))}
+function analyse(){resetClasses();try{let raw=read(),num=raw.map(r=>r.slice(1).map(parse)),obj=num[2].slice(0,4);let min=0,pc=-1;obj.forEach((v,i)=>{if(v<min){min=v;pc=i}});if(pc<0){out.innerHTML='<p class="ok">Optimal: no negative entries remain in the objective row.</p>';return}let rows=[0,1].map(i=>({i,name:raw[i][0],entry:num[i][pc],value:num[i][4],theta:num[i][4]/num[i][pc]}));let valid=rows.filter(r=>r.entry>0);if(!valid.length){out.innerHTML='<p class="bad">No positive theta values.</p>';return}valid.sort((a,b)=>a.theta-b.theta);let pr=valid[0];let headers=table.querySelectorAll('thead th');headers[pc+1].classList.add('highlight-col');[...table.querySelectorAll('tbody tr')].forEach(r=>r.children[pc+1].classList.add('highlight-col'));[...table.querySelectorAll('tbody tr')][pr.i].querySelectorAll('td').forEach(td=>td.classList.add('highlight-row'));[...table.querySelectorAll('tbody tr')][pr.i].children[pc+1].classList.add('pivot-cell');out.innerHTML=`<p><strong>Pivot column:</strong> ${['x','y','r','s'][pc]} because ${min} is most negative.</p><p>${rows.map(r=>r.entry>0?`<span class="pill">${r.name}: θ=${r.value}÷${r.entry}=${r.theta}</span>`:`<span class="pill">${r.name}: invalid entry ${r.entry}</span>`).join('')}</p><p><strong>Pivot row:</strong> ${pr.name}. <strong>Pivot:</strong> ${pr.entry}.</p><p class="ok">Divide the whole pivot row by ${pr.entry}, then clear the column.</p>`}catch(e){out.innerHTML='<p class="bad">Check entries.</p>'}}
+document.getElementById('analyse').onclick=analyse;document.getElementById('reset').onclick=()=>{[...table.querySelectorAll('tbody tr')].forEach((r,i)=>[...r.querySelectorAll('input')].forEach((inp,j)=>inp.value=defaults[i][j]));resetClasses();out.innerHTML='Press <strong>Analyse pivot</strong>.'}
+</script>
+</body>
+</html>

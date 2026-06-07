@@ -1,0 +1,35 @@
+<!--
+Asset ID: AS1DifferentiationSVG-002
+Source: Chapter 12 Differentiation PDF pp.4-5
+Related section: Core Theory 2-5
+Purpose: Show secants approaching the tangent for y=x^2 near x=5.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Secants approaching a tangent</title>
+  <desc id="desc">Two panels show the gradient estimate for y=x squared near x equals 5 improving as the second point moves closer.</desc>
+  <rect width="900" height="500" fill="#ffffff"/>
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700">Finding the Gradient Function: Secant to Tangent</text>
+  <g transform="translate(60,85)">
+    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="700">Far point: (6,36)</text>
+    <rect x="0" y="20" width="350" height="300" fill="#fafafa" stroke="#333"/>
+    <path d="M30 270 C95 230, 170 155, 320 35" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="160" cy="165" r="6" fill="#111"/>
+    <circle cx="245" cy="70" r="6" fill="#111"/>
+    <line x1="160" y1="165" x2="245" y2="70" stroke="#222" stroke-width="4"/>
+    <text x="130" y="185" font-family="Arial" font-size="16">(5,25)</text>
+    <text x="250" y="67" font-family="Arial" font-size="16">(6,36)</text>
+    <text x="55" y="290" font-family="Arial" font-size="18">m = 11/1 = 11</text>
+  </g>
+  <g transform="translate(490,85)">
+    <text x="0" y="0" font-family="Arial" font-size="20" font-weight="700">Close point: (5.01,25.1001)</text>
+    <rect x="0" y="20" width="350" height="300" fill="#fafafa" stroke="#333"/>
+    <path d="M30 270 C95 230, 170 155, 320 35" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="160" cy="165" r="6" fill="#111"/>
+    <circle cx="166" cy="158" r="6" fill="#111"/>
+    <line x1="135" y1="193" x2="190" y2="130" stroke="#222" stroke-width="4"/>
+    <text x="112" y="185" font-family="Arial" font-size="16">(5,25)</text>
+    <text x="175" y="155" font-family="Arial" font-size="16">(5.01,25.1001)</text>
+    <text x="42" y="290" font-family="Arial" font-size="18">m = 0.1001/0.01 = 10.01</text>
+  </g>
+  <text x="210" y="455" font-family="Arial" font-size="22" font-weight="700">As h → 0, the secant gradient tends to the tangent gradient.</text>
+</svg>

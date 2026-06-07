@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Outlier Boundaries</title>
+<desc id="desc">Use Q₁ − 1.5IQR and Q₃ + 1.5IQR.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Outlier Boundaries</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Use Q₁ − 1.5IQR and Q₃ + 1.5IQR.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-002; Source: Outlier evidence; Section: Core Theory, Outliers; Purpose: Visualise outlier boundaries.</metadata>
+<line x1="120" y1="410" x2="840" y2="410" stroke="#222" stroke-width="3"/>
+<g stroke="#111" stroke-width="4" fill="none"><line x1="360" y1="300" x2="400" y2="300"/><line x1="592" y1="300" x2="688" y2="300"/><rect x="400" y="255" width="192" height="90" fill="#f8fbff"/><line x1="480" y1="255" x2="480" y2="345"/><line x1="360" y1="275" x2="360" y2="325"/><line x1="688" y1="275" x2="688" y2="325"/></g>
+<path d="M400 230 L400 215 L592 215 L592 230" fill="none" stroke="#005f73" stroke-width="3"/><text x="496" y="204" font-family="Arial" font-size="17" text-anchor="middle" fill="#005f73" font-weight="700">IQR</text>
+<g stroke="#9b2226" stroke-width="3" stroke-dasharray="8 6"><line x1="112" y1="140" x2="112" y2="410"/><line x1="832" y1="140" x2="832" y2="410"/></g>
+<g font-family="Arial" font-size="16" fill="#9b2226" text-anchor="middle"><text x="112" y="122" font-weight="700">Q₁ − 1.5IQR</text><text x="832" y="122" font-weight="700">Q₃ + 1.5IQR</text></g>
+<g stroke="#9b2226" stroke-width="4"><line x1="72" y1="278" x2="92" y2="298"/><line x1="92" y1="278" x2="72" y2="298"/><line x1="868" y1="278" x2="888" y2="298"/><line x1="888" y1="278" x2="868" y2="298"/></g>
+<text x="480" y="496" font-family="Arial" font-size="16" text-anchor="middle">Show boundary calculations, then mark each outlier with a cross.</text>
+
+</svg>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AS2ForcesAndNewtonsLawsWidget-001</title>
+<!-- Asset ID: AS2ForcesAndNewtonsLawsWidget-001
+Source: Chapter 10 Forces and Motion evidence
+Related lesson section: Resultant Force Resolver
+Purpose: Enter up/down/left/right forces and see the resultant. -->
+<style>
+body{font-family:Arial,sans-serif;background:#f3f4f6;color:#111827;margin:0;padding:24px}
+.card{max-width:900px;margin:auto;background:white;border:2px solid #111827;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+h1{margin-top:0} .meta{background:#eef2ff;border-left:6px solid #4f46e5;border-radius:10px;padding:12px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px} label{font-weight:700;display:block} input{width:100%;box-sizing:border-box;padding:10px;border:2px solid #d1d5db;border-radius:10px;margin-top:6px}
+button{margin-top:16px;padding:12px 18px;border:0;border-radius:10px;background:#111827;color:white;font-weight:700;cursor:pointer}
+#out{margin-top:18px;padding:16px;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;line-height:1.7}
+.warn{margin-top:16px;background:#fff7ed;border-left:6px solid #f97316;border-radius:10px;padding:12px}
+</style></head><body><main class="card"><h1>Resultant Force Resolver</h1><div class="meta"><b>Asset ID:</b> AS2ForcesAndNewtonsLawsWidget-001<br><b>Purpose:</b> Enter up/down/left/right forces and see the resultant.</div><div class="grid"><label>Upward force / N<input id="up" type="number" value="40" step="0.1"></label>
+<label>Downward force / N<input id="down" type="number" value="5" step="0.1"></label>
+<label>Rightward force / N<input id="right" type="number" value="30" step="0.1"></label>
+<label>Leftward force / N<input id="left" type="number" value="30" step="0.1"></label></div><button onclick="calc()">Calculate</button><div id="out" aria-live="polite"></div><div class="warn"><b>Mechanics reminder:</b> choose directions before using equations and keep forces attached to the body being considered.</div></main><script>function calc(){
+const up=+document.getElementById('up').value, down=+document.getElementById('down').value, right=+document.getElementById('right').value, left=+document.getElementById('left').value;
+const rx=right-left, ry=up-down, mag=Math.hypot(rx,ry);
+document.getElementById('out').innerHTML=`R(right)=${right}-${left}=${rx.toFixed(3)} N<br>R(up)=${up}-${down}=${ry.toFixed(3)} N<br><b>|R|=${mag.toFixed(3)} N</b>`;} calc();</script></body></html>

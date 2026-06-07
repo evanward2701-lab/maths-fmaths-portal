@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Sampling Distribution of the Sample Mean</title>
+<desc id="desc">Repeated samples produce different sample means, which form a sampling distribution centred at mu.</desc>
+<defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker><style>.canvas{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2}.panelSoft{fill:#FBEFEF;stroke:#E5E5EA;stroke-width:2}.curveWide{fill:none;stroke:#C5A059;stroke-width:4}.curveNarrow{fill:none;stroke:#D4AF37;stroke-width:4}.axis{stroke:#2C2C2E;stroke-width:2;opacity:.75}.guide{stroke:#C5A059;stroke-width:2;stroke-dasharray:8 8}.arrow{stroke:#C5A059;stroke-width:3;fill:none;marker-end:url(#arrowGold)}.title{fill:#2C2C2E;font-family:Georgia,serif;font-size:34px;font-weight:700}.subtitle,.heading,.text,.small{fill:#2C2C2E;font-family:Arial,sans-serif}.subtitle{font-size:18px}.heading{font-size:22px;font-weight:700}.text{font-size:16px}.small{font-size:14px}.math{fill:#2C2C2E;font-family:Georgia,serif;font-size:22px}.chip{fill:#FBEFEF;stroke:#D4AF37;stroke-width:1.5}.dot{fill:#C5A059}</style></defs>
+<rect class="canvas" width="1200" height="820"/>
+<text class="title" x="60" y="70">Sampling distribution of X̄</text><text class="subtitle" x="60" y="105">Repeated samples produce different sample means. Those means have their own distribution.</text>
+<rect class="panel" x="60" y="145" width="1080" height="220" rx="22"/><text class="heading" x="90" y="185">1. Original population distribution</text><text class="text" x="90" y="215">The population has mean μ and variance σ².</text>
+<line class="axis" x1="125" y1="310" x2="535" y2="310"/><path class="curveWide" d="M125,310 C175,305 205,260 245,235 C285,210 335,210 375,235 C415,260 445,305 535,310"/><line class="guide" x1="330" y1="218" x2="330" y2="330"/><text class="math" x="318" y="352">μ</text>
+<rect class="chip" x="640" y="205" width="420" height="96" rx="18"/><text class="math" x="675" y="242">X has mean μ and variance σ²</text><text class="small" x="675" y="274">The original population need not be normal for CLT use.</text>
+<path class="arrow" d="M595,315 C605,382 605,430 595,492"/>
+<rect class="panelSoft" x="60" y="400" width="1080" height="150" rx="22"/><text class="heading" x="90" y="440">2. Take repeated samples of size n</text><text class="text" x="90" y="470">Each sample gives a different value of X̄.</text>
+<circle class="dot" cx="420" cy="445" r="7"/><circle class="dot" cx="450" cy="475" r="7"/><circle class="dot" cx="480" cy="438" r="7"/><text class="small" x="390" y="515">sample 1 gives x̄₁</text>
+<circle class="dot" cx="640" cy="450" r="7"/><circle class="dot" cx="670" cy="480" r="7"/><circle class="dot" cx="700" cy="455" r="7"/><text class="small" x="610" y="515">sample 2 gives x̄₂</text>
+<circle class="dot" cx="860" cy="460" r="7"/><circle class="dot" cx="890" cy="438" r="7"/><circle class="dot" cx="920" cy="478" r="7"/><text class="small" x="830" y="515">sample 3 gives x̄₃</text>
+<path class="arrow" d="M595,555 C605,590 605,610 595,645"/>
+<rect class="panel" x="60" y="585" width="1080" height="185" rx="22"/><text class="heading" x="90" y="625">3. The sample means form a sampling distribution</text>
+<line class="axis" x1="125" y1="715" x2="535" y2="715"/><path class="curveNarrow" d="M185,715 C235,710 270,655 330,640 C390,655 425,710 475,715"/><line class="guide" x1="330" y1="638" x2="330" y2="738"/><text class="math" x="318" y="760">μ</text>
+<rect class="chip" x="640" y="630" width="420" height="104" rx="18"/><text class="math" x="675" y="666">E(X̄) = μ</text><text class="math" x="675" y="696">Var(X̄) = σ² / n</text><text class="math" x="675" y="726">SE(X̄) = σ / √n</text>
+<text class="small" x="90" y="790">CLT boundary: for n ≥ 30, X̄ is approximately normal.</text>
+</svg>

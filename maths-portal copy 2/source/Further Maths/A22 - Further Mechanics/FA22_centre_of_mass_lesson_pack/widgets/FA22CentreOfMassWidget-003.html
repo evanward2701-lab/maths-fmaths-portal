@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FA22CentreOfMassWidget-003</title>
+<!--
+Asset ID: FA22CentreOfMassWidget-003
+Source: AI-proposed teaching enhancement based on lesson evidence
+Related lesson section: Section 10.3
+Purpose: Suspended lamina angle explorer.
+-->
+<style>
+:root{--canvas:#FAF9F6;--ivory:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--accent:#C5A059;--blush:#FBEFEF;--ink:#2C2C2E;}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+main{max-width:960px;margin:0 auto;padding:28px} .shell{background:var(--ivory);border:1px solid var(--line);border-radius:24px;padding:24px}
+input,select,button{font-family:inherit;padding:8px;border:1px solid var(--line);border-radius:10px;margin:4px} button{background:var(--blush);border-color:var(--accent);font-weight:700;cursor:pointer}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px} .result{background:var(--blush);border:1px solid var(--accent);border-radius:14px;padding:12px;margin-top:10px}
+svg{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+</style>
+</head>
+<body>
+<main><section class="shell">
+<h1>Suspended Lamina Angle Explorer</h1>
+<p>Use the rule that a freely suspended lamina rests with G vertically below the suspension point.</p>
+<div class="card"><label>A=(<input id="ax" type="number" value="0">,<input id="ay" type="number" value="0">)</label><label>G=(<input id="gx" type="number" value="4">,<input id="gy" type="number" value="3">)</label><button onclick="calc()">Calculate angle with vertical</button><div id="out" class="result"></div><svg id="plot" viewBox="0 0 500 360"></svg></div>
+</section></main>
+<script>function calc(){const ax=+document.getElementById('ax').value,ay=+document.getElementById('ay').value,gx=+document.getElementById('gx').value,gy=+document.getElementById('gy').value;const dx=Math.abs(gx-ax),dy=Math.abs(gy-ay);const ang=Math.atan2(dx,dy)*180/Math.PI;document.getElementById('out').innerHTML=`horizontal=${dx}, vertical=${dy}<br><b>angle with vertical = ${ang.toFixed(3)}°</b><p>In equilibrium, G lies vertically below the suspension point.</p>`;const svg=document.getElementById('plot');svg.innerHTML='<rect width="500" height="360" fill="#FFFFF0"/><line x1="250" y1="40" x2="250" y2="320" stroke="#D4AF37" stroke-width="3" stroke-dasharray="8 6"/><circle cx="250" cy="80" r="8" fill="#2C2C2E"/><text x="268" y="80" font-family="Georgia">A</text>';const x=250+dx*35,y=80+Math.max(40,dy*35);svg.innerHTML+=`<line x1="250" y1="80" x2="${x}" y2="${y}" stroke="#2C2C2E" stroke-width="3"/><circle cx="${x}" cy="${y}" r="9" fill="#D4AF37" stroke="#2C2C2E"/><text x="${x+18}" y="${y}" font-family="Georgia">G</text><text x="250" y="340" font-family="Georgia" text-anchor="middle">AG becomes vertical when hanging</text>`}calc();</script>
+</body>
+</html>

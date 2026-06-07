@@ -1,0 +1,13 @@
+<!--
+Asset ID: A21TrigonometryAndModellingWidget-005
+Source: Chapter 7 Trigonometry and Modelling transcript; P2 Chapter 7 slide PDF
+Related lesson section: A21 Trigonometry and Modelling
+Purpose: Trig Identity Proof Strategy Helper
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Trig Identity Proof Strategy Helper</title>
+<style>body{font-family:Arial;padding:24px}.widget{max-width:900px;margin:auto;border:2px solid #111;border-radius:18px;padding:24px;background:#f8f8f8}.q{background:white;border:1px solid #222;border-radius:14px;padding:18px;margin:16px 0}button{padding:10px 14px;border:2px solid #111;background:white;border-radius:10px;margin:6px}.output{background:white;border-left:6px solid #111;padding:14px;margin-top:16px;line-height:1.7}</style></head>
+<body><main class="widget"><h1>Trig Identity Proof Strategy Helper</h1><section class="q"><h2>What do you see?</h2><button onclick="s('double')">Double angle</button><button onclick="s('reciprocal')">sec, cosec or cot</button><button onclick="s('tan')">tan terms</button><button onclick="s('powers')">powers</button><button onclick="s('fraction')">large fraction</button><button onclick="s('half')">half-angle</button><div id="out" class="output">Choose a feature above.</div></section></main>
+<script>
+const advice={double:"Try a double angle identity: sin2x, cos2x or tan2x.",reciprocal:"Rewrite sec, cosec or cot in sine and cosine.",tan:"Use tanx=sinx/cosx or the tan double angle formula.",powers:"Use Pythagorean identities or square sin²x+cos²x=1.",fraction:"Work on the complicated side, combine fractions, then cancel common factors only.",half:"Write x as 2·(x/2), then use a double angle identity."};
+function s(k){out.innerHTML="<strong>Suggested first move:</strong> "+advice[k]}
+</script></body></html>

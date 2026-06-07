@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22 Further Kinematics straight-line motion axis</title>
+  <desc id="desc">A straight-line kinematics diagram showing origin O, particle P, displacement x, positive direction, velocity and acceleration arrows, with notes about towards O and away from O.</desc>
+
+  <metadata>
+    Asset ID: FA22FurtherKinematicsSVG-001
+    Source: Transcript notation recap and screenshot evidence
+    Related lesson section: Key Definitions and Notation; Visual Asset Integration
+    Purpose: Show a particle P moving on a straight line from a fixed origin O, with positive x, velocity v, and acceleration a.
+  </metadata>
+
+  <defs>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#C5A059"/>
+    </marker>
+    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="arrowRose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#D48C8C"/>
+    </marker>
+    <style>
+      .bg { fill: #FAF9F6; }
+      .panel { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 3; rx: 28; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 36px; font-weight: 700; fill: #2C2C2E; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 20px; fill: #3A3A3C; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 24px; fill: #2C2C2E; }
+      .small { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; fill: #3A3A3C; }
+      .math { font-family: "Times New Roman", serif; font-size: 28px; font-style: italic; fill: #2C2C2E; }
+      .note { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 20px; fill: #2C2C2E; }
+      .axis { stroke: #2C2C2E; stroke-width: 5; stroke-linecap: round; }
+      .gold { stroke: #C5A059; stroke-width: 5; stroke-linecap: round; }
+      .rose { stroke: #D48C8C; stroke-width: 5; stroke-linecap: round; }
+      .softLine { stroke: #E5E5EA; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="720"/>
+  <rect class="panel" x="60" y="52" width="1080" height="616"/>
+
+  <text class="title" x="110" y="112">Straight-line motion: signs, direction and displacement</text>
+  <text class="subtitle" x="110" y="150">FA22 Further Kinematics: use the line first, then let calculus do the heavy lifting.</text>
+
+  <line class="axis" x1="140" y1="360" x2="980" y2="360" marker-end="url(#arrowDark)"/>
+  <text class="label" x="995" y="368">positive direction of increasing x</text>
+
+  <line class="softLine" x1="220" y1="310" x2="220" y2="410"/>
+  <circle cx="220" cy="360" r="9" fill="#2C2C2E"/>
+  <text class="math" x="207" y="450">O</text>
+
+  <circle cx="700" cy="360" r="16" fill="#C5A059" stroke="#2C2C2E" stroke-width="3"/>
+  <text class="math" x="688" y="330">P</text>
+
+  <line class="gold" x1="225" y1="432" x2="690" y2="432" marker-end="url(#arrowGold)"/>
+  <text class="math" x="446" y="470">x</text>
+  <text class="small" x="335" y="505">displacement from the fixed origin O</text>
+
+  <line class="gold" x1="700" y1="300" x2="870" y2="300" marker-end="url(#arrowGold)"/>
+  <text class="math" x="775" y="284">v</text>
+  <text class="small" x="702" y="255">velocity in positive direction</text>
+
+  <line class="rose" x1="700" y1="420" x2="545" y2="420" marker-end="url(#arrowRose)"/>
+  <text class="math" x="610" y="455">a</text>
+  <text class="small" x="500" y="492">acceleration towards O gives a negative sign when x is positive</text>
+
+  <line class="gold" x1="700" y1="548" x2="860" y2="548" marker-end="url(#arrowGold)"/>
+  <text class="math" x="775" y="582">a</text>
+  <text class="small" x="500" y="622">acceleration away from O gives a positive sign when x is positive</text>
+
+  <rect x="115" y="205" width="360" height="92" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text class="note" x="140" y="238">Direction words are algebra.</text>
+  <text class="small" x="140" y="270">“Towards O” and “away from O” decide the sign of a.</text>
+
+  <rect x="780" y="405" width="320" height="92" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="2"/>
+  <text class="note" x="805" y="438">Signed displacement:</text>
+  <text class="math" x="805" y="478">v = dx/dt</text>
+
+  <rect x="780" y="510" width="320" height="92" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="2"/>
+  <text class="note" x="805" y="543">Signed acceleration:</text>
+  <text class="math" x="805" y="583">a = dv/dt</text>
+</svg>

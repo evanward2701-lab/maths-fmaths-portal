@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Finite to Infinite Binomial Expansion</title>
+  <desc id="desc">A21 Binomial Expansion visual asset 001.</desc>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Finite to Infinite Binomial Expansion</text>
+  <rect x="80" y="130" width="460" height="420" rx="24" fill="#f8fbff" stroke="#111111" stroke-width="2"/>
+  <text x="310" y="190" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">AS: positive integer n</text>
+  <text x="310" y="250" text-anchor="middle" font-family="Arial" font-size="24">(1 + x)^5</text>
+  <text x="310" y="310" text-anchor="middle" font-family="Arial" font-size="24">1 + 5x + 10x^2 + 10x^3</text>
+  <text x="310" y="345" text-anchor="middle" font-family="Arial" font-size="24">+ 5x^4 + x^5</text>
+  <text x="310" y="430" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Expansion stops</text>
+  <rect x="660" y="130" width="460" height="420" rx="24" fill="#fffaf2" stroke="#111111" stroke-width="2"/>
+  <text x="890" y="190" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">A2: rational n</text>
+  <text x="890" y="250" text-anchor="middle" font-family="Arial" font-size="24">(1 + x)^(-1)</text>
+  <text x="890" y="310" text-anchor="middle" font-family="Arial" font-size="24">1 - x + x^2 - x^3 + ...</text>
+  <text x="890" y="430" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Expansion continues</text>
+  <text x="600" y="640" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">A2 checkpoint: identify the small part and require its modulus to be less than 1.</text>
+</svg>

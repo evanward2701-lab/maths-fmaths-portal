@@ -1,0 +1,22 @@
+% Asset ID: FA22CentreOfMassTikZ-002
+% Source: Phase 4 generated TikZ asset for FA22 Centre of Mass
+% Related lesson section: Section 9 TikZ placeholders
+% Purpose: Triangle median and one-third construction.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Ink}{HTML}{2C2C2E}
+\definecolor{LineSoft}{HTML}{E5E5EA}
+\definecolor{Gold}{HTML}{D4AF37}
+\definecolor{Accent}{HTML}{C5A059}
+\definecolor{Blush}{HTML}{FBEFEF}
+\begin{document}
+\begin{tikzpicture}[every node/.style={font=\small,text=Ink},line/.style={draw=Ink,line width=0.8pt},gold/.style={draw=Accent,line width=1.1pt},dot/.style={circle,fill=Gold,draw=Ink,inner sep=2pt}]
+\fill[Canvas] (-1,-1) rectangle (12,7);
+\node[font=\bfseries\large] at (5.5,6.4) {Triangle median and one-third construction};
+
+\coordinate (A) at (2,5);\coordinate (B) at (0,1);\coordinate (C) at (5,1);\coordinate (M) at (2.5,1);\coordinate (G) at ($(A)!0.666!(M)$);
+\draw[fill=Blush,draw=Accent] (A)--(B)--(C)--cycle;\draw[gold] (A)--(M);\node[dot,label=right:{$G$}] at (G){};\node at (2.8,0.35){$AG:GM=2:1$};
+\coordinate (D) at (7,1);\coordinate (E) at (11,1);\coordinate (F) at (10,5);\draw[fill=Blush,draw=Accent] (D)--(E)--(F)--cycle;\draw[gold] (7.2,2.333)--(10.8,2.333);\node[dot,label=right:{$G$}] at (9.67,2.333){};\node at (9,0.35){$G$ lies $\frac13h$ from the base};
+\end{tikzpicture}
+\end{document}

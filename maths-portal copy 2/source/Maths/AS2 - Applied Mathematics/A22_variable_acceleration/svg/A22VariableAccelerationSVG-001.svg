@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img">
+  <metadata>Asset ID: A22VariableAccelerationSVG-001 | Source: CCEA A22-KIN-LO001 and Variable Acceleration lesson evidence | Related lesson section: Core Theory / Worked Examples | Purpose: Variable acceleration teaching visual.</metadata>
+  <rect width="1200" height="720" fill="white"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700">A22 Variable Acceleration SVG-001</text>
+  <line x1="150" y1="550" x2="1000" y2="550" stroke="#111" stroke-width="4"/>
+  <line x1="150" y1="550" x2="150" y2="130" stroke="#111" stroke-width="4"/>
+  <path d="M150 500 C300 250 450 250 600 500 C720 650 860 450 1000 220" fill="none" stroke="#2563eb" stroke-width="8"/>
+  <text x="1010" y="570" font-family="Arial" font-size="24">t</text>
+  <text x="115" y="125" font-family="Arial" font-size="24">v or s</text>
+  <rect x="190" y="105" width="820" height="72" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="150" text-anchor="middle" font-family="Arial" font-size="22">Use calculus: differentiate down s → v → a, integrate up a → v → s.</text>
+<text x="600" y="650" text-anchor="middle" font-family="Arial" font-size="22">Constant acceleration has straight-line velocity sections; variable acceleration can be curved.</text>
+</svg>

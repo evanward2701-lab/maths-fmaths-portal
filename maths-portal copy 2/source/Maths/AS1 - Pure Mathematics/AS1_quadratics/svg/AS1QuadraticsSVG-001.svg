@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">AS1 Quadratics Chapter Map</title>
+<desc id="desc">Six-part map of the quadratics chapter.</desc>
+<!-- asset_id: AS1QuadraticsSVG-001
+source: CCEA AS1-AF specification map + lesson evidence
+related_section: Big Picture Explanation
+purpose: Show the six-part structure of the quadratics lesson. -->
+<rect width="1200" height="720" fill="#f8fafc"/>
+<rect x="60" y="40" width="1080" height="90" rx="20" fill="#111827"/>
+<text x="600" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">AS1 Quadratics Chapter Map</text>
+
+<g font-family="Arial, sans-serif" font-size="20">
+  <rect x="80" y="180" width="300" height="120" rx="18" fill="#e0f2fe" stroke="#0369a1" stroke-width="3"/><text x="230" y="230" text-anchor="middle" font-size="26" font-weight="700">1. Solving</text><text x="230" y="265" text-anchor="middle">factorise, formula, square</text>
+  <rect x="450" y="180" width="300" height="120" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="3"/><text x="600" y="230" text-anchor="middle" font-size="26" font-weight="700">2. Complete square</text><text x="600" y="265" text-anchor="middle">a(x+b)²+c</text>
+  <rect x="820" y="180" width="300" height="120" rx="18" fill="#fef3c7" stroke="#b45309" stroke-width="3"/><text x="970" y="230" text-anchor="middle" font-size="26" font-weight="700">3. Functions</text><text x="970" y="265" text-anchor="middle">f(x), roots, outputs</text>
+  <rect x="80" y="420" width="300" height="120" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="230" y="470" text-anchor="middle" font-size="26" font-weight="700">4. Graphs</text><text x="230" y="505" text-anchor="middle">roots and turning point</text>
+  <rect x="450" y="420" width="300" height="120" rx="18" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/><text x="600" y="470" text-anchor="middle" font-size="26" font-weight="700">5. Discriminant</text><text x="600" y="505" text-anchor="middle">b²−4ac root cases</text>
+  <rect x="820" y="420" width="300" height="120" rx="18" fill="#cffafe" stroke="#0e7490" stroke-width="3"/><text x="970" y="470" text-anchor="middle" font-size="26" font-weight="700">6. Modelling</text><text x="970" y="505" text-anchor="middle">height, distance, profit</text>
+</g>
+<text x="600" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#334155">Quadratics link algebraic methods to graph features and real-world interpretation.</text>
+
+</svg>

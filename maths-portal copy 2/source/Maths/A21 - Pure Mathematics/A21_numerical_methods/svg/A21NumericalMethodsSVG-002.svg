@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-002; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: A sign change is not enough if the graph jumps.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Continuity is required</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">A sign change is not enough if the graph jumps.</text>
+  <line x1="90" y1="270" x2="810" y2="270" stroke="#222" stroke-width="3"/><line x1="450" y1="430" x2="450" y2="120" stroke="#d62728" stroke-width="3" stroke-dasharray="8 6"/><path d="M110,340 C220,350 320,390 435,480" fill="none" stroke="#1f77b4" stroke-width="5"/><path d="M465,60 C520,145 640,180 800,180" fill="none" stroke="#1f77b4" stroke-width="5"/><text x="470" y="145" font-family="Arial" font-size="18" fill="#d62728">x = 0 asymptote</text><text x="245" y="330" font-family="Arial" font-size="20">(-1,-1)</text><text x="650" y="175" font-family="Arial" font-size="20">(1,1)</text>
+</svg>

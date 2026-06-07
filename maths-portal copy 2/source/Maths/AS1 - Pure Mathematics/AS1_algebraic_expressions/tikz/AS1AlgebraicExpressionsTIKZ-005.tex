@@ -1,0 +1,44 @@
+% Asset ID: AS1AlgebraicExpressionsTIKZ-005
+% Source: Dr Frost fractional and negative indices examples
+% Related lesson section: Negative and Fractional Indices, Worked Examples
+% Purpose: Show how a negative fractional power is unpacked using reciprocal, root and power.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usetikzlibrary{arrows.meta,positioning}
+
+\begin{document}
+\begin{tikzpicture}[
+    font=\sffamily,
+    arrow/.style={-{Latex[length=3mm]}, thick},
+    step/.style={draw, rounded corners=4pt, thick, fill=gray!8, align=center, text width=4.4cm, minimum height=1.2cm},
+    final/.style={draw, rounded corners=4pt, thick, fill=black, text=white, align=center, text width=4.4cm, minimum height=1.2cm}
+]
+
+\node[font=\sffamily\bfseries\Large] at (0,3.2)
+{Unpacking a negative fractional index};
+
+\node[step] (start) at (0,2.0)
+{$\left(\dfrac{27}{8}\right)^{-2/3}$};
+
+\node[step] (recip) at (-4,0.35)
+{Negative sign\\take reciprocal\\$\left(\dfrac{8}{27}\right)^{2/3}$};
+
+\node[step] (root) at (0,-1.35)
+{Denominator $3$\\take cube root\\$\left(\dfrac{2}{3}\right)^2$};
+
+\node[step] (power) at (4,0.35)
+{Numerator $2$\\square the result};
+
+\node[final] (answer) at (0,-3.05)
+{$\left(\dfrac23\right)^2=\dfrac49$};
+
+\draw[arrow] (start.south west) -- (recip.north);
+\draw[arrow] (recip.south east) -- (root.north west);
+\draw[arrow] (root.north east) -- (power.south west);
+\draw[arrow] (root.south) -- (answer.north);
+
+\node[draw, rounded corners=4pt, thick, fill=gray!12, align=center, text width=9.5cm] at (0,-4.45)
+{\textbf{Memory line:} negative means reciprocal, denominator means root, numerator means power.};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Equal expected value but different variance</title>
+  <desc id="desc">Shows two distributions with expected value 2.5. Game A has outcomes closer to the centre. Game B has a far-right outcome at 990 and most probability at minus 10, illustrating larger variance.</desc>
+  <metadata>Asset ID: FAS2DiscreteRandomVariablesSVG-004; Source: transcript variance explanation comparing Game A and Game B.</metadata>
+  <rect x="0" y="0" width="1200" height="720" fill="#FAF9F6"/>
+  <text x="65" y="72" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2C2C2E">Equal expected value does not mean equal spread</text>
+  <rect x="80" y="165" width="1040" height="190" rx="18" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="110" y="215" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#2C2C2E">Game A: outcomes are relatively near E=2.5</text>
+  <line x1="150" y1="285" x2="1030" y2="285" stroke="#2C2C2E" stroke-width="2"/>
+  <line x1="470" y1="260" x2="470" y2="310" stroke="#C5A059" stroke-width="4"/>
+  <circle cx="345" cy="285" r="15" fill="#FBEFEF" stroke="#C5A059"/><text x="318" y="335" font-family="Arial" font-size="18" fill="#2C2C2E">−10</text>
+  <circle cx="430" cy="285" r="13" fill="#FBEFEF" stroke="#C5A059"/><text x="423" y="335" font-family="Arial" font-size="18" fill="#2C2C2E">0</text>
+  <circle cx="570" cy="285" r="14" fill="#FBEFEF" stroke="#C5A059"/><text x="558" y="335" font-family="Arial" font-size="18" fill="#2C2C2E">15</text>
+  <circle cx="760" cy="285" r="8" fill="#FBEFEF" stroke="#C5A059"/><text x="748" y="335" font-family="Arial" font-size="18" fill="#2C2C2E">40</text>
+  <rect x="80" y="400" width="1040" height="190" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/>
+  <text x="110" y="450" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#2C2C2E">Game B: a far-right outcome creates much larger spread</text>
+  <line x1="150" y1="520" x2="1030" y2="520" stroke="#2C2C2E" stroke-width="2"/>
+  <line x1="470" y1="495" x2="470" y2="545" stroke="#C5A059" stroke-width="4"/>
+  <circle cx="345" cy="520" r="28" fill="#FBEFEF" stroke="#C5A059"/><text x="318" y="575" font-family="Arial" font-size="18" fill="#2C2C2E">−10</text>
+  <circle cx="760" cy="520" r="10" fill="#FBEFEF" stroke="#C5A059"/><text x="748" y="575" font-family="Arial" font-size="18" fill="#2C2C2E">40</text>
+  <circle cx="1010" cy="520" r="7" fill="#FBEFEF" stroke="#C5A059"/><text x="982" y="575" font-family="Arial" font-size="18" fill="#2C2C2E">990</text>
+</svg>

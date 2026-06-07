@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Two joined springs in series with linked extensions</title><desc id="desc">Springs PQ and QR joined at Q, fixed at P and R, total distance 4 m, natural lengths 1.6 and 1.4, extensions x and 1-x.</desc>
+<rect width="1200" height="760" fill="#FAF9F6"/><rect x="46" y="42" width="1108" height="675" rx="24" fill="#FFFFF0" stroke="#E5E5EA"/>
+<text x="86" y="96" fill="#2C2C2E" font-family="Inter, Arial" font-size="32" font-weight="700">Combined elastic springs: link extensions, then equate tensions</text>
+<line x1="150" y1="250" x2="150" y2="430" stroke="#2C2C2E" stroke-width="5"/><line x1="1050" y1="250" x2="1050" y2="430" stroke="#2C2C2E" stroke-width="5"/>
+<path d="M150 340 C170 300,190 380,210 340 C230 300,250 380,270 340 C290 300,310 380,330 340 C350 300,370 380,390 340 C410 300,430 380,450 340 C470 300,490 380,510 340 C530 300,550 380,570 340" stroke="#2C2C2E" stroke-width="5" fill="none"/>
+<circle cx="600" cy="340" r="18" fill="#C5A059" stroke="#2C2C2E" stroke-width="4"/>
+<path d="M630 340 C650 300,670 380,690 340 C710 300,730 380,750 340 C770 300,790 380,810 340 C830 300,850 380,870 340 C890 300,910 380,930 340 C950 300,970 380,990 340 C1010 300,1030 380,1050 340" stroke="#2C2C2E" stroke-width="5" fill="none"/>
+<g font-family="Inter, Arial" fill="#2C2C2E"><text x="132" y="230" font-size="32" font-weight="700">P</text><text x="584" y="300" font-size="32" font-weight="700">Q</text><text x="1035" y="230" font-size="32" font-weight="700">R</text><text x="558" y="545" font-size="24">PR = 4 m</text><text x="205" y="632" font-size="20">1.6</text><text x="458" y="632" font-size="20" fill="#C5A059">x</text><text x="658" y="632" font-size="20" fill="#C5A059">1 - x</text><text x="895" y="632" font-size="20">1.4</text><text x="356" y="681" font-size="24">Equilibrium at Q: 20x / 1.6 = 28(1 - x) / 1.4</text></g>
+<line x1="150" y1="500" x2="1050" y2="500" stroke="#2C2C2E" stroke-width="3"/><line x1="150" y1="595" x2="1050" y2="595" stroke="#2C2C2E" stroke-width="3"/>
+</svg>

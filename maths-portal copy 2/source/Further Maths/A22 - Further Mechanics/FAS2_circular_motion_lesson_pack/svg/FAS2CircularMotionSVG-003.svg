@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Acceleration is directed towards the centre</title>
+  <desc id="desc">Show radial acceleration directed towards the centre at several positions on a circle.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-003
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show radial acceleration directed towards the centre at several positions on a circle.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Acceleration is directed towards the centre</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">Constant speed still gives acceleration because the velocity direction changes.</text>
+  <circle cx="430" cy="420" r="220" fill="none" stroke="#2C2C2E" stroke-width="5"/>
+  <circle cx="430" cy="420" r="8" fill="#2C2C2E"/>
+  <circle cx="430" cy="200" r="13" fill="#2C2C2E"/><circle cx="650" cy="420" r="13" fill="#2C2C2E"/><circle cx="430" cy="640" r="13" fill="#2C2C2E"/><circle cx="210" cy="420" r="13" fill="#2C2C2E"/>
+  <line x1="430" y1="200" x2="430" y2="350" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="650" y1="420" x2="500" y2="420" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="430" y1="640" x2="430" y2="490" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <line x1="210" y1="420" x2="360" y2="420" stroke="#C5A059" stroke-width="6" marker-end="url(#goldArrow)"/>
+  <rect x="745" y="240" width="340" height="250" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="780" y="292" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Magnitude</text>
+  <text x="780" y="352" font-family="Arial" font-size="34" font-weight="700" fill="#C5A059">a = rω²</text>
+  <text x="780" y="415" font-family="Arial" font-size="34" font-weight="700" fill="#C5A059">a = v²/r</text>
+
+</svg>

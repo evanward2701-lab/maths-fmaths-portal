@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">A-Level Maths bridge: what changes in Further Maths?</title>
+  <desc id="desc">Compare prior ordinary Maths method with Further Maths extension.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionBridgeSVG-001
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Compare prior ordinary Maths method with Further Maths extension.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">A-Level Maths bridge: what changes in Further Maths?</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">The old tools still work. The chosen direction becomes the key upgrade.</text>
+  <rect x="105" y="205" width="420" height="400" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="145" y="255" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Ordinary A-Level Maths</text>
+  <text x="145" y="315" font-family="Arial" font-size="23" fill="#2C2C2E">• s = rθ for arc length</text>
+  <text x="145" y="365" font-family="Arial" font-size="23" fill="#2C2C2E">• v = ds/dt</text>
+  <text x="145" y="415" font-family="Arial" font-size="23" fill="#2C2C2E">• F = ma in a chosen direction</text>
+  <text x="145" y="465" font-family="Arial" font-size="23" fill="#2C2C2E">• Resolve forces into components</text>
+  <text x="145" y="515" font-family="Arial" font-size="23" fill="#2C2C2E">• K.E. plus G.P.E.</text>
+  <line x1="545" y1="405" x2="655" y2="405" stroke="#C5A059" stroke-width="7" marker-end="url(#goldArrow)"/>
+  <rect x="675" y="205" width="420" height="400" rx="22" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="715" y="255" font-family="Arial" font-size="30" font-weight="700" fill="#2C2C2E">Further Maths circular motion</text>
+  <text x="715" y="315" font-family="Arial" font-size="23" fill="#2C2C2E">• s = rθ becomes v = rω</text>
+  <text x="715" y="365" font-family="Arial" font-size="23" fill="#2C2C2E">• constant speed can still accelerate</text>
+  <text x="715" y="415" font-family="Arial" font-size="23" fill="#2C2C2E">• radial F = ma uses mv²/r</text>
+  <text x="715" y="465" font-family="Arial" font-size="23" fill="#2C2C2E">• real forces provide inward resultant</text>
+  <text x="715" y="515" font-family="Arial" font-size="23" fill="#2C2C2E">• vertical circles use energy first</text>
+  <rect x="235" y="640" width="730" height="55" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="270" y="675" font-family="Arial" font-size="22" fill="#2C2C2E">Old habit to drop: do not treat centripetal force as an extra physical force.</text>
+
+</svg>

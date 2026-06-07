@@ -1,0 +1,17 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Ambiguous case of the sine rule</title>
+<desc id="desc">Two possible triangles and sine symmetry.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Ambiguous case of the sine rule</text>
+
+<line x1="80" y1="430" x2="480" y2="430" stroke="#172033" stroke-width="3"/>
+<circle cx="80" cy="430" r="6" fill="#172033"/><text x="60" y="465" font-family="Arial" font-size="24">B</text>
+<circle cx="230" cy="120" r="6" fill="#172033"/><text x="220" y="105" font-family="Arial" font-size="24">A</text>
+<circle cx="255" cy="430" r="6" fill="#b91c1c"/><text x="240" y="465" font-family="Arial" font-size="24">C₁</text>
+<circle cx="410" cy="430" r="6" fill="#0f766e"/><text x="395" y="465" font-family="Arial" font-size="24">C₂</text>
+<line x1="80" y1="430" x2="230" y2="120" stroke="#172033" stroke-width="4"/><line x1="230" y1="120" x2="255" y2="430" stroke="#b91c1c" stroke-width="4"/><line x1="230" y1="120" x2="410" y2="430" stroke="#0f766e" stroke-width="4" stroke-dasharray="8 6"/>
+<text x="135" y="280" font-family="Arial" font-size="22">4</text><text x="240" y="270" font-family="Arial" font-size="22">3</text><text x="335" y="275" font-family="Arial" font-size="22">3</text>
+<rect x="540" y="155" width="310" height="170" rx="14" fill="#fff7ed" stroke="#f59e0b"/><text x="570" y="205" font-family="Arial" font-size="24">sin θ = sin(180° − θ)</text><text x="570" y="250" font-family="Arial" font-size="22">67.9° or 112.1°</text>
+
+</svg>

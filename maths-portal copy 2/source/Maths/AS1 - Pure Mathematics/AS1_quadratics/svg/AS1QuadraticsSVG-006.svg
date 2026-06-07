@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">The Discriminant: Graph Cases</title>
+<desc id="desc">Three parabola cases for discriminant positive, zero and negative.</desc>
+<!-- asset_id: AS1QuadraticsSVG-006
+source: CCEA AS1-AF specification map + lesson evidence
+related_section: Core Theory Part H
+purpose: Show the three graph cases for the discriminant. -->
+<rect width="1200" height="720" fill="#f8fafc"/>
+<rect x="60" y="40" width="1080" height="90" rx="20" fill="#111827"/>
+<text x="600" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#fff">The Discriminant: Graph Cases</text>
+
+<g font-family="Arial, sans-serif">
+ <rect x="70" y="165" width="320" height="430" rx="20" fill="#fff" stroke="#cbd5e1" stroke-width="3"/><text x="230" y="215" text-anchor="middle" font-size="28" font-weight="700" fill="#15803d">D &gt; 0</text><text x="230" y="250" text-anchor="middle" font-size="20">two distinct roots</text><line x1="115" y1="430" x2="345" y2="430" stroke="#0f172a" stroke-width="3"/><path d="M120 280 C170 550 290 550 340 280" fill="none" stroke="#15803d" stroke-width="5"/><circle cx="165" cy="430" r="7" fill="#dc2626"/><circle cx="295" cy="430" r="7" fill="#dc2626"/>
+ <rect x="440" y="165" width="320" height="430" rx="20" fill="#fff" stroke="#cbd5e1" stroke-width="3"/><text x="600" y="215" text-anchor="middle" font-size="28" font-weight="700" fill="#b45309">D = 0</text><text x="600" y="250" text-anchor="middle" font-size="20">repeated root</text><line x1="485" y1="430" x2="715" y2="430" stroke="#0f172a" stroke-width="3"/><path d="M490 280 C540 430 660 430 710 280" fill="none" stroke="#b45309" stroke-width="5"/><circle cx="600" cy="430" r="7" fill="#dc2626"/>
+ <rect x="810" y="165" width="320" height="430" rx="20" fill="#fff" stroke="#cbd5e1" stroke-width="3"/><text x="970" y="215" text-anchor="middle" font-size="28" font-weight="700" fill="#7c3aed">D &lt; 0</text><text x="970" y="250" text-anchor="middle" font-size="20">no real roots</text><line x1="855" y1="500" x2="1085" y2="500" stroke="#0f172a" stroke-width="3"/><path d="M860 320 C910 470 1030 470 1080 320" fill="none" stroke="#7c3aed" stroke-width="5"/>
+</g>
+
+</svg>

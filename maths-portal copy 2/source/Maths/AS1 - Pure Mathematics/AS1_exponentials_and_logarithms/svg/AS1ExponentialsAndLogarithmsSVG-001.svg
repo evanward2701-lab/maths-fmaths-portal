@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420" role="img" aria-labelledby="title desc">
+  <title id="title">AS1ExponentialsAndLogarithmsSVG-001: Plot of y equals 2 to the power x</title>
+  <desc id="desc">Graph of y = 2^x using table values x = -2, -1, 0, 1, 2, 3, 4.</desc>
+  <!-- Asset ID: AS1ExponentialsAndLogarithmsSVG-001 | Source: Chapter 14 PDF and screenshot evidence | Related lesson section: Worked Example 1; Core Theory 1 | Purpose: Plot y=2^x from a table. -->
+  <rect width="600" height="420" fill="#fff"/>
+  <text x="30" y="38" font-family="Arial" font-size="22" font-weight="700">Plotting y = 2^x</text>
+  <line x1="70" y1="330" x2="540" y2="330" stroke="#111" stroke-width="2"/>
+  <line x1="227" y1="350" x2="227" y2="60" stroke="#111" stroke-width="2"/>
+  <g stroke="#e5e7eb" stroke-width="1">
+    <line x1="70" y1="270" x2="540" y2="270"/><line x1="70" y1="210" x2="540" y2="210"/><line x1="70" y1="150" x2="540" y2="150"/><line x1="70" y1="90" x2="540" y2="90"/>
+    <line x1="80" y1="70" x2="80" y2="330"/><line x1="153" y1="70" x2="153" y2="330"/><line x1="300" y1="70" x2="300" y2="330"/><line x1="373" y1="70" x2="373" y2="330"/><line x1="447" y1="70" x2="447" y2="330"/><line x1="520" y1="70" x2="520" y2="330"/>
+  </g>
+  <line x1="70" y1="330" x2="540" y2="330" stroke="#777" stroke-dasharray="7 5"/>
+  <path d="M80 326 C145 324 190 319 227 314 C285 305 335 285 373 265 C420 240 470 170 520 70" fill="none" stroke="#20639b" stroke-width="4"/>
+  <g fill="#20639b" stroke="#fff" stroke-width="2"><circle cx="80" cy="326" r="5"/><circle cx="153" cy="322" r="5"/><circle cx="227" cy="314" r="5"/><circle cx="300" cy="298" r="5"/><circle cx="373" cy="265" r="5"/><circle cx="447" cy="200" r="5"/><circle cx="520" cy="70" r="5"/></g>
+  <text x="235" y="312" font-family="Arial" font-size="13">(0,1)</text><text x="305" y="292" font-family="Arial" font-size="13">(1,2)</text><text x="382" y="260" font-family="Arial" font-size="13">(2,4)</text><text x="450" y="194" font-family="Arial" font-size="13">(3,8)</text><text x="460" y="88" font-family="Arial" font-size="13">(4,16)</text>
+  <text x="390" y="350" font-family="Arial" font-size="13">asymptote y = 0</text>
+  <text x="34" y="382" font-family="Arial" font-size="14">The graph grows by multiplying by 2 each time x increases by 1.</text>
+</svg>

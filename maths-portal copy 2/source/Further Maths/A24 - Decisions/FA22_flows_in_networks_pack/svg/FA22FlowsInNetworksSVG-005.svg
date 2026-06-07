@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22FlowsInNetworksSVG-005: Labelling Procedure</title>
+  <desc id="desc">Forward and backward labels for one arc.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .arc{stroke:#2C2C2E;stroke-width:4;fill:none;marker-end:url(#arrow)}
+      .cut{stroke:#C5A059;stroke-width:5;stroke-dasharray:14 10;fill:none} .hi{stroke:#D4AF37;stroke-width:10;opacity:.38;fill:none}
+      .node{fill:#D4AF37;stroke:#2C2C2E;stroke-width:2} .source{fill:#FBEFEF;stroke:#C5A059;stroke-width:3} .sink{fill:#FFF8DC;stroke:#C5A059;stroke-width:3}
+      .title{font-family:Georgia,serif;font-size:30px;font-weight:700;fill:#2C2C2E} .text{font-family:Arial,sans-serif;font-size:22px;fill:#2C2C2E} .math{font-family:Georgia,serif;font-size:25px;fill:#2C2C2E} .box{fill:white;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+  </defs>
+  <rect class="bg" width="1100" height="720"/><rect class="panel" x="40" y="40" width="1020" height="640" rx="24"/>
+  <text class="title" x="70" y="95">Labelling procedure</text>
+  <text class="text" x="70" y="132">Forward label = c − f. Backward label = f.</text>
+  <line class="arc" x1="210" y1="350" x2="720" y2="350"/><circle class="node" cx="190" cy="350" r="24"/><circle class="node" cx="750" cy="350" r="24"/><text class="math" x="178" y="305">A</text><text class="math" x="742" y="305">B</text><text class="math" x="430" y="310">capacity c = 20</text><text class="math" x="430" y="395">current flow f = 15</text><path class="cut" d="M250 250 C390 190 565 190 705 250"/><text class="math" x="380" y="210">forward = 20 − 15 = 5</text><path class="cut" d="M705 455 C565 515 390 515 250 455"/><text class="math" x="390" y="530">backward = 15</text><rect class="box" x="805" y="240" width="245" height="180"/><text class="math" x="830" y="290">5 + 15 = 20</text><text class="text" x="830" y="345">labels add to capacity</text>
+</svg>

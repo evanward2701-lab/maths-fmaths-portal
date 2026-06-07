@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FA22 Further Kinematics Separating Variables Checker</title>
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--text:#2C2C2E;--muted:#55555A;--gold:#C5A059;--gold2:#D4AF37;--rose:#FBEFEF;--white:#FFFFFF}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--canvas);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;padding:24px}.app{max-width:1080px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:28px}h1{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.03em}.subtitle{margin:0 0 24px;color:var(--muted)}.meta{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:24px}.pill{border:1px solid var(--line);background:var(--white);border-radius:18px;padding:12px 14px;font-size:.95rem}.layout{display:grid;grid-template-columns:minmax(300px,.95fr) minmax(360px,1.05fr);gap:22px}@media(max-width:880px){.layout{grid-template-columns:1fr}}.card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:20px}label{display:block;font-weight:800;margin-bottom:8px}select,button{width:100%;font:inherit;border-radius:16px;border:1px solid var(--line);padding:12px 14px;color:var(--text);background:var(--panel);margin-bottom:16px}button{cursor:pointer;background:var(--gold);border-color:var(--gold);font-weight:900}.result{background:var(--panel);border:1px solid var(--gold);border-radius:22px;padding:18px;min-height:440px}.math{font-family:"Times New Roman",serif;font-size:1.2rem;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:12px;margin:10px 0;overflow-x:auto}.warning{border-left:5px solid var(--gold2);background:var(--rose);padding:12px 14px;border-radius:14px;margin-top:14px}.badge{display:inline-block;background:var(--rose);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:.9rem;margin-bottom:12px}.step{border:1px solid var(--line);background:var(--white);border-radius:16px;padding:12px;margin:10px 0}.tiny{color:var(--muted);font-size:.92rem;margin-top:18px}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <h1>Separating Variables Checker</h1>
+    <p class="subtitle">Practise turning kinematics differential equations into integrable form.</p>
+    <section class="meta" aria-label="Asset metadata"><div class="pill"><strong>Asset ID:</strong> FA22FurtherKinematicsWidget-003</div><div class="pill"><strong>Source:</strong> AI-proposed teaching enhancement based on lesson evidence</div><div class="pill"><strong>Section:</strong> Interactive Learning Widgets</div><div class="pill"><strong>Purpose:</strong> Reinforce correct separation before integration</div></section>
+    <section class="layout">
+      <form class="card" id="checkerForm"><label for="caseSelect">Choose a differential equation type</label><select id="caseSelect"><option value="dxdt_2x">dx/dt = 2x</option><option value="dxdt_exp">dx/dt = e^(-x/2)</option><option value="vdvdx_2x">v dv/dx = 2x</option><option value="vdvdx_neg4x">v dv/dx = -4x</option><option value="dvdt_12minus3v">dv/dt = 12 - 3v</option><option value="av_neg_k">dv/dt = -(k² + v²)</option><option value="av_distance_k">v dv/dx = -(k² + v²)</option></select><button type="submit">Check separation</button><p class="tiny">The widget shows setup, separated form, integration line and a common wrong move.</p></form>
+      <section class="result" id="result" aria-live="polite"><span class="badge">Checker ready</span><h2>Select a case</h2><p>The main rule: each side must be integrated with respect to its own variable.</p><div class="math">x terms with dx, v terms with dv, t terms with dt</div></section>
+    </section>
+  </main>
+  <script>
+    const cases={
+      dxdt_2x:{title:'Velocity as a function of displacement',given:'dx/dt = 2x',separated:'(1/x) dx = 2 dt',integral:'∫ (1/x) dx = ∫ 2 dt',result:'ln x = 2t + C',wrong:'Wrong move: x = ∫ 2x dt. You cannot integrate 2x with respect to t before separating.',note:'This is the clean bridge example: v = 2x becomes dx/dt = 2x.'},
+      dxdt_exp:{title:'Velocity found from an a = f(x) problem',given:'dx/dt = e^(-x/2)',separated:'e^(x/2) dx = dt',integral:'∫ e^(x/2) dx = ∫ 1 dt',result:'2e^(x/2) = t + C',wrong:'Wrong move: integrate e^(-x/2) directly with respect to t while x is still the variable.',note:'This form appears after finding v = e^(-x/2).'},
+      vdvdx_2x:{title:'Acceleration as a function of displacement',given:'v dv/dx = 2x',separated:'v dv = 2x dx',integral:'∫ v dv = ∫ 2x dx',result:'1/2 v² = x² + C',wrong:'Wrong move: forget the v on the left and write dv/dx = 2x.',note:'The half v squared appears naturally from ∫ v dv.'},
+      vdvdx_neg4x:{title:'Acceleration towards O',given:'v dv/dx = -4x',separated:'v dv = -4x dx',integral:'∫ v dv = ∫ -4x dx',result:'1/2 v² = -2x² + C',wrong:'Wrong move: use +4x when the acceleration is directed towards O.',note:'Direction language decides the sign.'},
+      dvdt_12minus3v:{title:'Acceleration as a function of velocity for time',given:'dv/dt = 12 - 3v',separated:'dv/(12 - 3v) = dt',integral:'∫ dv/(12 - 3v) = ∫ 1 dt',result:'-(1/3) ln(12 - 3v) = t + C',wrong:'Wrong move: expand as if v were constant with respect to t.',note:'This route is for finding v in terms of t.'},
+      av_neg_k:{title:'Function of velocity for time to rest',given:'dv/dt = -(k² + v²)',separated:'dv/(k² + v²) = -dt',integral:'∫ dv/(k² + v²) = ∫ -1 dt',result:'(1/k) arctan(v/k) = -t + C',wrong:'Wrong move: use v dv/dx when the question asks for time.',note:'Use dv/dt for time and velocity questions.'},
+      av_distance_k:{title:'Function of velocity for distance',given:'v dv/dx = -(k² + v²)',separated:'v dv/(k² + v²) = -dx',integral:'∫ v dv/(k² + v²) = ∫ -1 dx',result:'1/2 ln(k² + v²) = -x + C',wrong:'Wrong move: use dv/dt when the question asks for distance or displacement.',note:'Use v dv/dx for displacement and distance questions.'}
+    };
+    function renderCase(item){return `<span class="badge">Separated correctly</span><h2>${item.title}</h2><div class="step"><strong>Given:</strong><div class="math">${item.given}</div></div><div class="step"><strong>Separated form:</strong><div class="math">${item.separated}</div></div><div class="step"><strong>Integral setup:</strong><div class="math">${item.integral}</div></div><div class="step"><strong>Result after integration:</strong><div class="math">${item.result}</div></div><div class="warning"><strong>Common wrong move:</strong> ${item.wrong}</div><p>${item.note}</p>`}
+    document.getElementById('checkerForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('result').innerHTML=renderCase(cases[document.getElementById('caseSelect').value])});
+  </script>
+</body>
+</html>

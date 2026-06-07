@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Area between curves</title>
+<desc id="desc">Area between curves for A21 Integration.</desc>
+<!-- Asset ID: A21IntegrationSVG-008 | Source: CCEA A21 Integration + lesson evidence | Purpose: teaching visual -->
+<rect x="20" y="20" width="860" height="520" rx="24" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="450" y="65" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#0f172a">Area between curves</text>
+<path d="M160 430 C280 300 420 220 560 120 L560 430 Z" fill="#fde68a" stroke="#b45309"/><path d="M160 430 C280 300 420 220 560 120" fill="none" stroke="#1d4ed8" stroke-width="4"/><path d="M160 430 C300 400 440 250 560 120" fill="none" stroke="#dc2626" stroke-width="4"/><text x="680" y="230" text-anchor="middle" font-family="Arial" font-size="24">Area = ∫(top-bottom) dx</text>
+</svg>

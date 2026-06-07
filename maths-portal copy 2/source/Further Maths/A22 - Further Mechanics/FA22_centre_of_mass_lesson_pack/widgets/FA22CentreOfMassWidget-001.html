@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FA22CentreOfMassWidget-001</title>
+<!--
+Asset ID: FA22CentreOfMassWidget-001
+Source: AI-proposed teaching enhancement based on lesson evidence
+Related lesson section: Section 10.1
+Purpose: Particle centre-of-mass calculator for line/plane systems.
+-->
+<style>
+:root{--canvas:#FAF9F6;--ivory:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--accent:#C5A059;--blush:#FBEFEF;--ink:#2C2C2E;}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+main{max-width:960px;margin:0 auto;padding:28px} .shell{background:var(--ivory);border:1px solid var(--line);border-radius:24px;padding:24px}
+input,select,button{font-family:inherit;padding:8px;border:1px solid var(--line);border-radius:10px;margin:4px} button{background:var(--blush);border-color:var(--accent);font-weight:700;cursor:pointer}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px} .result{background:var(--blush);border:1px solid var(--accent);border-radius:14px;padding:12px;margin-top:10px}
+svg{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+</style>
+</head>
+<body>
+<main><section class="shell">
+<h1>Particle Centre-of-Mass Calculator</h1>
+<p>Practise ∑mᵢxᵢ=x̄∑mᵢ and ∑mᵢrᵢ=r̄∑mᵢ.</p>
+<div class="card"><p>Enter particles as mass, x, y. For line mode set all y values to 0.</p><textarea id="data" style="width:100%;height:120px">2,1,2
+3,3,1
+5,4,3</textarea><br/><button onclick="calc()">Calculate</button><div id="out" class="result"></div><svg id="plot" viewBox="0 0 500 260"></svg></div>
+</section></main>
+<script>function calc(){const rows=document.getElementById('data').value.trim().split(/\n+/).map(r=>r.split(',').map(Number)).filter(r=>r.length>=3);let sm=0,smx=0,smy=0;rows.forEach(([m,x,y])=>{sm+=m;smx+=m*x;smy+=m*y});const xb=smx/sm,yb=smy/sm;document.getElementById('out').innerHTML=`∑m=${sm}, ∑mx=${smx}, ∑my=${smy}<br><b>G=(${xb.toFixed(4)}, ${yb.toFixed(4)})</b>`;const svg=document.getElementById('plot');svg.innerHTML='<rect width="500" height="260" fill="#FFFFF0"/><line x1="40" y1="220" x2="460" y2="220" stroke="#2C2C2E"/><line x1="40" y1="220" x2="40" y2="30" stroke="#2C2C2E"/>';const xs=rows.map(r=>r[1]).concat([xb]), ys=rows.map(r=>r[2]).concat([yb]);const minx=Math.min(...xs)-1,maxx=Math.max(...xs)+1,miny=Math.min(...ys)-1,maxy=Math.max(...ys)+1;const sx=x=>40+(x-minx)*420/(maxx-minx), sy=y=>220-(y-miny)*190/(maxy-miny);rows.forEach(([m,x,y])=>svg.innerHTML+=`<circle cx="${sx(x)}" cy="${sy(y)}" r="${6+Math.abs(m)*2}" fill="#D4AF37" stroke="#2C2C2E"/><text x="${sx(x)}" y="${sy(y)-16}" font-family="Georgia" font-size="13" text-anchor="middle">m=${m}</text>`);svg.innerHTML+=`<circle cx="${sx(xb)}" cy="${sy(yb)}" r="8" fill="#2C2C2E" stroke="#D4AF37" stroke-width="4"/><text x="${sx(xb)+12}" y="${sy(yb)-10}" font-family="Georgia" font-size="14">G</text>`}calc();</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Minimal Spanning Tree Concept</title><desc id="desc">A weighted graph with vertices A, B, C, D and E reduced to a minimal spanning tree with total weight 20.</desc><metadata>Asset ID: FAS2AlgorithmsOnGraphsSVG-001; Source: Supplied PDF minimum spanning tree and Prim's algorithm evidence.</metadata>
+<rect width="1200" height="720" fill="#FAF9F6"/><text x="600" y="68" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#2C2C2E">Minimal Spanning Tree: keep every vertex, remove cycles, minimise weight</text>
+<rect x="56" y="112" width="520" height="500" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><rect x="624" y="112" width="520" height="500" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="316" y="158" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#2C2C2E">Original weighted graph</text><text x="884" y="158" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#2C2C2E">One minimal spanning tree</text>
+<g stroke-linecap="round" font-family="Arial" fill="#2C2C2E" font-weight="700">
+<g stroke="#B8B8BE" stroke-width="5"><line x1="105" y1="275" x2="300" y2="210"/><line x1="150" y1="405" x2="105" y2="275"/><line x1="150" y1="405" x2="300" y2="210"/><line x1="300" y1="210" x2="350" y2="405"/><line x1="150" y1="405" x2="350" y2="405"/><line x1="300" y1="210" x2="475" y2="300"/><line x1="350" y1="405" x2="475" y2="300"/></g>
+<text x="194" y="230">4</text><text x="105" y="355">5</text><text x="205" y="318">6</text><text x="344" y="315">6</text><text x="247" y="430">7</text><text x="390" y="244">8</text><text x="417" y="374">5</text>
+<g stroke="#2C2C2E" stroke-width="3" fill="#FAF9F6"><circle cx="150" cy="405" r="18"/><circle cx="105" cy="275" r="18"/><circle cx="300" cy="210" r="18"/><circle cx="350" cy="405" r="18"/><circle cx="475" cy="300" r="18"/></g>
+<text x="150" y="451" text-anchor="middle">A</text><text x="80" y="282" text-anchor="middle">E</text><text x="300" y="178" text-anchor="middle">D</text><text x="350" y="451" text-anchor="middle">B</text><text x="506" y="307" text-anchor="middle">C</text>
+<g stroke="#C5A059" stroke-width="8"><line x1="718" y1="405" x2="678" y2="275"/><line x1="678" y1="275" x2="846" y2="210"/><line x1="846" y1="210" x2="910" y2="405"/><line x1="910" y1="405" x2="1038" y2="300"/></g>
+<text x="672" y="356">5</text><text x="758" y="232">4</text><text x="894" y="315">6</text><text x="986" y="374">5</text>
+<g stroke="#2C2C2E" stroke-width="3" fill="#FAF9F6"><circle cx="718" cy="405" r="18"/><circle cx="678" cy="275" r="18"/><circle cx="846" cy="210" r="18"/><circle cx="910" cy="405" r="18"/><circle cx="1038" cy="300" r="18"/></g>
+<text x="718" y="451" text-anchor="middle">A</text><text x="648" y="282" text-anchor="middle">E</text><text x="846" y="178" text-anchor="middle">D</text><text x="910" y="451" text-anchor="middle">B</text><text x="1070" y="307" text-anchor="middle">C</text>
+<rect x="700" y="506" width="368" height="58" rx="14" fill="#FBEFEF" stroke="#E5E5EA"/><text x="884" y="542" text-anchor="middle" font-size="24">5 + 4 + 6 + 5 = 20</text></g>
+<text x="600" y="662" text-anchor="middle" font-family="Arial" font-size="18" fill="#5B5B60">A minimal spanning tree connects every vertex with no cycles and the smallest possible total weight.</text>
+</svg>

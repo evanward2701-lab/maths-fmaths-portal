@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Dominance Reduction</title>
+<desc id="desc">Asset ID: FA22GameTheoryEnrichmentSVG-005. Optional enrichment only. Dominance Reduction</desc>
+<rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+<rect x="50" y="40" width="1100" height="680" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="90" y="95" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Dominance Reduction</text>
+<text x="90" y="135" font-family="Arial" font-size="18" fill="#2C2C2E">Rows: bigger is better for A. Columns: smaller is better for B.</text><rect x="100" y="200" width="520" height="240" fill="#FFFFFF" stroke="#E5E5EA"/><g font-family="Arial" font-size="22" fill="#2C2C2E"><text x="140" y="255">A1: 3, 0, 1</text><text x="140" y="315">A2: 1, -1, 5</text><text x="140" y="375">A3: 5, 2, 2</text></g><line x1="120" y1="255" x2="560" y2="255" stroke="#C5A059" stroke-width="5"/><line x1="245" y1="210" x2="245" y2="420" stroke="#C5A059" stroke-width="5"/><rect x="700" y="210" width="410" height="270" rx="18" fill="#FFF7DD" stroke="#D4AF37"/><text x="735" y="260" font-family="Arial" font-size="20" fill="#2C2C2E">A3 dominates A1: 5&gt;3, 2&gt;0, 2&gt;1.</text><text x="735" y="330" font-family="Arial" font-size="20" fill="#2C2C2E">B2 dominates B1: 0&lt;3, -1&lt;1, 2&lt;5.</text><text x="735" y="400" font-family="Arial" font-size="20" fill="#2C2C2E">Delete dominated strategies.</text>
+</svg>

@@ -1,0 +1,23 @@
+<!-- Asset ID: A22ProjectilesSVG-001 | Source: screenshots PDF + transcript | Section: Core Theory | Purpose: projectile path with components, height and range. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Projectile path with velocity components, height and range">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#111827"/></marker></defs>
+  <rect width="1100" height="650" fill="white"/>
+  <text x="550" y="55" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700">Projectile Motion</text>
+  <line x1="120" y1="560" x2="1010" y2="560" stroke="#111827" stroke-width="4" marker-end="url(#a)"/>
+  <line x1="120" y1="560" x2="120" y2="100" stroke="#111827" stroke-width="4" marker-end="url(#a)"/>
+  <path d="M120 560 C300 250 540 180 940 560" fill="none" stroke="#dc2626" stroke-width="5"/>
+  <circle cx="120" cy="560" r="10" fill="#111827"/><circle cx="510" cy="248" r="10" fill="#111827"/><circle cx="940" cy="560" r="10" fill="#111827"/>
+  <line x1="120" y1="560" x2="275" y2="560" stroke="#2563eb" stroke-width="5" marker-end="url(#a)"/>
+  <line x1="120" y1="560" x2="120" y2="405" stroke="#2563eb" stroke-width="5" marker-end="url(#a)"/>
+  <line x1="120" y1="560" x2="260" y2="420" stroke="#111827" stroke-width="4" marker-end="url(#a)"/>
+  <text x="290" y="565" font-family="Arial" font-size="24" fill="#2563eb">uₓ = U cos θ</text>
+  <text x="132" y="405" font-family="Arial" font-size="24" fill="#2563eb">uᵧ = U sin θ</text>
+  <text x="265" y="420" font-family="Arial" font-size="30" font-weight="700">U</text>
+  <path d="M165 560 A45 45 0 0 0 152 528" fill="none" stroke="#111827" stroke-width="4"/><text x="175" y="545" font-family="Arial" font-size="28" font-weight="700">θ</text>
+  <line x1="510" y1="248" x2="510" y2="560" stroke="#7c3aed" stroke-width="4" stroke-dasharray="8 8"/>
+  <text x="535" y="410" font-family="Arial" font-size="28" font-weight="700">Maximum height H</text>
+  <line x1="120" y1="590" x2="940" y2="590" stroke="#7c3aed" stroke-width="4" marker-end="url(#a)"/>
+  <text x="530" y="630" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#7c3aed">Range R</text>
+  <line x1="510" y1="248" x2="650" y2="248" stroke="#2563eb" stroke-width="5" marker-end="url(#a)"/>
+  <text x="665" y="254" font-family="Arial" font-size="24" fill="#2563eb">vₓ = U cos θ, vᵧ = 0</text>
+</svg>

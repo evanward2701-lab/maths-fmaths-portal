@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Objective Lines and Sliding Ruler Method</title>
+  <desc id="desc">Parallel objective lines showing the last feasible contact for a maximum.</desc>
+  <metadata>asset_id: FA22LinearProgrammingFoundationsSVG-003; source: Chapter 6 PDF and transcript sliding ruler method; purpose: Show objective-line method.</metadata>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="40" width="1100" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E">Objective Lines and Sliding Ruler Method</text>
+  
+  <text x="600" y="130" text-anchor="middle" font-family="Arial" font-size="17" fill="#2C2C2E">Parallel objective lines move across the feasible region.</text>
+  <g transform="translate(170,620)">
+    <line x1="0" y1="0" x2="580" y2="0" stroke="#2C2C2E" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-460" stroke="#2C2C2E" stroke-width="3"/>
+    <polygon points="0,0 0,-300 170,-380 390,-250 500,-80 420,0" fill="#FFFFF0" stroke="#D4AF37" stroke-width="4"/>
+    <line x1="-20" y1="-80" x2="350" y2="-450" stroke="#C5A059" stroke-width="3" stroke-dasharray="8 8"/>
+    <line x1="60" y1="-40" x2="450" y2="-430" stroke="#C5A059" stroke-width="3" stroke-dasharray="8 8"/>
+    <line x1="145" y1="0" x2="560" y2="-415" stroke="#D4AF37" stroke-width="5"/>
+    <circle cx="500" cy="-80" r="12" fill="#2C2C2E"/>
+    <text x="515" y="-95" font-family="Arial" font-size="20" font-weight="700" fill="#2C2C2E">maximum</text>
+    <text x="200" y="-80" font-family="Arial" font-size="18" fill="#2C2C2E">increasing P →</text>
+  </g>
+</svg>

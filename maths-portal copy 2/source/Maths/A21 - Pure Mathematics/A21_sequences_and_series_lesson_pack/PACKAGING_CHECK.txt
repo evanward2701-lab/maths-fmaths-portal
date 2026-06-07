@@ -1,0 +1,1 @@
+Pack written by ChatGPT. Expected counts: mermaid=2, svg=11, tikz=2, widgets=3. A21-SS-LO008 binomial expansion remains a logged evidence gap.

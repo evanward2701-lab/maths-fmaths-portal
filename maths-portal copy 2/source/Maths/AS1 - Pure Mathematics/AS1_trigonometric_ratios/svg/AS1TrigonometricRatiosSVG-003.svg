@@ -1,0 +1,14 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Cosine rule labelling</title>
+<desc id="desc">Triangle showing A opposite a.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Cosine rule labelling</text>
+
+<polygon points="180,430 670,430 480,105" fill="#f7fbff" stroke="#1d3557" stroke-width="4"/>
+<text x="150" y="460" font-family="Arial" font-size="30">A</text><text x="685" y="460" font-family="Arial" font-size="30">B</text><text x="480" y="90" font-family="Arial" font-size="30">C</text>
+<text x="590" y="270" font-family="Arial" font-size="30" fill="#b91c1c">a</text><text x="315" y="250" font-family="Arial" font-size="30" fill="#0f766e">b</text><text x="420" y="465" font-family="Arial" font-size="30" fill="#6d28d9">c</text>
+<rect x="55" y="80" width="290" height="105" rx="14" fill="#fff7ed" stroke="#f59e0b"/>
+<text x="80" y="125" font-family="Arial" font-size="24">a² = b² + c²</text><text x="80" y="160" font-family="Arial" font-size="24">− 2bc cos A</text>
+
+</svg>

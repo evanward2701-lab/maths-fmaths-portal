@@ -1,0 +1,7 @@
+placeholder_ids=['FAS2AlgorithmsOnGraphsMermaid-001', 'FAS2AlgorithmsOnGraphsSVG-001', 'FAS2AlgorithmsOnGraphsSVG-002', 'FAS2AlgorithmsOnGraphsBridgeSVG-001', 'FAS2AlgorithmsOnGraphsTikZ-001', 'FAS2AlgorithmsOnGraphsSVG-003', 'FAS2AlgorithmsOnGraphsSVG-004', 'FAS2AlgorithmsOnGraphsWidget-001', 'FAS2AlgorithmsOnGraphsWidget-002', 'FAS2AlgorithmsOnGraphsWidget-003']
+missing_placeholders=[]
+svg_errors=[]
+html_errors=[]
+lo_missing=[]
+old_refs=[]
+files_written=['FAS2_algorithms_on_graphs_lesson.md', 'manifest.md', 'mermaid/FAS2AlgorithmsOnGraphsMermaid-001.md', 'source_reference.md', 'svg/FAS2AlgorithmsOnGraphsBridgeSVG-001.svg', 'svg/FAS2AlgorithmsOnGraphsSVG-001.svg', 'svg/FAS2AlgorithmsOnGraphsSVG-002.svg', 'svg/FAS2AlgorithmsOnGraphsSVG-003.svg', 'svg/FAS2AlgorithmsOnGraphsSVG-004.svg', 'tikz/FAS2AlgorithmsOnGraphsTikZ-001.tex', 'widgets/FAS2AlgorithmsOnGraphsWidget-001.html', 'widgets/FAS2AlgorithmsOnGraphsWidget-002.html', 'widgets/FAS2AlgorithmsOnGraphsWidget-003.html']

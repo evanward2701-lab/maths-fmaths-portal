@@ -1,0 +1,62 @@
+<!--
+Asset ID: AS1AlgebraicMethodsWidget-002
+Unit code: AS1
+Topic code: AS1-AF
+Topic ID: AS1AlgebraicMethodsFactorTheorem
+Related LO IDs: AS1-AF-LO011
+Source: CCEA Mathematics Specification Map; Chapter 7a Algebraic Methods transcript
+Related lesson section: Core Theory F: The Remainder Theorem; Core Theory I: Unknown Coefficients
+Purpose: Let the student enter a cubic and a linear divisor ax+b, then compute the substitution value and the remainder f(-b/a).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AS1 Remainder Theorem Checker</title>
+  <style>
+    :root { --ink:#111827; --muted:#4b5563; --panel:#fff; --soft:#f3f4f6; --border:#d1d5db; --accent:#111827; --good:#065f46; --warn:#92400e; }
+    body{margin:0;padding:24px;font-family:Arial,sans-serif;color:var(--ink);background:var(--soft)}
+    .widget{max-width:1000px;margin:0 auto;background:var(--panel);border:2px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(17,24,39,.08)}
+    h1{margin:0 0 8px;font-size:28px}.subtitle{margin:0 0 18px;color:var(--muted);line-height:1.45}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:12px;margin-bottom:16px}.divisorGrid{display:grid;grid-template-columns:repeat(2,minmax(120px,1fr));gap:12px;margin-bottom:16px}
+    label{display:block;font-weight:700;margin-bottom:6px}input{width:100%;box-sizing:border-box;padding:10px;border:2px solid var(--border);border-radius:10px;font-size:16px}
+    button{cursor:pointer;border:none;border-radius:12px;background:var(--accent);color:white;padding:11px 16px;font-size:16px;font-weight:700;margin:6px 8px 16px 0}button.secondary{background:#374151}
+    .output{border:2px solid var(--border);border-radius:14px;padding:16px;background:#fff;margin-top:8px;line-height:1.5}.mathLine{font-family:Georgia,serif;font-size:22px;margin:10px 0}.step{background:#f9fafb;border:1px solid var(--border);border-radius:12px;padding:12px;margin:10px 0}.good{color:var(--good);font-weight:700}.warn{color:var(--warn);font-weight:700}.footer{margin-top:16px;color:var(--muted);font-size:14px}
+    @media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(120px,1fr))}.divisorGrid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main class="widget">
+<h1>Remainder Theorem Substitution Checker</h1>
+<p class="subtitle">For a linear divisor Ax+B, solve Ax+B=0, then substitute that value into f(x). The result is the remainder. If the result is 0, the divisor is a factor.</p>
+<h2>Polynomial f(x)=ax³+bx²+cx+d</h2>
+<section class="grid" aria-label="Polynomial coefficients">
+<div><label for="coefA">a in ax³</label><input id="coefA" type="number" value="3" step="1" /></div>
+<div><label for="coefB">b in bx²</label><input id="coefB" type="number" value="11" step="1" /></div>
+<div><label for="coefC">c in cx</label><input id="coefC" type="number" value="-7" step="1" /></div>
+<div><label for="coefD">d</label><input id="coefD" type="number" value="1" step="1" /></div>
+</section>
+<h2>Linear divisor Ax+B</h2>
+<section class="divisorGrid" aria-label="Divisor coefficients">
+<div><label for="divA">A in Ax</label><input id="divA" type="number" value="3" step="1" /></div>
+<div><label for="divB">B</label><input id="divB" type="number" value="-1" step="1" /></div>
+</section>
+<button id="runBtn">Calculate remainder</button>
+<button id="exampleBtn" class="secondary">Load 3x−1 example</button>
+<section id="output" class="output" aria-live="polite"></section>
+<p class="footer">CCEA AS1 focus: remainder theorem and factor theorem for linear divisors. This widget is a checker, not a replacement for showing written substitution in an exam.</p>
+</main>
+<script>
+const coefA=document.getElementById('coefA'),coefB=document.getElementById('coefB'),coefC=document.getElementById('coefC'),coefD=document.getElementById('coefD'),divA=document.getElementById('divA'),divB=document.getElementById('divB'),output=document.getElementById('output');
+function numberValue(input,fallback){const value=Number(input.value);return Number.isFinite(value)?value:fallback;}
+function formatDecimal(value){if(Math.abs(value-Math.round(value))<1e-10)return String(Math.round(value));return Number(value.toFixed(8)).toString();}
+function formatSignedTerm(coef,term){if(coef===0)return '';const sign=coef>0?' + ':' - ';const abs=Math.abs(coef);const shownCoef=abs===1&&term!==''?'':String(abs);return sign+shownCoef+term;}
+function polynomialText(a,b,c,d){let text='';if(a!==0)text+=a===1?'x³':a===-1?'-x³':`${a}x³`;text+=formatSignedTerm(b,'x²');text+=formatSignedTerm(c,'x');text+=formatSignedTerm(d,'');if(text.startsWith(' + '))text=text.slice(3);if(text==='')text='0';return text;}
+function divisorText(A,B){let text='';if(A!==0)text+=A===1?'x':A===-1?'-x':`${A}x`;text+=formatSignedTerm(B,'');if(text.startsWith(' + '))text=text.slice(3);if(text==='')text='0';return text;}
+function f(x,a,b,c,d){return a*x**3+b*x**2+c*x+d;}
+function runCheck(){const a=numberValue(coefA,0),b=numberValue(coefB,0),c=numberValue(coefC,0),d=numberValue(coefD,0),A=numberValue(divA,1),B=numberValue(divB,0);if(A===0){output.innerHTML='<div class="step"><span class="warn">The divisor must be linear.</span> You entered A = 0, so Ax + B is not a valid linear divisor for this AS1 widget.</div>';return;}const root=-B/A;const remainder=f(root,a,b,c,d);const isFactor=Math.abs(remainder)<1e-9;output.innerHTML=`<div class="mathLine">f(x) = ${polynomialText(a,b,c,d)}</div><div class="mathLine">Divisor = ${divisorText(A,B)}</div><div class="step"><strong>Step 1: Make the divisor equal zero.</strong><div class="mathLine">${divisorText(A,B)} = 0</div><div class="mathLine">x = ${formatDecimal(root)}</div></div><div class="step"><strong>Step 2: Substitute into f(x).</strong><div class="mathLine">f(${formatDecimal(root)}) = ${formatDecimal(remainder)}</div></div><div class="step"><strong>Conclusion:</strong> ${isFactor?`<span class="good">The remainder is 0, so ${divisorText(A,B)} is a factor.</span>`:`<span class="warn">The remainder is ${formatDecimal(remainder)}, so ${divisorText(A,B)} is not a factor.</span>`}</div><div class="step"><strong>Exam wording:</strong> ${isFactor?`Since f(${formatDecimal(root)}) = 0, by the factor theorem, ${divisorText(A,B)} is a factor of f(x).`:`By the remainder theorem, the remainder is f(${formatDecimal(root)}) = ${formatDecimal(remainder)}.`}</div>`;}
+function loadExample(){coefA.value=3;coefB.value=11;coefC.value=-7;coefD.value=1;divA.value=3;divB.value=-1;runCheck();}
+document.getElementById('runBtn').addEventListener('click',runCheck);document.getElementById('exampleBtn').addEventListener('click',loadExample);runCheck();
+</script>
+</body>
+</html>

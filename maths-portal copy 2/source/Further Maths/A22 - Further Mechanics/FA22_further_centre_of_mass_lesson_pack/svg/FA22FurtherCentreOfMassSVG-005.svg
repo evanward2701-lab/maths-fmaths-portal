@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Suspended body rule</title>
+  <desc id="desc">Suspended body with centre of mass vertically below point of suspension.</desc>
+  <!-- Asset ID: FA22FurtherCentreOfMassSVG-005 -->
+  <!-- Source: CCEA FA22-FCOM-LO003 + lesson evidence -->
+  <!-- Related lesson section: #9 Visual Asset Integration; #8.13 -->
+  <!-- Purpose: Show that in suspended equilibrium G lies vertically below P. -->
+  <defs>
+    <style>
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .soft{fill:#FBEFEF;stroke:#2C2C2E;stroke-width:3}
+      .gold{stroke:#C5A059;stroke-width:4;fill:none} .line{stroke:#2C2C2E;stroke-width:3;fill:none} .dash{stroke:#2C2C2E;stroke-width:2;stroke-dasharray:8 8;fill:none}
+      .txt{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:30px} .small{font-family:Inter,Arial,sans-serif;fill:#2C2C2E;font-size:22px} .math{font-family:Georgia,'Times New Roman',serif;fill:#2C2C2E;font-size:26px}
+      .box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:18} .warn{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;rx:18}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <rect class="panel" x="40" y="36" width="1120" height="688" rx="28"/>
+  <text class="txt" x="80" y="90">Suspended body rule</text>
+  
+  <line class="line" x1="220" y1="145" x2="600" y2="145"/><line class="line" x1="410" y1="145" x2="410" y2="210"/><circle cx="410" cy="210" r="8" fill="#2C2C2E"/><text class="math" x="430" y="215">P</text>
+  <line class="dash" x1="410" y1="210" x2="410" y2="625"/><circle cx="410" cy="405" r="11" fill="#C5A059" stroke="#2C2C2E" stroke-width="2"/><text class="math" x="435" y="412">G</text><line class="line" x1="410" y1="405" x2="410" y2="545" marker-end="url(#arrow)"/><text class="math" x="435" y="500">mg</text>
+  <path class="soft" d="M260 500 A150 150 0 0 1 560 500 Z"/><line class="gold" x1="410" y1="500" x2="500" y2="330"/><text class="math" x="520" y="355">θ</text>
+  <rect class="warn" x="705" y="245" width="360" height="170"/><text class="math" x="750" y="310">P, G and vertical</text><text class="math" x="750" y="355">are aligned</text><text class="small" x="750" y="390">in equilibrium.</text>
+
+</svg>

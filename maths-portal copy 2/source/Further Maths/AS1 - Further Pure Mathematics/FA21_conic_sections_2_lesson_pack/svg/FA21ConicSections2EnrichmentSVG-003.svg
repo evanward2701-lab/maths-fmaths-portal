@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Standard Hyperbola</title><desc id="desc">Horizontal hyperbola with vertices and asymptotes.</desc>
+<rect width="1200" height="760" fill="#FAF9F6"/><rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="600" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#2C2C2E" font-weight="700">Standard Hyperbola</text>
+<g font-family="Arial,sans-serif" fill="#2C2C2E"><line x1="120" y1="390" x2="1080" y2="390" stroke="#2C2C2E" stroke-width="3"/><line x1="600" y1="620" x2="600" y2="170" stroke="#2C2C2E" stroke-width="3"/><line x1="180" y1="610" x2="1020" y2="170" stroke="#D4AF37" stroke-width="3" stroke-dasharray="10 8"/><line x1="180" y1="170" x2="1020" y2="610" stroke="#D4AF37" stroke-width="3" stroke-dasharray="10 8"/><path d="M740 390 C800 360 890 250 1010 170 M740 390 C800 420 890 530 1010 610 M460 390 C400 360 310 250 190 170 M460 390 C400 420 310 530 190 610" fill="none" stroke="#2C2C2E" stroke-width="6"/><text x="455" y="650" font-size="22">x²/a² − y²/b² = 1</text><text x="460" y="680" font-size="20">asymptotes: y = ±(b/a)x</text></g>
+<rect x="180" y="690" width="840" height="36" rx="18" fill="#FBEFEF" stroke="#E5E5EA"/><text x="600" y="714" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#2C2C2E">Off-spec enrichment visual unless official CCEA conics evidence is supplied.</text>
+</svg>

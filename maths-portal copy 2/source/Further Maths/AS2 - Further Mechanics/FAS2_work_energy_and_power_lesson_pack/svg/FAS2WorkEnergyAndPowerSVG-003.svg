@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2WorkEnergyAndPowerSVG-003: Work-energy ledger</title>
+  <desc id="desc">A two column ledger for the work-energy principle.</desc>
+  <metadata>asset_id: FAS2WorkEnergyAndPowerSVG-003; unit_code: FAS2; topic_code: FAS2-WENG + FAS2-POW; topic_id: FAS2WorkEnergyAndPower; status: Generated in Phase 3</metadata>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" fill="#C5A059"/></marker></defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="45" width="1100" height="670" rx="30" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="90" y="105" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Work-energy ledger</text>
+  
+  <rect x="110" y="190" width="470" height="410" rx="28" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/>
+  <rect x="620" y="190" width="470" height="410" rx="28" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/>
+  <text x="345" y="245" text-anchor="middle" font-size="26" font-family="Inter, Arial" font-weight="700">Energy in</text>
+  <text x="855" y="245" text-anchor="middle" font-size="26" font-family="Inter, Arial" font-weight="700">Energy after / spent</text>
+  <text x="345" y="320" text-anchor="middle" font-size="25" font-family="Cambria Math">work in</text>
+  <text x="345" y="380" text-anchor="middle" font-size="25" font-family="Cambria Math">initial KE = 1/2 mu²</text>
+  <text x="345" y="440" text-anchor="middle" font-size="25" font-family="Cambria Math">initial GPE = mgh₁</text>
+  <text x="345" y="500" text-anchor="middle" font-size="25" font-family="Cambria Math">initial elastic PE</text>
+  <text x="855" y="320" text-anchor="middle" font-size="25" font-family="Cambria Math">final KE = 1/2 mv²</text>
+  <text x="855" y="380" text-anchor="middle" font-size="25" font-family="Cambria Math">final GPE = mgh₂</text>
+  <text x="855" y="440" text-anchor="middle" font-size="25" font-family="Cambria Math">final elastic PE</text>
+  <text x="855" y="500" text-anchor="middle" font-size="25" font-family="Cambria Math">work out = resistance × distance</text>
+  <text x="600" y="420" text-anchor="middle" font-size="80" font-family="Inter, Arial" fill="#C5A059">=</text>
+  <text x="600" y="680" text-anchor="middle" font-size="28" font-family="Cambria Math">work in + 1/2mu² + mgh₁ = 1/2mv² + mgh₂ + resistance × distance</text>
+
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">Area function and thin strip explanation</title>
+<desc id="desc">A curve with accumulated area A(x) and a thin strip of width h, showing that A prime x equals f x.</desc>
+<rect width="1000" height="650" fill="#ffffff"/>
+
+<text x="60" y="60" font-family="Arial" font-size="32" font-weight="700">Why integration gives area</text>
+<line x1="110" y1="500" x2="750" y2="500" stroke="#222" stroke-width="3"/>
+<line x1="110" y1="500" x2="110" y2="120" stroke="#222" stroke-width="3"/>
+<path d="M140,500 L140,420 C240,330 340,260 455,245 C525,235 570,260 610,270 L610,500 Z" fill="#8ecae6" opacity="0.55"/>
+<rect x="610" y="270" width="55" height="230" fill="#f4a261" opacity="0.65" stroke="#bc6c25" stroke-width="2"/>
+<path d="M140,420 C240,330 340,260 455,245 C535,235 600,270 675,280 C720,285 745,240 775,200" fill="none" stroke="#126782" stroke-width="5"/>
+<line x1="610" y1="500" x2="610" y2="270" stroke="#444" stroke-dasharray="6 6"/>
+<line x1="665" y1="500" x2="665" y2="270" stroke="#444" stroke-dasharray="6 6"/>
+<text x="602" y="535" font-family="Arial" font-size="22">x</text><text x="646" y="535" font-family="Arial" font-size="22">x+h</text>
+<text x="305" y="405" font-family="Arial" font-size="26" fill="#023047">A(x)</text>
+<text x="690" y="360" font-family="Arial" font-size="22" fill="#bc6c25">thin strip ≈ f(x)h</text>
+<rect x="90" y="560" width="850" height="60" rx="14" fill="#eef7ff" stroke="#8ecae6"/>
+<text x="125" y="598" font-family="Arial" font-size="22">A(x+h)−A(x) ≈ f(x)h, so as h→0, A′(x)=f(x).</text>
+
+</svg>

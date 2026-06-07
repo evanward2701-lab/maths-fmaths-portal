@@ -1,0 +1,13 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Trig graph transformations</title>
+<desc id="desc">Four panels for transformed trig graphs.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Trig graph transformations</text>
+
+<rect x="60" y="90" width="360" height="170" rx="14" fill="#eff6ff" stroke="#2563eb"/><text x="90" y="135" font-family="Arial" font-size="24">y = 4 sin x</text><text x="90" y="175" font-family="Arial" font-size="20">Vertical stretch</text>
+<rect x="480" y="90" width="360" height="170" rx="14" fill="#f5f3ff" stroke="#6d28d9"/><text x="510" y="135" font-family="Arial" font-size="24">y = cos(x + 45°)</text><text x="510" y="175" font-family="Arial" font-size="20">Shift left 45°</text>
+<rect x="60" y="310" width="360" height="170" rx="14" fill="#ecfdf5" stroke="#0f766e"/><text x="90" y="355" font-family="Arial" font-size="24">y = -tan x</text><text x="90" y="395" font-family="Arial" font-size="20">Reflect in x-axis</text>
+<rect x="480" y="310" width="360" height="170" rx="14" fill="#fff7ed" stroke="#f59e0b"/><text x="510" y="355" font-family="Arial" font-size="24">y = sin(x/2)</text><text x="510" y="395" font-family="Arial" font-size="20">Horizontal stretch by 2</text>
+
+</svg>

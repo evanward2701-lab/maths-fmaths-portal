@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Trig identity bridge</title>
+<desc id="desc">Trig identity bridge for A21 Integration.</desc>
+<!-- Asset ID: A21IntegrationSVG-004 | Source: CCEA A21 Integration + lesson evidence | Purpose: teaching visual -->
+<rect x="20" y="20" width="860" height="520" rx="24" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="450" y="65" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#0f172a">Trig identity bridge</text>
+<text x="450" y="150" text-anchor="middle" font-family="Arial" font-size="26">sin²x = ½ - ½cos2x</text><text x="450" y="220" text-anchor="middle" font-family="Arial" font-size="26">cos²x = ½ + ½cos2x</text><text x="450" y="290" text-anchor="middle" font-family="Arial" font-size="26">tan²x = sec²x - 1</text>
+</svg>

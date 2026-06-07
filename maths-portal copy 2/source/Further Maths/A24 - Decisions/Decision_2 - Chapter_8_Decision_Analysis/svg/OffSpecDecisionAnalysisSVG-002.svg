@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="760" viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">James Example: EMV Decision Tree</title>
+  <desc id="desc">Decision tree for James and the two tetrahedral dice game.</desc>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FAF9F6;stroke:#C5A059;stroke-width:4} .chance{fill:#FFFFF0;stroke:#D4AF37;stroke-width:4} .pay{fill:#FBEFEF;stroke:#C5A059;stroke-width:4} .branch{stroke:#2C2C2E;stroke-width:3;fill:none;stroke-linecap:round} .chosen{stroke:#C5A059;stroke-width:4;fill:none;stroke-linecap:round} .cross{stroke:#C5A059;stroke-width:5;stroke-linecap:round} .text{fill:#2C2C2E;font-family:Inter,Arial,sans-serif} .title{font-size:36px;font-weight:700} .small{font-size:17px} .label{font-size:22px;font-weight:700} .math{fill:#2C2C2E;font-family:Times New Roman,serif;font-size:24px}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1400" height="760"/>
+  <text class="text title" x="60" y="70">James Example: EMV Decision Tree</text>
+  
+  <text class="text small" x="60" y="108">Two fair tetrahedral dice: total 6 or more wins £4, otherwise loses £2.</text>
+  <rect class="panel" x="70" y="135" width="1260" height="545" rx="24"/>
+  <rect class="node" x="150" y="350" width="105" height="75" rx="8"/>
+  <text class="text small" x="166" y="393">decision</text>
+  <path class="chosen" d="M255 388 C360 295 465 238 570 220"/>
+  <path class="branch" d="M255 388 C370 485 485 535 615 580"/>
+  <text class="math" x="360" y="300">p: play</text>
+  <text class="math" x="350" y="520">~p: do not play</text>
+  <line class="cross" x1="410" y1="496" x2="445" y2="531"/><line class="cross" x1="422" y1="484" x2="457" y2="519"/>
+  <circle class="chance" cx="615" cy="220" r="55"/><text class="math" x="583" y="216">EMV</text><text class="math" x="590" y="244">0.25</text>
+  <path class="chosen" d="M670 220 C790 160 905 145 1010 135"/><path class="branch" d="M670 220 C800 300 915 335 1025 375"/>
+  <text class="math" x="765" y="162">6 or more, 3/8</text><text class="math" x="760" y="342">less than 6, 5/8</text>
+  <polygon class="pay" points="1110,95 1025,135 1110,175"/><text class="math" x="1130" y="143">+4</text>
+  <polygon class="pay" points="1125,335 1040,375 1125,415"/><text class="math" x="1145" y="383">−2</text>
+  <polygon class="pay" points="715,540 630,580 715,620"/><text class="math" x="735" y="588">0</text>
+  <rect class="panel" x="400" y="615" width="600" height="48" rx="16"/><text class="math" x="420" y="647">EMV(play) = (3/8)(4) + (5/8)(−2) = 1/4 = 0.25</text>
+
+</svg>

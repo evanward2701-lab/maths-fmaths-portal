@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22TDistributionSVG-002: Reading an upper-tail t-table</title>
+  <desc id="desc">A teaching diagram showing how to read a t-distribution table using degrees of freedom nu equals 2 and an upper-tail probability of 0.05.</desc>
+  <metadata>Asset ID: FA22TDistributionSVG-002; Source: Dr Frost t-table slide and teacher transcript table explanation; Related lesson section: # 9.3 Reading upper-tail t-tables.</metadata>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="52" y="42" width="1096" height="676" rx="26" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="92" y="102" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#2C2C2E" font-weight="700">Reading an upper-tail t-table</text>
+  <text x="92" y="142" font-family="Arial, sans-serif" font-size="19" fill="#2C2C2E">A typical t-table gives the value exceeded with the probability shown at the top of the column.</text>
+  <rect x="92" y="188" width="510" height="246" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="122" y="226" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E" font-weight="700">Percentage points of Student's t-distribution</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#2C2C2E">
+    <rect x="122" y="254" width="430" height="128" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+    <line x1="202" y1="254" x2="202" y2="382" stroke="#E5E5EA" stroke-width="2"/><line x1="292" y1="254" x2="292" y2="382" stroke="#E5E5EA" stroke-width="2"/><line x1="382" y1="254" x2="382" y2="382" stroke="#E5E5EA" stroke-width="2"/><line x1="472" y1="254" x2="472" y2="382" stroke="#E5E5EA" stroke-width="2"/>
+    <line x1="122" y1="300" x2="552" y2="300" stroke="#E5E5EA" stroke-width="2"/><line x1="122" y1="341" x2="552" y2="341" stroke="#E5E5EA" stroke-width="2"/>
+    <text x="148" y="284" font-weight="700">ν</text><text x="223" y="284" font-weight="700">0.10</text><text x="314" y="284" font-weight="700">0.05</text><text x="398" y="284" font-weight="700">0.025</text><text x="492" y="284" font-weight="700">0.01</text>
+    <text x="148" y="326">1</text><text x="221" y="326">3.078</text><text x="313" y="326">6.314</text><text x="398" y="326">12.706</text><text x="492" y="326">31.821</text>
+    <text x="148" y="367" font-weight="700">2</text><text x="221" y="367">1.886</text><rect x="304" y="344" width="70" height="34" rx="8" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="313" y="367" font-weight="700">2.920</text><text x="398" y="367">4.303</text><text x="492" y="367">6.965</text>
+  </g>
+  <rect x="650" y="198" width="450" height="176" rx="18" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/>
+  <text x="680" y="238" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E" font-weight="700">Table reading</text>
+  <text x="680" y="278" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#2C2C2E">ν = 2,   column = 0.05,   value = 2.920</text>
+  <text x="680" y="324" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#2C2C2E">P(T &gt; 2.920) = 0.05</text>
+  <rect x="92" y="468" width="1008" height="198" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <line x1="150" y1="622" x2="1040" y2="622" stroke="#2C2C2E" stroke-width="2"/>
+  <line x1="595" y1="622" x2="595" y2="494" stroke="#E5E5EA" stroke-width="2"/>
+  <path d="M150 616 C245 608, 335 585, 420 548 C500 512, 555 498, 595 498 C635 498, 690 512, 770 548 C855 585, 945 608, 1040 616" fill="none" stroke="#2C2C2E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M910 593 C948 606, 991 614, 1040 616 L1040 622 L910 622 Z" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <path d="M150 616 C199 614, 242 606, 280 593 L280 622 L150 622 Z" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <line x1="910" y1="622" x2="910" y2="584" stroke="#C5A059" stroke-width="3"/><line x1="280" y1="622" x2="280" y2="584" stroke="#C5A059" stroke-width="3"/>
+  <text x="582" y="650" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">0</text><text x="253" y="650" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">−2.920</text><text x="887" y="650" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">2.920</text>
+  <text x="860" y="560" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#2C2C2E">P(T &gt; 2.920) = 0.05</text>
+  <text x="160" y="560" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#2C2C2E">P(T &lt; −2.920) = 0.05</text>
+  <text x="444" y="688" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2C2C2E">Therefore P(T &lt; 2.920) = 0.95</text>
+</svg>

@@ -1,0 +1,30 @@
+% TikZ Asset: FAS2ContinuousDistributionsTikZ-002
+% Unit: FAS2
+% Topic code: FAS2-DIST
+% Topic ID: FAS2ContinuousDistributions
+% Lesson file: FAS2_continuous_distributions_lesson.md
+% Related lesson section: Section 9.6 CDF accumulation diagram
+% Source: DrFrost/Pearson CDF slide and teacher transcript
+% Purpose: Show F(x) as accumulated probability area under f(t) from the lower support up to variable point x.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns,decorations.pathreplacing}
+\begin{document}
+\begin{tikzpicture}[x=1.55cm,y=5.1cm,axis/.style={->, thick, draw={rgb,255:red,44;green,44;blue,46}},curve/.style={very thick, draw={rgb,255:red,44;green,44;blue,46}},highlight/.style={draw={rgb,255:red,197;green,160;blue,89}, very thick},guide/.style={draw={rgb,255:red,44;green,44;blue,46}, dashed},card/.style={rounded corners=5pt, draw={rgb,255:red,229;green,229;blue,234}, fill=white, inner sep=7pt},warning/.style={rounded corners=5pt, draw={rgb,255:red,212;green,175;blue,55}, fill={rgb,255:red,251;green,239;blue,239}, inner sep=7pt}]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-0.75,-0.20) rectangle (7.25,1.13);
+\draw[{rgb,255:red,229;green,229;blue,234}, rounded corners=8pt] (-0.62,-0.14) rectangle (7.12,1.04);
+\draw[axis] (-0.15,0) -- (6.65,0) node[right] {$t$};\draw[axis] (0,-0.02) -- (0,0.88) node[above] {$f(t)$};
+\draw[curve, smooth] plot coordinates {(1,0.05)(1.5,0.19)(2,0.34)(2.7,0.49)(3.5,0.56)(4.25,0.50)(5,0.34)(5.6,0.17)(6,0.05)};
+\fill[{rgb,255:red,251;green,239;blue,239}, opacity=0.95] (1,0) -- (1,0.05) plot[smooth] coordinates {(1,0.05)(1.5,0.19)(2,0.34)(2.7,0.49)(3.5,0.56)(4.25,0.50)} -- (4.25,0) -- cycle;
+\draw[highlight, smooth] plot coordinates {(1,0.05)(1.5,0.19)(2,0.34)(2.7,0.49)(3.5,0.56)(4.25,0.50)};
+\draw[guide] (1,0) -- (1,0.05);\draw[guide] (4.25,0) -- (4.25,0.50);\draw[guide] (6,0) -- (6,0.05);
+\node[below] at (1,0) {$a$};\node[below] at (4.25,0) {$x$};\node[below] at (6,0) {$b$};
+\node[card, align=center] at (2.65,0.28) {accumulated area\\from \(a\) to \(x\)};
+\node[card, align=center] at (3.65,0.95) {\(\displaystyle F(x)=P(X\leq x)\)};
+\node[card, align=center] at (3.65,0.78) {\(\displaystyle F(x)=\int_{-\infty}^{x} f(t)\,dt\)};
+\node[warning, align=center] at (3.65,-0.105) {Use \(t\) inside the integral when \(x\) is the upper limit.\\The variable \(t\) is a dummy integration variable.};
+\draw[-{Latex[length=3mm]}, draw={rgb,255:red,212;green,175;blue,55}, thick] (3.65,0.70) to[out=-115,in=70] (3.25,0.43);
+\node[align=center, font=\bfseries\large] at (3.25,1.08) {CDF as accumulated probability};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-005
+Source: Chapter 5/7 Forces transcript
+Related lesson section: Core Theory: The friction model
+Purpose: Show friction increasing up to the maximum value mu R.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Friction Threshold</title>
+  <desc id="desc">Show friction increasing up to the maximum value mu R.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Friction Threshold</text>
+  <line x1="120" y1="420" x2="780" y2="420" stroke="#111" stroke-width="3"/><line x1="120" y1="420" x2="120" y2="100" stroke="#111" stroke-width="3"/><polyline points="120,420 450,190 740,190" fill="none" stroke="#111" stroke-width="4"/><line x1="120" y1="190" x2="760" y2="190" stroke="#555" stroke-dasharray="8 6"/><line x1="450" y1="420" x2="450" y2="190" stroke="#555" stroke-dasharray="8 6"/><text x="230" y="170" font-family="Arial" font-size="22">maximum friction = μR</text><text x="450" y="455" text-anchor="middle" font-family="Arial" font-size="20">limiting point</text><text x="690" y="465" font-family="Arial" font-size="20">applied force</text><text x="30" y="150" font-family="Arial" font-size="20" transform="rotate(-90 30 150)">friction</text>
+</svg>

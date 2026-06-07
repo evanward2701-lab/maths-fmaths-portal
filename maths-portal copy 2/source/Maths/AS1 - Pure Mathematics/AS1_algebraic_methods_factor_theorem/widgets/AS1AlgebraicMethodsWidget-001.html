@@ -1,0 +1,70 @@
+<!--
+Asset ID: AS1AlgebraicMethodsWidget-001
+Unit code: AS1
+Topic code: AS1-AF
+Topic ID: AS1AlgebraicMethodsFactorTheorem
+Related LO IDs: AS1-AF-LO011
+Source: CCEA Mathematics Specification Map; Chapter 7a Algebraic Methods transcript
+Related lesson section: Core Theory H: Fully Factorising a Cubic
+Purpose: Let the student test integer values of x and see when f(x)=0, supporting factor theorem searches.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AS1 Factor Theorem Value Tester</title>
+  <style>
+    :root { --ink:#111827; --muted:#4b5563; --panel:#ffffff; --soft:#f3f4f6; --border:#d1d5db; --accent:#111827; --good:#065f46; --bad:#991b1b; }
+    body { margin:0; padding:24px; font-family:Arial,sans-serif; color:var(--ink); background:var(--soft); }
+    .widget { max-width:980px; margin:0 auto; background:var(--panel); border:2px solid var(--border); border-radius:18px; padding:22px; box-shadow:0 8px 24px rgba(17,24,39,.08); }
+    h1 { margin:0 0 8px; font-size:28px; }
+    .subtitle { margin:0 0 18px; color:var(--muted); line-height:1.45; }
+    .grid { display:grid; grid-template-columns:repeat(4,minmax(120px,1fr)); gap:12px; margin-bottom:16px; }
+    label { display:block; font-weight:700; margin-bottom:6px; }
+    input { width:100%; box-sizing:border-box; padding:10px; border:2px solid var(--border); border-radius:10px; font-size:16px; }
+    button { cursor:pointer; border:none; border-radius:12px; background:var(--accent); color:white; padding:11px 16px; font-size:16px; font-weight:700; margin:6px 8px 16px 0; }
+    button.secondary { background:#374151; }
+    .output { border:2px solid var(--border); border-radius:14px; padding:16px; background:#fff; margin-top:8px; }
+    .formula { font-family:Georgia,serif; font-size:22px; line-height:1.5; margin-bottom:12px; }
+    .notice { padding:12px; border-radius:12px; background:#f9fafb; border:1px solid var(--border); margin:12px 0; line-height:1.45; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; overflow:hidden; border-radius:12px; }
+    th,td { border:1px solid var(--border); padding:9px; text-align:center; }
+    th { background:#f9fafb; }
+    .zero { font-weight:700; color:var(--good); background:#ecfdf5; }
+    .nonzero { color:var(--bad); }
+    .footer { margin-top:16px; color:var(--muted); font-size:14px; }
+    @media (max-width:760px){ .grid{ grid-template-columns:repeat(2,minmax(120px,1fr)); } }
+  </style>
+</head>
+<body>
+  <main class="widget">
+    <h1>Factor Theorem Value Tester</h1>
+    <p class="subtitle">Enter a cubic polynomial f(x)=ax³+bx²+cx+d. Test integer values to spot when f(p)=0. If f(p)=0, then x-p is a factor.</p>
+    <section class="grid" aria-label="Polynomial coefficients">
+      <div><label for="coefA">a in ax³</label><input id="coefA" type="number" value="2" step="1" /></div>
+      <div><label for="coefB">b in bx²</label><input id="coefB" type="number" value="1" step="1" /></div>
+      <div><label for="coefC">c in cx</label><input id="coefC" type="number" value="-18" step="1" /></div>
+      <div><label for="coefD">d</label><input id="coefD" type="number" value="-9" step="1" /></div>
+    </section>
+    <section class="grid" aria-label="Testing range">
+      <div><label for="minX">Test from</label><input id="minX" type="number" value="-5" step="1" /></div>
+      <div><label for="maxX">Test to</label><input id="maxX" type="number" value="5" step="1" /></div>
+    </section>
+    <button id="runBtn">Test values</button>
+    <button id="exampleBtn" class="secondary">Load lesson example</button>
+    <section id="output" class="output" aria-live="polite"></section>
+    <p class="footer">CCEA AS1 focus: use the factor theorem to identify factors of cubic expressions. This widget checks values only; written exam solutions still need the statement “By the factor theorem...”.</p>
+  </main>
+<script>
+const coefA=document.getElementById('coefA'),coefB=document.getElementById('coefB'),coefC=document.getElementById('coefC'),coefD=document.getElementById('coefD'),minX=document.getElementById('minX'),maxX=document.getElementById('maxX'),output=document.getElementById('output');
+function numberValue(input,fallback){const value=Number(input.value);return Number.isFinite(value)?value:fallback;}
+function formatSignedTerm(coef,term){if(coef===0)return '';const sign=coef>0?' + ':' - ';const abs=Math.abs(coef);const shownCoef=abs===1&&term!==''?'':String(abs);return sign+shownCoef+term;}
+function polynomialText(a,b,c,d){let text='';if(a!==0){text+=a===1?'x³':a===-1?'-x³':`${a}x³`;}text+=formatSignedTerm(b,'x²');text+=formatSignedTerm(c,'x');text+=formatSignedTerm(d,'');if(text.startsWith(' + '))text=text.slice(3);if(text==='')text='0';return text;}
+function f(x,a,b,c,d){return a*x**3+b*x**2+c*x+d;}
+function factorText(p){if(p===0)return 'x';if(p>0)return `x - ${p}`;return `x + ${Math.abs(p)}`;}
+function runTest(){const a=numberValue(coefA,0),b=numberValue(coefB,0),c=numberValue(coefC,0),d=numberValue(coefD,0);let start=Math.trunc(numberValue(minX,-5));let end=Math.trunc(numberValue(maxX,5));if(start>end){const temp=start;start=end;end=temp;}if(end-start>40){output.innerHTML='<div class="notice">Please choose a range of at most 40 integer values.</div>';return;}const rows=[],factors=[];for(let x=start;x<=end;x++){const y=f(x,a,b,c,d);if(Math.abs(y)<1e-10)factors.push({x,factor:factorText(x)});rows.push({x,y});}const factorMessage=factors.length?factors.map(item=>`Since f(${item.x}) = 0, ${item.factor} is a factor.`).join('<br>'):'No zero values were found in this range. Try extending the search or checking non-integer roots if needed.';output.innerHTML=`<div class="formula">f(x) = ${polynomialText(a,b,c,d)}</div><div class="notice">${factorMessage}</div><table><thead><tr><th>x</th><th>f(x)</th><th>Factor theorem conclusion</th></tr></thead><tbody>${rows.map(row=>`<tr><td>${row.x}</td><td class="${Math.abs(row.y)<1e-10?'zero':'nonzero'}">${row.y}</td><td>${Math.abs(row.y)<1e-10?`${factorText(row.x)} is a factor`:'not shown as a factor'}</td></tr>`).join('')}</tbody></table>`;}
+function loadLessonExample(){coefA.value=2;coefB.value=1;coefC.value=-18;coefD.value=-9;minX.value=-5;maxX.value=5;runTest();}
+document.getElementById('runBtn').addEventListener('click',runTest);document.getElementById('exampleBtn').addEventListener('click',loadLessonExample);runTest();
+</script>
+</body>
+</html>

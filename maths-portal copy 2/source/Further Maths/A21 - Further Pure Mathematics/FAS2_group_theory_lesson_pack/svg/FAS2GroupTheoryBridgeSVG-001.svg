@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">A-Level Maths bridge to group theory</title><desc id="desc">Bridge from ordinary operations and functions to group theory.</desc>
+<metadata>Asset ID: FAS2GroupTheoryBridgeSVG-001</metadata>
+<rect width="900" height="560" fill="#FAF9F6"/>
+<rect x="40" y="40" width="820" height="480" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="70" y="95" font-family="Georgia, serif" font-size="30" fill="#2C2C2E" font-weight="700">Bridge into group theory</text>
+<text x="90" y="180" font-family="Arial" font-size="22" fill="#2C2C2E">Ordinary Maths: operations, functions, inverse notation, transformations, proof.</text><text x="90" y="260" font-family="Arial" font-size="22" fill="#2C2C2E">Further Maths: set + binary operation + four axioms.</text><text x="90" y="340" font-family="Arial" font-size="22" fill="#2C2C2E">Upgrade: study structure, not just calculation.</text><text x="90" y="420" font-family="Arial" font-size="22" fill="#2C2C2E">Warning: ordinary bridge content does not override CCEA FAS2-GROUP.</text>
+</svg>

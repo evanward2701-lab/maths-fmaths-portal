@@ -1,0 +1,29 @@
+<!--
+Asset ID: A22MomentsSVG-009
+Source: MechYr2 Chapter 7 Applications of Forces, page 15.
+Related lesson section: Worked Example 11.
+Purpose: Rough rod with smooth peg.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="Rough rod with smooth peg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#111827"/>
+    </marker>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:28px;font-weight:700;fill:#111827}
+      .label{font-family:Arial,sans-serif;font-size:18px;fill:#111827}
+      .small{font-family:Arial,sans-serif;font-size:15px;fill:#374151}
+      .rod{stroke:#111827;stroke-width:10;stroke-linecap:round}
+      .beam{fill:#F3F4F6;stroke:#111827;stroke-width:3}
+      .support{fill:#D1D5DB;stroke:#111827;stroke-width:2}
+      .up{stroke:#2563EB;stroke-width:4;marker-end:url(#arrow)}
+      .down{stroke:#DC2626;stroke-width:4;marker-end:url(#arrow)}
+      .force{stroke:#7C3AED;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#6B7280;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#EFF6FF;stroke:#2563EB;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="40" y="55" class="title">Rough ground and smooth peg rod diagram</text>
+  <line x1="110" y1="430" x2="820" y2="430" stroke="#111827" stroke-width="4"/><line x1="190" y1="420" x2="710" y2="280" class="rod"/><circle cx="610" cy="307" r="26" class="support"/><text x="625" y="306" class="label">smooth peg C</text><line x1="190" y1="430" x2="190" y2="355" class="up"/><text x="202" y="385" class="label">R</text><line x1="150" y1="430" x2="230" y2="430" class="force"/><text x="164" y="408" class="label">mu R</text><line x1="445" y1="300" x2="445" y2="372" class="down"/><text x="458" y="340" class="label">40g</text><line x1="610" y1="307" x2="570" y2="235" class="force"/><text x="520" y="238" class="label">N</text>
+</svg>

@@ -1,0 +1,16 @@
+<!-- asset_id: FA22FlowsInNetworks2SVG-002 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<title id="title">Residual arrows with lower capacities</title><desc id="desc">Forward residual is upper minus flow; backward residual is flow minus lower.</desc>
+<rect width="1400" height="760" fill="#FAF9F6"/><rect x="60" y="45" width="1280" height="670" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="700" y="95" text-anchor="middle" font-family="Georgia" font-size="36" fill="#2C2C2E" font-weight="700">Residual arrows when lower capacities exist</text>
+<rect x="130" y="125" width="1140" height="85" rx="20" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="3"/><text x="700" y="180" text-anchor="middle" font-family="Georgia" font-size="30" fill="#2C2C2E">forward residual = u − f     and     backward residual = f − l</text>
+<rect x="120" y="245" width="1160" height="390" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+<g font-family="Arial" fill="#2C2C2E" font-size="24"><text x="210" y="282">Arc</text><text x="420" y="282">Capacity</text><text x="625" y="282">Flow</text><text x="850" y="282">Forward</text><text x="1090" y="282">Backward</text></g>
+<g font-family="Georgia" fill="#2C2C2E" font-size="27">
+<text x="205" y="352">SA</text><text x="405" y="352">(15,20)</text><text x="650" y="352">17</text><text x="865" y="352">20−17=3</text><text x="1090" y="352">17−15=2</text>
+<text x="205" y="435">AD</text><text x="410" y="435">(6,12)</text><text x="655" y="435">8</text><text x="880" y="435">12−8=4</text><text x="1110" y="435">8−6=2</text>
+<text x="205" y="518">AE</text><text x="410" y="518">(4,6)</text><text x="655" y="518">4</text><text x="890" y="518">6−4=2</text><text x="1110" y="518">4−4=0</text>
+<text x="205" y="601">DF</text><text x="410" y="601">(3,6)</text><text x="655" y="601">4</text><text x="890" y="601">6−4=2</text><text x="1110" y="601">4−3=1</text>
+</g>
+<text x="700" y="705" text-anchor="middle" font-family="Arial" font-size="22" fill="#2C2C2E">Backward residual means “reduce only down to the lower capacity”.</text>
+</svg>

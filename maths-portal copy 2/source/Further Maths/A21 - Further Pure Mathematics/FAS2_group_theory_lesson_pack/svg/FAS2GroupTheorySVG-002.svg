@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Six symmetries of an equilateral triangle</title><desc id="desc">Six symmetries I,P,Q,R,S,T.</desc>
+<metadata>Asset ID: FAS2GroupTheorySVG-002</metadata>
+<rect width="900" height="560" fill="#FAF9F6"/>
+<rect x="40" y="40" width="820" height="480" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<text x="70" y="95" font-family="Georgia, serif" font-size="30" fill="#2C2C2E" font-weight="700">Triangle symmetry group</text>
+<text x="70" y="145" font-family="Arial" font-size="20" fill="#2C2C2E">I: do nothing, P/Q: 120° rotations, R/S/T: reflections.</text><g font-family="Arial" font-size="22" fill="#2C2C2E"><text x="100" y="220">I = do nothing</text><text x="100" y="270">P = rotate 120° clockwise</text><text x="100" y="320">Q = rotate 120° anticlockwise</text><text x="100" y="370">R = reflect in vertical mirror line</text><text x="100" y="420">S = reflect through bottom left vertex</text><text x="100" y="470">T = reflect through bottom right vertex</text></g><polygon points="650,170 760,360 540,360" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="3"/><text x="650" y="410" text-anchor="middle" font-family="Arial" font-size="22">G={I,P,Q,R,S,T}</text>
+</svg>

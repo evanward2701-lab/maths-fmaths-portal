@@ -1,0 +1,15 @@
+<svg role="img" aria-label="Harmonic Form Graph Interpretation" xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="white"/>
+<text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700">Harmonic Form Gives Maxima and Minima</text>
+<line x1="110" y1="380" x2="1090" y2="380" stroke="#111" stroke-width="2"/>
+<line x1="160" y1="130" x2="160" y2="630" stroke="#111" stroke-width="2"/>
+<line x1="160" y1="180" x2="1090" y2="180" stroke="#777" stroke-dasharray="8 8"/>
+<line x1="160" y1="580" x2="1090" y2="580" stroke="#777" stroke-dasharray="8 8"/>
+<text x="125" y="187" text-anchor="end" font-family="Arial" font-size="22" font-weight="700">R</text>
+<text x="125" y="587" text-anchor="end" font-family="Arial" font-size="22" font-weight="700">−R</text>
+<path d="M160 380 C240 250 310 180 390 180 C470 180 540 250 620 380 C700 510 770 580 850 580 C930 580 1000 510 1090 380" fill="none" stroke="#111" stroke-width="5"/>
+<circle cx="390" cy="180" r="7" fill="#111"/>
+<circle cx="850" cy="580" r="7" fill="#111"/>
+<text x="390" y="150" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">maximum=R</text>
+<text x="850" y="625" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">minimum=−R</text>
+</svg>

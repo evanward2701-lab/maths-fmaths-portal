@@ -1,0 +1,33 @@
+<!--
+Asset ID: AS1DifferentiationSVG-003
+Source: Chapter 12 Differentiation PDF p.21
+Related section: Core Theory 14
+Purpose: Show tangent to y=x^2 at (3,9), with tangent equation y-9=6(x-3).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="520" viewBox="0 0 850 520" role="img" aria-labelledby="title desc">
+  <title id="title">Tangent to y equals x squared at x equals 3</title>
+  <desc id="desc">A curve y equals x squared with tangent at point 3,9 and gradient 6.</desc>
+  <rect width="850" height="520" fill="#ffffff"/>
+  <text x="40" y="45" font-family="Arial" font-size="28" font-weight="700">Tangent to y = x² at (3,9)</text>
+  <g transform="translate(80,80)">
+    <rect x="0" y="0" width="460" height="360" fill="#fafafa" stroke="#333"/>
+    <line x1="40" y1="320" x2="430" y2="320" stroke="#111" stroke-width="2"/>
+    <line x1="90" y1="20" x2="90" y2="335" stroke="#111" stroke-width="2"/>
+    <text x="420" y="345" font-family="Arial" font-size="16">x</text>
+    <text x="100" y="35" font-family="Arial" font-size="16">y</text>
+    <path d="M90 320 C140 310, 205 260, 260 175 C300 110, 345 55, 420 15" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="300" cy="95" r="7" fill="#111"/>
+    <line x1="210" y1="275" x2="390" y2="-85" stroke="#222" stroke-width="4"/>
+    <text x="310" y="90" font-family="Arial" font-size="18">(3,9)</text>
+    <text x="250" y="245" font-family="Arial" font-size="17">tangent</text>
+  </g>
+  <g transform="translate(590,115)" font-family="Arial">
+    <rect x="0" y="0" width="220" height="240" fill="#fff" stroke="#333"/>
+    <text x="18" y="35" font-size="18" font-weight="700">Method</text>
+    <text x="18" y="75" font-size="17">dy/dx = 2x</text>
+    <text x="18" y="110" font-size="17">At x = 3:</text>
+    <text x="18" y="140" font-size="17">m = 2(3) = 6</text>
+    <text x="18" y="175" font-size="17">Point = (3,9)</text>
+    <text x="18" y="210" font-size="17" font-weight="700">y - 9 = 6(x - 3)</text>
+  </g>
+</svg>

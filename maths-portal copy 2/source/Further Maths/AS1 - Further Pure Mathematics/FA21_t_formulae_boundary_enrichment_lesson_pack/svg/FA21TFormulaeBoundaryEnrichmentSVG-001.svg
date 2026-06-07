@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Memory triangle for the t-formulae</title>
+  <desc id="desc">FA21TFormulaeBoundaryEnrichmentSVG-001: Memory triangle for the t-formulae</desc>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="32" y="32" width="1136" height="696" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="72" y="88" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Memory triangle for the t-formulae</text>
+  <g transform="translate(0,20)">
+    <path d="M160 520 L690 520 L690 190 Z" fill="#FFFFFF" stroke="#2C2C2E" stroke-width="4"/>
+    <path d="M650 520 L650 480 L690 480" fill="none" stroke="#2C2C2E" stroke-width="3"/>
+    <path d="M215 520 A 58 58 0 0 1 252 476" fill="none" stroke="#C5A059" stroke-width="4"/>
+    <text x="252" y="505" font-family="Arial" font-size="30" fill="#2C2C2E">θ</text>
+    <text x="714" y="365" font-family="Arial" font-size="34" font-weight="700" fill="#2C2C2E">2t</text>
+    <text x="390" y="566" font-family="Arial" font-size="34" font-weight="700" fill="#2C2C2E">1 − t²</text>
+    <text x="372" y="312" transform="rotate(-31 372 312)" font-family="Arial" font-size="34" font-weight="700" fill="#2C2C2E">1 + t²</text>
+  </g>
+  <rect x="760" y="170" width="340" height="160" rx="18" fill="#FFFFFF" stroke="#C5A059" stroke-width="2"/>
+  <text x="792" y="220" font-family="Arial" font-size="25" fill="#2C2C2E">tan θ = 2t / (1 − t²)</text>
+  <text x="792" y="268" font-family="Arial" font-size="22" fill="#2C2C2E">opposite = 2t</text>
+  <text x="792" y="302" font-family="Arial" font-size="22" fill="#2C2C2E">adjacent = 1 − t²</text>
+  <rect x="95" y="620" width="1010" height="70" rx="16" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="125" y="664" font-family="Arial" font-size="26" fill="#2C2C2E">sin θ = 2t/(1+t²)     cos θ = (1−t²)/(1+t²)     tan θ = 2t/(1−t²)</text>
+</svg>

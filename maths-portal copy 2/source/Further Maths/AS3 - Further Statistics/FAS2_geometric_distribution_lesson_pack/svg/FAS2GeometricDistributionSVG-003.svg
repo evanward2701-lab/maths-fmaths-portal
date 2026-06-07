@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="650" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2GeometricDistributionSVG-003: Wording to symbols exam card</title><desc id="desc">Exam card translating wording into symbols and formulae.</desc>
+<metadata>asset_id: FAS2GeometricDistributionSVG-003</metadata>
+<rect width="1200" height="650" fill="#FAF9F6"/>
+<rect x="60" y="50" width="1080" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="100" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Geometric wording → symbols → formula</text>
+<text x="100" y="155" font-family="Arial" font-size="22">First write the probability statement. Then choose the formula.</text>
+<g font-family="Arial" font-size="22"><text x="120" y="230">exactly x:        P(X = x)        p(1 − p)^(x − 1)</text><text x="120" y="295">at most x:        P(X ≤ x)        1 − (1 − p)^x</text><text x="120" y="360">fewer than x:     P(X &lt; x)=P(X ≤ x − 1)     1 − (1 − p)^(x − 1)</text><text x="120" y="425">more than x:      P(X &gt; x)        (1 − p)^x</text><text x="120" y="490">at least x:       P(X ≥ x)        (1 − p)^(x − 1)</text></g>
+</svg>

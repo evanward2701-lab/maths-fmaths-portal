@@ -1,0 +1,14 @@
+<!--
+Asset ID: A21TrigonometryAndModellingWidget-004
+Source: Chapter 7 Trigonometry and Modelling transcript; P2 Chapter 7 slide PDF
+Related lesson section: A21 Trigonometry and Modelling
+Purpose: Sinusoidal Model Explorer
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Sinusoidal Model Explorer</title>
+<style>body{font-family:Arial;padding:24px}.widget{max-width:1000px;margin:auto;border:2px solid #111;border-radius:18px;padding:24px;background:#f8f8f8}.controls{display:grid;grid-template-columns:1fr 1fr;gap:18px}canvas{display:block;margin:20px auto;border:1px solid #222;background:white}.summary{background:white;border:1px solid #222;border-radius:14px;padding:16px;line-height:1.7}</style></head>
+<body><main class="widget"><h1>Sinusoidal Model Explorer</h1><p>Explore y=d+R sin(kx+α).</p><canvas id="graph" width="860" height="430"></canvas><div class="controls"><label>d <span id="dv"></span><input id="d" type="range" min="-3" max="3" value="0" step="0.1" oninput="draw()"></label><label>R <span id="rv"></span><input id="R" type="range" min="0.5" max="4" value="2" step="0.1" oninput="draw()"></label><label>k <span id="kv"></span><input id="k" type="range" min="0.5" max="4" value="1" step="0.1" oninput="draw()"></label><label>α <span id="av"></span><input id="alpha" type="range" min="-3.14" max="3.14" value="0" step="0.01" oninput="draw()"></label></div><div id="sum" class="summary"></div></main>
+<script>
+const canvas=graph,ctx=canvas.getContext("2d");function mx(x){return 60+x*70}function my(y){return canvas.height/2-y*45}
+function draw(){const D=+d.value,A=+R.value,K=+k.value,P=+alpha.value;dv.textContent=D.toFixed(1);rv.textContent=A.toFixed(1);kv.textContent=K.toFixed(1);av.textContent=P.toFixed(2);ctx.clearRect(0,0,860,430);ctx.beginPath();ctx.moveTo(40,215);ctx.lineTo(830,215);ctx.moveTo(60,20);ctx.lineTo(60,405);ctx.stroke();ctx.setLineDash([8,8]);[D,D+A,D-A].forEach(y=>{ctx.beginPath();ctx.moveTo(60,my(y));ctx.lineTo(830,my(y));ctx.stroke()});ctx.setLineDash([]);ctx.lineWidth=3;ctx.beginPath();for(let x=0;x<=10;x+=0.02){const y=D+A*Math.sin(K*x+P),cx=mx(x),cy=my(y);if(x===0)ctx.moveTo(cx,cy);else ctx.lineTo(cx,cy)}ctx.stroke();const per=2*Math.PI/K;sum.innerHTML=`Model: y=${D.toFixed(1)}+${A.toFixed(1)}sin(${K.toFixed(1)}x+${P.toFixed(2)})<br>Midline: ${D.toFixed(1)}<br>Amplitude: ${A.toFixed(1)}<br>Period: ${per.toFixed(3)}<br>Maximum: ${(D+A).toFixed(1)}<br>Minimum: ${(D-A).toFixed(1)}`;}
+draw();
+</script></body></html>

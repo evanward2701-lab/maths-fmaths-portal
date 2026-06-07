@@ -1,0 +1,42 @@
+<!--
+Asset ID: A22StatisticalHypothesisTestingSVG-004
+Unit code: A22
+Topic code: A22-HT
+Topic name: Statistical hypothesis testing
+Related lesson section: Core Theory, Critical value method for correlation tests
+Source: CCEA specification map; lesson transcript; Stats Yr2 Chapter 1 PDF
+Purpose: Show the decision process for testing correlation using r and a critical value.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="690" viewBox="0 0 980 690" role="img" aria-labelledby="title desc">
+  <title id="title">Correlation hypothesis test decision process</title>
+  <desc id="desc">A flowchart showing how to test for correlation: state hypotheses, choose tail type, find critical value, compare r and write a contextual conclusion.</desc>
+  <rect width="980" height="690" fill="#ffffff"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700">Hypothesis test for correlation</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#111111"/></marker></defs>
+  <rect x="350" y="75" width="280" height="58" rx="10" fill="#f6f6f6" stroke="#111111" stroke-width="2"/>
+  <text x="490" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">Start with sample PMCC, r</text>
+  <line x1="490" y1="133" x2="490" y2="165" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="350" y="165" width="280" height="70" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="490" y="194" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700">State H₀</text>
+  <text x="490" y="219" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">H₀: ρ = 0</text>
+  <line x1="490" y1="235" x2="490" y2="267" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <polygon points="490,267 620,335 490,403 360,335" fill="#f6f6f6" stroke="#111111" stroke-width="2"/>
+  <text x="490" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700">Choose H₁</text>
+  <text x="490" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">from wording</text>
+  <line x1="360" y1="335" x2="220" y2="335" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="335" x2="760" y2="335" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="403" x2="490" y2="455" stroke="#111111" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="55" y="295" width="190" height="80" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="150" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700">Positive test</text><text x="150" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">H₁: ρ &gt; 0</text><text x="150" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">upper tail</text>
+  <rect x="735" y="295" width="190" height="80" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="830" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700">Negative test</text><text x="830" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">H₁: ρ &lt; 0</text><text x="830" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">lower tail</text>
+  <rect x="350" y="455" width="280" height="80" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+  <text x="490" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700">Two-tailed test</text><text x="490" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="15">H₁: ρ ≠ 0</text><text x="490" y="527" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">split significance across both tails</text>
+  <line x1="150" y1="375" x2="330" y2="570" stroke="#111111" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="830" y1="375" x2="650" y2="570" stroke="#111111" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="535" x2="490" y2="570" stroke="#111111" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="310" y="570" width="360" height="85" rx="10" fill="#f6f6f6" stroke="#111111" stroke-width="2"/>
+  <text x="490" y="598" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700">Compare r with the critical value</text>
+  <text x="490" y="623" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">In critical region: reject H₀</text>
+  <text x="490" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Not in critical region: do not reject H₀</text>
+</svg>

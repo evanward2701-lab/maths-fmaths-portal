@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="620" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2CriticalPathAnalysisBridgeSVG-001: A-Level Maths Bridge</title>
+<desc id="desc">Bridge from ordinary table and graph skills to Further Maths CPA.</desc>
+<defs>
+<marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker>
+<style>
+.bg{fill:#FAF9F6} .panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2} .node{fill:#FFFFF0;stroke:#2C2C2E;stroke-width:3} .arc{stroke:#2C2C2E;stroke-width:4;fill:none;marker-end:url(#arrow)} .dummy{stroke:#2C2C2E;stroke-width:4;stroke-dasharray:10 8;fill:none;marker-end:url(#arrow)} .accent{fill:#FBEFEF;stroke:#C5A059;stroke-width:2} .text{fill:#2C2C2E;font-family:Arial,Helvetica,sans-serif} .title{font-size:30px;font-weight:700} .label{font-size:20px;font-weight:700} .small{font-size:16px}
+</style>
+</defs>
+<rect class="bg" width="1000" height="620"/><rect class="panel" x="30" y="30" width="940" height="560" rx="24"/>
+
+<text class="text title" x="70" y="85">A-Level Maths Bridge: From Tables to Project Networks</text>
+<rect class="accent" x="80" y="150" width="350" height="300" rx="18"/><text class="text label" x="110" y="195">Ordinary Maths habits</text><text class="text small" x="110" y="235">• Read tables</text><text class="text small" x="110" y="270">• Follow graph direction</text><text class="text small" x="110" y="305">• Choose max/min values</text><text class="text small" x="110" y="340">• Interpret model outputs</text>
+<path d="M450 300 L550 300" stroke="#D4AF37" stroke-width="5" marker-end="url(#arrow)"/>
+<rect class="accent" x="570" y="150" width="350" height="300" rx="18"/><text class="text label" x="600" y="195">Further Maths upgrade</text><text class="text small" x="600" y="235">• Precedence table</text><text class="text small" x="600" y="270">• Activity-on-arc network</text><text class="text small" x="600" y="305">• Forward/backward pass</text><text class="text small" x="600" y="340">• Float and critical path</text>
+<rect class="accent" x="150" y="500" width="700" height="70" rx="14"/><text class="text label" x="180" y="540">Warning: “immediately preceding” means direct dependencies only.</text>
+
+</svg>

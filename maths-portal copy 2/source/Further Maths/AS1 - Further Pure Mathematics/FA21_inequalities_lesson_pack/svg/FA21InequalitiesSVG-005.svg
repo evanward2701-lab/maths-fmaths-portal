@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="FA21InequalitiesSVG-005" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Modulus graph: |x²-4x| &lt; 3</title>
+  <desc id="desc">Mathematical visual asset for the FA21 inequalities enrichment lesson.</desc>
+  <style>
+    .bg{fill:#FAF9F6} .card{fill:#FFFFFF;stroke:#E5E5EA;stroke-width:3} .title{font-family:Arial,sans-serif;font-size:30px;font-weight:700;fill:#2C2C2E} .txt{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E} .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E} .math{font-family:Georgia,serif;font-size:22px;fill:#2C2C2E} .axis{stroke:#2C2C2E;stroke-width:3} .curve{stroke:#2C2C2E;stroke-width:5;fill:none} .gold{stroke:#C5A059;stroke-width:5;fill:none} .dash{stroke:#C5A059;stroke-width:3;stroke-dasharray:10 8;fill:none} .shade{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;opacity:.85} .dot{fill:#C5A059;stroke:#2C2C2E;stroke-width:2} .open{fill:#FFFFFF;stroke:#C5A059;stroke-width:5} .hl{stroke:#C5A059;stroke-width:12;stroke-linecap:round}
+  </style>
+  <rect class="bg" width="1200" height="720"/>
+  <rect class="card" x="50" y="55" width="1100" height="610" rx="24"/>
+  <text class="title" x="85" y="105">Modulus graph: |x²-4x| &lt; 3</text>
+  
+  <line class="axis" x1="110" y1="440" x2="1050" y2="440"/><line class="axis" x1="520" y1="540" x2="520" y2="150"/>
+  <path class="curve" d="M180 160 C260 300 350 420 430 440 C480 470 525 340 590 240 C655 340 700 470 750 440 C850 420 940 300 1010 160"/>
+  <line class="gold" x1="130" y1="280" x2="1030" y2="280"/>
+  <line class="hl" x1="280" y1="440" x2="430" y2="440"/><line class="hl" x1="750" y1="440" x2="890" y2="440"/>
+  <text class="txt" x="245" y="470">2-√7</text><text class="txt" x="420" y="470">1</text><text class="txt" x="740" y="470">3</text><text class="txt" x="855" y="470">2+√7</text>
+  <text class="math" x="110" y="620">Solution: 2-√7 &lt; x &lt; 1 or 3 &lt; x &lt; 2+√7</text>
+
+</svg>

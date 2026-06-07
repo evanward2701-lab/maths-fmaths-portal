@@ -1,0 +1,41 @@
+% Asset ID: AS1DifferentiationTIKZ-004
+% Source: Chapter 12 Differentiation PDF p.22 + CCEA AS1-DIFF-LO007
+% Related lesson section: Core Theory 15
+% Purpose: Show tangent and normal to y=x^2 at (3,9), including negative reciprocal gradients.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=8cm,
+    axis lines=middle,
+    xmin=-0.5, xmax=5,
+    ymin=-1, ymax=18,
+    grid=both,
+    xlabel={$x$},
+    ylabel={$y$},
+    title={Tangent and normal to $y=x^2$ at $(3,9)$},
+    samples=200,
+    domain=-0.2:4.5
+]
+\addplot[thick, blue] {x^2};
+\addplot[thick, red, domain=1.8:4.2] {6*(x-3)+9};
+\addplot[thick, purple, domain=-0.2:5] {-1/6*(x-3)+9};
+
+\addplot[only marks, mark=*, black] coordinates {(3,9)};
+\node[anchor=west] at (axis cs:3.05,9.2) {$(3,9)$};
+
+\node[red, anchor=west] at (axis cs:3.15,12.7) {tangent: $m_t=6$};
+\node[purple, anchor=west] at (axis cs:0.5,10.2) {normal: $m_n=-\frac16$};
+
+\node[fill=white, draw, rounded corners, align=center] at (axis cs:1.55,15.1)
+{Normal gradient is\\the negative reciprocal\\of tangent gradient.};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

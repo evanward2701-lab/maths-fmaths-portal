@@ -1,0 +1,95 @@
+{
+  "placeholder_count": 20,
+  "placeholders": [
+    [
+      "FAS1ConicSections1SVG-004",
+      "svg/FAS1ConicSections1SVG-004.svg"
+    ],
+    [
+      "FAS1ConicSections1TikZ-003",
+      "tikz/FAS1ConicSections1TikZ-003.tex"
+    ],
+    [
+      "FAS1ConicSections1SVG-003",
+      "svg/FAS1ConicSections1SVG-003.svg"
+    ],
+    [
+      "FAS1ConicSections1TikZ-004",
+      "tikz/FAS1ConicSections1TikZ-004.tex"
+    ],
+    [
+      "FAS1ConicSections1Mermaid-001",
+      "mermaid/FAS1ConicSections1Mermaid-001.md"
+    ],
+    [
+      "FAS1ConicSections1Mermaid-002",
+      "mermaid/FAS1ConicSections1Mermaid-002.md"
+    ],
+    [
+      "FAS1ConicSections1SVG-001",
+      "svg/FAS1ConicSections1SVG-001.svg"
+    ],
+    [
+      "FAS1ConicSections1SVG-002",
+      "svg/FAS1ConicSections1SVG-002.svg"
+    ],
+    [
+      "FAS1ConicSections1SVG-003",
+      "svg/FAS1ConicSections1SVG-003.svg"
+    ],
+    [
+      "FAS1ConicSections1SVG-004",
+      "svg/FAS1ConicSections1SVG-004.svg"
+    ],
+    [
+      "FAS1ConicSections1BridgeSVG-001",
+      "svg/FAS1ConicSections1BridgeSVG-001.svg"
+    ],
+    [
+      "FAS1ConicSections1TikZ-001",
+      "tikz/FAS1ConicSections1TikZ-001.tex"
+    ],
+    [
+      "FAS1ConicSections1TikZ-002",
+      "tikz/FAS1ConicSections1TikZ-002.tex"
+    ],
+    [
+      "FAS1ConicSections1TikZ-003",
+      "tikz/FAS1ConicSections1TikZ-003.tex"
+    ],
+    [
+      "FAS1ConicSections1TikZ-004",
+      "tikz/FAS1ConicSections1TikZ-004.tex"
+    ],
+    [
+      "FAS1ConicSections1Widget-001",
+      "widgets/FAS1ConicSections1Widget-001.html"
+    ],
+    [
+      "FAS1ConicSections1Widget-002",
+      "widgets/FAS1ConicSections1Widget-002.html"
+    ],
+    [
+      "FAS1ConicSections1Widget-003",
+      "widgets/FAS1ConicSections1Widget-003.html"
+    ],
+    [
+      "FAS1ConicSections1Widget-004",
+      "widgets/FAS1ConicSections1Widget-004.html"
+    ],
+    [
+      "FAS1ConicSections1Widget-005",
+      "widgets/FAS1ConicSections1Widget-005.html"
+    ]
+  ],
+  "missing_placeholder_files": [],
+  "asset_id_missing_in_file": [],
+  "svg_errors": [],
+  "html_errors": [],
+  "bad_wrapper_terms_found": [],
+  "old_reference_terms_found": [],
+  "lo_missing": [],
+  "bridge_label_ok": true,
+  "offspec_marked_ok": true,
+  "expected_missing": []
+}

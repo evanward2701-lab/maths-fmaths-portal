@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-009
+Source: Chapter 5/7 Forces Transcript and supporting PDFs
+Related lesson section: Worked Example 2
+Purpose: Show a box on a smooth horizontal floor pulled by 10 N at 30 degrees.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Smooth Floor Angled Pull</title>
+  <desc id="desc">Show a box on a smooth horizontal floor pulled by 10 N at 30 degrees.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Smooth Floor Angled Pull</text>
+  <line x1="120" y1="350" x2="780" y2="350" stroke="#111" stroke-width="4"/><rect x="330" y="260" width="180" height="90" fill="#f7f7f7" stroke="#111"/><text x="420" y="313" text-anchor="middle" font-family="Arial" font-size="22">8 kg</text><line x1="510" y1="285" x2="680" y2="185" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="595.0" y="225.0" font-family="Arial" font-size="20" text-anchor="middle">10 N</text><line x1="510" y1="285" x2="680" y2="285" stroke="#111" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/><text x="595" y="315" font-family="Arial" font-size="20" text-anchor="middle">10 cos30</text><line x1="680" y1="285" x2="680" y2="185" stroke="#111" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/><text x="750" y="235" font-family="Arial" font-size="20" text-anchor="middle">10 sin30</text><line x1="420" y1="260" x2="420" y2="160" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="420.0" y="200.0" font-family="Arial" font-size="20" text-anchor="middle">R</text><line x1="420" y1="350" x2="420" y2="455" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="420.0" y="392.5" font-family="Arial" font-size="20" text-anchor="middle">8g</text>
+</svg>

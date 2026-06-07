@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Oblique impact with a fixed smooth plane</title><desc id="desc">A sphere approaches a fixed smooth plane with speed u at angle alpha and rebounds with speed v at angle beta. The parallel components are equal and perpendicular components are connected by e.</desc>
+  <metadata>Asset ID: FA22RestitutionElasticCollisionsInTwoDimensionsSVG-002; Source: FM1-Chp5-ObliqueCollisions.pdf page 4.</metadata>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/></marker><marker id="gold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker></defs>
+  <rect width="1280" height="800" fill="#FAF9F6"/><rect x="42" y="38" width="1196" height="724" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="78" y="94" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#2C2C2E">Oblique impact with a fixed smooth plane</text>
+  <line x1="115" y1="515" x2="715" y2="515" stroke="#2C2C2E" stroke-width="5"/>
+  <circle cx="415" cy="515" r="8" fill="#2C2C2E"/>
+  <line x1="250" y1="317" x2="415" y2="515" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrow)"/><text x="238" y="304" font-family="Georgia, serif" font-size="26">u</text>
+  <line x1="415" y1="515" x2="610" y2="430" stroke="#2C2C2E" stroke-width="4" marker-end="url(#arrow)"/><text x="620" y="432" font-family="Georgia, serif" font-size="26">v</text>
+  <line x1="415" y1="515" x2="415" y2="315" stroke="#E5E5EA" stroke-width="3" stroke-dasharray="8 8"/><text x="428" y="340" font-family="Arial" font-size="18">normal</text>
+  <line x1="415" y1="515" x2="305" y2="515" stroke="#C5A059" stroke-width="5" marker-end="url(#gold)"/><text x="220" y="550" font-family="Georgia, serif" font-size="24">u cos α</text>
+  <line x1="305" y1="515" x2="305" y2="383" stroke="#9F3A45" stroke-width="5" marker-end="url(#arrow)"/><text x="170" y="390" font-family="Georgia, serif" font-size="24">u sin α</text>
+  <line x1="415" y1="545" x2="570" y2="545" stroke="#C5A059" stroke-width="5" marker-end="url(#gold)"/><text x="585" y="552" font-family="Georgia, serif" font-size="24">v cos β</text>
+  <line x1="570" y1="545" x2="570" y2="477" stroke="#9F3A45" stroke-width="5" marker-end="url(#arrow)"/><text x="585" y="500" font-family="Georgia, serif" font-size="24">v sin β</text>
+  <text x="335" y="490" font-family="Georgia, serif" font-size="24">α</text><text x="505" y="500" font-family="Georgia, serif" font-size="24">β</text>
+  <rect x="785" y="220" width="390" height="140" rx="20" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="813" y="268" font-family="Georgia, serif" font-size="28">Parallel unchanged</text><text x="813" y="318" font-family="Georgia, serif" font-size="28">u cos α = v cos β</text>
+  <rect x="785" y="400" width="390" height="150" rx="20" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="813" y="448" font-family="Georgia, serif" font-size="28">Normal uses restitution</text><text x="813" y="500" font-family="Georgia, serif" font-size="28">e u sin α = v sin β</text>
+  <rect x="785" y="590" width="390" height="90" rx="20" fill="#FFFFF0" stroke="#D4AF37" stroke-width="2"/><text x="813" y="646" font-family="Georgia, serif" font-size="27">deflection = α + β</text>
+</svg>

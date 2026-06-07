@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22GraphTheoryBipartiteMatchingsWidget-002</title>
+  <!--
+    Widget Asset: FA22GraphTheoryBipartiteMatchingsWidget-002
+    Asset ID: FA22GraphTheoryBipartiteMatchingsWidget-002
+    Topic ID: FA22GraphTheoryBipartiteMatchings
+    Unit: FA22
+    Topic code: FA22-GRAPH
+    Related lesson file: FA22_graph_theory_bipartite_matchings_lesson.md
+    Related lesson section: Section 10.2 Hall Condition Checker Widget
+    Source: AI-proposed teaching enhancement based on CCEA FA22-GRAPH-LO004.
+    Purpose: Let the student select a subset S, calculate N(S), compare |N(S)| with |S|, and test Hall's condition.
+    Off-spec guard: This widget checks Hall's marriage theorem only. It does not teach weighted allocation or the Hungarian algorithm.
+  -->
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--soft-gold:#C5A059;--blush:#FBEFEF;--text:#2C2C2E;--muted:#6E6E73;--soft-line:#A9A9B2;--good-bg:#F4F8ED;--bad-bg:#FFF0F0;--focus:#8A6D1D}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}.wrap{max-width:1120px;margin:0 auto;padding:24px}.card{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px}h1{margin:0 0 8px;font-size:clamp(1.5rem,3vw,2.15rem);letter-spacing:-.03em}.subtitle{margin:0 0 18px;color:var(--muted);max-width:850px}.grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:start}@media(max-width:880px){.grid{grid-template-columns:1fr}}.panel{background:rgba(255,255,240,.78);border:1px solid var(--line);border-radius:18px;padding:16px}.panel h2{margin:0 0 12px;font-size:1.05rem}.subsetControls{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 16px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:var(--canvas);display:inline-flex;align-items:center;gap:8px;font-weight:700}input[type=checkbox]{width:18px;height:18px;accent-color:var(--gold)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}button{border:1px solid var(--soft-gold);background:var(--panel);color:var(--text);border-radius:999px;padding:9px 14px;font-weight:700;cursor:pointer}button:hover{border-color:var(--gold);background:var(--blush)}button:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.graphBox{background:var(--canvas);border:1px solid var(--line);border-radius:18px;padding:8px;overflow:hidden}svg{width:100%;height:auto;display:block}.result{margin-top:16px;border-radius:18px;padding:16px;border:1px solid var(--line);background:var(--canvas)}.result.good{background:var(--good-bg);border-color:#B8C99D}.result.bad{background:var(--bad-bg);border-color:#E0A0A0}.result h3{margin:0 0 8px}.result p{margin:8px 0}code{background:var(--blush);padding:2px 6px;border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.tableWrap{overflow-x:auto;margin-top:12px}table{width:100%;border-collapse:collapse;min-width:380px;font-size:.92rem}th,td{border:1px solid var(--line);padding:8px;text-align:center}th{background:var(--canvas)}.ok{background:var(--good-bg)}.fail{background:var(--bad-bg)}.small{color:var(--muted);font-size:.92rem}.footer-note{margin-top:16px;color:var(--muted);font-size:.92rem}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Hall Condition Checker</h1>
+      <p class="subtitle">Select a subset <strong>S</strong> of <strong>U</strong>. The widget finds the neighbourhood <strong>N(S)</strong>, counts both sets, and checks whether <strong>|N(S)| &ge; |S|</strong>.</p>
+      <div class="grid">
+        <section class="panel" aria-labelledby="controls-title">
+          <h2 id="controls-title">Choose a graph and subset</h2>
+          <p class="small">Hall’s theorem checks every subset of U. This tool lets you inspect one subset at a time or run every subset.</p>
+          <div class="actions"><button type="button" id="loadSuccess">Load success graph</button><button type="button" id="loadFailure">Load bottleneck graph</button><button type="button" id="checkAll">Check every subset</button></div>
+          <h2>Select S &subseteq; U</h2>
+          <div id="subsetControls" class="subsetControls"></div>
+          <div id="result" class="result" aria-live="polite"></div>
+          <div class="tableWrap" id="allSubsetTable"></div>
+        </section>
+        <section class="panel" aria-labelledby="graph-title">
+          <h2 id="graph-title">Subset and neighbourhood diagram</h2>
+          <div class="graphBox">
+            <svg viewBox="0 0 720 470" role="img" aria-labelledby="svgTitle svgDesc">
+              <title id="svgTitle">Interactive Hall theorem graph</title>
+              <desc id="svgDesc">A bipartite graph showing a selected subset S in U and its neighbourhood N(S) in W.</desc>
+              <rect x="0" y="0" width="720" height="470" rx="20" fill="#FAF9F6"></rect>
+              <text x="130" y="44" text-anchor="middle" fill="#2C2C2E" font-size="18" font-weight="700">U</text>
+              <text x="590" y="44" text-anchor="middle" fill="#2C2C2E" font-size="18" font-weight="700">W</text>
+              <g id="edgeLayer"></g><g id="vertexLayer"></g>
+              <rect x="160" y="380" width="400" height="58" rx="16" fill="#FFFFF0" stroke="#E5E5EA"></rect>
+              <text id="countText1" x="360" y="405" text-anchor="middle" fill="#2C2C2E" font-size="17" font-weight="700"></text>
+              <text id="countText2" x="360" y="429" text-anchor="middle" fill="#2C2C2E" font-size="15"></text>
+            </svg>
+          </div>
+          <p class="footer-note">CCEA FA22-GRAPH-LO004 focus: demonstrate understanding of and use Hall’s marriage theorem.</p>
+        </section>
+      </div>
+      <p class="footer-note">Boundary guard: this widget uses adjacency only. It does not minimise time, maximise profit or apply the Hungarian algorithm.</p>
+    </section>
+  </main>
+  <script>
+    const U=["A","B","C"],W=["1","2","3"];const presets={success:new Set(["A-1","A-2","B-1","B-3","C-2","C-3"]),failure:new Set(["A-1","B-1","C-2","C-3"])};let allowed=new Set(presets.success),selectedS=new Set(["A","B"]);const coords={A:{x:130,y:115},B:{x:130,y:220},C:{x:130,y:325},"1":{x:590,y:115},"2":{x:590,y:220},"3":{x:590,y:325}};const edgeKey=(u,w)=>`${u}-${w}`;const subsetControls=document.getElementById("subsetControls"),result=document.getElementById("result"),allSubsetTable=document.getElementById("allSubsetTable"),edgeLayer=document.getElementById("edgeLayer"),vertexLayer=document.getElementById("vertexLayer"),countText1=document.getElementById("countText1"),countText2=document.getElementById("countText2");
+    function setText(set){const arr=[...set];return arr.length?`{${arr.join(", ")}}`:"∅"}function neighboursOf(subset){const n=new Set();subset.forEach(u=>W.forEach(w=>{if(allowed.has(edgeKey(u,w)))n.add(w)}));return n}function makeSvg(tag,attrs={}){const el=document.createElementNS("http://www.w3.org/2000/svg",tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));return el}
+    function renderSubsetControls(){subsetControls.innerHTML="";U.forEach(u=>{const label=document.createElement("label");label.className="pill";const box=document.createElement("input");box.type="checkbox";box.checked=selectedS.has(u);box.addEventListener("change",()=>{box.checked?selectedS.add(u):selectedS.delete(u);allSubsetTable.innerHTML="";render()});label.appendChild(box);label.append(` ${u}`);subsetControls.appendChild(label)})}
+    function renderGraph(){edgeLayer.innerHTML="";vertexLayer.innerHTML="";const N=neighboursOf(selectedS);U.forEach(u=>W.forEach(w=>{if(!allowed.has(edgeKey(u,w)))return;const p1=coords[u],p2=coords[w],active=selectedS.has(u);edgeLayer.appendChild(makeSvg("line",{x1:p1.x,y1:p1.y,x2:p2.x,y2:p2.y,stroke:active?"#D4AF37":"#A9A9B2","stroke-width":active?"6":"3","stroke-linecap":"round",opacity:active?"1":"0.55"}))}));U.forEach(u=>drawVertex(u,selectedS.has(u),false));W.forEach(w=>drawVertex(w,false,N.has(w)));countText1.textContent=`S = ${setText(selectedS)} and N(S) = ${setText(N)}`;countText2.textContent=`|S| = ${selectedS.size}, |N(S)| = ${N.size}`}
+    function drawVertex(v,selected,neighbour){const p=coords[v];const circle=makeSvg("circle",{cx:p.x,cy:p.y,r:"29",fill:selected?"#FBEFEF":neighbour?"#FFF8DC":"#FFFFF0",stroke:selected||neighbour?"#D4AF37":"#2C2C2E","stroke-width":selected||neighbour?"3":"2"});const text=makeSvg("text",{x:p.x,y:p.y+1,"text-anchor":"middle","dominant-baseline":"middle",fill:"#2C2C2E","font-size":"22","font-weight":"700"});text.textContent=v;vertexLayer.appendChild(circle);vertexLayer.appendChild(text)}
+    function renderResult(){const N=neighboursOf(selectedS),holds=N.size>=selectedS.size;result.className="result "+(holds?"good":"bad");const empty=selectedS.size===0?"<p>The empty set is harmless: N(∅) = ∅ and 0 ≥ 0.</p>":"";result.innerHTML=`<h3>${holds?"Hall condition holds for this subset":"Hall condition fails for this subset"}</h3><p><strong>Selected subset:</strong> <code>S = ${setText(selectedS)}</code></p><p><strong>Neighbourhood:</strong> <code>N(S) = ${setText(N)}</code></p><p><strong>Count check:</strong> <code>|S| = ${selectedS.size}</code> and <code>|N(S)| = ${N.size}</code></p><p><strong>Conclusion:</strong> <code>${N.size} ${holds?"≥":"<"} ${selectedS.size}</code></p>${empty}<p>${holds?"This subset passes Hall’s condition.":"This single failed subset proves that no complete matching from U to W exists."}</p>`}
+    function subsets(arr){const out=[],total=1<<arr.length;for(let mask=0;mask<total;mask++){const s=new Set();arr.forEach((item,index)=>{if(mask&(1<<index))s.add(item)});out.push(s)}return out}function renderAllSubsetTable(){const ss=subsets(U),rows=ss.map(s=>{const n=neighboursOf(s),holds=n.size>=s.size;return `<tr class="${holds?"ok":"fail"}"><td><code>${setText(s)}</code></td><td><code>${setText(n)}</code></td><td>${s.size}</td><td>${n.size}</td><td>${holds?"Pass":"Fail"}</td></tr>`}).join("");const allHold=ss.every(s=>neighboursOf(s).size>=s.size);allSubsetTable.innerHTML=`<h2>Every subset check</h2><p class="small">Overall conclusion: <strong>${allHold?"Hall’s condition holds for every subset, so a complete matching exists.":"At least one subset fails Hall’s condition, so no complete matching exists."}</strong></p><table><thead><tr><th>S</th><th>N(S)</th><th>|S|</th><th>|N(S)|</th><th>Condition</th></tr></thead><tbody>${rows}</tbody></table>`}
+    function render(){renderSubsetControls();renderGraph();renderResult()}document.getElementById("loadSuccess").addEventListener("click",()=>{allowed=new Set(presets.success);selectedS=new Set(["A","B"]);allSubsetTable.innerHTML="";render()});document.getElementById("loadFailure").addEventListener("click",()=>{allowed=new Set(presets.failure);selectedS=new Set(["A","B"]);allSubsetTable.innerHTML="";render()});document.getElementById("checkAll").addEventListener("click",renderAllSubsetTable);render();
+  </script>
+</body>
+</html>

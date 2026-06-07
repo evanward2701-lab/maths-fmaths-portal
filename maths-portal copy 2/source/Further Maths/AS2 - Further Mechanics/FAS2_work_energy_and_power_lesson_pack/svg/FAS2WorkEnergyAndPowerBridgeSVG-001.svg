@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2WorkEnergyAndPowerBridgeSVG-001: Bridge: Newton route versus energy route</title>
+  <desc id="desc">A split comparison of ordinary AS2 mechanics and FAS2 work-energy methods.</desc>
+  <metadata>asset_id: FAS2WorkEnergyAndPowerBridgeSVG-001; unit_code: FAS2; topic_code: FAS2-WENG + FAS2-POW; topic_id: FAS2WorkEnergyAndPower; status: Generated in Phase 3</metadata>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" fill="#C5A059"/></marker></defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="45" width="1100" height="670" rx="30" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="90" y="105" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Bridge: Newton route versus energy route</text>
+  
+  <rect x="100" y="180" width="480" height="470" rx="28" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <rect x="620" y="180" width="480" height="470" rx="28" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/>
+  <text x="340" y="235" text-anchor="middle" font-size="26" font-family="Inter, Arial" font-weight="700">Ordinary AS2 Mechanics</text>
+  <text x="860" y="235" text-anchor="middle" font-size="26" font-family="Inter, Arial" font-weight="700">FAS2 Work-Energy</text>
+  <text x="340" y="310" text-anchor="middle" font-size="22" font-family="Inter, Arial">draw force diagram</text>
+  <text x="340" y="370" text-anchor="middle" font-size="22" font-family="Inter, Arial">resolve forces</text>
+  <text x="340" y="430" text-anchor="middle" font-size="22" font-family="Inter, Arial">find resultant force</text>
+  <text x="340" y="490" text-anchor="middle" font-size="28" font-family="Cambria Math">F = ma</text>
+  <text x="340" y="550" text-anchor="middle" font-size="22" font-family="Inter, Arial">use SUVAT</text>
+  <text x="860" y="310" text-anchor="middle" font-size="22" font-family="Inter, Arial">draw force diagram</text>
+  <text x="860" y="370" text-anchor="middle" font-size="22" font-family="Inter, Arial">identify initial energy</text>
+  <text x="860" y="430" text-anchor="middle" font-size="22" font-family="Inter, Arial">identify final energy</text>
+  <text x="860" y="490" text-anchor="middle" font-size="22" font-family="Inter, Arial">add work in and work out</text>
+  <text x="860" y="550" text-anchor="middle" font-size="28" font-family="Cambria Math">one energy equation</text>
+  <text x="600" y="705" text-anchor="middle" font-size="28" font-family="Cambria Math" fill="#C5A059">same physics, different ledger</text>
+
+</svg>

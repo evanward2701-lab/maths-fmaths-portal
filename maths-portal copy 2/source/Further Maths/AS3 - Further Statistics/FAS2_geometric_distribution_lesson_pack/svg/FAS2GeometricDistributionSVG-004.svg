@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="650" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2GeometricDistributionSVG-004: CCEA boundary card</title><desc id="desc">Boundary card showing geometric as core and negative binomial as excluded.</desc>
+<metadata>asset_id: FAS2GeometricDistributionSVG-004 optional</metadata>
+<rect width="1200" height="650" fill="#FAF9F6"/>
+<rect x="60" y="50" width="1080" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="100" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">CCEA lesson boundary</text>
+<rect x="120" y="200" width="430" height="260" rx="18" fill="#FAF9F6" stroke="#D4AF37" stroke-width="3"/><rect x="650" y="200" width="430" height="260" rx="18" fill="#FBEFEF" stroke="#E5E5EA"/>
+<text x="335" y="260" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">Core here</text><text x="865" y="260" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">Excluded here</text>
+<text x="335" y="325" text-anchor="middle" font-family="Arial" font-size="26">X ~ Geo(p)</text><text x="865" y="325" text-anchor="middle" font-family="Arial" font-size="26">Negative binomial</text>
+<text x="335" y="380" text-anchor="middle" font-family="Arial" font-size="21">Trials until first success</text><text x="865" y="380" text-anchor="middle" font-family="Arial" font-size="21">Trials until rth success</text>
+</svg>

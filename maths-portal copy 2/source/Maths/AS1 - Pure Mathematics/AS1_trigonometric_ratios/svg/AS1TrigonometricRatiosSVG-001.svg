@@ -1,0 +1,20 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Right-angled trigonometric ratios</title>
+<desc id="desc">Right triangle labelled opposite, adjacent and hypotenuse.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Right-angled trigonometric ratios</text>
+
+<polygon points="120,430 520,430 520,150" fill="#f7fbff" stroke="#1d3557" stroke-width="4"/>
+<path d="M520 430 L485 430 L485 395 L520 395" fill="none" stroke="#1d3557" stroke-width="3"/>
+<path d="M155 430 A60 60 0 0 0 205 400" fill="none" stroke="#e76f51" stroke-width="4"/>
+<text x="180" y="402" font-family="Arial" font-size="28" fill="#e76f51">θ</text>
+<text x="300" y="465" font-family="Arial" font-size="24" text-anchor="middle">adjacent</text>
+<text x="545" y="300" font-family="Arial" font-size="24">opposite</text>
+<text x="315" y="260" font-family="Arial" font-size="24" transform="rotate(-35 315 260)">hypotenuse</text>
+<rect x="600" y="150" width="250" height="210" rx="16" fill="#fff7ed" stroke="#f59e0b"/>
+<text x="625" y="195" font-family="Arial" font-size="21">sin θ = opp / hyp</text>
+<text x="625" y="245" font-family="Arial" font-size="21">cos θ = adj / hyp</text>
+<text x="625" y="295" font-family="Arial" font-size="21">tan θ = opp / adj</text>
+
+</svg>

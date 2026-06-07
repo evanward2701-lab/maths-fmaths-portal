@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="620" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22CentreOfMassSVG-001: Object type definitions</title>
+  <desc id="desc">Object type definitions</desc>
+  <style>
+    .bg { fill:#FAF9F6; } .card { fill:#FFFFF0; stroke:#E5E5EA; stroke-width:2; rx:22; }
+    .ink { fill:#2C2C2E; font-family: Georgia, 'Times New Roman', serif; }
+    .line { stroke:#2C2C2E; stroke-width:3; fill:none; } .gold { stroke:#C5A059; stroke-width:4; fill:none; }
+    .fill { fill:#FBEFEF; stroke:#C5A059; stroke-width:3; } .dot { fill:#D4AF37; stroke:#2C2C2E; stroke-width:1.5; }
+    .dash { stroke:#C5A059; stroke-width:3; stroke-dasharray:8 6; fill:none; } .small { font-size:18px; } .title { font-size:28px; font-weight:700; } .label { font-size:21px; font-weight:700; }
+  </style>
+  <rect class="bg" width="100%" height="100%"/>
+  <rect class="card" x="35" y="35" width="1030" height="550"/>
+  <text class="ink title" x="550.0" y="80" text-anchor="middle">Object type definitions</text>
+  
+  <circle class="dot" cx="180" cy="240" r="18"/><text class="ink label" x="180" y="310" text-anchor="middle">Particle</text><text class="ink small" x="180" y="342" text-anchor="middle">mass with no dimension</text>
+  <line class="gold" x1="340" y1="240" x2="520" y2="240"/><circle class="dot" cx="430" cy="240" r="9"/><text class="ink label" x="430" y="310" text-anchor="middle">Rod / beam / wire</text><text class="ink small" x="430" y="342" text-anchor="middle">mass with one dimension</text>
+  <rect class="fill" x="610" y="185" width="150" height="110"/><line class="dash" x1="685" y1="185" x2="685" y2="295"/><line class="dash" x1="610" y1="240" x2="760" y2="240"/><circle class="dot" cx="685" cy="240" r="9"/><text class="ink label" x="685" y="330" text-anchor="middle">Lamina</text><text class="ink small" x="685" y="362" text-anchor="middle">mass with two dimensions</text>
+  <path class="fill" d="M910 175 C970 155 1020 205 995 260 C1030 315 950 365 890 320 C835 335 810 260 850 225 C850 195 875 182 910 175Z"/><circle class="dot" cx="920" cy="260" r="9"/><text class="ink label" x="920" y="390" text-anchor="middle">Body</text><text class="ink small" x="920" y="422" text-anchor="middle">any fixed amount of matter</text>
+
+</svg>

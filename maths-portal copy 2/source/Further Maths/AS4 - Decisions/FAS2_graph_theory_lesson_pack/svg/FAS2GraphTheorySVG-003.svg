@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2GraphTheorySVG-003: Walk/path/trail/cycle comparison</title>
+  <desc id="desc">Route terminology diagram comparing walk, path, trail, cycle, Eulerian and Hamiltonian ideas.</desc>
+  <!-- asset_id: FAS2GraphTheorySVG-003 | unit_code: FAS2 | topic_code: FAS2-GRAPH | topic_id: FAS2GraphTheory -->
+  <rect width="1100" height="720" fill="#FAF9F6"/>
+  <rect x="40" y="34" width="1020" height="650" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  
+  <text x="80" y="86" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#2C2C2E">Traversability language</text>
+  <text x="80" y="124" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">Eulerian ideas focus on edges. Hamiltonian ideas focus on vertices.</text>
+  <g stroke="#2C2C2E" stroke-width="5" stroke-linecap="round"><line x1="170" y1="360" x2="310" y2="210"/><line x1="170" y1="360" x2="380" y2="390"/><line x1="310" y1="210" x2="610" y2="210"/><line x1="310" y1="210" x2="380" y2="390"/><line x1="380" y1="390" x2="610" y2="210"/><line x1="380" y1="390" x2="760" y2="430"/><line x1="300" y1="560" x2="760" y2="430"/><line x1="170" y1="360" x2="300" y2="560"/></g>
+  <g stroke="#C5A059" stroke-width="10" stroke-linecap="round" opacity="0.55"><line x1="170" y1="360" x2="310" y2="210"/><line x1="310" y1="210" x2="610" y2="210"/><line x1="610" y1="210" x2="380" y2="390"/><line x1="380" y1="390" x2="170" y2="360"/></g>
+  <g fill="#D4AF37" stroke="#2C2C2E" stroke-width="3"><circle cx="170" cy="360" r="18"/><circle cx="310" cy="210" r="18"/><circle cx="380" cy="390" r="18"/><circle cx="300" cy="560" r="18"/><circle cx="610" cy="210" r="18"/><circle cx="760" cy="430" r="18"/></g>
+  <g font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#2C2C2E"><text x="126" y="368">P</text><text x="300" y="180">Q</text><text x="368" y="430">R</text><text x="290" y="600">S</text><text x="600" y="180">T</text><text x="785" y="438">U</text></g>
+  <rect x="820" y="170" width="220" height="390" rx="16" fill="#FAF9F6" stroke="#E5E5EA"/>
+  <text x="850" y="210" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#2C2C2E">Key rules</text>
+  <text x="850" y="250" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Walk: route</text><text x="850" y="285" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Path: no repeated vertices</text><text x="850" y="320" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Trail: no repeated edges</text><text x="850" y="355" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Cycle: closed path</text><text x="850" y="390" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Euler: every edge</text><text x="850" y="425" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Hamilton: every vertex</text>
+  <rect x="80" y="620" width="650" height="42" rx="12" fill="#FBEFEF" stroke="#C5A059"/><text x="105" y="647" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">Highlighted route: P → Q → T → R → P is a cycle.</text>
+
+</svg>

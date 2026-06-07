@@ -1,0 +1,54 @@
+{
+  "files_exist": {
+    "FAS2GraphTheoryMermaid-001": true,
+    "FAS2GraphTheorySVG-001": true,
+    "FAS2GraphTheorySVG-002": true,
+    "FAS2GraphTheorySVG-003": true,
+    "FAS2GraphTheorySVG-004": true,
+    "FAS2GraphTheorySVG-005": true,
+    "FAS2GraphTheoryBridgeSVG-001": true,
+    "FAS2GraphTheoryTikZ-001": true,
+    "FAS2GraphTheoryTikZ-002": true,
+    "FAS2GraphTheoryWidget-001": true,
+    "FAS2GraphTheoryWidget-002": true,
+    "FAS2GraphTheoryWidget-003": true
+  },
+  "placeholder_ids": [
+    "FAS2GraphTheoryMermaid-001 ",
+    "FAS2GraphTheorySVG-001 ",
+    "FAS2GraphTheorySVG-002 ",
+    "FAS2GraphTheorySVG-003 ",
+    "FAS2GraphTheorySVG-004 ",
+    "FAS2GraphTheorySVG-005 ",
+    "FAS2GraphTheoryBridgeSVG-001 ",
+    "FAS2GraphTheoryTikZ-001 ",
+    "FAS2GraphTheoryTikZ-002 ",
+    "FAS2GraphTheoryWidget-001 ",
+    "FAS2GraphTheoryWidget-002 ",
+    "FAS2GraphTheoryWidget-003 "
+  ],
+  "placeholder_match": false,
+  "svg_valid": {
+    "FAS2GraphTheorySVG-001": true,
+    "FAS2GraphTheorySVG-002": true,
+    "FAS2GraphTheorySVG-003": true,
+    "FAS2GraphTheorySVG-004": true,
+    "FAS2GraphTheorySVG-005": true,
+    "FAS2GraphTheoryBridgeSVG-001": true
+  },
+  "html_basic_valid": {
+    "FAS2GraphTheoryWidget-001": true,
+    "FAS2GraphTheoryWidget-002": true,
+    "FAS2GraphTheoryWidget-003": true
+  },
+  "lo_ids_present": {
+    "FAS2-GRAPH-LO001": true,
+    "FAS2-GRAPH-LO002": true,
+    "FAS2-GRAPH-LO003": true,
+    "FAS2-GRAPH-LO004": true,
+    "FAS2-GRAPH-LO005": true
+  },
+  "old_single_markdown_refs_present": false,
+  "bridge_label_present": true,
+  "offspec_logged": true
+}

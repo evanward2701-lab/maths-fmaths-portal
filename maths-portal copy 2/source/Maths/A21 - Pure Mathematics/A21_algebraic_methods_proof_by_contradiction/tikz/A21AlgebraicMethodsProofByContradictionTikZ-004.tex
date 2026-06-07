@@ -1,0 +1,22 @@
+% Asset ID: A21AlgebraicMethodsProofByContradictionTikZ-004
+% Source: Teacher transcript and slide example for Euclid's proof; Phase 1 Worked Example 6
+% Related lesson section: Worked Example 6
+% Purpose: Show Euclid's contradiction proof that there are infinitely many prime numbers.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily, step/.style={rectangle, rounded corners=5pt, draw=black, very thick, align=center, text width=4.8cm, minimum height=1.15cm}, diamond/.style={diamond, aspect=2, draw=black, very thick, align=center, text width=3.2cm, fill=gray!8}, arrow/.style={-{Latex[length=3mm]}, very thick}]
+\node[step, fill=orange!12] (a) {Assume finitely many primes};
+\node[step, fill=orange!12, right=2.2cm of a] (b) {List all primes: $p_1,p_2,\ldots,p_n$};
+\node[step, fill=blue!7, below=1.5cm of b] (c) {$N=p_1p_2\cdots p_n+1$};
+\node[step, fill=blue!7, left=2.2cm of c] (d) {Divide by any listed prime $p_i$: remainder $1$};
+\node[step, fill=red!8, below=1.5cm of d] (e) {$N$ is divisible by no listed prime};
+\node[diamond, below=1.5cm of e] (f) {What is $N$?};
+\node[step, fill=gray!10, right=2.0cm of f] (g) {If prime: new prime not in list};
+\node[step, fill=gray!10, below=1.3cm of f] (h) {If composite: has a prime factor not in list};
+\node[step, fill=red!10, right=2.0cm of h] (i) {Contradiction};
+\node[step, fill=green!12, below=1.3cm of i] (j) {Therefore infinitely many primes};
+\draw[arrow] (a)--(b); \draw[arrow] (b)--(c); \draw[arrow] (c)--(d); \draw[arrow] (d)--(e); \draw[arrow] (e)--(f); \draw[arrow] (f)--(g); \draw[arrow] (f)--(h); \draw[arrow] (g)--(i); \draw[arrow] (h)--(i); \draw[arrow] (i)--(j);
+\end{tikzpicture}
+\end{document}

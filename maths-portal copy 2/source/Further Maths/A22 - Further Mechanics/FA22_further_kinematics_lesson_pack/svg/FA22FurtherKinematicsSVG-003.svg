@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Piecewise velocity graph with areas A, B and C</title>
+  <desc id="desc">A piecewise velocity graph for v equals 2t squared minus 7t plus 3 from 0 to 3, and v equals 5t minus 15 from 3 to 5. It marks instantaneous rest at t equals 0.5 and t equals 3, and shows areas A, B and C for total distance.</desc>
+  <metadata>Asset ID: FA22FurtherKinematicsSVG-003; Source: FM2 PDF page 5 adapted textbook example; Related lesson section: Worked Examples; Visual Asset Integration; Purpose: Show a piecewise velocity function, instantaneous rest at t = 0.5 and t = 3, and the split into areas A, B and C.</metadata>
+  <defs>
+    <marker id="arrowDark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 12 6 L 0 12 z" fill="#2C2C2E"/></marker>
+    <pattern id="areaGold" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="10" stroke="#C5A059" stroke-width="3" opacity="0.55"/></pattern>
+    <pattern id="areaRose" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="10" stroke="#D48C8C" stroke-width="3" opacity="0.55"/></pattern>
+    <style>.bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:3;rx:28}.title{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:36px;font-weight:700;fill:#2C2C2E}.subtitle{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:20px;fill:#3A3A3C}.axis{stroke:#2C2C2E;stroke-width:4;stroke-linecap:round}.grid{stroke:#E5E5EA;stroke-width:1.5}.curve{fill:none;stroke:#2C2C2E;stroke-width:5;stroke-linecap:round}.join{fill:#D4AF37;stroke:#2C2C2E;stroke-width:2}.label{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:20px;fill:#2C2C2E}.small{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;fill:#3A3A3C}.math{font-family:"Times New Roman",serif;font-size:25px;font-style:italic;fill:#2C2C2E}.formula{font-family:"Times New Roman",serif;font-size:26px;fill:#2C2C2E}.areaLetter{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:36px;font-weight:700;fill:#2C2C2E}</style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="800"/><rect class="panel" x="55" y="45" width="1090" height="710"/>
+  <text class="title" x="95" y="102">Piecewise velocity: split distance into A, B and C</text><text class="subtitle" x="95" y="140">Instantaneous rest at t = 0.5 and t = 3 warns that distance and displacement may differ.</text>
+  <rect x="90" y="190" width="650" height="405" rx="16" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <line class="axis" x1="90" y1="520" x2="90" y2="110" marker-end="url(#arrowDark)"/><line class="axis" x1="80" y1="360" x2="710" y2="360" marker-end="url(#arrowDark)"/>
+  <text class="math" x="64" y="132">v</text><text class="math" x="694" y="390">t</text>
+  <line class="grid" x1="145" y1="190" x2="145" y2="595"/><line class="grid" x1="420" y1="190" x2="420" y2="595"/><line class="grid" x1="640" y1="190" x2="640" y2="595"/>
+  <text class="small" x="82" y="384">0</text><text class="small" x="130" y="384">0.5</text><text class="small" x="412" y="384">3</text><text class="small" x="632" y="384">5</text><text class="small" x="56" y="290">3</text><text class="small" x="52" y="445">−3</text><text class="small" x="52" y="130">10</text>
+  <path d="M 90 360 L 90 285 C 111 310 130 340 145 360 Z" fill="url(#areaGold)" stroke="#C5A059" stroke-width="2"/>
+  <path d="M 145 360 C 225 445 335 445 420 360 L 145 360 Z" fill="url(#areaRose)" stroke="#D48C8C" stroke-width="2"/>
+  <path d="M 420 360 L 640 110 L 640 360 Z" fill="url(#areaGold)" stroke="#C5A059" stroke-width="2"/>
+  <path class="curve" d="M 90 285 C 112 318 130 345 145 360 C 225 445 335 445 420 360"/><path class="curve" d="M 420 360 L 640 110"/>
+  <circle class="join" cx="145" cy="360" r="8"/><circle class="join" cx="420" cy="360" r="8"/><circle class="join" cx="640" cy="110" r="7"/>
+  <text class="areaLetter" x="108" y="330">A</text><text class="areaLetter" x="275" y="430">B</text><text class="areaLetter" x="548" y="260">C</text>
+  <text class="label" x="105" y="235">v = 2t² − 7t + 3</text><text class="label" x="482" y="170">v = 5t − 15</text>
+  <rect x="780" y="190" width="340" height="405" rx="22" fill="#FFFFF0" stroke="#C5A059" stroke-width="3"/><text class="label" x="810" y="230">Velocity function:</text><text class="formula" x="810" y="278">v = { 2t² − 7t + 3, 0 ≤ t ≤ 3</text><text class="formula" x="854" y="318">5t − 15, 3 &lt; t ≤ 5 }</text><line x1="810" y1="350" x2="1090" y2="350" stroke="#E5E5EA" stroke-width="3"/><text class="label" x="810" y="390">Instantaneous rest:</text><text class="formula" x="810" y="432">v = 0 at t = 0.5 and t = 3</text><text class="label" x="810" y="485">Distance travelled:</text><text class="formula" x="810" y="527">A + |B| + C</text><text class="small" x="810" y="565">Use magnitudes of areas, not just signed area.</text>
+  <rect x="95" y="635" width="1025" height="70" rx="22" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/><text class="label" x="125" y="675">Warning:</text><text class="small" x="225" y="675">“Instantaneous rest” suggests a possible change of direction, so distance may not equal displacement.</text>
+</svg>

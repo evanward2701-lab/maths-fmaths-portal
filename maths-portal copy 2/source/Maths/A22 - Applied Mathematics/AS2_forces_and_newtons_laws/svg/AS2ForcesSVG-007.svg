@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-007
+Source: MechYr2 Chapter 7 Applications of Forces PDF + Chapter 5/7 Forces transcript
+Related lesson section: Core Theory: Strings, pulleys and connected particles
+Purpose: Show connected particles over a smooth pulley with common tension T.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Connected Particles</title>
+  <desc id="desc">Show connected particles over a smooth pulley with common tension T.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Connected Particles</text>
+  <line x1="120" y1="430" x2="560" y2="240" stroke="#111" stroke-width="4"/><circle cx="585" cy="220" r="35" fill="#fff" stroke="#111" stroke-width="3"/><path d="M330 340 L585 220 L620 220 L620 360" fill="none" stroke="#111" stroke-width="3"/><g transform="translate(330 340) rotate(-23)"><rect x="-40" y="-25" width="80" height="50" fill="#f7f7f7" stroke="#111"/><text x="0" y="7" text-anchor="middle" font-family="Arial" font-size="20">A</text></g><rect x="585" y="360" width="70" height="70" fill="#f7f7f7" stroke="#111"/><text x="620" y="402" text-anchor="middle" font-family="Arial" font-size="22">B</text><line x1="330" y1="340" x2="430" y2="295" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="380.0" y="307.5" font-family="Arial" font-size="20" text-anchor="middle">T</text><line x1="620" y1="360" x2="620" y2="280" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="620.0" y="310.0" font-family="Arial" font-size="20" text-anchor="middle">T</text><line x1="330" y1="340" x2="330" y2="455" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="330.0" y="387.5" font-family="Arial" font-size="20" text-anchor="middle">mAg</text><line x1="620" y1="430" x2="620" y2="500" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="650" y="480" font-family="Arial" font-size="20" text-anchor="middle">mBg</text><text x="200" y="490" font-family="Arial" font-size="20">Smooth pulley: same tension on both sides.</text>
+</svg>

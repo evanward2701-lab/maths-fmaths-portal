@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2WorkEnergyAndPowerSVG-004: Power model and vehicle interpretation</title>
+  <desc id="desc">Power derivation from W/t to Fv and vehicle formulas.</desc>
+  <metadata>asset_id: FAS2WorkEnergyAndPowerSVG-004; unit_code: FAS2; topic_code: FAS2-WENG + FAS2-POW; topic_id: FAS2WorkEnergyAndPower; status: Generated in Phase 3</metadata>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 Z" fill="#C5A059"/></marker></defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="45" width="1100" height="670" rx="30" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="90" y="105" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Power model and vehicle interpretation</text>
+  
+  <rect x="100" y="200" width="270" height="110" rx="24" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/><text x="235" y="265" text-anchor="middle" font-size="34" font-family="Cambria Math">P = W/t</text>
+  <line x1="370" y1="255" x2="470" y2="255" stroke="#C5A059" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="490" y="200" width="270" height="110" rx="24" fill="#FAF9F6" stroke="#C5A059" stroke-width="2"/><text x="625" y="265" text-anchor="middle" font-size="34" font-family="Cambria Math">W = Fs</text>
+  <line x1="760" y1="255" x2="860" y2="255" stroke="#C5A059" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="880" y="200" width="270" height="110" rx="24" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/><text x="1015" y="265" text-anchor="middle" font-size="36" font-family="Cambria Math">P = Fv</text>
+  <text x="600" y="420" text-anchor="middle" font-size="30" font-family="Cambria Math">P = W/t = Fs/t = F(s/t) = Fv</text>
+  <text x="600" y="480" text-anchor="middle" font-size="26" font-family="Cambria Math">1 W = 1 J s⁻¹, 1 kW = 1000 W</text>
+  <rect x="120" y="555" width="960" height="110" rx="24" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="605" text-anchor="middle" font-size="28" font-family="Cambria Math">vehicle: F = P/v, so P/v - R = ma</text>
+  <text x="600" y="650" text-anchor="middle" font-size="28" font-family="Cambria Math" fill="#C5A059">maximum speed: P/v = R</text>
+
+</svg>

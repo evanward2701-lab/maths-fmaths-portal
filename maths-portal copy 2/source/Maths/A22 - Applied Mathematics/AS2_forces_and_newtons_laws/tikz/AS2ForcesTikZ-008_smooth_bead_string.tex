@@ -1,0 +1,14 @@
+% Asset ID: AS2ForcesTikZ-008
+% Source: Chapter 5/7 Forces Transcript + MechYr2 Chapter 7 Applications of Forces PDF
+% Related lesson section: Worked Example 3
+% Purpose: Show a smooth bead with equal tension on both string sections.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, angles, quotes, decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}[force/.style={-{Latex[length=3mm]}, thick}, comp/.style={-{Latex[length=3mm]}, thick, dashed}, label/.style={font=\large}, note/.style={font=\normalsize}]
+
+\coordinate (X) at (0,4); \coordinate (Z) at (5,4); \coordinate (Y) at (0,0); \fill (X) circle (2pt); \fill (Z) circle (2pt); \draw[thick] (X)--(Y)--(Z); \draw[thick,fill=white] (Y) circle (0.15);
+\draw[force] (Y)--++(0,1.6) node[midway,left,label] {$T$}; \draw[force] (Y)--++(1.35,1.08) node[midway,right,label] {$T$}; \draw[force] (Y)--++(-1.8,0) node[midway,above,label] {$8\text{ N}$}; \draw[force] (Y)--++(0,-1.8) node[midway,right,label] {$W$};
+\end{tikzpicture}
+\end{document}

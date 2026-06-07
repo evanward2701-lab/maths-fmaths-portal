@@ -1,0 +1,23 @@
+% Asset ID: FAS2HookesLawElasticStringsAndSpringsTikZ-003
+% Asset type: TikZ diagram
+% Source: FM1 Elastic Strings and Springs lesson evidence
+% Related lesson section: Section 9 Visual Asset Integration
+% Purpose: Precise mathematical diagram for the Hooke's Law lesson.
+\documentclass[tikz,border=6mm]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,angles,quotes,calc}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily,force/.style={-{Latex[length=4mm]},draw=black,thick},spring/.style={decorate,decoration={coil,aspect=0.55,segment length=5pt,amplitude=4pt},draw=black,thick}]
+\node[font=\bfseries] at (0,3) {Elastic spring on rough inclined plane};
+\coordinate (B) at (-3,-2); \coordinate (Top) at (3,1.46); \coordinate (A) at (2,0.88); \coordinate (P) at (-0.2,-0.39);
+\draw[thick] (B)--(Top); \draw[dashed] (B)--++(2,0); \pic[draw,"$30^\circ$",angle radius=8mm] {angle=$(B)+(2,0)$--B--Top};
+\draw[spring] (A)--(P); \node[above] at (A) {$A$}; \node[below] at (P) {$P$};
+\draw[fill=gray!10] ($(P)+(-0.25,-0.2)$) rectangle ($(P)+(0.25,0.2)$);
+\draw[force] (P)--($(P)!0.55!(A)$) node[midway,above] {$T$};
+\draw[force] (P)--($(P)+(-0.6,1.04)$) node[left] {$R$};
+\draw[force] (P)--($(P)+(0,-1.25)$) node[right] {$mg$};
+\draw[force,dashed] ($(P)+(0.25,0.15)$)--($(P)!-0.45!(A)+(0.25,0.15)$) node[midway,below] {$F$ down};
+\draw[force,dotted] ($(P)+(-0.25,-0.15)$)--($(P)!0.6!(A)+(-0.25,-0.15)$) node[midway,above] {$F$ up};
+\node[align=left,draw,rounded corners,fill=gray!5] at (3.8,-1.2) {$R=mg\cos30^\circ$\\$F=\mu R$\\$T=\dfrac{\lambda(AP-a)}{a}$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,42 @@
+% Asset ID: FAS2LinearRegressionTikZ-001
+% Source: Teacher transcript + formula evidence.
+% Related lesson section: Section 9.6 TikZ formal residual notation diagram.
+% Purpose: Give a precise mathematical diagram for a single residual.
+% Requires: \usepackage{tikz}
+% Optional: \usetikzlibrary{decorations.pathreplacing}
+
+\begin{tikzpicture}[
+    axis/.style={->, line width=0.8pt},
+    regression/.style={line width=1.2pt, draw={rgb,255:red,197;green,160;blue,89}},
+    residual/.style={line width=0.9pt, dashed},
+    point/.style={circle, fill={rgb,255:red,44;green,44;blue,46}, draw=white, inner sep=2.2pt},
+    predpoint/.style={circle, fill=white, draw={rgb,255:red,44;green,44;blue,46}, inner sep=2pt},
+    labelbox/.style={rounded corners=3pt, fill={rgb,255:red,255;green,255;blue,240}, draw={rgb,255:red,212;green,175;blue,55}, inner sep=4pt},
+    note/.style={font=\small}
+]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-0.8,-0.9) rectangle (10.2,7.1);
+\draw[{rgb,255:red,229;green,229;blue,234}, rounded corners=8pt] (-0.6,-0.7) rectangle (10,6.9);
+\node[font=\bfseries\large, anchor=west] at (-0.25,6.45) {Residual for one data point};
+\node[note, anchor=west] at (-0.25,6.05) {A residual is the vertical difference: observed value minus predicted value.};
+\draw[axis] (0,0) -- (9.2,0) node[right] {$x$};
+\draw[axis] (0,0) -- (0,5.7) node[above] {$y$};
+\draw[regression] (0.55,0.85) -- (8.65,4.9);
+\node[note, anchor=west, labelbox] at (6.1,4.95) {$\hat y=a+bx$};
+\coordinate (XiAxis) at (4.6,0);
+\coordinate (Pred) at (4.6,2.875);
+\coordinate (Obs) at (4.6,4.2);
+\draw[dashed, draw={rgb,255:red,229;green,229;blue,234}] (XiAxis) -- (Obs);
+\draw[dashed, draw={rgb,255:red,229;green,229;blue,234}] (0,2.875) -- (Pred);
+\draw[dashed, draw={rgb,255:red,229;green,229;blue,234}] (0,4.2) -- (Obs);
+\draw[residual] (Pred) -- (Obs);
+\node[predpoint] at (Pred) {};
+\node[point] at (Obs) {};
+\node[note, anchor=north] at (XiAxis) {$x_i$};
+\node[note, anchor=east] at (-0.05,2.875) {$\hat y_i$};
+\node[note, anchor=east] at (-0.05,4.2) {$y_i$};
+\node[note, anchor=west] at (4.85,4.2) {observed point $(x_i,y_i)$};
+\node[note, anchor=west] at (4.85,2.875) {predicted point $(x_i,\hat y_i)$};
+\node[note, labelbox, anchor=west] at (5.15,3.55) {$\varepsilon_i=y_i-\hat y_i$};
+\node[labelbox, anchor=west, align=left, text width=4.2cm] at (0.45,5.05) {\(\hat y_i=a+bx_i\)\\[3pt]\(\varepsilon_i=y_i-\hat y_i\)\\[3pt]Positive above the line.\\ Negative below the line.};
+\node[note, anchor=west, align=left, text width=9.2cm] at (0.25,-0.45) {For the least squares regression line, \(\sum \varepsilon_i=0\). The least squares method minimises \(\sum \varepsilon_i^2\).};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">AS1VectorsSVG-001: 2D vector components</title>
+  <desc id="desc">A two-dimensional vector shown as horizontal i component and vertical j component on coordinate axes.</desc>
+  <!-- Asset ID: AS1VectorsSVG-001 | Source: CCEA AS1-VEC-LO001, AS1-VEC-LO002 | Purpose: 2D vector components | Boundary: 2D only -->
+  <rect x="0" y="0" width="900" height="620" fill="white"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Vector components in 2D</text>
+  <text x="40" y="95" font-family="Arial, sans-serif" font-size="18">A vector can be split into horizontal and vertical components.</text>
+  <line x1="110" y1="500" x2="760" y2="500" stroke="black" stroke-width="3"/>
+  <line x1="110" y1="500" x2="110" y2="120" stroke="black" stroke-width="3"/>
+  <polygon points="760,500 742,491 742,509" fill="black"/>
+  <polygon points="110,120 101,138 119,138" fill="black"/>
+  <text x="775" y="507" font-family="Arial" font-size="24">x</text>
+  <text x="101" y="105" font-family="Arial" font-size="24">y</text>
+  <line x1="110" y1="500" x2="520" y2="500" stroke="black" stroke-width="2" stroke-dasharray="8 8"/>
+  <line x1="520" y1="500" x2="520" y2="240" stroke="black" stroke-width="2" stroke-dasharray="8 8"/>
+  <line x1="110" y1="500" x2="520" y2="240" stroke="black" stroke-width="5"/>
+  <polygon points="520,240 495,244 508,263" fill="black"/>
+  <text x="290" y="530" font-family="Arial" font-size="24">x i</text>
+  <text x="540" y="380" font-family="Arial" font-size="24">y j</text>
+  <text x="365" y="345" font-family="Arial" font-size="26" font-weight="700">a = x i + y j</text>
+  <circle cx="520" cy="240" r="6" fill="black"/>
+  <text x="535" y="235" font-family="Arial" font-size="22">(x, y)</text>
+  <rect x="110" y="560" width="620" height="42" rx="8" fill="white" stroke="black" stroke-width="2"/>
+  <text x="130" y="588" font-family="Arial" font-size="22">Column form: (x, y) = x i + y j</text>
+  <rect x="610" y="150" width="230" height="120" rx="10" fill="white" stroke="black" stroke-width="2"/>
+  <text x="630" y="182" font-family="Arial" font-size="20" font-weight="700">Unit vectors</text>
+  <text x="630" y="218" font-family="Arial" font-size="20">i = (1, 0)</text>
+  <text x="630" y="250" font-family="Arial" font-size="20">j = (0, 1)</text>
+</svg>

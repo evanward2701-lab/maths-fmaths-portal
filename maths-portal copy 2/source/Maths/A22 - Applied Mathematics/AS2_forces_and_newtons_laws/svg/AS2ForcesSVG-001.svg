@@ -1,0 +1,17 @@
+<!--
+Asset ID: AS2ForcesSVG-001
+Source: CCEA specification map + Chapter 5/7 Forces transcript
+Related lesson section: Big Picture Explanation
+Purpose: Show the big-picture link between forces, motion and F = ma.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Mechanics Big Picture</title>
+  <desc id="desc">Show the big-picture link between forces, motion and F = ma.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Mechanics Big Picture</text>
+  <rect x="340" y="80" width="220" height="70" fill="#f7f7f7" stroke="#111" rx="12"/><text x="450" y="124" text-anchor="middle" font-family="Arial" font-size="22">Mechanics</text>
+<rect x="100" y="220" width="220" height="70" fill="#fff" stroke="#111" rx="12"/><text x="210" y="264" text-anchor="middle" font-family="Arial" font-size="22">Forces</text>
+<rect x="580" y="220" width="220" height="70" fill="#fff" stroke="#111" rx="12"/><text x="690" y="264" text-anchor="middle" font-family="Arial" font-size="22">Motion</text>
+<rect x="320" y="360" width="260" height="80" fill="#f7f7f7" stroke="#111" rx="12"/><text x="450" y="395" text-anchor="middle" font-family="Arial" font-size="22">Resultant force = ma</text><text x="450" y="422" text-anchor="middle" font-family="Arial" font-size="18">The bridge</text><line x1="450" y1="150" x2="230" y2="220" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="340.0" y="175.0" font-family="Arial" font-size="20" text-anchor="middle"></text><line x1="450" y1="150" x2="670" y2="220" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="560.0" y="175.0" font-family="Arial" font-size="20" text-anchor="middle"></text><line x1="310" y1="290" x2="400" y2="360" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="355.0" y="315.0" font-family="Arial" font-size="20" text-anchor="middle"></text><line x1="590" y1="290" x2="500" y2="360" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="545.0" y="315.0" font-family="Arial" font-size="20" text-anchor="middle"></text>
+</svg>

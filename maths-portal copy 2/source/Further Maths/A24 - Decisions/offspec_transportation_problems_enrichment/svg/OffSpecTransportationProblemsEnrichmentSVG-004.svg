@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Asset ID: OffSpecTransportationProblemsEnrichmentSVG-004
+Source: Teacher transcript Transportation Problems 2
+Related lesson section: Section 9.4
+Purpose: Compare balanced and unbalanced cases.
+CCEA status: Off-spec enrichment only
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">Balanced vs Unbalanced Problems</title>
+  <desc id="desc">Panels for balanced, excess supply and excess demand cases.</desc>
+  <rect width="1100" height="760" fill="#FAF9F6"/>
+  <text x="550" y="55" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" fill="#2C2C2E" font-weight="700">Balanced vs Unbalanced Problems</text>
+  <text x="550" y="88" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">Off-spec enrichment only</text>
+  <g font-family="Inter, Arial, sans-serif"><g transform="translate(70,150)"><rect x="0" y="0" width="310" height="420" rx="22" fill="#FFFFF0" stroke="#E5E5EA"/><text x="155" y="45" text-anchor="middle" font-size="22" fill="#2C2C2E" font-weight="700">Balanced</text><text x="155" y="120" text-anchor="middle" font-size="34" fill="#C5A059" font-weight="700">50 = 50</text><rect x="40" y="180" width="230" height="120" rx="18" fill="#FBEFEF"/><text x="155" y="230" text-anchor="middle" font-size="18" fill="#2C2C2E" font-weight="700">No dummy point</text><text x="155" y="350" text-anchor="middle" font-size="16" fill="#2C2C2E">Dummy route cost = 0</text></g><g transform="translate(395,150)"><rect x="0" y="0" width="310" height="420" rx="22" fill="#FFFFF0" stroke="#E5E5EA"/><text x="155" y="45" text-anchor="middle" font-size="22" fill="#2C2C2E" font-weight="700">Excess supply</text><text x="155" y="120" text-anchor="middle" font-size="34" fill="#C5A059" font-weight="700">150 > 120</text><rect x="40" y="180" width="230" height="120" rx="18" fill="#FBEFEF"/><text x="155" y="230" text-anchor="middle" font-size="18" fill="#2C2C2E" font-weight="700">Add dummy demand 30</text><text x="155" y="350" text-anchor="middle" font-size="16" fill="#2C2C2E">Dummy route cost = 0</text></g><g transform="translate(720,150)"><rect x="0" y="0" width="310" height="420" rx="22" fill="#FFFFF0" stroke="#E5E5EA"/><text x="155" y="45" text-anchor="middle" font-size="22" fill="#2C2C2E" font-weight="700">Excess demand</text><text x="155" y="120" text-anchor="middle" font-size="34" fill="#C5A059" font-weight="700">214 > 190</text><rect x="40" y="180" width="230" height="120" rx="18" fill="#FBEFEF"/><text x="155" y="230" text-anchor="middle" font-size="18" fill="#2C2C2E" font-weight="700">Add dummy supply 24</text><text x="155" y="350" text-anchor="middle" font-size="16" fill="#2C2C2E">Dummy route cost = 0</text></g></g><text x="550" y="660" text-anchor="middle" font-family="Inter, Arial, sans-serif" fill="#2C2C2E">Dummy points balance the table, but only real suppliers represent real stock.</text>
+</svg>

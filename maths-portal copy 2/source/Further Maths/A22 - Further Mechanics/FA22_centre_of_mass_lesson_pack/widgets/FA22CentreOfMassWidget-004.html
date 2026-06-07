@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FA22CentreOfMassWidget-004</title>
+<!--
+Asset ID: FA22CentreOfMassWidget-004
+Source: AI-proposed teaching enhancement based on lesson evidence
+Related lesson section: Section 10.4
+Purpose: Arc and sector formula checker with radians warning.
+-->
+<style>
+:root{--canvas:#FAF9F6;--ivory:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--accent:#C5A059;--blush:#FBEFEF;--ink:#2C2C2E;}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+main{max-width:960px;margin:0 auto;padding:28px} .shell{background:var(--ivory);border:1px solid var(--line);border-radius:24px;padding:24px}
+input,select,button{font-family:inherit;padding:8px;border:1px solid var(--line);border-radius:10px;margin:4px} button{background:var(--blush);border-color:var(--accent);font-weight:700;cursor:pointer}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px} .result{background:var(--blush);border:1px solid var(--accent);border-radius:14px;padding:12px;margin-top:10px}
+svg{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+</style>
+</head>
+<body>
+<main><section class="shell">
+<h1>Arc and Sector Formula Checker</h1>
+<p>Check whether the shape is a sector lamina or circular arc wire, then use the correct formula with radians.</p>
+<div class="card"><label>Shape <select id="shape"><option value="sector">sector lamina</option><option value="arc">circular arc wire</option></select></label><label>Radius r <input id="r" type="number" value="9"></label><label>Total angle 2α <input id="ang" type="number" value="100"></label><label>Unit <select id="unit"><option value="deg">degrees</option><option value="rad">radians</option></select></label><button onclick="calc()">Check formula</button><div id="out" class="result"></div><svg id="plot" viewBox="0 0 500 300"></svg></div>
+</section></main>
+<script>function calc(){const shape=document.getElementById('shape').value,r=+document.getElementById('r').value,ang=+document.getElementById('ang').value,unit=document.getElementById('unit').value;const full=unit==='deg'?ang*Math.PI/180:ang,alpha=full/2;const d=shape==='sector'?2*r*Math.sin(alpha)/(3*alpha):r*Math.sin(alpha)/alpha;const formula=shape==='sector'?'d=2r sinα/(3α)':'d=r sinα/α';document.getElementById('out').innerHTML=`2α=${full.toFixed(6)} rad, α=${alpha.toFixed(6)} rad<br>${formula}<br><b>d=${d.toFixed(5)}</b><p>Warning: use α, not 2α, and α must be in radians.</p>`;const svg=document.getElementById('plot');svg.innerHTML='<rect width="500" height="300" fill="#FFFFF0"/><text x="250" y="35" text-anchor="middle" font-family="Georgia" font-size="20">'+(shape==='sector'?'Sector lamina':'Circular arc wire')+'</text>';if(shape==='sector'){svg.innerHTML+='<path d="M250 240 L160 80 A150 150 0 0 1 340 80 Z" fill="#FBEFEF" stroke="#C5A059" stroke-width="3"/>'}else{svg.innerHTML+='<path d="M160 80 A150 150 0 0 1 340 80" fill="none" stroke="#C5A059" stroke-width="8" stroke-linecap="round"/><line x1="250" y1="240" x2="160" y2="80" stroke="#2C2C2E"/><line x1="250" y1="240" x2="340" y2="80" stroke="#2C2C2E"/>'}svg.innerHTML+='<line x1="250" y1="240" x2="250" y2="55" stroke="#D4AF37" stroke-width="3" stroke-dasharray="8 6"/><circle cx="250" cy="145" r="8" fill="#2C2C2E" stroke="#D4AF37" stroke-width="3"/><text x="270" y="145" font-family="Georgia">G</text>'}calc();</script>
+</body>
+</html>

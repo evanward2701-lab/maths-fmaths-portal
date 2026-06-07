@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Vertical circles: constrained or unconstrained?</title>
+  <desc id="desc">Compare constrained and unconstrained circular paths.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-008
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Compare constrained and unconstrained circular paths.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Vertical circles: constrained or unconstrained?</text>
+  
+  <rect x="90" y="165" width="245" height="215" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="120" y="205" font-family="Arial" font-size="25" font-weight="700" fill="#2C2C2E">Rigid rod</text>
+  <circle cx="212" cy="285" r="62" fill="none" stroke="#2C2C2E" stroke-width="4"/>
+  <line x1="212" y1="285" x2="212" y2="223" stroke="#C5A059" stroke-width="6"/>
+  <circle cx="212" cy="223" r="10" fill="#2C2C2E"/>
+  <text x="120" y="355" font-family="Arial" font-size="20" fill="#C5A059">Constrained</text>
+  <rect x="365" y="165" width="245" height="215" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="395" y="205" font-family="Arial" font-size="25" font-weight="700" fill="#2C2C2E">Bead on wire</text>
+  <circle cx="487" cy="285" r="62" fill="none" stroke="#2C2C2E" stroke-width="6"/>
+  <circle cx="540" cy="253" r="11" fill="#C5A059" stroke="#2C2C2E" stroke-width="3"/>
+  <text x="395" y="355" font-family="Arial" font-size="20" fill="#C5A059">Constrained</text>
+  <rect x="640" y="165" width="245" height="215" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="670" y="205" font-family="Arial" font-size="25" font-weight="700" fill="#2C2C2E">String</text>
+  <circle cx="762" cy="285" r="62" fill="none" stroke="#E5E5EA" stroke-width="4"/>
+  <line x1="762" y1="285" x2="812" y2="248" stroke="#2C2C2E" stroke-width="4"/>
+  <circle cx="812" cy="248" r="10" fill="#2C2C2E"/>
+  <path d="M812 248 C850 230 870 218 892 198" fill="none" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <text x="670" y="355" font-family="Arial" font-size="20" fill="#C5A059">Unconstrained if T = 0</text>
+  <rect x="915" y="165" width="195" height="215" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="940" y="205" font-family="Arial" font-size="25" font-weight="700" fill="#2C2C2E">Sphere</text>
+  <circle cx="1012" cy="290" r="62" fill="none" stroke="#2C2C2E" stroke-width="4"/>
+  <circle cx="1060" cy="250" r="10" fill="#2C2C2E"/>
+  <path d="M1060 250 C1095 232 1115 214 1130 190" fill="none" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <text x="940" y="355" font-family="Arial" font-size="20" fill="#C5A059">If R = 0</text>
+  <rect x="180" y="445" width="840" height="160" rx="22" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="220" y="540" font-family="Arial" font-size="23" fill="#2C2C2E">Constrained: circular path is enforced.</text>
+  <text x="220" y="578" font-family="Arial" font-size="23" fill="#2C2C2E">Unconstrained: when T or R reaches zero, the particle leaves the circle.</text>
+  <text x="220" y="616" font-family="Arial" font-size="23" fill="#2C2C2E">After leaving, use projectile motion with tangent velocity.</text>
+
+</svg>

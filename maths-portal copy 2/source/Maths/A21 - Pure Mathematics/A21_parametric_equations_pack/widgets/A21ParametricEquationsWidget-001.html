@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A21ParametricEquationsWidget-001</title>
+<!--
+Asset ID: A21ParametricEquationsWidget-001
+Source: CCEA A21-CG-LO001 and A21-CG-LO002; Chapter 8 Parametric Equations transcript.
+Related lesson section: Core Theory; Visual Asset Integration; Worked Examples; Modelling.
+Purpose: Interactive slider showing how a parameter t generates x(t), y(t), a plotted point and a trace.
+-->
+<style>
+body{margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;background:#eef3ff;color:#172033}
+.widget{max-width:1100px;margin:auto;background:#fff;border:1px solid #c8d2e6;border-radius:22px;box-shadow:0 18px 45px rgba(23,32,51,.12);overflow:hidden}
+header{padding:22px 26px;background:#f7f9fc;border-bottom:1px solid #c8d2e6}
+h1{margin:0 0 8px;font-family:Georgia,serif}
+.layout{display:grid;grid-template-columns:320px 1fr}
+aside{padding:18px;border-right:1px solid #c8d2e6;background:#fbfcff}
+main{padding:18px}
+label{display:block;margin:14px 0 6px;font-weight:700}
+select,input,button{width:100%}
+select{padding:9px;border:1px solid #c8d2e6;border-radius:10px}
+button{margin-top:10px;border:0;border-radius:10px;padding:10px;color:#fff;background:#2d5be3;font-weight:700;cursor:pointer}
+.card{border:1px solid #c8d2e6;border-radius:14px;background:#fff;padding:14px;margin-top:14px}
+.gold{background:#fff8e6;border-color:#e2ad37}
+canvas{width:100%;height:520px;display:block;border:1px solid #c8d2e6;border-radius:18px;background:#fff}
+.eq{font-family:Georgia,serif;font-size:18px;line-height:1.7}
+.metric{font-family:"Courier New",monospace}
+@media(max-width:850px){.layout{grid-template-columns:1fr} aside{border-right:0;border-bottom:1px solid #c8d2e6}}
+</style>
+</head>
+<body>
+<section class="widget">
+<header>
+<h1>Parametric Curve Explorer</h1>
+<p>Move the parameter <strong>t</strong> and watch how \(x(t)\) and \(y(t)\) generate a point on a curve.</p>
+</header>
+<div class="layout">
+<aside>
+<label for="preset">Choose a curve</label>
+<select id="preset"></select>
+<div class="card gold">
+<h2>Current equations</h2>
+<div class="eq" id="equations"></div>
+</div>
+<label for="slider">Parameter t</label>
+<input id="slider" type="range" min="0" max="1000" value="0">
+<button id="play">Play</button>
+<button id="reset" style="background:#d61f69">Reset</button>
+<div class="card">
+<h3>Live values</h3>
+<p class="metric">t = <span id="tv"></span></p>
+<p class="metric">x(t) = <span id="xv"></span></p>
+<p class="metric">y(t) = <span id="yv"></span></p>
+</div>
+<div class="card">
+<h3>Exam reminder</h3>
+<p id="note"></p>
+</div>
+</aside>
+<main>
+<canvas id="plot" width="850" height="520"></canvas>
+<div class="card">
+<h3>Domain and range thought</h3>
+<p id="domain"></p>
+</div>
+</main>
+</div>
+</section>
+<script>
+const curves=[
+{title:"Restricted parabola: x=2t, y=t²", t0:-3,t1:3,start:0,eq:"x = 2t<br>y = t²<br>-3 < t < 3",note:"Do not draw the whole Cartesian curve. The parameter restriction gives -6 < x < 6 and 0 ≤ y < 9.",domain:"x-values come from x=2t. y-values come from y=t².",x:t=>2*t,y:t=>t*t},
+{title:"Circle: x=sin(t)+2, y=cos(t)-3", t0:0,t1:2*Math.PI,start:0,eq:"x = sin(t)+2<br>y = cos(t)-3",note:"Use sin²t + cos²t = 1.",domain:"The Cartesian equation is (x-2)²+(y+3)²=1.",x:t=>Math.sin(t)+2,y:t=>Math.cos(t)-3},
+{title:"Trig identity: x=sin(t), y=sin(2t)", t0:-Math.PI/2,t1:Math.PI/2,start:-Math.PI/2,eq:"x = sin(t)<br>y = sin(2t)",note:"Use sin(2t)=2sin(t)cos(t).",domain:"Here -1 ≤ x ≤ 1 and -1 ≤ y ≤ 1.",x:t=>Math.sin(t),y:t=>Math.sin(2*t)},
+{title:"Plane model: x=49.03t, y=9.81t", t0:0,t1:20,start:0,eq:"x = 49.03t<br>y = 9.81t",note:"A straight-line model is not realistic forever.",domain:"Eliminating t gives approximately y = 0.2x.",x:t=>49.03*t,y:t=>9.81*t}
+];
+const sel=document.getElementById("preset"), slider=document.getElementById("slider"), cv=document.getElementById("plot"), ctx=cv.getContext("2d");
+const eq=document.getElementById("equations"), tv=document.getElementById("tv"), xv=document.getElementById("xv"), yv=document.getElementById("yv"), note=document.getElementById("note"), dom=document.getElementById("domain");
+let current=curves[0], playing=false, raf=null;
+curves.forEach((c,i)=>{let o=document.createElement("option");o.value=i;o.textContent=c.title;sel.appendChild(o)});
+function f(n){return Math.abs(n)<1e-9?"0":n.toFixed(Math.abs(n)>10?2:3)}
+function tval(){return current.t0 + slider.value/1000*(current.t1-current.t0)}
+function setT(t){slider.value=Math.round((t-current.t0)/(current.t1-current.t0)*1000)}
+function sample(){let pts=[];for(let i=0;i<=500;i++){let t=current.t0+i/500*(current.t1-current.t0);pts.push({t,x:current.x(t),y:current.y(t)})}return pts}
+function bounds(pts){let xs=pts.map(p=>p.x),ys=pts.map(p=>p.y);let mnx=Math.min(...xs),mxx=Math.max(...xs),mny=Math.min(...ys),mxy=Math.max(...ys);if(mxx-mnx<1e-6){mnx-=1;mxx+=1}if(mxy-mny<1e-6){mny-=1;mxy+=1}let px=.12*(mxx-mnx),py=.12*(mxy-mny);return {mnx:mnx-px,mxx:mxx+px,mny:mny-py,mxy:mxy+py}}
+function proj(b,x,y){return {X:45+(x-b.mnx)/(b.mxx-b.mnx)*(cv.width-90),Y:cv.height-45-(y-b.mny)/(b.mxy-b.mny)*(cv.height-90)}}
+function render(){let pts=sample(),b=bounds(pts),t=tval(),x=current.x(t),y=current.y(t);ctx.clearRect(0,0,cv.width,cv.height);ctx.fillStyle="#fff";ctx.fillRect(0,0,cv.width,cv.height);ctx.strokeStyle="#edf1f8";ctx.lineWidth=1;for(let i=0;i<=10;i++){let X=45+i*(cv.width-90)/10;ctx.beginPath();ctx.moveTo(X,20);ctx.lineTo(X,cv.height-20);ctx.stroke();let Y=20+i*(cv.height-40)/10;ctx.beginPath();ctx.moveTo(20,Y);ctx.lineTo(cv.width-20,Y);ctx.stroke()}ctx.strokeStyle="#b8c0cf";ctx.lineWidth=5;ctx.beginPath();pts.forEach((p,i)=>{let q=proj(b,p.x,p.y);i?ctx.lineTo(q.X,q.Y):ctx.moveTo(q.X,q.Y)});ctx.stroke();let idx=Math.round(slider.value/1000*(pts.length-1));ctx.strokeStyle="#2d5be3";ctx.beginPath();for(let i=0;i<=idx;i++){let q=proj(b,pts[i].x,pts[i].y);i?ctx.lineTo(q.X,q.Y):ctx.moveTo(q.X,q.Y)}ctx.stroke();let q=proj(b,x,y);ctx.fillStyle="#d61f69";ctx.beginPath();ctx.arc(q.X,q.Y,8,0,7);ctx.fill();ctx.fillStyle="#172033";ctx.font="14px Arial";ctx.fillText(`t=${f(t)}`,q.X+14,q.Y-10);ctx.fillText(`(${f(x)}, ${f(y)})`,q.X+14,q.Y+10);tv.textContent=f(t);xv.textContent=f(x);yv.textContent=f(y)}
+function load(){current=curves[+sel.value];eq.innerHTML=current.eq;note.textContent=current.note;dom.textContent=current.domain;setT(current.start);render()}
+sel.onchange=()=>{playing=false;load()}; slider.oninput=render; document.getElementById("reset").onclick=()=>{playing=false;setT(current.start);render()};
+document.getElementById("play").onclick=()=>{playing=!playing;if(playing)tick()};
+function tick(){if(!playing)return;slider.value=(+slider.value+4)%1000;render();raf=requestAnimationFrame(tick)}
+load();
+</script>
+</body>
+</html>

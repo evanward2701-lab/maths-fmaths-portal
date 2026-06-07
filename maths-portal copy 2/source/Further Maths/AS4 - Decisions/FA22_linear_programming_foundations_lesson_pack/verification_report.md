@@ -1,0 +1,21 @@
+# Verification Report
+
+- Placeholder paths matched real files: True
+  - `mermaid/FA22LinearProgrammingFoundationsMermaid-001.md`: OK
+  - `svg/FA22LinearProgrammingFoundationsSVG-001.svg`: OK
+  - `svg/FA22LinearProgrammingFoundationsSVG-002.svg`: OK
+  - `svg/FA22LinearProgrammingFoundationsSVG-003.svg`: OK
+  - `svg/FA22LinearProgrammingFoundationsSVG-004.svg`: OK
+  - `svg/FA22LinearProgrammingFoundationsBridgeSVG-001.svg`: OK
+  - `tikz/FA22LinearProgrammingFoundationsTikZ-001.tex`: OK
+  - `tikz/FA22LinearProgrammingFoundationsTikZ-002.tex`: OK
+  - `widgets/FA22LinearProgrammingFoundationsWidget-001.html`: OK
+  - `widgets/FA22LinearProgrammingFoundationsWidget-002.html`: OK
+  - `widgets/FA22LinearProgrammingFoundationsWidget-003.html`: OK
+  - `widgets/FA22LinearProgrammingFoundationsWidget-004.html`: OK
+- SVG XML parse check: True
+- Widget HTML structure check: True
+- No old five-single-Markdown-file references remain: True
+- LO IDs preserved: True
+- Ordinary Maths bridge labelled as bridge context: True
+- Off-spec evidence excluded/logged: True

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="720" viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2GraphTheorySVG-001: Basic weighted graph</title>
+  <desc id="desc">Labelled vertices, weighted edges and a crossing that is not a vertex.</desc>
+  <!-- asset_id: FAS2GraphTheorySVG-001 | unit_code: FAS2 | topic_code: FAS2-GRAPH | topic_id: FAS2GraphTheory -->
+  <rect width="1100" height="720" fill="#FAF9F6"/>
+  <rect x="40" y="34" width="1020" height="650" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  
+  <text x="80" y="86" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#2C2C2E">Basic weighted graph / network</text>
+  <text x="80" y="124" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">Vertices are labelled points. Edges are connections. Weights are written beside edges.</text>
+  <g stroke="#2C2C2E" stroke-width="5" stroke-linecap="round">
+    <line x1="230" y1="330" x2="150" y2="520"/><line x1="230" y1="330" x2="470" y2="190"/><line x1="230" y1="330" x2="540" y2="520"/><line x1="230" y1="330" x2="850" y2="360"/><line x1="150" y1="520" x2="540" y2="520"/><line x1="470" y1="190" x2="540" y2="520"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#2C2C2E"><text x="175" y="430">4</text><text x="330" y="255">12</text><text x="365" y="435">7</text><text x="340" y="558">6</text><text x="535" y="355">10</text><text x="555" y="318">14</text></g>
+  <g fill="#D4AF37" stroke="#2C2C2E" stroke-width="3"><circle cx="230" cy="330" r="19"/><circle cx="150" cy="520" r="19"/><circle cx="470" cy="190" r="19"/><circle cx="540" cy="520" r="19"/><circle cx="850" cy="360" r="19"/></g>
+  <g font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#2C2C2E"><text x="190" y="332">A</text><text x="112" y="528">B</text><text x="490" y="184">C</text><text x="563" y="528">D</text><text x="875" y="368">E</text></g>
+  <circle cx="446" cy="414" r="15" fill="#FAF9F6" stroke="#C5A059" stroke-width="2" stroke-dasharray="5 5"/>
+  <rect x="660" y="170" width="340" height="92" rx="16" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <text x="686" y="202" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E">Crossing warning</text>
+  <text x="686" y="230" font-family="Inter, Arial, sans-serif" font-size="16" fill="#2C2C2E">A crossing is not a vertex unless marked.</text>
+  <rect x="80" y="610" width="860" height="42" rx="12" fill="#FBEFEF" stroke="#C5A059"/>
+  <text x="105" y="637" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2C2C2E">V = {A, B, C, D, E}. Weighted graphs are not normally drawn to scale.</text>
+
+</svg>

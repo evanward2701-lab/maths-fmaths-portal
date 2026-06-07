@@ -1,0 +1,14 @@
+% asset_id: FA22FlowsInNetworks2TikZ-001
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}\usepackage{xcolor}\usetikzlibrary{arrows.meta,positioning,calc}
+\definecolor{Canvas}{HTML}{FAF9F6}\definecolor{Panel}{HTML}{FFFFF0}\definecolor{LineSoft}{HTML}{E5E5EA}\definecolor{Ink}{HTML}{2C2C2E}\definecolor{Gold}{HTML}{C5A059}\definecolor{SoftRose}{HTML}{FBEFEF}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,node/.style={circle,draw=Gold,line width=1.2pt,fill=Panel,text=Ink,font=\bfseries\large,minimum size=9mm},arc/.style={->,line width=2pt,draw=Gold},cap/.style={fill=Canvas,draw=LineSoft,rounded corners=2pt,inner sep=2pt,font=\small},note/.style={fill=SoftRose,draw=LineSoft,rounded corners=5pt,align=left,inner sep=7pt,text=Ink,font=\small}]
+\fill[Canvas] (-4.4,-1.9) rectangle (5.8,3.1);\draw[LineSoft,fill=Panel,rounded corners=10pt] (-4.1,-1.6) rectangle (5.5,2.8);
+\node[anchor=west,font=\bfseries\Large,text=Ink] at (-3.8,2.45){Forced flow by considering vertex $B$};
+\node[node] (A) at (-3,0) {$A$};\node[node,fill=SoftRose] (B) at (0,0) {$B$};\node[node] (C) at (1.4,1.45) {$C$};\node[node] (D) at (2.2,-0.45) {$D$};
+\draw[arc] (A)--(B) node[midway,above,cap] {$ (3,5)$};\draw[arc] (B)--(C) node[midway,left,cap] {$(3,4)$};\draw[arc] (B)--(D) node[midway,below,cap] {$(2,7)$};
+\node[note] at (-2.05,-1.05){$(l,u)$ means\\$l\leq f\leq u$};
+\node[note,text width=4.1cm] at (3.4,1.15){At $B$:\\maximum inflow $=5$,\\minimum outflow $=3+2=5$.\\So the values are forced.};
+\node[note,text width=3.9cm] at (3.35,-0.75){$AB=5,\quad BC=3,\quad BD=2.$};
+\end{tikzpicture}\end{document}

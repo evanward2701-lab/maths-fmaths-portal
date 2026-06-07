@@ -1,0 +1,10 @@
+% Asset ID: FAS2GroupTheoryTikZ-002
+% Purpose: Triangle symmetry Cayley table.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}
+\node at (0,0) {$\begin{array}{c|cccccc}*&I&P&Q&R&S&T\\\hline I&I&P&Q&R&S&T\\ P&P&Q&I&T&R&S\\ Q&Q&I&P&S&T&R\\ R&R&S&T&I&P&Q\\ S&S&R&T&Q&I&P\\ T&T&S&R&P&Q&I\end{array}$};
+\node at (0,-3.0) {Triangle symmetry group: identity $I$, rotations $P,Q$, reflections $R,S,T$.};
+\end{tikzpicture}
+\end{document}

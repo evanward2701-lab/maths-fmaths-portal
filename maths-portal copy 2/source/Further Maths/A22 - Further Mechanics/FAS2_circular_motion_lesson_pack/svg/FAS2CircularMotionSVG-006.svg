@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Banked corner: the acceleration arrow is not a force</title>
+  <desc id="desc">Show a banked corner without friction and the detached acceleration arrow warning.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-006
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show a banked corner without friction and the detached acceleration arrow warning.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Banked corner: the acceleration arrow is not a force</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">No friction: the reaction has a horizontal component towards the centre.</text>
+  <g transform="translate(370 440) rotate(-20)">
+    <rect x="-220" y="-18" width="440" height="36" rx="10" fill="#E5E5EA" stroke="#2C2C2E" stroke-width="3"/>
+  </g>
+  <circle cx="400" cy="366" r="18" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="4"/>
+  <line x1="400" y1="366" x2="462" y2="196" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="470" y="215" font-family="Arial" font-size="28" fill="#2C2C2E">R</text>
+  <line x1="400" y1="366" x2="400" y2="500" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="418" y="485" font-family="Arial" font-size="26" fill="#2C2C2E">75g</text>
+  <line x1="595" y1="366" x2="485" y2="366" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <line x1="595" y1="382" x2="485" y2="382" stroke="#C5A059" stroke-width="5" marker-end="url(#goldArrow)"/>
+  <text x="605" y="382" font-family="Arial" font-size="25" fill="#C5A059">acceleration</text>
+  <rect x="720" y="230" width="360" height="250" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="750" y="342" font-family="Arial" font-size="26" fill="#2C2C2E">R cos 20° = 75g</text>
+  <text x="750" y="402" font-family="Arial" font-size="26" fill="#2C2C2E">R sin 20° = 75v²/25</text>
+
+</svg>

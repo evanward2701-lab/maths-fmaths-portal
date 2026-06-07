@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FA22FurtherCentreOfMassWidget-001 | Lamina Integral Builder</title>
+  <!-- Asset ID: FA22FurtherCentreOfMassWidget-001; Source: AI-proposed teaching enhancement based on lesson evidence; Related lesson file: FA22_further_centre_of_mass_lesson.md; Purpose: Help students build M, Mxbar and Mybar expressions for laminae using strips. -->
+  <style>
+    :root { --canvas:#FAF9F6; --ivory:#FFFFF0; --line:#E5E5EA; --ink:#2C2C2E; --gold:#C5A059; --soft:#FBEFEF; }
+    body { margin:0; background:var(--canvas); color:var(--ink); font-family:Inter,Arial,sans-serif; line-height:1.5; }
+    main { max-width:1050px; margin:24px auto; padding:24px; background:var(--ivory); border:1px solid var(--line); border-radius:24px; }
+    h1 { margin:0 0 8px; } .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:800px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--canvas);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0} input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--ivory)}
+    label{font-weight:700;display:block;margin-top:12px} button{margin-top:14px;border:1px solid var(--gold);background:var(--soft);border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .math{font-family:Georgia,'Times New Roman',serif;font-size:1.15rem;background:var(--ivory);border-left:4px solid var(--gold);padding:10px;border-radius:10px;margin:8px 0;overflow-x:auto}
+    .warn{background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px;margin:8px 0}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Lamina Integral Builder</h1><p>Build mass and moment expressions before integrating.</p><div class="grid"><section class="card"><label>Lamina type</label><select id="mode"><option value="one">Under one curve</option><option value="two">Between two curves</option></select><label>y or y₁</label><input id="y1" value="sqrt(x)"><label>y₂, if needed</label><input id="y2" value="1/2 x"><label>Lower limit a</label><input id="a" value="0"><label>Upper limit b</label><input id="b" value="4"><button onclick="build()">Build</button></section><section class="card"><h2>Expressions</h2><div id="out"></div></section></div><div class="warn">Between-curves warning: strip height is y₁−y₂, but vertical centre is 1/2(y₁+y₂), not 1/2(y₁−y₂).</div>
+  </main>
+  <script>function I(a,b,f){return `∫_${a}^${b} ${f} dx`} function build(){const m=document.getElementById('mode').value,a=document.getElementById('a').value,b=document.getElementById('b').value,y1=document.getElementById('y1').value,y2=document.getElementById('y2').value; let html=''; if(m==='one'){html+=`<div class="math">M = ${I(a,b,`(${y1})`)}</div><div class="math">M x̄ = ${I(a,b,`x(${y1})`)}</div><div class="math">M ȳ = ${I(a,b,`1/2(${y1})²`)}</div>`}else{html+=`<div class="math">M = ${I(a,b,`(${y1})-(${y2})`)}</div><div class="math">M x̄ = ${I(a,b,`x[(${y1})-(${y2})]`)}</div><div class="math">M ȳ = 1/2 ${I(a,b,`[(${y1})+(${y2})][(${y1})-(${y2})]`)}</div>`} document.getElementById('out').innerHTML=html} build();</script>
+</body>
+</html>

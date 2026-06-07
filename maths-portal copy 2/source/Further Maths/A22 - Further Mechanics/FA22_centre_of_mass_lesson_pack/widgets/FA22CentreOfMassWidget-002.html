@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FA22CentreOfMassWidget-002</title>
+<!--
+Asset ID: FA22CentreOfMassWidget-002
+Source: AI-proposed teaching enhancement based on lesson evidence
+Related lesson section: Section 10.2
+Purpose: Composite lamina table builder for laminae, holes and frameworks.
+-->
+<style>
+:root{--canvas:#FAF9F6;--ivory:#FFFFF0;--line:#E5E5EA;--gold:#D4AF37;--accent:#C5A059;--blush:#FBEFEF;--ink:#2C2C2E;}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+main{max-width:960px;margin:0 auto;padding:28px} .shell{background:var(--ivory);border:1px solid var(--line);border-radius:24px;padding:24px}
+input,select,button{font-family:inherit;padding:8px;border:1px solid var(--line);border-radius:10px;margin:4px} button{background:var(--blush);border-color:var(--accent);font-weight:700;cursor:pointer}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:16px} .result{background:var(--blush);border:1px solid var(--accent);border-radius:14px;padding:12px;margin-top:10px}
+svg{width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
+</style>
+</head>
+<body>
+<main><section class="shell">
+<h1>Composite Lamina Table Builder</h1>
+<p>Build component tables and check effective mass ratios.</p>
+<div class="card"><p>Rows are: name,type,size,density,x,y. Use type <b>hole</b> for negative mass.</p><textarea id="data" style="width:100%;height:140px">S1,lamina,4,1,2,4
+S2,lamina,12,1,4,2</textarea><br/><button onclick="calc()">Calculate</button><button onclick="hole()">Load hole example</button><div id="out" class="result"></div></div>
+</section></main>
+<script>function hole(){document.getElementById('data').value='large rectangle,lamina,24,1,4,3\nremoved rectangle,hole,8,1,5,4';calc()}function calc(){const rows=document.getElementById('data').value.trim().split(/\n+/).map(r=>r.split(','));let sm=0,smx=0,smy=0,html='<table><tr><th>Component</th><th>mass ratio</th><th>centre</th><th>mx</th><th>my</th></tr>';rows.forEach(r=>{let [name,type,size,dens,x,y]=r;size=+size;dens=+dens;x=+x;y=+y;let m=size*dens*(type.trim()==='hole'?-1:1);sm+=m;smx+=m*x;smy+=m*y;html+=`<tr><td>${name}</td><td>${m}</td><td>(${x},${y})</td><td>${m*x}</td><td>${m*y}</td></tr>`});html+='</table>';html+=`<p>∑m=${sm}, ∑mx=${smx}, ∑my=${smy}</p><b>G=(${(smx/sm).toFixed(4)}, ${(smy/sm).toFixed(4)})</b>`;html+='<p>Reminder: laminae use area, frameworks use length, holes are negative mass.</p>';document.getElementById('out').innerHTML=html}calc();</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS1VectorsWidget-002: Position Vector and Distance Explorer</title>
+  <!-- Asset ID: AS1VectorsWidget-002 | Source: CCEA AS1-VEC-LO004, AS1-VEC-LO005 | Purpose: explore position vectors and distance | Boundary: 2D only -->
+  <style>
+    body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#111;line-height:1.5}main{max-width:1150px;margin:auto;padding:24px}.layout{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}.card{border:2px solid #111;border-radius:14px;padding:18px;background:#f7f7f7}.point-box{border:1px solid #111;border-radius:12px;padding:14px;margin-bottom:14px;background:#fff}.row{margin-bottom:14px}label{display:block;font-weight:700;margin-bottom:6px}input[type=range]{width:100%}.pill{display:inline-block;min-width:52px;padding:4px 8px;border:1px solid #111;border-radius:999px;background:#fff;text-align:center;font-weight:700}.result{background:#fff;border:1px solid #111;border-radius:10px;padding:12px;margin-bottom:12px}.warning{background:#fff;border:2px dashed #111;border-radius:10px;padding:12px;margin-top:12px}svg{width:100%;height:auto;background:#fff;border:2px solid #111;border-radius:14px}@media(max-width:900px){.layout{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Position Vector and Distance Explorer</h1>
+  <p>Move points A and B. The widget calculates OA, OB, AB = OB - OA, and the distance AB.</p>
+  <section class="layout">
+    <div class="card">
+      <div class="point-box"><h2>Point A</h2><div class="row"><label>A x-coordinate: <span id="axValue" class="pill">1</span></label><input id="axInput" type="range" min="-8" max="8" step="1" value="1"/></div><div class="row"><label>A y-coordinate: <span id="ayValue" class="pill">2</span></label><input id="ayInput" type="range" min="-8" max="8" step="1" value="2"/></div></div>
+      <div class="point-box"><h2>Point B</h2><div class="row"><label>B x-coordinate: <span id="bxValue" class="pill">4</span></label><input id="bxInput" type="range" min="-8" max="8" step="1" value="4"/></div><div class="row"><label>B y-coordinate: <span id="byValue" class="pill">0</span></label><input id="byInput" type="range" min="-8" max="8" step="1" value="0"/></div></div>
+      <div class="result"><strong>OA:</strong> <span id="oaOut"></span></div><div class="result"><strong>OB:</strong> <span id="obOut"></span></div><div class="result"><strong>AB:</strong> <span id="abOut"></span></div><div class="result"><strong>Distance AB:</strong> <span id="distanceOut"></span></div>
+      <div class="warning"><strong>Exam note:</strong> The vector AB is directional, so use B - A. The distance AB is just the magnitude of that vector.</div>
+    </div>
+    <div>
+      <svg id="positionSvg" viewBox="0 0 650 650" role="img" aria-label="Position vector diagram">
+        <line x1="325" y1="620" x2="325" y2="30" stroke="black" stroke-width="2"/><line x1="30" y1="325" x2="620" y2="325" stroke="black" stroke-width="2"/>
+        <polygon points="325,30 317,48 333,48" fill="black"/><polygon points="620,325 602,317 602,333" fill="black"/>
+        <text x="625" y="318" font-size="18" font-family="Arial">x</text><text x="335" y="28" font-size="18" font-family="Arial">y</text><text x="307" y="348" font-size="18" font-family="Arial">O</text>
+        <line id="oaLine" x1="325" y1="325" x2="360" y2="255" stroke="black" stroke-width="4"/><polygon id="oaArrow" points="" fill="black"/>
+        <line id="obLine" x1="325" y1="325" x2="465" y2="325" stroke="black" stroke-width="4"/><polygon id="obArrow" points="" fill="black"/>
+        <line id="abLine" x1="360" y1="255" x2="465" y2="325" stroke="black" stroke-width="5" stroke-dasharray="10 8"/><polygon id="abArrow" points="" fill="black"/>
+        <circle id="aPoint" cx="360" cy="255" r="6" fill="black"/><circle id="bPoint" cx="465" cy="325" r="6" fill="black"/>
+        <text id="aLabel" x="370" y="245" font-size="18" font-family="Arial">A(1, 2)</text><text id="bLabel" x="475" y="315" font-size="18" font-family="Arial">B(4, 0)</text><text id="abLabel" x="410" y="285" font-size="18" font-family="Arial">AB</text>
+      </svg>
+    </div>
+  </section>
+</main>
+<script>
+const $=id=>document.getElementById(id);const inp={ax:$('axInput'),ay:$('ayInput'),bx:$('bxInput'),by:$('byInput')};const val={ax:$('axValue'),ay:$('ayValue'),bx:$('bxValue'),by:$('byValue')};const out={oa:$('oaOut'),ob:$('obOut'),ab:$('abOut'),distance:$('distanceOut')};const s={oaLine:$('oaLine'),obLine:$('obLine'),abLine:$('abLine'),oaArrow:$('oaArrow'),obArrow:$('obArrow'),abArrow:$('abArrow'),aPoint:$('aPoint'),bPoint:$('bPoint'),aLabel:$('aLabel'),bLabel:$('bLabel'),abLabel:$('abLabel')};
+function formatSurd(n){const r=Math.sqrt(n);return Number.isInteger(r)?String(r):`√${n} ≈ ${r.toFixed(3)}`;}function arrow(x1,y1,x2,y2){if(x1===x2&&y1===y2)return '';const a=Math.atan2(y2-y1,x2-x1),l=16,sp=.55,p1x=x2-l*Math.cos(a-sp),p1y=y2-l*Math.sin(a-sp),p2x=x2-l*Math.cos(a+sp),p2y=y2-l*Math.sin(a+sp);return `${x2},${y2} ${p1x},${p1y} ${p2x},${p2y}`;}function pt(x,y){return{x:325+x*35,y:325-y*35}}function line(el,x1,y1,x2,y2){el.setAttribute('x1',x1);el.setAttribute('y1',y1);el.setAttribute('x2',x2);el.setAttribute('y2',y2)}
+function update(){const ax=+inp.ax.value,ay=+inp.ay.value,bx=+inp.bx.value,by=+inp.by.value;Object.entries({ax,ay,bx,by}).forEach(([k,v])=>val[k].textContent=v);const abx=bx-ax,aby=by-ay,d2=abx*abx+aby*aby;out.oa.textContent=`OA = (${ax}, ${ay})`;out.ob.textContent=`OB = (${bx}, ${by})`;out.ab.textContent=`AB = OB - OA = (${bx}, ${by}) - (${ax}, ${ay}) = (${abx}, ${aby})`;out.distance.textContent=`AB = √(${abx}² + ${aby}²) = ${formatSurd(d2)}`;const o={x:325,y:325},a=pt(ax,ay),b=pt(bx,by);line(s.oaLine,o.x,o.y,a.x,a.y);line(s.obLine,o.x,o.y,b.x,b.y);line(s.abLine,a.x,a.y,b.x,b.y);s.oaArrow.setAttribute('points',arrow(o.x,o.y,a.x,a.y));s.obArrow.setAttribute('points',arrow(o.x,o.y,b.x,b.y));s.abArrow.setAttribute('points',arrow(a.x,a.y,b.x,b.y));s.aPoint.setAttribute('cx',a.x);s.aPoint.setAttribute('cy',a.y);s.bPoint.setAttribute('cx',b.x);s.bPoint.setAttribute('cy',b.y);s.aLabel.setAttribute('x',a.x+10);s.aLabel.setAttribute('y',a.y-10);s.aLabel.textContent=`A(${ax}, ${ay})`;s.bLabel.setAttribute('x',b.x+10);s.bLabel.setAttribute('y',b.y-10);s.bLabel.textContent=`B(${bx}, ${by})`;s.abLabel.setAttribute('x',(a.x+b.x)/2+8);s.abLabel.setAttribute('y',(a.y+b.y)/2-8);}
+Object.values(inp).forEach(el=>el.addEventListener('input',update));update();
+</script>
+</body>
+</html>

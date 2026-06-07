@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Lift force diagrams</title>
+<desc id="desc">AS2 Forces and Newton's Laws SVG asset 009.</desc>
+<metadata>
+Asset ID: AS2ForcesAndNewtonsLawsSVG-009
+Source: Chapter 10 Forces and Motion evidence; CCEA AS2-FORCES boundary
+Related lesson section: Lift force diagrams
+Purpose: Lift force diagrams.
+</metadata>
+<rect width="900" height="520" fill="#ffffff"/>
+<text x="40" y="58" font-family="Arial" font-size="30" font-weight="700" fill="#111827">Lift force diagrams</text>
+<rect x="60" y="120" width="340" height="80" rx="14" fill="#eef2ff" stroke="#111827" stroke-width="3"/><text x="80" y="168" font-family="Arial" font-size="22" fill="#111827">Whole lift: T and total weight</text><rect x="460" y="120" width="340" height="80" rx="14" fill="#ecfdf5" stroke="#111827" stroke-width="3"/><text x="480" y="168" font-family="Arial" font-size="22" fill="#111827">Person: R and weight</text><rect x="60" y="240" width="340" height="80" rx="14" fill="#fef3c7" stroke="#111827" stroke-width="3"/><text x="80" y="288" font-family="Arial" font-size="22" fill="#111827">Acceleration sign matters</text>
+
+<text x="40" y="500" font-family="Arial" font-size="18" fill="#374151">AS2-FORCES lesson asset. Use with the main lesson file and source reference.</text>
+</svg>

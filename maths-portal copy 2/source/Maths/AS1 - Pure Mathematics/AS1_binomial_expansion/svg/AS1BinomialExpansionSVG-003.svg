@@ -1,0 +1,24 @@
+<!--
+asset_id: AS1BinomialExpansionSVG-003
+source: Dr Frost Maths P1 Chapter 8 Binomial Expansion slide page 16; Chapter 8 transcript section on why Pascal’s triangle and binomial coefficients are linked
+related_lesson_section: Core Theory 8.7
+purpose: Explain why choosing terms from five brackets gives the coefficient of a^3b^2 in (a+b)^5.
+linked_LOs: AS1-SS-LO001, AS1-SS-LO002
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Why binomial coefficients count terms in an expansion</title>
+  <desc id="desc">A diagram showing that a term such as a cubed b squared in (a+b)^5 comes from choosing three a terms from five brackets.</desc>
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#111111">Why does Pascal’s triangle give binomial coefficients?</text>
+  <text x="60" y="115" font-family="Arial, sans-serif" font-size="22" fill="#333333">Each term in the expansion comes from choosing one item from each bracket.</text>
+  <rect x="60" y="140" width="1080" height="3" fill="#111111"/>
+  <text x="120" y="205" font-family="Arial, sans-serif" font-size="32" fill="#111111">(a+b)⁵ =</text>
+  <g font-family="Arial, sans-serif" font-size="30" text-anchor="middle"><rect x="285" y="170" width="105" height="60" rx="12" fill="#f5f5f5" stroke="#222222" stroke-width="2"/><text x="337" y="210" fill="#111111">(a+b)</text><rect x="410" y="170" width="105" height="60" rx="12" fill="#f5f5f5" stroke="#222222" stroke-width="2"/><text x="462" y="210" fill="#111111">(a+b)</text><rect x="535" y="170" width="105" height="60" rx="12" fill="#f5f5f5" stroke="#222222" stroke-width="2"/><text x="587" y="210" fill="#111111">(a+b)</text><rect x="660" y="170" width="105" height="60" rx="12" fill="#f5f5f5" stroke="#222222" stroke-width="2"/><text x="712" y="210" fill="#111111">(a+b)</text><rect x="785" y="170" width="105" height="60" rx="12" fill="#f5f5f5" stroke="#222222" stroke-width="2"/><text x="837" y="210" fill="#111111">(a+b)</text></g>
+  <text x="165" y="320" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#111111">One possible selection:</text>
+  <g font-family="Arial, sans-serif" font-size="34" text-anchor="middle" font-weight="700"><circle cx="337" cy="310" r="34" fill="#ffffff" stroke="#111111" stroke-width="2"/><text x="337" y="322" fill="#111111">a</text><circle cx="462" cy="310" r="34" fill="#ffffff" stroke="#111111" stroke-width="2"/><text x="462" y="322" fill="#111111">a</text><circle cx="587" cy="310" r="34" fill="#ffffff" stroke="#111111" stroke-width="2"/><text x="587" y="322" fill="#111111">b</text><circle cx="712" cy="310" r="34" fill="#ffffff" stroke="#111111" stroke-width="2"/><text x="712" y="322" fill="#111111">a</text><circle cx="837" cy="310" r="34" fill="#ffffff" stroke="#111111" stroke-width="2"/><text x="837" y="322" fill="#111111">b</text></g>
+  <rect x="120" y="385" width="440" height="230" rx="18" fill="#f5f5f5" stroke="#222222" stroke-width="2"/>
+  <text x="150" y="430" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#111111">This selection gives</text><text x="150" y="485" font-family="Arial, sans-serif" font-size="34" fill="#111111">a × a × b × a × b</text><text x="150" y="540" font-family="Arial, sans-serif" font-size="34" fill="#111111">= a³b²</text><text x="150" y="585" font-family="Arial, sans-serif" font-size="21" fill="#333333">Three a’s and two b’s are chosen.</text>
+  <rect x="640" y="385" width="440" height="230" rx="18" fill="#f5f5f5" stroke="#222222" stroke-width="2"/>
+  <text x="670" y="430" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#111111">How many such selections?</text><text x="670" y="485" font-family="Arial, sans-serif" font-size="29" fill="#111111">Choose 3 brackets from 5</text><text x="670" y="540" font-family="Arial, sans-serif" font-size="34" fill="#111111">C(5,3) = 10</text><text x="670" y="585" font-family="Arial, sans-serif" font-size="21" fill="#333333">So the coefficient of a³b² is 10.</text>
+  <text x="60" y="700" font-family="Arial, sans-serif" font-size="22" fill="#333333">General idea: in (a+b)ⁿ, the coefficient of aⁿ⁻ʳbʳ is C(n,r).</text>
+</svg>

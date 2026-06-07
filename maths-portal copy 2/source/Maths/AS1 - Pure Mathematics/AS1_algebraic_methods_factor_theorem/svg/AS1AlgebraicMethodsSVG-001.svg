@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Asset ID: AS1AlgebraicMethodsSVG-001
+Unit code: AS1
+Topic code: AS1-AF
+Topic ID: AS1AlgebraicMethodsFactorTheorem
+Related LO IDs: AS1-AF-LO010
+Source: Dr Frost P1 Chapter 7 Algebraic Methods PDF page 4; Chapter 7a teacher transcript
+Related lesson section: Core Theory A: Simplifying Algebraic Fractions
+Purpose: Show the factorise-first pathway for simplifying algebraic fractions, including the warning that only whole common factors may be cancelled.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simplifying algebraic fractions by factorising first</title>
+  <desc id="desc">A flow diagram showing an original algebraic fraction, factorisation of numerator and denominator, cancellation of a common factor, and final simplified form.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M 0 0 L 12 6 L 0 12 z" fill="#222222"/></marker>
+    <style>
+      .heading { font: bold 34px Arial, sans-serif; fill: #111111; }
+      .subheading { font: bold 22px Arial, sans-serif; fill: #111111; }
+      .body { font: 20px Arial, sans-serif; fill: #111111; }
+      .math { font: 25px Georgia, serif; fill: #111111; }
+      .small { font: 17px Arial, sans-serif; fill: #111111; }
+      .box { fill: #ffffff; stroke: #222222; stroke-width: 3; rx: 18; }
+      .noteBox { fill: #f7f7f7; stroke: #222222; stroke-width: 2.5; rx: 16; }
+      .cancel { stroke: #b00020; stroke-width: 5; stroke-linecap: round; }
+      .arrowLine { stroke: #222222; stroke-width: 3; marker-end: url(#arrow); fill: none; }
+    </style>
+  </defs>
+  <rect x="20" y="20" width="1160" height="720" rx="26" fill="#fafafa" stroke="#111111" stroke-width="3"/>
+  <text x="600" y="72" text-anchor="middle" class="heading">Algebraic Fractions: Factorise First, Then Cancel</text>
+  <text x="600" y="108" text-anchor="middle" class="body">Only cancel common factors. Terms joined by + or − are not cancellable on their own.</text>
+  <rect x="60" y="160" width="260" height="170" class="box"/>
+  <text x="190" y="195" text-anchor="middle" class="subheading">1. Original</text>
+  <text x="190" y="248" text-anchor="middle" class="math">(x² − 1)</text>
+  <line x1="110" y1="262" x2="270" y2="262" stroke="#111111" stroke-width="3"/>
+  <text x="190" y="300" text-anchor="middle" class="math">(x² + x)</text>
+  <path d="M 330 245 C 365 245, 380 245, 415 245" class="arrowLine"/>
+  <text x="372" y="225" text-anchor="middle" class="small">factorise</text>
+  <rect x="425" y="160" width="330" height="170" class="box"/>
+  <text x="590" y="195" text-anchor="middle" class="subheading">2. Factorise both parts</text>
+  <text x="590" y="246" text-anchor="middle" class="math">(x + 1)(x − 1)</text>
+  <line x1="475" y1="262" x2="705" y2="262" stroke="#111111" stroke-width="3"/>
+  <text x="590" y="300" text-anchor="middle" class="math">x(x + 1)</text>
+  <line x1="494" y1="230" x2="570" y2="254" class="cancel"/>
+  <line x1="632" y1="286" x2="708" y2="310" class="cancel"/>
+  <text x="590" y="350" text-anchor="middle" class="small">common factor: x + 1</text>
+  <path d="M 765 245 C 805 245, 825 245, 865 245" class="arrowLine"/>
+  <text x="815" y="225" text-anchor="middle" class="small">cancel</text>
+  <rect x="875" y="160" width="260" height="170" class="box"/>
+  <text x="1005" y="195" text-anchor="middle" class="subheading">3. Simplified</text>
+  <text x="1005" y="248" text-anchor="middle" class="math">x − 1</text>
+  <line x1="955" y1="262" x2="1055" y2="262" stroke="#111111" stroke-width="3"/>
+  <text x="1005" y="300" text-anchor="middle" class="math">x</text>
+  <rect x="90" y="420" width="475" height="220" class="noteBox"/>
+  <text x="327" y="460" text-anchor="middle" class="subheading">Why this works</text>
+  <text x="120" y="500" class="body">Multiplying by (x + 1) and dividing by</text>
+  <text x="120" y="530" class="body">(x + 1) cancel because they are inverse</text>
+  <text x="120" y="560" class="body">operations.</text>
+  <text x="120" y="610" class="body">But this is only allowed after factorising.</text>
+  <rect x="635" y="420" width="475" height="220" class="noteBox"/>
+  <text x="872" y="460" text-anchor="middle" class="subheading">Exam warning</text>
+  <text x="665" y="500" class="body">Do not cancel pieces of terms.</text>
+  <text x="665" y="535" class="math">x² + x ≠ x² + 1</text>
+  <text x="665" y="580" class="body">Original restrictions still matter:</text>
+  <text x="665" y="615" class="math">x(x + 1) ≠ 0, so x ≠ 0, −1</text>
+  <text x="600" y="705" text-anchor="middle" class="small">AS1-AF-LO010: factorisation and algebraic manipulation</text>
+</svg>

@@ -1,0 +1,20 @@
+% Asset ID: A21AlgebraicMethodsProofByContradictionTikZ-005
+% Source: Teacher transcript rational/irrational proof example; Phase 1 Worked Example 4
+% Related lesson section: Worked Example 4
+% Purpose: Show strategy for proving rational plus/minus irrational expressions are irrational.
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,positioning}
+\begin{document}
+\begin{tikzpicture}[font=\sffamily, step/.style={rectangle, rounded corners=5pt, draw=black, very thick, align=center, text width=5.0cm, minimum height=1.2cm}, arrow/.style={-{Latex[length=3mm]}, very thick}]
+\node[step, fill=blue!7] (a) {Claim: $a$ rational and $b$ irrational $\Rightarrow a-b$ irrational};
+\node[step, fill=orange!12, right=2.3cm of a] (b) {Assume $a-b$ rational too};
+\node[step, fill=blue!7, below=1.5cm of b] (c) {$a=\frac cd$, $a-b=\frac ef$};
+\node[step, fill=gray!10, left=2.3cm of c] (d) {Do not write $b$ as a fraction};
+\node[step, fill=blue!7, below=1.5cm of d] (e) {$b=a-\frac ef$};
+\node[step, fill=blue!7, right=2.3cm of e] (f) {$b=\frac cd-\frac ef=\frac{cf-de}{df}$};
+\node[step, fill=red!10, below=1.5cm of f] (g) {So $b$ is rational: contradiction};
+\node[step, fill=green!12, left=2.3cm of g] (h) {Therefore $a-b$ is irrational};
+\draw[arrow] (a)--(b); \draw[arrow] (b)--(c); \draw[arrow] (c)--(d); \draw[arrow] (d)--(e); \draw[arrow] (e)--(f); \draw[arrow] (f)--(g); \draw[arrow] (g)--(h);
+\end{tikzpicture}
+\end{document}

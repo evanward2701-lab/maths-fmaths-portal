@@ -1,0 +1,37 @@
+{
+  "placeholder_ids": [
+    "FAS2HookesLawElasticStringsAndSpringsMermaid-001",
+    "FAS2HookesLawElasticStringsAndSpringsMermaid-002",
+    "FAS2HookesLawElasticStringsAndSpringsSVG-001",
+    "FAS2HookesLawElasticStringsAndSpringsSVG-002",
+    "FAS2HookesLawElasticStringsAndSpringsSVG-003",
+    "FAS2HookesLawElasticStringsAndSpringsBridgeSVG-001",
+    "FAS2HookesLawElasticStringsAndSpringsTikZ-001",
+    "FAS2HookesLawElasticStringsAndSpringsTikZ-002",
+    "FAS2HookesLawElasticStringsAndSpringsTikZ-003",
+    "FAS2HookesLawElasticStringsAndSpringsWidget-001",
+    "FAS2HookesLawElasticStringsAndSpringsWidget-002",
+    "FAS2HookesLawElasticStringsAndSpringsWidget-003"
+  ],
+  "missing_placeholders": [],
+  "svg_errors": [],
+  "html_errors": [],
+  "old_refs_present": false,
+  "lo_ids_present": true,
+  "bridge_labelled": true,
+  "off_spec_logged": true,
+  "asset_paths": [
+    "mermaid/FAS2HookesLawElasticStringsAndSpringsMermaid-001.md",
+    "mermaid/FAS2HookesLawElasticStringsAndSpringsMermaid-002.md",
+    "svg/FAS2HookesLawElasticStringsAndSpringsSVG-001.svg",
+    "svg/FAS2HookesLawElasticStringsAndSpringsSVG-002.svg",
+    "svg/FAS2HookesLawElasticStringsAndSpringsSVG-003.svg",
+    "svg/FAS2HookesLawElasticStringsAndSpringsBridgeSVG-001.svg",
+    "tikz/FAS2HookesLawElasticStringsAndSpringsTikZ-001.tex",
+    "tikz/FAS2HookesLawElasticStringsAndSpringsTikZ-002.tex",
+    "tikz/FAS2HookesLawElasticStringsAndSpringsTikZ-003.tex",
+    "widgets/FAS2HookesLawElasticStringsAndSpringsWidget-001.html",
+    "widgets/FAS2HookesLawElasticStringsAndSpringsWidget-002.html",
+    "widgets/FAS2HookesLawElasticStringsAndSpringsWidget-003.html"
+  ]
+}

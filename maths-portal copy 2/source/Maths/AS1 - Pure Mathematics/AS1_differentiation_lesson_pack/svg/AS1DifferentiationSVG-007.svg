@@ -1,0 +1,42 @@
+<!--
+Asset ID: AS1DifferentiationSVG-007
+Source: Chapter 12 Differentiation PDF stationary point sections and CCEA AS1-DIFF-LO007
+Related section: Core Theory 19-21
+Purpose: Compare local maximum, local minimum and stationary point of inflexion.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" role="img" aria-labelledby="title desc">
+  <title id="title">Stationary point types</title>
+  <desc id="desc">Three small graph panels compare a local maximum, local minimum and stationary point of inflexion.</desc>
+  <rect width="960" height="430" fill="#ffffff"/>
+  <text x="40" y="45" font-family="Arial" font-size="28" font-weight="700">Stationary Points: f'(x) = 0</text>
+  <g transform="translate(55,95)" font-family="Arial">
+    <rect x="0" y="0" width="260" height="250" fill="#fafafa" stroke="#333"/>
+    <line x1="25" y1="210" x2="235" y2="210" stroke="#111"/>
+    <line x1="130" y1="30" x2="130" y2="225" stroke="#111"/>
+    <path d="M35 190 C75 70, 180 70, 225 190" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="130" cy="95" r="6" fill="#111"/>
+    <line x1="90" y1="95" x2="170" y2="95" stroke="#222" stroke-width="3"/>
+    <text x="58" y="235" font-size="20" font-weight="700">Local maximum</text>
+    <text x="45" y="270" font-size="16">gradient: + → 0 → -</text>
+  </g>
+  <g transform="translate(350,95)" font-family="Arial">
+    <rect x="0" y="0" width="260" height="250" fill="#fafafa" stroke="#333"/>
+    <line x1="25" y1="210" x2="235" y2="210" stroke="#111"/>
+    <line x1="130" y1="30" x2="130" y2="225" stroke="#111"/>
+    <path d="M35 70 C75 190, 180 190, 225 70" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="130" cy="165" r="6" fill="#111"/>
+    <line x1="90" y1="165" x2="170" y2="165" stroke="#222" stroke-width="3"/>
+    <text x="65" y="235" font-size="20" font-weight="700">Local minimum</text>
+    <text x="45" y="270" font-size="16">gradient: - → 0 → +</text>
+  </g>
+  <g transform="translate(645,95)" font-family="Arial">
+    <rect x="0" y="0" width="260" height="250" fill="#fafafa" stroke="#333"/>
+    <line x1="25" y1="210" x2="235" y2="210" stroke="#111"/>
+    <line x1="130" y1="30" x2="130" y2="225" stroke="#111"/>
+    <path d="M35 200 C80 200, 95 130, 130 130 C165 130, 180 60, 225 60" fill="none" stroke="#1f77b4" stroke-width="4"/>
+    <circle cx="130" cy="130" r="6" fill="#111"/>
+    <line x1="90" y1="130" x2="170" y2="130" stroke="#222" stroke-width="3"/>
+    <text x="14" y="235" font-size="20" font-weight="700">Stationary inflexion</text>
+    <text x="45" y="270" font-size="16">gradient: + → 0 → +</text>
+  </g>
+</svg>

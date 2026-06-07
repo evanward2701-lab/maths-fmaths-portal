@@ -1,0 +1,14 @@
+<!--
+Asset ID: A21TrigonometryAndModellingWidget-003
+Source: Chapter 7 Trigonometry and Modelling transcript; P2 Chapter 7 slide PDF
+Related lesson section: A21 Trigonometry and Modelling
+Purpose: Harmonic Identity Calculator
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Harmonic Identity Calculator</title>
+<style>body{font-family:Arial;padding:24px}.widget{max-width:940px;margin:auto;border:2px solid #111;border-radius:18px;padding:24px;background:#f8f8f8}.inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}input{width:100%;font-size:1.1rem;padding:10px}button{padding:10px 16px;border:2px solid #111;background:white;border-radius:10px;margin:8px 0}.output{background:white;border:1px solid #222;border-radius:14px;padding:18px;margin-top:16px;line-height:1.7}</style></head>
+<body><main class="widget"><h1>Harmonic Identity Calculator</h1><p>For a sinx + b cosx = R sin(x+α), assuming a,b &gt; 0.</p><div class="inputs"><div><label>a</label><input id="a" type="number" value="3" step="0.1"></div><div><label>b</label><input id="b" type="number" value="4" step="0.1"></div></div><button onclick="calc()">Calculate</button><div id="out" class="output"></div><canvas id="tri" width="520" height="320"></canvas></main>
+<script>
+function calc(){const A=+a.value,B=+b.value;if(A<=0||B<=0){out.innerHTML="Enter positive values.";return}const R=Math.hypot(A,B), rad=Math.atan(B/A), deg=rad*180/Math.PI;out.innerHTML=`R=√(${A}²+${B}²)=${R.toFixed(4)}<br>tanα=${B}/${A}<br>α=${deg.toFixed(2)}°=${rad.toFixed(4)} rad<br><strong>${A}sinx+${B}cosx=${R.toFixed(4)}sin(x+${deg.toFixed(2)}°)</strong>`;draw(A,B)}
+function draw(A,B){const c=tri.getContext("2d");c.clearRect(0,0,520,320);const s=180/Math.max(A,B),x1=90,y1=240,x2=x1+A*s,y2=y1,x3=x2,y3=y1-B*s;c.lineWidth=3;c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.lineTo(x3,y3);c.closePath();c.stroke();c.font="18px Arial";c.fillText("a=R cosα",(x1+x2)/2-45,y1+30);c.fillText("b=R sinα",x2+12,(y2+y3)/2);c.fillText("R",(x1+x3)/2,(y1+y3)/2);c.fillText("α",x1+35,y1-10)}
+calc();
+</script></body></html>

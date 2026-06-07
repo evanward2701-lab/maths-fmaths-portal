@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="820" viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Feasible region and simplex vertex movement for a two-variable linear programming problem</title>
+  <desc id="desc">A two-variable feasible region for 5x plus 7y less than or equal to 70, 10x plus 3y less than or equal to 60, x and y non-negative. The simplex route is shown from the origin to 6 comma 0, then to 42 over 11 comma 80 over 11.</desc>
+  <metadata>
+    Asset ID: FA22SimplexAlgorithmTableauSVG-001
+    Unit: FA22 Further A2 2 Applied Mathematics
+    Applied section: Section D, Discrete and Decision Mathematics
+    Topic code: FA22-ALGGRAPH
+    Topic ID: FA22SimplexAlgorithmTableau
+    Related LO: FA22-ALGGRAPH-LO003
+    Related lesson file: FA22_simplex_algorithm_tableau_lesson.md
+    Related lesson section: #9. Visual Asset Integration
+    Used placeholder: [VISUAL PLACEHOLDER: FA22SimplexAlgorithmTableauSVG-001 | Source: Uploaded two-variable graphical simplex evidence | Insert from svg/FA22SimplexAlgorithmTableauSVG-001.svg | Purpose: Show how simplex moves between vertices of the feasible region.]
+  </metadata>
+  <defs>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/></marker>
+    <style>
+      .bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2}.grid{stroke:#E5E5EA;stroke-width:1}.axis{stroke:#2C2C2E;stroke-width:2.5}.constraintA{stroke:#8E8E93;stroke-width:3}.constraintB{stroke:#6E6E73;stroke-width:3}.feasible{fill:#FBEFEF;opacity:.72;stroke:#C5A059;stroke-width:2.5}.route{stroke:#C5A059;stroke-width:5;fill:none;marker-end:url(#arrowGold)}.point{fill:#D4AF37;stroke:#2C2C2E;stroke-width:2}.text{fill:#2C2C2E;font-family:Inter,Aptos,'Segoe UI',Arial,sans-serif}.title{font-size:31px;font-weight:700}.subtitle{font-size:18px}.label{font-size:17px}.small{font-size:14px}.math{font-size:18px;font-family:'Cambria Math','STIX Two Math',Georgia,serif}.box{fill:#FFFFF0;stroke:#C5A059;stroke-width:2;rx:16}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="820"/>
+  <rect class="panel" x="36" y="34" width="1128" height="752" rx="26"/>
+  <text class="text title" x="70" y="86">Simplex movement between vertices</text>
+  <text class="text subtitle" x="70" y="119">Two-variable CCEA FA22 simplex tableau example: the graph explains the row operations.</text>
+  <g id="graph">
+    <rect x="120" y="150" width="680" height="560" rx="18" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+    <g opacity="0.9">
+      <line class="grid" x1="160" y1="660" x2="790" y2="660"/><line class="grid" x1="160" y1="576" x2="790" y2="576"/><line class="grid" x1="160" y1="492" x2="790" y2="492"/><line class="grid" x1="160" y1="408" x2="790" y2="408"/><line class="grid" x1="160" y1="324" x2="790" y2="324"/><line class="grid" x1="160" y1="240" x2="790" y2="240"/>
+      <line class="grid" x1="160" y1="660" x2="160" y2="176"/><line class="grid" x1="244" y1="660" x2="244" y2="176"/><line class="grid" x1="328" y1="660" x2="328" y2="176"/><line class="grid" x1="412" y1="660" x2="412" y2="176"/><line class="grid" x1="496" y1="660" x2="496" y2="176"/><line class="grid" x1="580" y1="660" x2="580" y2="176"/><line class="grid" x1="664" y1="660" x2="664" y2="176"/><line class="grid" x1="748" y1="660" x2="748" y2="176"/>
+    </g>
+    <line class="axis" x1="160" y1="660" x2="790" y2="660"/><line class="axis" x1="160" y1="660" x2="160" y2="176"/>
+    <text class="text label" x="792" y="666">x</text><text class="text label" x="150" y="168">y</text>
+    <polygon class="feasible" points="160,660 412,660 320.36,354.55 160,240"/>
+    <line class="constraintA" x1="160" y1="240" x2="748" y2="660"/><line class="constraintB" x1="160" y1="-180" x2="412" y2="660"/>
+    <line class="route" x1="160" y1="660" x2="412" y2="660"/><line class="route" x1="412" y1="660" x2="320.36" y2="354.55"/>
+    <circle class="point" cx="160" cy="660" r="7"/><circle class="point" cx="412" cy="660" r="7"/><circle class="point" cx="320.36" cy="354.55" r="7"/><circle class="point" cx="160" cy="240" r="7"/>
+    <text class="text math" x="174" y="653">(0,0)</text><text class="text math" x="420" y="647">(6,0)</text><text class="text math" x="332" y="344">(42/11, 80/11)</text><text class="text math" x="174" y="235">(0,10)</text>
+    <text class="text math" x="515" y="545">5x + 7y = 70</text><text class="text small" x="542" y="570">r = 0 on this boundary</text>
+    <text class="text math" x="452" y="354">10x + 3y = 60</text><text class="text small" x="483" y="379">s = 0 on this boundary</text>
+  </g>
+  <g id="explanation">
+    <rect class="box" x="840" y="150" width="278" height="164"/><text class="text label" x="862" y="184" font-weight="700">What the route means</text><text class="text small" x="862" y="216">The simplex method starts at</text><text class="text math" x="862" y="242">(0,0)</text><text class="text small" x="862" y="270">then moves to adjacent vertices</text><text class="text small" x="862" y="294">that improve the objective value.</text>
+    <rect class="box" x="840" y="340" width="278" height="174"/><text class="text label" x="862" y="374" font-weight="700">Objective function</text><text class="text math" x="862" y="407">P = 3x + 2y</text><text class="text small" x="862" y="438">At the optimum:</text><text class="text math" x="862" y="468">x = 42/11, y = 80/11</text><text class="text math" x="862" y="496">P = 26</text>
+    <rect class="box" x="840" y="540" width="278" height="150"/><text class="text label" x="862" y="574" font-weight="700">Zero slack interpretation</text><text class="text small" x="862" y="606">At the optimal vertex:</text><text class="text math" x="862" y="633">r = 0 and s = 0</text><text class="text small" x="862" y="662">Both constraints are at capacity.</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Annotated Cake Linear Programme</title>
+  <desc id="desc">Decision variables, objective function and constraints for the cake example.</desc>
+  <metadata>asset_id: FA22LinearProgrammingFoundationsSVG-001; source: Teacher transcript and screenshot PDF cake example; purpose: Annotate the cake LP model.</metadata>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="50" y="40" width="1100" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E">Annotated Cake Linear Programme</text>
+  
+  <text x="600" y="130" text-anchor="middle" font-family="Arial" font-size="17" fill="#2C2C2E">Cake production formulation</text>
+  <rect x="90" y="170" width="300" height="145" rx="18" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="240" y="205" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#2C2C2E">Decision variables</text>
+  <text x="120" y="245" font-family="Arial" font-size="18" fill="#2C2C2E">x = lemon drizzle cakes</text>
+  <text x="120" y="280" font-family="Arial" font-size="18" fill="#2C2C2E">y = carrot cakes</text>
+  <rect x="450" y="170" width="300" height="145" rx="18" fill="#FBEFEF" stroke="#C5A059" stroke-width="2"/>
+  <text x="600" y="205" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#2C2C2E">Objective</text>
+  <text x="600" y="255" text-anchor="middle" font-family="Arial" font-size="24" fill="#2C2C2E">Maximise P = 4.5x + 5y</text>
+  <rect x="810" y="170" width="300" height="145" rx="18" fill="#FAF9F6" stroke="#D4AF37" stroke-width="2"/>
+  <text x="960" y="205" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#2C2C2E">Non-negativity</text>
+  <text x="960" y="255" text-anchor="middle" font-family="Arial" font-size="24" fill="#2C2C2E">x ≥ 0, y ≥ 0</text>
+  <rect x="100" y="380" width="1000" height="220" rx="22" fill="#FFFFFF" stroke="#E5E5EA"/>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#2C2C2E">Constraints</text>
+  <text x="250" y="485" text-anchor="middle" font-family="Arial" font-size="24" fill="#2C2C2E">x + 2y ≤ 24</text>
+  <text x="600" y="475" text-anchor="middle" font-family="Arial" font-size="21" fill="#2C2C2E">0.25x + 0.3y ≤ 4</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial" font-size="21" fill="#2C2C2E">5x + 6y ≤ 80</text>
+  <text x="950" y="475" text-anchor="middle" font-family="Arial" font-size="21" fill="#2C2C2E">0.2x + 0.3y ≤ 5</text>
+  <text x="950" y="510" text-anchor="middle" font-family="Arial" font-size="21" fill="#2C2C2E">2x + 3y ≤ 50</text>
+  <text x="600" y="665" text-anchor="middle" font-family="Arial" font-size="18" fill="#2C2C2E">Feasible solution → feasible region → optimal solution</text>
+</svg>

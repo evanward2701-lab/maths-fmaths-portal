@@ -1,0 +1,56 @@
+<!-- Asset ID: AS1AlgebraicExpressionsSVG-001 -->
+<!-- Source: Dr Frost Algebraic Expressions PDF page 4 and screenshot PDF index-law sequence -->
+<!-- Related lesson section: Key Definitions and Notation, Core Theory -->
+<!-- Purpose: Label base, exponent/index, power and show why terminology matters. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Base, exponent, index and power notation</title>
+  <desc id="desc">A large expression 3 to the power 5 is labelled with base, exponent or index, and power terminology.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#222"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111; }
+      .subtitle { font: 400 18px Arial, sans-serif; fill: #333; }
+      .math-main { font: 700 128px Georgia, serif; fill: #111; }
+      .math-exp { font: 700 68px Georgia, serif; fill: #111; }
+      .label { font: 700 24px Arial, sans-serif; fill: #111; }
+      .note { font: 400 19px Arial, sans-serif; fill: #222; }
+      .small { font: 400 16px Arial, sans-serif; fill: #333; }
+      .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 16; }
+      .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .guide { stroke: #555; stroke-width: 2; stroke-dasharray: 6 6; }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="960" height="520" rx="24" fill="#ffffff" stroke="#111" stroke-width="3"/>
+
+  <text x="60" y="72" class="title">Index notation: the tiny number is doing huge work</text>
+  <text x="60" y="105" class="subtitle">In A-Level algebra, precise language helps prevent precise disasters.</text>
+
+  <g transform="translate(390 160)">
+    <text x="0" y="170" class="math-main">3</text>
+    <text x="92" y="92" class="math-exp">5</text>
+  </g>
+
+  <line x1="430" y1="345" x2="325" y2="420" class="arrow"/>
+  <line x1="520" y1="205" x2="650" y2="150" class="arrow"/>
+  <line x1="515" y1="335" x2="665" y2="420" class="arrow"/>
+
+  <rect x="95" y="390" width="260" height="90" class="box"/>
+  <text x="125" y="425" class="label">base</text>
+  <text x="125" y="455" class="note">the repeated factor</text>
+
+  <rect x="655" y="95" width="285" height="105" class="box"/>
+  <text x="685" y="130" class="label">exponent or index</text>
+  <text x="685" y="160" class="note">plural: indices</text>
+  <text x="685" y="185" class="small">also sometimes called the power</text>
+
+  <rect x="665" y="390" width="250" height="90" class="box"/>
+  <text x="695" y="425" class="label">power</text>
+  <text x="695" y="455" class="note">the whole idea of raising</text>
+
+  <line x1="60" y1="505" x2="940" y2="505" class="guide"/>
+  <text x="80" y="532" class="small">Preferred wording: when multiplying same bases, add the indices. Avoid vague wording such as “add the powers”.</text>
+</svg>

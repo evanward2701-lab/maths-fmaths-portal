@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA22TDistributionBridgeSVG-001: Bridge from z-standardisation to t-standardisation</title>
+  <desc id="desc">A bridge diagram showing how the ordinary A-Level z-test formula with known population standard deviation sigma becomes the Further Mathematics t-test formula with sample standard deviation S.</desc>
+  <metadata>Asset ID: FA22TDistributionBridgeSVG-001; Source: Ordinary A-Level Maths bridge plus CCEA FA22-TDIST specification boundary; Related lesson section: # 9.4 Bridge visual: z to t.</metadata>
+  <rect x="0" y="0" width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="54" y="42" width="1092" height="676" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="94" y="104" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#2C2C2E" font-weight="700">From ordinary z-tests to Further Maths t-tests</text>
+  <text x="94" y="144" font-family="Arial, sans-serif" font-size="19" fill="#2C2C2E">The algebra looks almost the same. The meaning of the denominator changes everything.</text>
+  <rect x="92" y="204" width="448" height="360" rx="24" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="132" y="252" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E" font-weight="700">Ordinary A-Level Maths bridge</text>
+  <text x="132" y="286" font-family="Arial, sans-serif" font-size="18" fill="#2C2C2E">Population standard deviation is known.</text>
+  <rect x="132" y="324" width="338" height="100" rx="18" fill="#FFFFF0" stroke="#C5A059" stroke-width="2"/>
+  <text x="172" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#2C2C2E">Z = ( X̄ − μ ) / ( σ / √n )</text>
+  <circle cx="142" cy="470" r="6" fill="#C5A059"/><text x="160" y="476" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">σ is a population standard deviation.</text>
+  <circle cx="142" cy="506" r="6" fill="#C5A059"/><text x="160" y="512" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">σ is fixed if it is known.</text>
+  <circle cx="142" cy="542" r="6" fill="#C5A059"/><text x="160" y="548" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">Critical values come from Z ∼ N(0,1).</text>
+  <line x1="560" y1="384" x2="640" y2="384" stroke="#D4AF37" stroke-width="6" stroke-linecap="round"/><polygon points="640,384 618,370 618,398" fill="#D4AF37"/>
+  <text x="558" y="346" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E" font-weight="700">unknown σ</text>
+  <text x="548" y="414" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E" font-weight="700">small sample</text>
+  <rect x="660" y="204" width="448" height="360" rx="24" fill="#FAF9F6" stroke="#C5A059" stroke-width="3"/>
+  <text x="700" y="252" font-family="Arial, sans-serif" font-size="22" fill="#2C2C2E" font-weight="700">Further Maths upgrade</text>
+  <text x="700" y="286" font-family="Arial, sans-serif" font-size="18" fill="#2C2C2E">Population standard deviation is unknown.</text>
+  <rect x="700" y="324" width="338" height="100" rx="18" fill="#FBEFEF" stroke="#D4AF37" stroke-width="2"/>
+  <text x="740" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#2C2C2E">T = ( X̄ − μ ) / ( S / √n )</text>
+  <circle cx="710" cy="470" r="6" fill="#D4AF37"/><text x="728" y="476" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">S is calculated from the sample.</text>
+  <circle cx="710" cy="506" r="6" fill="#D4AF37"/><text x="728" y="512" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">S varies from sample to sample.</text>
+  <circle cx="710" cy="542" r="6" fill="#D4AF37"/><text x="728" y="548" font-family="Arial, sans-serif" font-size="17" fill="#2C2C2E">Critical values come from T ∼ tν.</text>
+  <rect x="92" y="604" width="1016" height="76" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="126" y="636" font-family="Arial, sans-serif" font-size="19" fill="#2C2C2E" font-weight="700">Exam warning:</text>
+  <text x="250" y="636" font-family="Arial, sans-serif" font-size="19" fill="#2C2C2E">Replacing σ by S is not just a cosmetic symbol swap.</text>
+  <text x="126" y="664" font-family="Arial, sans-serif" font-size="19" fill="#2C2C2E">For small samples, the statistic follows a t-distribution with ν = n − 1, not the standard normal distribution.</text>
+</svg>

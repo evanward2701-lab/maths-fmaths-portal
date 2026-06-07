@@ -1,0 +1,14 @@
+<!--
+Asset ID: AS2ForcesSVG-014
+Source: Chapter 5/7 Forces Transcript and supporting PDFs
+Related lesson section: Worked Example 7
+Purpose: Show a rough inclined plane with friction acting up the slope.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Rough Inclined Plane</title>
+  <desc id="desc">Show a rough inclined plane with friction acting up the slope.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#111"/></marker></defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Rough Inclined Plane</text>
+  <line x1="120" y1="430" x2="760" y2="430" stroke="#111" stroke-width="3"/><line x1="120" y1="430" x2="720" y2="220" stroke="#111" stroke-width="4"/><g transform="translate(420 325) rotate(-19)"><rect x="-60" y="-35" width="120" height="70" fill="#f7f7f7" stroke="#111"/><text x="0" y="8" text-anchor="middle" font-family="Arial" font-size="20">2 kg</text></g><line x1="420" y1="325" x2="540" y2="282" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="600" y="270" font-family="Arial" font-size="20" text-anchor="middle">friction = μR</text><line x1="420" y1="325" x2="300" y2="368" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="360.0" y="336.5" font-family="Arial" font-size="20" text-anchor="middle">motion</text><line x1="420" y1="325" x2="420" y2="465" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="420.0" y="385.0" font-family="Arial" font-size="20" text-anchor="middle">2g</text><line x1="420" y1="325" x2="465" y2="205" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/><text x="442.5" y="255.0" font-family="Arial" font-size="20" text-anchor="middle">R</text>
+</svg>

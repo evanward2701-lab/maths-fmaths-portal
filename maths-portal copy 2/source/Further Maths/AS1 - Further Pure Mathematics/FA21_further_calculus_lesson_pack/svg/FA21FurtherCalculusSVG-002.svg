@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="980" viewBox="0 0 1400 980" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FA21FurtherCalculusSVG-002: L'Hospital Admissibility Panel</title>
+  <desc id="desc">A panel showing when L'Hospital's rule is allowed, when an expression must be rewritten first, and when the rule is not needed.</desc>
+  <rect width="1400" height="980" fill="#FAF9F6"/>
+  <rect x="70" y="55" width="1260" height="110" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="700" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#2C2C2E" font-weight="700">L’Hospital’s Rule: Admissibility Check</text>
+  <text x="700" y="140" text-anchor="middle" font-family="Arial" font-size="18" fill="#2C2C2E">Enrichment panel: check the form before differentiating numerator and denominator</text>
+  <rect x="360" y="200" width="680" height="80" rx="24" fill="#FBEFEF" stroke="#D4AF37" stroke-width="3"/>
+  <text x="700" y="232" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#2C2C2E">lim f(x)/g(x) = lim f′(x)/g′(x)</text>
+  <text x="700" y="262" text-anchor="middle" font-family="Arial" font-size="15" fill="#2C2C2E">only after the correct indeterminate quotient form appears</text>
+  <g font-family="Arial" fill="#2C2C2E">
+    <rect x="85" y="335" width="380" height="440" rx="28" fill="#FFFFF0" stroke="#D4AF37" stroke-width="4"/><rect x="125" y="365" width="300" height="46" rx="23" fill="#C5A059"/><text x="275" y="395" text-anchor="middle" font-size="20" fill="#FFFFF0" font-weight="700">Allowed directly</text><text x="275" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="46">0/0</text><text x="275" y="535" text-anchor="middle" font-family="Georgia, serif" font-size="44">±∞/±∞</text><text x="275" y="630" text-anchor="middle" font-size="17">Differentiate numerator</text><text x="275" y="657" text-anchor="middle" font-size="17">and denominator separately</text>
+    <rect x="510" y="335" width="380" height="440" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><rect x="550" y="365" width="300" height="46" rx="23" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/><text x="700" y="395" text-anchor="middle" font-size="20" font-weight="700">Rewrite first</text><text x="700" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="39">∞ − ∞</text><text x="700" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="39">0 × ∞</text><text x="700" y="575" text-anchor="middle" font-family="Georgia, serif" font-size="39">1^∞</text><text x="700" y="662" text-anchor="middle" font-size="17">Convert to a quotient</text><text x="700" y="689" text-anchor="middle" font-size="17">then check for 0/0 or ∞/∞</text>
+    <rect x="935" y="335" width="380" height="440" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/><rect x="975" y="365" width="300" height="46" rx="23" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/><text x="1125" y="395" text-anchor="middle" font-size="20" font-weight="700">Not needed</text><text x="1125" y="465" text-anchor="middle" font-family="Georgia, serif" font-size="37">finite / finite</text><text x="1125" y="522" text-anchor="middle" font-family="Georgia, serif" font-size="37">non-zero / non-zero</text><text x="1125" y="630" text-anchor="middle" font-size="17">Use direct substitution</text><text x="1125" y="657" text-anchor="middle" font-size="17">or ordinary limit methods</text>
+  </g>
+  <rect x="165" y="835" width="1070" height="72" rx="30" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="700" y="866" text-anchor="middle" font-family="Arial" font-size="18" fill="#2C2C2E" font-weight="700">Workflow: substitute first → identify form → rewrite if needed → apply rule only when allowed</text>
+  <text x="700" y="894" text-anchor="middle" font-family="Arial" font-size="15" fill="#2C2C2E">Boundary reminder: L’Hospital’s rule is preserved here as FP1 enrichment, not confirmed CCEA-core.</text>
+</svg>

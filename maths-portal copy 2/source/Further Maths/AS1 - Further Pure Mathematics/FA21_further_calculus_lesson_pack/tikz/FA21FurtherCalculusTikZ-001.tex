@@ -1,0 +1,38 @@
+% Asset ID: FA21FurtherCalculusTikZ-001
+% Asset type: TikZ diagram
+% Related lesson file: FA21_further_calculus_lesson.md
+% Related lesson section: Section 9.5 Leibnitz derivative staircase
+% Used placeholder: [VISUAL PLACEHOLDER: FA21FurtherCalculusTikZ-001 | Source: Uploaded FP1 Leibnitz evidence | Insert from tikz/FA21FurtherCalculusTikZ-001.tex | Purpose: Show how derivative orders pair so their total is n.]
+% Source: Uploaded FP1 Leibnitz evidence
+% Purpose: Show how Leibnitz theorem pairs u-derivatives and v-derivatives so that each row has total derivative order n.
+% Boundary note: Optional enrichment. Leibnitz’s theorem is not confirmed as CCEA-core from the supplied FA21-FCALC LOs.
+
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows.meta, positioning, calc, decorations.pathreplacing}
+\begin{document}
+\begin{tikzpicture}[
+    font=\sffamily,
+    titlebox/.style={rounded corners=10pt, draw={rgb,255:red,229;green,229;blue,234}, line width=0.9pt, fill={rgb,255:red,255;green,255;blue,240}, align=center, inner sep=10pt},
+    goldbox/.style={rounded corners=9pt, draw={rgb,255:red,212;green,175;blue,55}, line width=0.9pt, fill={rgb,255:red,251;green,239;blue,239}, align=center, inner sep=8pt},
+    rowbox/.style={rounded corners=7pt, draw={rgb,255:red,229;green,229;blue,234}, line width=0.75pt, fill={rgb,255:red,255;green,255;blue,240}, align=center, minimum height=0.95cm},
+    coeffbox/.style={rounded corners=7pt, draw={rgb,255:red,197;green,160;blue,89}, line width=0.8pt, fill={rgb,255:red,250;green,249;blue,246}, align=center, minimum height=0.95cm},
+    arrow/.style={-{Latex[length=3mm]}, draw={rgb,255:red,197;green,160;blue,89}, line width=0.9pt},
+    note/.style={rounded corners=7pt, draw={rgb,255:red,229;green,229;blue,234}, fill={rgb,255:red,251;green,239;blue,239}, align=center, inner sep=8pt}
+]
+\fill[{rgb,255:red,250;green,249;blue,246}] (-8.2,-7.5) rectangle (8.2,6.1);
+\node[titlebox, text width=13.5cm] (title) at (0,5.25) {{\Large\bfseries Leibnitz Derivative Staircase}\\[4pt] Optional enrichment: pair derivative orders so that they add to \(n\)};
+\node[goldbox, text width=11.7cm, below=0.55cm of title] (theorem) {If \(y=uv\), then \[y^{(n)}=\sum_{k=0}^{n}\binom{n}{k}u^{(k)}v^{(n-k)}.\]};
+\node[goldbox, text width=3.3cm] (h1) at (-4.9,2.8) {\(\boldsymbol{k}\)\\ derivative order of \(u\)};
+\node[goldbox, text width=3.3cm] (h2) at (0,2.8) {coefficient\\ \(\displaystyle \binom{n}{k}\)};
+\node[goldbox, text width=3.3cm] (h3) at (4.9,2.8) {\(\boldsymbol{n-k}\)\\ derivative order of \(v\)};
+\foreach \name/\x/\y/\txt in {u0/-4.9/1.55/{\(u^{(0)}=u\)},u1/-4.9/0.35/{\(u^{(1)}=u'\)},u2/-4.9/-0.85/{\(u^{(2)}=u''\)},udots/-4.9/-2.05/{\(\vdots\)},uk/-4.9/-3.25/{\(u^{(k)}\)},un/-4.9/-4.45/{\(u^{(n)}\)}} {\node[rowbox, text width=3.3cm] (\name) at (\x,\y) {\txt};}
+\foreach \name/\x/\y/\txt in {c0/0/1.55/{\(\displaystyle \binom{n}{0}\)},c1/0/0.35/{\(\displaystyle \binom{n}{1}\)},c2/0/-0.85/{\(\displaystyle \binom{n}{2}\)},cdots/0/-2.05/{\(\vdots\)},ck/0/-3.25/{\(\displaystyle \binom{n}{k}\)},cn/0/-4.45/{\(\displaystyle \binom{n}{n}\)}} {\node[coeffbox, text width=3.3cm] (\name) at (\x,\y) {\txt};}
+\foreach \name/\x/\y/\txt in {v0/4.9/1.55/{\(v^{(n)}\)},v1/4.9/0.35/{\(v^{(n-1)}\)},v2/4.9/-0.85/{\(v^{(n-2)}\)},vdots/4.9/-2.05/{\(\vdots\)},vk/4.9/-3.25/{\(v^{(n-k)}\)},vn/4.9/-4.45/{\(v^{(0)}=v\)}} {\node[rowbox, text width=3.3cm] (\name) at (\x,\y) {\txt};}
+\foreach \a/\b/\c in {u0/c0/v0,u1/c1/v1,u2/c2/v2,udots/cdots/vdots,uk/ck/vk,un/cn/vn}{\draw[arrow] (\a.east) -- (\b.west);\draw[arrow] (\b.east) -- (\c.west);}
+\draw[arrow] (-6.9,1.95) -- (-6.9,-4.85);\node[align=center, font=\small] at (-7.45,-1.45) {\(u\)-derivatives\\increase};
+\draw[arrow] (6.9,-4.85) -- (6.9,1.95);\node[align=center, font=\small] at (7.45,-1.45) {\(v\)-derivatives\\decrease};
+\node[note, text width=12.5cm] at (0,-6.15) {Each row contributes \[\binom{n}{k}u^{(k)}v^{(n-k)}.\] The derivative orders add to \(n\): \[k+(n-k)=n.\] Warning: \(u^{(k)}\) means the \(k\)th derivative of \(u\), not \(u^k\).};
+\end{tikzpicture}
+\end{document}

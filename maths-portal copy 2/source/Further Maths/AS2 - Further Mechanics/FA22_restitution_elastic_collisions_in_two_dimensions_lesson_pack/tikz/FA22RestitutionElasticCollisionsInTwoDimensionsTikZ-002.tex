@@ -1,0 +1,45 @@
+% Asset ID: FA22RestitutionElasticCollisionsInTwoDimensionsTikZ-002
+% File path: tikz/FA22RestitutionElasticCollisionsInTwoDimensionsTikZ-002.tex
+% Topic ID: FA22RestitutionElasticCollisionsInTwoDimensions
+% Unit: FA22
+% Topic code: FA22-REST
+% Source: Transcript two-sphere explanation + CCEA FA22-REST boundary
+% Purpose: Provide a precise line-of-centres/common-tangent diagram for two smooth spheres.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, calc, positioning}
+
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Ivory}{HTML}{FFFFF0}
+\definecolor{Line}{HTML}{2C2C2E}
+\definecolor{SoftLine}{HTML}{E5E5EA}
+\definecolor{Gold}{HTML}{C5A059}
+\definecolor{Rose}{HTML}{FBEFEF}
+\definecolor{NormalAccent}{HTML}{B45A64}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,every node/.style={font=\sffamily,text=Line},sphere/.style={draw=Line,line width=1pt,fill=Canvas},centre/.style={draw=Line,fill=Gold},velocity/.style={->,very thick,draw=Line},tangentvel/.style={->,very thick,draw=Gold},impulse/.style={->,very thick,draw=NormalAccent},loc/.style={draw=NormalAccent,line width=1.1pt},tangent/.style={draw=Gold,line width=1pt,dashed},equationbox/.style={draw=Gold,fill=Rose,rounded corners=6pt,line width=0.7pt,inner sep=7pt,align=left},notebox/.style={draw=SoftLine,fill=Ivory,rounded corners=6pt,line width=0.7pt,inner sep=7pt,align=left}]
+\fill[Canvas] (-1.3,-2.4) rectangle (14.6,7.4);
+\draw[SoftLine,rounded corners=14pt,line width=0.8pt] (-1.0,-2.1) rectangle (14.3,7.05);
+\node[font=\sffamily\bfseries\Large,anchor=west] at (-0.65,6.55) {Collision of two smooth spheres};
+\node[font=\sffamily\small,anchor=west] at (-0.65,6.15) {The impulse acts along the line of centres. Tangent components are unchanged.};
+\coordinate (A) at (3.3,2.35); \coordinate (B) at (5.9,2.35); \coordinate (C) at ($(A)!0.5!(B)$);
+\draw[sphere] (A) circle (1.3); \draw[sphere] (B) circle (1.3);
+\fill[centre] (A) circle (2.2pt); \fill[centre] (B) circle (2.2pt);
+\node[font=\sffamily\bfseries] at ($(A)+(-0.32,0)$) {$A$}; \node[font=\sffamily\bfseries] at ($(B)+(0.32,0)$) {$B$};
+\draw[loc] ($(A)+(-1.65,0)$) -- ($(B)+(1.65,0)$); \node[font=\sffamily\small,fill=Canvas,inner sep=2pt] at ($(C)+(0,0.35)$) {line of centres};
+\draw[tangent] ($(C)+(0,-2.4)$) -- ($(C)+(0,2.4)$); \node[font=\sffamily\small,rotate=90,fill=Canvas,inner sep=2pt] at ($(C)+(0.35,1.55)$) {common tangent};
+\draw[velocity] ($(A)+(-2.0,1.65)$) -- ($(A)+(-0.72,0.68)$); \node[font=\sffamily\small] at ($(A)+(-2.15,1.86)$) {$\mathbf{u}_A$};
+\draw[velocity] ($(B)+(2.0,-1.15)$) -- ($(B)+(0.76,-0.48)$); \node[font=\sffamily\small] at ($(B)+(2.15,-1.28)$) {$\mathbf{u}_B$};
+\draw[tangentvel] ($(A)+(-1.55,-1.3)$) -- ($(A)+(-1.55,-0.38)$); \node[font=\sffamily\small,align=center] at ($(A)+(-2.25,-1.64)$) {tangent\\component\\unchanged};
+\draw[tangentvel] ($(B)+(1.55,1.3)$) -- ($(B)+(1.55,0.38)$); \node[font=\sffamily\small,align=center] at ($(B)+(2.25,1.65)$) {tangent\\component\\unchanged};
+\draw[impulse] ($(C)+(-0.15,0.18)$) -- ($(C)+(-0.95,0.18)$); \draw[impulse] ($(C)+(0.15,-0.18)$) -- ($(C)+(0.95,-0.18)$);
+\node[font=\sffamily\small,fill=Canvas,inner sep=2pt] at ($(C)+(0,-0.72)$) {equal and opposite impulses};
+\node[equationbox,anchor=west] at (8.25,4.65) {\(\textbf{Common tangent}\)\\[2pt]Components parallel to the common tangent\\are unchanged.};
+\node[equationbox,anchor=west] at (8.25,2.65) {\(\textbf{Line of centres}\)\\[2pt]Use conservation of momentum:\\[-2pt]\[m_Au_A+m_Bu_B=m_Av_A+m_Bv_B\]};
+\node[equationbox,anchor=west] at (8.25,0.35) {\(\textbf{Restitution}\)\\[2pt]Use Newton's law along the line of centres:\\[-2pt]\[v_B-v_A=e(u_A-u_B)\]};
+\node[notebox,anchor=west] at (-0.45,-1.45) {Do not apply \(e\) to the whole two-dimensional velocity.\\Apply it only along the line of centres, after resolving into components.};
+\end{tikzpicture}
+\end{document}

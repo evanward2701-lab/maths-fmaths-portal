@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AS1 Integration Signed Area Explorer</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;padding:24px;background:#f8fafc;color:#1f2937}
+main{max-width:980px;margin:auto;background:white;border:1px solid #d0d5dd;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+h1{margin-top:0}.grid{display:grid;grid-template-columns:280px 1fr;gap:16px}@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:#f7fafc;border:1px solid #d0d5dd;border-radius:14px;padding:16px}
+label{display:block;font-weight:700;margin-top:10px}input{width:100%;padding:9px;border:1px solid #d0d5dd;border-radius:10px}
+button{margin-top:12px;padding:9px 12px;border:0;border-radius:999px;background:#2563eb;color:white;font-weight:700;cursor:pointer}
+svg{width:100%;height:auto;background:white;border:1px solid #d0d5dd;border-radius:14px}
+.output{font-size:1.15rem;background:#fff;border:1px solid #d0d5dd;border-radius:14px;padding:16px;margin-top:16px;line-height:1.6}
+</style>
+</head>
+<body>
+<main>
+<h1>AS1 Signed Area Explorer</h1>
+<p>Explore \(f(x)=x(x-1)(x-2)\). A definite integral gives signed area. Total area needs splitting at roots and adding magnitudes.</p>
+<div class="grid">
+<div class="card">
+<h2>Choose limits</h2>
+<label>Lower limit a <input id="a" type="number" step="0.1" value="0"></label>
+<label>Upper limit b <input id="b" type="number" step="0.1" value="2"></label>
+<button onclick="update()">Update</button>
+<button onclick="preset(0,1)">0 to 1</button>
+<button onclick="preset(1,2)">1 to 2</button>
+<button onclick="preset(0,2)">0 to 2</button>
+<button onclick="preset(0,3)">0 to 3</button>
+</div>
+<div class="card">
+<svg id="plot" viewBox="0 0 720 420"></svg>
+</div>
+</div>
+<div id="out" class="output"></div>
+</main>
+<script>
+function f(x){return x*(x-1)*(x-2)}
+function F(x){return 0.25*x*x*x*x-x*x*x+x*x}
+function r(x){return Math.abs(x)<1e-10?'0':Number(x.toFixed(6)).toString()}
+function preset(a,b){document.getElementById('a').value=a;document.getElementById('b').value=b;update()}
+function split(a,b){const pts=[a];[0,1,2].forEach(x=>{if(x>a&&x<b)pts.push(x)});pts.push(b);return pts.sort((x,y)=>x-y)}
+function update(){
+ const a=parseFloat(document.getElementById('a').value), b=parseFloat(document.getElementById('b').value);
+ const out=document.getElementById('out');
+ if(!isFinite(a)||!isFinite(b)||a>=b){out.textContent='Enter valid limits with a < b.';return}
+ const pts=split(a,b); let total=0, rows='';
+ for(let i=0;i<pts.length-1;i++){const l=pts[i],u=pts[i+1], val=F(u)-F(l); total+=Math.abs(val); rows+=`${r(l)} to ${r(u)}: signed integral ${r(val)}, area contribution ${r(Math.abs(val))}<br>`}
+ const signed=F(b)-F(a);
+ out.innerHTML=`<strong>Split points:</strong> ${pts.map(r).join(', ')}<br><strong>Signed integral:</strong> ${r(signed)}<br><strong>Total area:</strong> ${r(total)}<br><br>${rows}`;
+ draw(a,b,pts);
+}
+function draw(a,b,pts){
+ const svg=document.getElementById('plot'); svg.innerHTML='';
+ const X=x=>60+(x+0.6)/(3.8)*620, Y=y=>340-(y+0.6)/(7.2)*300;
+ svg.innerHTML+=`<line x1="60" y1="${Y(0)}" x2="680" y2="${Y(0)}" stroke="#222" stroke-width="2"/><line x1="${X(0)}" y1="30" x2="${X(0)}" y2="360" stroke="#222" stroke-width="2"/>`;
+ for(let i=0;i<pts.length-1;i++){let l=pts[i],u=pts[i+1],d=`M ${X(l)} ${Y(0)} `; for(let k=0;k<=50;k++){let x=l+(u-l)*k/50;d+=`L ${X(x)} ${Y(f(x))} `} d+=`L ${X(u)} ${Y(0)} Z`; let mid=f((l+u)/2); svg.innerHTML+=`<path d="${d}" fill="${mid>=0?'rgba(22,163,74,.28)':'rgba(220,38,38,.24)'}" stroke="${mid>=0?'#16a34a':'#dc2626'}"/>`}
+ let d=''; for(let k=0;k<=200;k++){let x=-0.5+3.5*k/200; d+=(k?'L':'M')+` ${X(x)} ${Y(f(x))} `} svg.innerHTML+=`<path d="${d}" fill="none" stroke="#2563eb" stroke-width="3"/>`;
+ [0,1,2].forEach(x=>{svg.innerHTML+=`<circle cx="${X(x)}" cy="${Y(0)}" r="5" fill="#111"/><text x="${X(x)-4}" y="${Y(0)+24}" font-size="14">${x}</text>`})
+ svg.innerHTML+=`<line x1="${X(a)}" y1="30" x2="${X(a)}" y2="360" stroke="#b45309" stroke-dasharray="6 5"/><line x1="${X(b)}" y1="30" x2="${X(b)}" y2="360" stroke="#7c3aed" stroke-dasharray="6 5"/>`;
+}
+update();
+</script>
+</body>
+</html>

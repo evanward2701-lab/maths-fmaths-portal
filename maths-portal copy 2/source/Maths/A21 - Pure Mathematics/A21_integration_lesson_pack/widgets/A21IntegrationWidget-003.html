@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>A21IntegrationWidget-003</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;margin:0;padding:20px}
+main{max-width:900px;margin:auto;background:white;border:2px solid #cbd5e1;border-radius:20px;padding:20px}
+canvas{width:100%;max-width:650px;border:1px solid #cbd5e1;border-radius:12px;background:white}
+.controls{margin-top:12px}
+label{font-weight:700}
+</style>
+</head>
+<body><main><h1>Differential Equation Model Explorer</h1>
+<p>For <strong>dV/dt = -kV</strong>, the solution is <strong>V=V₀e<sup>-kt</sup></strong>.</p>
+<canvas id="c" width="650" height="420"></canvas>
+<div class="controls"><label>k: <span id="kOut">0.30</span></label><input id="k" type="range" min="0.05" max="1.2" step="0.05" value="0.30"></div>
+<p>Limitations: constant k, continuous change, limited valid interval, real data may differ.</p>
+<script>
+const c=document.getElementById('c'),ctx=c.getContext('2d'),k=document.getElementById('k'),kOut=document.getElementById('kOut');function X(t){return 60+50*t} function Y(v){return 360-28*v}
+function draw(){let kk=+k.value;kOut.textContent=kk.toFixed(2);ctx.clearRect(0,0,650,420);ctx.strokeStyle='#0f172a';ctx.beginPath();ctx.moveTo(X(0),Y(0));ctx.lineTo(X(10.5),Y(0));ctx.moveTo(X(0),Y(0));ctx.lineTo(X(0),Y(11));ctx.stroke();ctx.strokeStyle='#16a34a';ctx.beginPath();for(let i=0;i<=200;i++){let t=10*i/200,v=10*Math.exp(-kk*t);if(i===0)ctx.moveTo(X(t),Y(v));else ctx.lineTo(X(t),Y(v));}ctx.stroke();ctx.fillText('V = 10e^(-kt)',X(5),Y(4));} k.oninput=draw;draw();
+</script></main></body></html>

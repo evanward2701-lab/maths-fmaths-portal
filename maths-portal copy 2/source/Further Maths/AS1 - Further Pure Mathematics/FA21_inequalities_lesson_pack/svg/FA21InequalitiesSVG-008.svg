@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="FA21InequalitiesSVG-008" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Particle distance modulus model</title>
+  <desc id="desc">Mathematical visual asset for the FA21 inequalities enrichment lesson.</desc>
+  <style>
+    .bg{fill:#FAF9F6} .card{fill:#FFFFFF;stroke:#E5E5EA;stroke-width:3} .title{font-family:Arial,sans-serif;font-size:30px;font-weight:700;fill:#2C2C2E} .txt{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E} .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E} .math{font-family:Georgia,serif;font-size:22px;fill:#2C2C2E} .axis{stroke:#2C2C2E;stroke-width:3} .curve{stroke:#2C2C2E;stroke-width:5;fill:none} .gold{stroke:#C5A059;stroke-width:5;fill:none} .dash{stroke:#C5A059;stroke-width:3;stroke-dasharray:10 8;fill:none} .shade{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;opacity:.85} .dot{fill:#C5A059;stroke:#2C2C2E;stroke-width:2} .open{fill:#FFFFFF;stroke:#C5A059;stroke-width:5} .hl{stroke:#C5A059;stroke-width:12;stroke-linecap:round}
+  </style>
+  <rect class="bg" width="1200" height="720"/>
+  <rect class="card" x="50" y="55" width="1100" height="610" rx="24"/>
+  <text class="title" x="85" y="105">Particle distance modulus model</text>
+  
+  <line class="axis" x1="110" y1="480" x2="1080" y2="480"/><line class="axis" x1="110" y1="550" x2="110" y2="130"/>
+  <path class="gold" d="M110 180 L650 480 L1040 190"/>
+  <path class="curve" d="M110 360 C220 280 310 180 370 480 C460 230 650 160 800 300 C900 370 960 480 1040 170"/>
+  <line class="hl" x1="110" y1="480" x2="370" y2="480"/><line class="hl" x1="800" y1="480" x2="960" y2="480"/>
+  <text class="txt" x="112" y="510">0</text><text class="txt" x="315" y="510">5-2√3</text><text class="txt" x="770" y="510">23/3</text><text class="txt" x="920" y="510">5+2√3</text>
+  <text class="txt" x="760" y="180">d_A=|5t-31|</text><text class="txt" x="470" y="155">d_B=|3t²-25t+8|</text>
+  <text class="math" x="110" y="620">d_A &gt; d_B for 0 ≤ t &lt; 5-2√3 or 23/3 &lt; t &lt; 5+2√3</text>
+
+</svg>

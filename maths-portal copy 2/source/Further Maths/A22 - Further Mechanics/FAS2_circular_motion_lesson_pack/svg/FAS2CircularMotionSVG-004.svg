@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Flat bend: friction provides the inward resultant</title>
+  <desc id="desc">Show how friction supplies the inward resultant for a car moving round a bend.</desc>
+  <metadata>
+    Asset ID: FAS2CircularMotionSVG-004
+    Topic ID: FAS2CircularMotion
+    Related lesson section: # 9. Visual Asset Integration
+    Source: Phase 1 visual placeholder and circular motion evidence
+    Purpose: Show how friction supplies the inward resultant for a car moving round a bend.
+  </metadata>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2C2C2E"/>
+    </marker>
+    <marker id="goldArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <rect x="40" y="40" width="1120" height="680" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="80" y="105" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#2C2C2E">Flat bend: friction provides the inward resultant</text>
+  
+  <text x="80" y="150" font-family="Arial" font-size="22" fill="#2C2C2E">At the greatest speed without slipping, friction is limiting.</text>
+  <circle cx="365" cy="415" r="210" fill="none" stroke="#E5E5EA" stroke-width="34"/>
+  <circle cx="365" cy="415" r="210" fill="none" stroke="#2C2C2E" stroke-width="3"/>
+  <circle cx="365" cy="415" r="6" fill="#2C2C2E"/>
+  <rect x="500" y="390" width="90" height="50" rx="12" fill="#FBEFEF" stroke="#2C2C2E" stroke-width="3"/>
+  <line x1="525" y1="415" x2="395" y2="415" stroke="#C5A059" stroke-width="7" marker-end="url(#goldArrow)"/>
+  <text x="436" y="395" font-family="Arial" font-size="28" fill="#C5A059">friction F</text>
+  <rect x="730" y="210" width="340" height="210" rx="18" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="3"/>
+  <circle cx="900" cy="328" r="10" fill="#2C2C2E"/>
+  <line x1="900" y1="328" x2="900" y2="258" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="900" y1="328" x2="900" y2="398" stroke="#2C2C2E" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="918" y="268" font-family="Arial" font-size="24" fill="#2C2C2E">R</text>
+  <text x="918" y="395" font-family="Arial" font-size="24" fill="#2C2C2E">Mg</text>
+  <rect x="700" y="465" width="390" height="150" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="730" y="510" font-family="Arial" font-size="24" fill="#2C2C2E">R = Mg</text>
+  <text x="730" y="548" font-family="Arial" font-size="24" fill="#2C2C2E">F = μR</text>
+  <text x="730" y="586" font-family="Arial" font-size="24" fill="#2C2C2E">F = Mv²/r</text>
+
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Negating statements</title>
+<desc id="desc">Table-style map of correct negations.</desc>
+<metadata>Asset ID: A21AlgebraicMethodsProofByContradictionSVG-002; Source: Dr Frost negation slide; Section: Key Definitions; Purpose: negation map.</metadata>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#222"/></marker></defs>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600" y="60" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#111">Negating statements correctly</text>
+<text x="300" y="130" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Original</text><text x="900" y="130" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">Negation</text><rect x="90" y="165" width="420" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="300.0" y="203" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">There is no P</text>
+<text x="300.0" y="239" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">There exists P</text><line x1="510" y1="205" x2="690" y2="205" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="690" y="165" width="420" height="80" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="900.0" y="203" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">There exists P</text>
+<text x="900.0" y="239" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">negates no P</text><rect x="90" y="280" width="420" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="300.0" y="318" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">All are P</text>
+<text x="300.0" y="354" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">At least one is not P</text><line x1="510" y1="320" x2="690" y2="320" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="690" y="280" width="420" height="80" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="900.0" y="318" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">At least one not P</text>
+<text x="900.0" y="354" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">not “none are”</text><rect x="90" y="395" width="420" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="300.0" y="433" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Infinitely many</text>
+<text x="300.0" y="469" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">Finitely many</text><line x1="510" y1="435" x2="690" y2="435" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="690" y="395" width="420" height="80" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="900.0" y="433" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">Finitely many</text>
+<text x="900.0" y="469" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">not zero necessarily</text><rect x="90" y="510" width="420" height="80" rx="18" fill="#f4f7ff" stroke="#203864" stroke-width="3"/>
+<text x="300.0" y="548" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">If A then B</text>
+<text x="300.0" y="584" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">A and not B</text><line x1="510" y1="550" x2="690" y2="550" stroke="#222" stroke-width="4" marker-end="url(#arrow)"/><rect x="690" y="510" width="420" height="80" rx="18" fill="#fff8e8" stroke="#946200" stroke-width="3"/>
+<text x="900.0" y="548" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#111">A true, B false</text>
+<text x="900.0" y="584" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">conditional negation</text>
+</svg>

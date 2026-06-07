@@ -1,0 +1,45 @@
+% asset_id: AS1TrigIdentitiesTikZ-001
+% asset_type: TikZ
+% unit_code: AS1
+% topic_code: AS1-TRIG
+% topic_name: Trigonometric Identities and Equations
+% related_lesson_file: AS1_trigonometric_identities_and_equations_lesson.md
+% related_lesson_section: Core Theory 8.2 Unit circle signs and special angles; Core Theory 8.4 Two core identities
+% source: Chapter 10 lesson PDF pages 5 to 7 and page 12; transcript videos 2, 3 and 8
+% purpose: Provide a clean printable unit-circle diagram showing (cos theta, sin theta), signed horizontal/vertical components, and the link tan theta = sin theta / cos theta.
+% status: Written
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{arrows.meta,angles,quotes,calc,positioning}
+\begin{document}
+\begin{tikzpicture}[scale=1, axis/.style={->, thick}, radius/.style={thick, blue!70!black}, component/.style={thick}, guide/.style={dashed, gray!60}, labelbox/.style={draw=gray!45, rounded corners=3pt, fill=gray!5, inner sep=5pt, align=left}, signbox/.style={draw=gray!45, rounded corners=3pt, fill=white, inner sep=4pt, align=center}]
+\def\r{3}
+\def\ang{140}
+\coordinate (O) at (0,0);
+\coordinate (P) at ({\r*cos(\ang)},{\r*sin(\ang)});
+\coordinate (X) at ({\r*cos(\ang)},0);
+\draw[axis] (-3.8,0) -- (3.9,0) node[right] {$x$};
+\draw[axis] (0,-3.8) -- (0,3.9) node[above] {$y$};
+\draw[thick] (O) circle (\r);
+\node[below right] at (3,0) {$0^\circ$};
+\node[above right] at (0,3) {$90^\circ$};
+\node[below left] at (-3,0) {$180^\circ$};
+\node[below right] at (0,-3) {$270^\circ$};
+\draw[radius] (O) -- (P) node[midway, above left] {$1$};
+\draw[component, green!60!black] (O) -- (X) node[midway, below] {$\cos\theta$};
+\draw[component, red!70!black] (X) -- (P) node[midway, left] {$\sin\theta$};
+\draw[guide] (P) -- (X);
+\fill[black] (P) circle (2pt);
+\node[above left] at (P) {$(\cos\theta,\sin\theta)$};
+\pic[draw=orange!85!black, thick, "$\theta$", angle radius=0.65cm, angle eccentricity=1.35] {angle = (3,0)--O--P};
+\draw ($(X)+(0.18,0)$) -- ($(X)+(0.18,0.18)$) -- ($(X)+(0,0.18)$);
+\node[labelbox, anchor=west] at (4.35,2.35) {Unit-circle point:\\[2pt] \[ (\cos\theta,\sin\theta) \]};
+\node[labelbox, anchor=west] at (4.35,0.75) {Gradient of radius line:\\[2pt] \[ \tan\theta = \frac{\sin\theta}{\cos\theta} \]};
+\node[labelbox, anchor=west] at (4.35,-1.15) {Pythagoras on the unit triangle:\\[2pt] \[ \sin^2\theta+\cos^2\theta=1 \]};
+\node[signbox, anchor=north west] at (-3.75,-4.25) {\begin{tabular}{c|c|c|c} Range & $\cos\theta$ & $\sin\theta$ & $\tan\theta$\\ \hline $0^\circ<\theta<90^\circ$ & $+$ & $+$ & $+$\\ $90^\circ<\theta<180^\circ$ & $-$ & $+$ & $-$\\ $180^\circ<\theta<270^\circ$ & $-$ & $-$ & $+$\\ $270^\circ<\theta<360^\circ$ & $+$ & $-$ & $-$ \end{tabular}};
+\node[align=center, font=\bfseries] at (1.75,4.35) {Unit Circle: Coordinates, Signs and Core Identities};
+\node[align=center, font=\small] at (1.75,3.95) {Angles are measured anticlockwise from the positive \(x\)-axis.};
+\end{tikzpicture}
+\end{document}

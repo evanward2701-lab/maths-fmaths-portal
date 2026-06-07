@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="640" viewBox="0 0 1100 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">A21ParametricEquationsSVG-002 Restricted Parabola</title>
+<desc id="desc">Shows y=x squared over 4 restricted by -3<t<3.</desc>
+<metadata>
+Asset ID: A21ParametricEquationsSVG-002
+Source: Transcript section 1; CCEA A21-CG-LO001.
+Related lesson section: Worked Example 1; Common Mistakes and Exam Traps.
+Purpose: Show how parameter restrictions trim the Cartesian curve.
+</metadata>
+<rect width="1100" height="640" fill="#ffffff"/>
+<text x="55" y="55" font-family="Georgia, serif" font-size="34" font-weight="700">Parameter restriction trims the Cartesian curve</text>
+<text x="55" y="92" font-family="Arial, sans-serif" font-size="17">For x = 2t, y = t², and -3 < t < 3, only part of y = x²/4 is allowed.</text>
+
+<rect x="70" y="125" width="700" height="455" rx="18" fill="#f7f9fc" stroke="#c7d2e5" stroke-width="2"/>
+<line x1="120" y1="350" x2="720" y2="350" stroke="#333" stroke-width="2"/>
+<line x1="420" y1="540" x2="420" y2="160" stroke="#333" stroke-width="2"/>
+<text x="728" y="355" font-family="Arial" font-size="16">x</text>
+<text x="428" y="165" font-family="Arial" font-size="16">y</text>
+
+<path d="M 180 170 C 280 430 360 540 420 540 C 480 540 560 430 660 170" fill="none" stroke="#b8bcc8" stroke-width="5" stroke-dasharray="12 12"/>
+<path d="M 250 235 C 325 455 380 540 420 540 C 460 540 515 455 590 235" fill="none" stroke="#2d5be3" stroke-width="6"/>
+<circle cx="250" cy="235" r="9" fill="#fff" stroke="#2d5be3" stroke-width="4"/>
+<circle cx="590" cy="235" r="9" fill="#fff" stroke="#2d5be3" stroke-width="4"/>
+<text x="815" y="200" font-family="Georgia" font-size="20">y = x²/4</text>
+<text x="815" y="240" font-family="Georgia" font-size="20">-6 &lt; x &lt; 6</text>
+<text x="815" y="280" font-family="Georgia" font-size="20">0 ≤ y &lt; 9</text>
+<text x="815" y="340" font-family="Arial" font-size="16">Open endpoints because</text>
+<text x="815" y="365" font-family="Arial" font-size="16">t = ±3 is not allowed.</text>
+
+</svg>

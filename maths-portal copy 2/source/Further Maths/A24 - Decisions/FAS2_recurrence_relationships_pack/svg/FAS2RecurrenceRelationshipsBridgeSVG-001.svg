@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="820"
+     viewBox="0 0 1200 820"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">FAS2RecurrenceRelationshipsBridgeSVG-001: A-Level Maths bridge to recurrence relationships</title>
+  <desc id="desc">A bridge table comparing ordinary A-Level Maths sequence ideas with Further Maths recurrence relationship upgrades.</desc>
+
+  <metadata>
+    <![CDATA[
+    Asset ID: FAS2RecurrenceRelationshipsBridgeSVG-001
+    Source: Ordinary A-Level Maths bridge sources plus CCEA FAS2-REC specification boundary.
+    Related lesson section: # 9. Visual Asset Integration and # 5. Explicit Prerequisite Recap
+    Used placeholder: FAS2RecurrenceRelationshipsBridgeSVG-001
+    Purpose: Compare prior ordinary Maths methods with Further Maths recurrence extensions.
+    ]]>
+  </metadata>
+
+  <defs>
+    <marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#C5A059"/>
+    </marker>
+    <style>
+      .bg { fill: #FAF9F6; }
+      .header { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 2; rx: 22; }
+      .panel { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; rx: 22; }
+      .row { fill: #FFFFFF; stroke: #E5E5EA; stroke-width: 1.5; rx: 16; }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 30px; font-weight: 700; fill: #2C2C2E; }
+      .subtitle { font-family: Inter, Arial, sans-serif; font-size: 17px; fill: #2C2C2E; }
+      .headText { font-family: Inter, Arial, sans-serif; font-size: 21px; font-weight: 700; fill: #2C2C2E; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 18px; fill: #2C2C2E; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 15px; fill: #2C2C2E; }
+      .math { font-family: Georgia, 'Times New Roman', serif; font-size: 21px; fill: #2C2C2E; }
+      .arrow { stroke: #C5A059; stroke-width: 2.5; fill: none; marker-end: url(#arrowGold); }
+      .note { fill: #FBEFEF; stroke: #D4AF37; stroke-width: 1.5; rx: 16; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="820"/>
+
+  <text x="600" y="56" text-anchor="middle" class="title">A-Level Maths Bridge: From Sequences to Recurrences</text>
+  <text x="600" y="86" text-anchor="middle" class="subtitle">Ordinary Maths gives the stepping stones. Further Maths builds the engine.</text>
+
+  <rect class="header" x="80" y="120" width="460" height="70" rx="22"/>
+  <text x="310" y="163" text-anchor="middle" class="headText">Ordinary A-Level Maths</text>
+
+  <rect class="header" x="660" y="120" width="460" height="70" rx="22"/>
+  <text x="890" y="163" text-anchor="middle" class="headText">Further Maths recurrence upgrade</text>
+
+  <g id="rows">
+    <rect class="row" x="80" y="220" width="460" height="62" rx="16"/>
+    <text x="310" y="257" text-anchor="middle" class="label">Term-to-term rule</text>
+    <path class="arrow" d="M550,251 L650,251"/>
+    <rect class="row" x="660" y="220" width="460" height="62" rx="16"/>
+    <text x="890" y="257" text-anchor="middle" class="label">Recurrence relation</text>
+
+    <rect class="row" x="80" y="305" width="460" height="62" rx="16"/>
+    <text x="310" y="342" text-anchor="middle" class="label">First term</text>
+    <path class="arrow" d="M550,336 L650,336"/>
+    <rect class="row" x="660" y="305" width="460" height="62" rx="16"/>
+    <text x="890" y="342" text-anchor="middle" class="label">Initial condition</text>
+
+    <rect class="row" x="80" y="390" width="460" height="62" rx="16"/>
+    <text x="310" y="427" text-anchor="middle" class="label">n-th term formula</text>
+    <path class="arrow" d="M550,421 L650,421"/>
+    <rect class="row" x="660" y="390" width="460" height="62" rx="16"/>
+    <text x="890" y="427" text-anchor="middle" class="label">Closed form</text>
+
+    <rect class="row" x="80" y="475" width="460" height="62" rx="16"/>
+    <text x="310" y="512" text-anchor="middle" class="label">Geometric sequence</text>
+    <path class="arrow" d="M550,506 L650,506"/>
+    <rect class="row" x="660" y="475" width="460" height="62" rx="16"/>
+    <text x="890" y="512" text-anchor="middle" class="math">uₙ = C aⁿ</text>
+
+    <rect class="row" x="80" y="560" width="460" height="62" rx="16"/>
+    <text x="310" y="597" text-anchor="middle" class="label">Sigma notation</text>
+    <path class="arrow" d="M550,591 L650,591"/>
+    <rect class="row" x="660" y="560" width="460" height="62" rx="16"/>
+    <text x="890" y="597" text-anchor="middle" class="math">uₙ = u₀ + Σ g(r)</text>
+
+    <rect class="row" x="80" y="645" width="460" height="62" rx="16"/>
+    <text x="310" y="682" text-anchor="middle" class="label">Solving quadratics</text>
+    <path class="arrow" d="M550,676 L650,676"/>
+    <rect class="row" x="660" y="645" width="460" height="62" rx="16"/>
+    <text x="890" y="682" text-anchor="middle" class="label">Auxiliary equation</text>
+  </g>
+
+  <rect class="note" x="220" y="735" width="760" height="54" rx="16"/>
+  <text x="600" y="759" text-anchor="middle" class="small">Bridge context only: ordinary Maths explains the roots of the method.</text>
+  <text x="600" y="779" text-anchor="middle" class="small">The CCEA Further Mathematics specification controls the syllabus boundary.</text>
+</svg>

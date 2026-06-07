@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">4X versus 4 separate X values</title>
+<desc id="desc">Compare a scaled single observation and a sum of four independent observations.</desc>
+<metadata>asset_id: FA22LinearCombinationsOfIndependentVariablesSVG-003; unit_code: FA22; topic_code: FA22-LINCOMB; topic_id: FA22LinearCombinationsOfIndependentVariables; source: FS2-Chp4-CombiningVars.pdf page 7; purpose: Show same mean but different variances.</metadata>
+<rect width="1200" height="720" fill="#FAF9F6"/>
+<text x="600" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#2C2C2E" font-weight="700">4X versus 4 separate X values</text>
+<rect x="70" y="100" width="1060" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+<g font-family="Arial,sans-serif" fill="#2C2C2E"><rect x="130" y="170" width="430" height="330" rx="20" fill="#FAF9F6" stroke="#E5E5EA"/><text x="345" y="230" text-anchor="middle" font-family="Georgia,serif" font-size="36">4X</text><text x="345" y="275" text-anchor="middle" font-size="21">One observation stretched by 4</text><text x="345" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="26">Var(4X)=16Var(X)</text><rect x="640" y="170" width="430" height="330" rx="20" fill="#FAF9F6" stroke="#E5E5EA"/><text x="855" y="230" text-anchor="middle" font-family="Georgia,serif" font-size="34">X₁+X₂+X₃+X₄</text><text x="855" y="275" text-anchor="middle" font-size="21">Four independent observations</text><text x="855" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="26">Var(X₁+…+X₄)=4Var(X)</text><rect x="180" y="570" width="840" height="48" rx="16" fill="#FBEFEF" stroke="#C5A059"/><text x="600" y="602" text-anchor="middle" font-size="20" font-weight="700">Same expected value. Different variance.</text></g>
+<text x="600" y="690" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#5B5B60">FA22-LINCOMB • Linear combinations of independent variables</text>
+</svg>

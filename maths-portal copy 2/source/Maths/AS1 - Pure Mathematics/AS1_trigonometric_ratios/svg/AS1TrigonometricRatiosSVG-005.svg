@@ -1,0 +1,14 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Sine rule opposite pairs</title>
+<desc id="desc">Triangle labelled for the sine rule.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Sine rule opposite pairs</text>
+
+<polygon points="150,430 710,420 450,110" fill="#f7fbff" stroke="#1d3557" stroke-width="4"/>
+<text x="445" y="145" font-family="Arial" font-size="30">A</text><text x="700" y="455" font-family="Arial" font-size="30">B</text><text x="130" y="455" font-family="Arial" font-size="30">C</text>
+<text x="405" y="465" font-family="Arial" font-size="30" fill="#b91c1c">a</text><text x="275" y="255" font-family="Arial" font-size="30" fill="#0f766e">b</text><text x="590" y="255" font-family="Arial" font-size="30" fill="#6d28d9">c</text>
+<rect x="90" y="80" width="320" height="100" rx="14" fill="#ecfdf5" stroke="#0f766e"/>
+<text x="115" y="125" font-family="Arial" font-size="24">a / sin A = b / sin B</text><text x="190" y="160" font-family="Arial" font-size="24">= c / sin C</text>
+
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="FA21MaclaurinSeriesSVG-001" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Successive Maclaurin approximations to sine near zero</title>
+  <desc id="desc">Graph of y equals sine x and three Maclaurin approximations centred at x equals zero, highlighting that approximations match best near zero.</desc>
+  <metadata><![CDATA[
+Asset ID: FA21MaclaurinSeriesSVG-001
+Topic ID: FA21MaclaurinSeries
+Unit: FA21 - Further A2 1 Pure Mathematics
+Topic code: FA21-FAF
+Related lesson file: FA21_maclaurin_series_lesson.md
+Related section: Section 9.2 Visual Asset Integration
+Source: DrFrost/Pearson Maclaurin recap graph idea plus CCEA Maclaurin LO boundary
+Purpose: Show y=sin x and successive Maclaurin approximations near x=0.
+Evidence status: Evidence-inspired, syllabus-backed.
+  ]]></metadata>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6}.panel{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5}.grid{stroke:#E5E5EA;stroke-width:1}.axis{stroke:#2C2C2E;stroke-width:2}.title{font:700 24px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.sub{font:400 14px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.label{font:500 13px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.math{font:500 15px Georgia,serif;fill:#2C2C2E}.note{font:400 12px Segoe UI,Arial,sans-serif;fill:#2C2C2E}.sin{fill:none;stroke:#2C2C2E;stroke-width:4;stroke-linecap:round}.p1{fill:none;stroke:#C5A059;stroke-width:3;stroke-dasharray:8 7}.p3{fill:none;stroke:#D4AF37;stroke-width:3;stroke-dasharray:2 6}.p5{fill:none;stroke:#8A7A47;stroke-width:3.5}.focus{fill:#FBEFEF;stroke:#C5A059;stroke-width:2;stroke-dasharray:6 5;opacity:.85}
+    ]]></style>
+    <clipPath id="clip"><rect x="80" y="95" width="660" height="330" rx="8"/></clipPath>
+  </defs>
+  <rect class="bg" width="900" height="560"/>
+  <rect class="panel" x="40" y="35" width="820" height="490" rx="20"/>
+  <text class="title" x="70" y="70">Maclaurin approximations to sin x</text>
+  <text class="sub" x="70" y="96">Each added term matches more derivative information at x = 0.</text>
+  <rect x="80" y="95" width="660" height="330" fill="#FFFFF0" stroke="#E5E5EA"/>
+  <g>
+    <line class="axis" x1="80" y1="260" x2="740" y2="260"/><line class="axis" x1="410" y1="95" x2="410" y2="425"/>
+    <line class="grid" x1="190" y1="95" x2="190" y2="425"/><line class="grid" x1="300" y1="95" x2="300" y2="425"/><line class="grid" x1="520" y1="95" x2="520" y2="425"/><line class="grid" x1="630" y1="95" x2="630" y2="425"/>
+    <line class="grid" x1="80" y1="150" x2="740" y2="150"/><line class="grid" x1="80" y1="205" x2="740" y2="205"/><line class="grid" x1="80" y1="315" x2="740" y2="315"/><line class="grid" x1="80" y1="370" x2="740" y2="370"/>
+  </g>
+  <ellipse class="focus" cx="410" cy="260" rx="92" ry="68"/>
+  <text class="label" x="430" y="240">best match</text><text class="label" x="435" y="258">near x = 0</text>
+  <g clip-path="url(#clip)">
+    <path class="p1" d="M80 590 L740 -70"/>
+    <path class="p3" d="M80 -780 C185 620 300 340 410 260 C520 180 635 -100 740 1300"/>
+    <path class="p5" d="M80 710 C190 170 285 360 410 260 C535 160 630 350 740 -190"/>
+    <path class="sin" d="M80 165 C145 120 205 420 300 370 C360 340 365 270 410 260 C455 250 465 180 520 155 C610 115 645 385 740 355"/>
+  </g>
+  <text class="label" x="744" y="265">x</text><text class="label" x="418" y="90">y</text><text class="label" x="397" y="278">0</text>
+  <g transform="translate(88,455)">
+    <line x1="0" y1="0" x2="38" y2="0" stroke="#2C2C2E" stroke-width="4"/><text class="math" x="48" y="5">y = sin x</text>
+    <line x1="160" y1="0" x2="198" y2="0" stroke="#C5A059" stroke-width="3" stroke-dasharray="8 7"/><text class="math" x="208" y="5">y = x</text>
+    <line x1="300" y1="0" x2="338" y2="0" stroke="#D4AF37" stroke-width="3" stroke-dasharray="2 6"/><text class="math" x="348" y="5">y = x − x³/3!</text>
+    <line x1="540" y1="0" x2="578" y2="0" stroke="#8A7A47" stroke-width="3.5"/><text class="math" x="588" y="5">+ x⁵/5!</text>
+  </g>
+  <rect x="70" y="492" width="760" height="34" rx="10" fill="#FBEFEF" stroke="#E5E5EA"/>
+  <text class="note" x="88" y="514">Core CCEA idea: Maclaurin means centre at x = 0. More terms improve the local approximation around that centre.</text>
+</svg>

@@ -1,0 +1,13 @@
+<!-- Asset generated for AS1 Trigonometric Ratios lesson pack. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">Area of a triangle</title>
+<desc id="desc">Included angle for one half ab sine C.</desc>
+<rect width="900" height="560" fill="#ffffff"/>
+<text x="30" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Area of a triangle</text>
+
+<polygon points="160,430 690,430 380,120" fill="#f7fbff" stroke="#1d3557" stroke-width="4"/>
+<path d="M205 430 A70 70 0 0 1 230 375" fill="none" stroke="#b45309" stroke-width="5"/>
+<text x="230" y="393" font-family="Arial" font-size="28" fill="#b45309">C</text><text x="420" y="465" font-family="Arial" font-size="30">a</text><text x="255" y="285" font-family="Arial" font-size="30">b</text>
+<rect x="500" y="120" width="320" height="115" rx="14" fill="#ecfdf5" stroke="#0f766e"/><text x="525" y="175" font-family="Arial" font-size="28">Area = 1/2 ab sin C</text><text x="525" y="210" font-family="Arial" font-size="20">C is the included angle.</text>
+
+</svg>

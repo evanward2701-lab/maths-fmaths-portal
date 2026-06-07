@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-007; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: Curve, line, curve, line.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Staircase / cobweb diagram</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">Curve, line, curve, line.</text>
+  <line x1="100" y1="430" x2="810" y2="430" stroke="#222" stroke-width="3"/><line x1="140" y1="470" x2="140" y2="120" stroke="#222" stroke-width="3"/><path d="M145,425 L785,135" stroke="#444" stroke-width="3"/><path d="M145,390 C250,330 335,272 425,235 C535,190 640,180 785,192" fill="none" stroke="#1f77b4" stroke-width="5"/><polyline points="255,430 255,315 385,315 385,250 485,250 485,205 560,205 560,186" fill="none" stroke="#d62728" stroke-width="4"/>
+</svg>

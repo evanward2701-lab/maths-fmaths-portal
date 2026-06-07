@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bipartite graph with a complete matching from U to W</title>
+  <desc id="desc">A bipartite graph with left vertex set U equals {A, B, C} and right vertex set W equals {1, 2, 3}. Allowed edges are A1, A2, B1, C2 and C3. The complete matching A2, B1, C3 is highlighted.</desc>
+  <style>
+    .bg { fill: #FAF9F6; }
+    .panel { fill: #FFFFF0; stroke: #E5E5EA; stroke-width: 2; }
+    .title { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 28px; font-weight: 700; }
+    .subtitle { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 16px; }
+    .label { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 600; }
+    .small { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 14px; }
+    .vertex { fill: #FFFFF0; stroke: #2C2C2E; stroke-width: 2; }
+    .vertexText { fill: #2C2C2E; font-family: Inter, Arial, sans-serif; font-size: 22px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+    .edge { stroke: #A9A9B2; stroke-width: 3; stroke-linecap: round; }
+    .matchEdge { stroke: #D4AF37; stroke-width: 7; stroke-linecap: round; }
+    .matchGlow { stroke: #FBEFEF; stroke-width: 13; stroke-linecap: round; opacity: 0.95; }
+    .setBox { fill: none; stroke: #C5A059; stroke-width: 2; stroke-dasharray: 8 6; }
+    .noteBox { fill: #FFFFF0; stroke: #D4AF37; stroke-width: 2; rx: 14; }
+  </style>
+  <rect class="bg" x="0" y="0" width="900" height="560"/>
+  <rect class="panel" x="45" y="35" width="810" height="490" rx="24"/>
+  <text class="title" x="450" y="78" text-anchor="middle">Bipartite Graph and Complete Matching</text>
+  <text class="subtitle" x="450" y="108" text-anchor="middle">Edges show allowed pairings. Highlighted edges form a complete matching from U to W.</text>
+  <text class="label" x="165" y="148" text-anchor="middle">U = {A, B, C}</text>
+  <text class="label" x="735" y="148" text-anchor="middle">W = {1, 2, 3}</text>
+  <rect class="setBox" x="118" y="172" width="96" height="238" rx="42"/>
+  <rect class="setBox" x="686" y="172" width="96" height="238" rx="42"/>
+  <line class="matchGlow" x1="165" y1="205" x2="735" y2="290"/>
+  <line class="matchGlow" x1="165" y1="290" x2="735" y2="205"/>
+  <line class="matchGlow" x1="165" y1="375" x2="735" y2="375"/>
+  <line class="edge" x1="165" y1="205" x2="735" y2="205"/>
+  <line class="edge" x1="165" y1="375" x2="735" y2="290"/>
+  <line class="matchEdge" x1="165" y1="205" x2="735" y2="290"/>
+  <line class="matchEdge" x1="165" y1="290" x2="735" y2="205"/>
+  <line class="matchEdge" x1="165" y1="375" x2="735" y2="375"/>
+  <circle class="vertex" cx="165" cy="205" r="28"/><circle class="vertex" cx="165" cy="290" r="28"/><circle class="vertex" cx="165" cy="375" r="28"/>
+  <circle class="vertex" cx="735" cy="205" r="28"/><circle class="vertex" cx="735" cy="290" r="28"/><circle class="vertex" cx="735" cy="375" r="28"/>
+  <text class="vertexText" x="165" y="205">A</text><text class="vertexText" x="165" y="290">B</text><text class="vertexText" x="165" y="375">C</text>
+  <text class="vertexText" x="735" y="205">1</text><text class="vertexText" x="735" y="290">2</text><text class="vertexText" x="735" y="375">3</text>
+  <rect class="noteBox" x="235" y="430" width="430" height="58"/>
+  <line class="matchEdge" x1="260" y1="459" x2="322" y2="459"/>
+  <text class="small" x="342" y="455">Highlighted matching:</text>
+  <text class="small" x="342" y="475">M = {(A,2), (B,1), (C,3)}. No vertex is used twice.</text>
+  <text class="small" x="450" y="515" text-anchor="middle">CCEA FA22-GRAPH-LO003: bipartite graphs, matchings and complete matchings.</text>
+</svg>

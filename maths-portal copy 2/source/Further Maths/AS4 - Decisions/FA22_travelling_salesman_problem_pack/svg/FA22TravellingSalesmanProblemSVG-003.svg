@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nearest neighbour choice from the current row</title>
+  <desc id="desc">The current row C is used while visited vertices are ignored.</desc>
+  <metadata>
+    asset_id: FA22TravellingSalesmanProblemSVG-003
+    asset_type: svg
+    topic_id: FA22TravellingSalesmanProblem
+    unit_code: FA22
+    topic_code: FA22-ALGGRAPH
+    lesson_file: FA22_travelling_salesman_problem_lesson.md
+  </metadata>
+  <defs>
+    <style><![CDATA[
+      .bg{fill:#FAF9F6} .card{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:2;rx:22}
+      .title{font-family:Arial,sans-serif;font-size:32px;font-weight:700;fill:#2C2C2E}
+      .text{font-family:Arial,sans-serif;font-size:20px;fill:#2C2C2E}
+      .small{font-family:Arial,sans-serif;font-size:16px;fill:#2C2C2E}
+      .edge{stroke:#8E8E93;stroke-width:3;fill:none} .route{stroke:#C5A059;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .node{fill:#FAF9F6;stroke:#2C2C2E;stroke-width:2.5} .gold{fill:#FBEFEF;stroke:#C5A059;stroke-width:3}
+      .cell{fill:#FAF9F6;stroke:#E5E5EA;stroke-width:1.2} .hi{fill:#FBEFEF;stroke:#C5A059;stroke-width:2.5}
+    ]]></style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  
+  <text class="title" x="60" y="60">Nearest Neighbour: Choose from the Current Row</text>
+  <text class="small" x="60" y="90">Route so far: A → D → C. Current vertex is C. Visited: A, D, C. Unvisited: B, E.</text>
+  <rect class="card" x="60" y="125" width="640" height="560"/><rect class="card" x="735" y="125" width="405" height="560"/>
+  <text class="text" x="95" y="170">Distance table</text>
+  <g transform="translate(105,225)">
+    <text class="small" x="108" y="30">A</text><text class="small" x="184" y="30">B</text><text class="small" x="260" y="30">C</text><text class="small" x="336" y="30">D</text><text class="small" x="412" y="30">E</text>
+    <text class="small" x="28" y="82">A</text><text class="small" x="28" y="134">B</text><text class="small" x="28" y="186">C</text><text class="small" x="28" y="238">D</text><text class="small" x="28" y="290">E</text>
+    <rect class="cell" x="76" y="52" width="76" height="52"/><rect class="cell" x="152" y="52" width="76" height="52"/><rect class="cell" x="228" y="52" width="76" height="52"/><rect class="cell" x="304" y="52" width="76" height="52"/><rect class="cell" x="380" y="52" width="76" height="52"/>
+    <rect class="cell" x="76" y="104" width="76" height="52"/><rect class="cell" x="152" y="104" width="76" height="52"/><rect class="cell" x="228" y="104" width="76" height="52"/><rect class="cell" x="304" y="104" width="76" height="52"/><rect class="cell" x="380" y="104" width="76" height="52"/>
+    <rect class="cell" x="76" y="156" width="76" height="52"/><rect class="hi" x="152" y="156" width="76" height="52"/><rect class="cell" x="228" y="156" width="76" height="52"/><rect class="cell" x="304" y="156" width="76" height="52"/><rect class="cell" x="380" y="156" width="76" height="52"/>
+    <text class="text" x="104" y="85">-</text><text class="text" x="180" y="85">9</text><text class="text" x="256" y="85">7</text><text class="text" x="332" y="85">5</text><text class="text" x="408" y="85">8</text>
+    <text class="text" x="104" y="137">9</text><text class="text" x="182" y="137">-</text><text class="text" x="256" y="137">6</text><text class="text" x="332" y="137">4</text><text class="text" x="408" y="137">3</text>
+    <text class="text" x="104" y="189">7</text><text class="text" x="180" y="189">6</text><text class="text" x="258" y="189">-</text><text class="text" x="332" y="189">2</text><text class="text" x="404" y="189">10</text>
+  </g>
+  <text class="text" x="100" y="600">Allowed from C: CB = 6 and CE = 10, so choose B.</text>
+  <text class="text" x="765" y="170">Route build</text>
+  <circle class="gold" cx="835" cy="295" r="24"/><circle class="node" cx="1005" cy="295" r="24"/><circle class="gold" cx="925" cy="410" r="24"/><circle class="gold" cx="835" cy="535" r="24"/><circle class="node" cx="1005" cy="535" r="24"/>
+  <text class="small" x="828" y="302">A</text><text class="small" x="998" y="302">B</text><text class="small" x="918" y="417">C</text><text class="small" x="828" y="542">D</text><text class="small" x="998" y="542">E</text>
+  <polyline class="route" points="835,295 835,535 925,410 1005,295"/>
+  <text class="text" x="770" y="620">A → D → C → B</text>
+
+</svg>

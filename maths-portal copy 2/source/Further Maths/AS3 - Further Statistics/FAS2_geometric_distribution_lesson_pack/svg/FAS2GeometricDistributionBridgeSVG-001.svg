@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="650" viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">FAS2GeometricDistributionBridgeSVG-001: Binomial versus geometric bridge</title><desc id="desc">Two-column bridge comparison between binomial and geometric distributions.</desc>
+<metadata>asset_id: FAS2GeometricDistributionBridgeSVG-001</metadata>
+<rect width="1200" height="650" fill="#FAF9F6"/>
+<rect x="60" y="50" width="1080" height="550" rx="24" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="2"/>
+<text x="100" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">Bridge: Binomial vs Geometric</text>
+<rect x="100" y="180" width="460" height="340" rx="18" fill="#FAF9F6" stroke="#E5E5EA"/><rect x="640" y="180" width="460" height="340" rx="18" fill="#FAF9F6" stroke="#D4AF37" stroke-width="3"/>
+<text x="330" y="240" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700">Binomial</text><text x="870" y="240" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700">Geometric</text>
+<text x="330" y="300" text-anchor="middle" font-family="Arial" font-size="26">X ~ Bin(n,p)</text><text x="870" y="300" text-anchor="middle" font-family="Arial" font-size="26">X ~ Geo(p)</text>
+<text x="140" y="360" font-family="Arial" font-size="22">• fixed number of trials</text><text x="680" y="360" font-family="Arial" font-size="22">• trials until first success</text>
+<text x="140" y="410" font-family="Arial" font-size="22">• X counts successes</text><text x="680" y="410" font-family="Arial" font-size="22">• X counts trials</text>
+<text x="140" y="460" font-family="Arial" font-size="22">• values 0,1,...,n</text><text x="680" y="460" font-family="Arial" font-size="22">• values 1,2,3,...</text>
+</svg>

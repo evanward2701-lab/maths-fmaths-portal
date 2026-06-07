@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">Area under a positive curve</title>
+<desc id="desc">A positive curve y equals f of x above the x-axis, with limits a and b and shaded area represented by a definite integral.</desc>
+<rect width="1000" height="650" fill="#ffffff"/>
+
+<text x="60" y="60" font-family="Arial" font-size="32" font-weight="700">Area under a positive curve</text>
+<line x1="110" y1="500" x2="860" y2="500" stroke="#222" stroke-width="3"/>
+<line x1="110" y1="500" x2="110" y2="100" stroke="#222" stroke-width="3"/>
+<text x="870" y="510" font-family="Arial" font-size="24">x</text>
+<text x="95" y="90" font-family="Arial" font-size="24">y</text>
+<path d="M250,500 L250,300 C340,210 460,160 570,190 C650,210 710,250 770,170 L770,500 Z" fill="#8ecae6" opacity="0.55"/>
+<path d="M150,430 C270,280 390,170 520,175 C650,180 710,250 840,125" fill="none" stroke="#126782" stroke-width="5"/>
+<line x1="250" y1="500" x2="250" y2="300" stroke="#444" stroke-width="2" stroke-dasharray="8 7"/>
+<line x1="770" y1="500" x2="770" y2="170" stroke="#444" stroke-width="2" stroke-dasharray="8 7"/>
+<text x="242" y="535" font-family="Arial" font-size="24">a</text>
+<text x="762" y="535" font-family="Arial" font-size="24">b</text>
+<text x="610" y="150" font-family="Arial" font-size="28" fill="#126782">y = f(x)</text>
+<text x="380" y="360" font-family="Arial" font-size="28" fill="#023047">∫ₐᵇ f(x) dx</text>
+<text x="325" y="600" font-family="Arial" font-size="22">For a positive curve, the integral gives area above the x-axis.</text>
+
+</svg>

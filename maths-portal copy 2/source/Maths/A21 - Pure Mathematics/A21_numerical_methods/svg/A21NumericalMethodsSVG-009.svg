@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Asset ID: A21NumericalMethodsSVG-009; Source: CCEA specification map + Chapter 10 evidence; Related section: A21 Numerical Methods lesson; Purpose: If f′(xₙ)=0, the method divides by zero.. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Newton-Raphson failure</text>
+  <text x="40" y="90" font-family="Arial, sans-serif" font-size="17">If f′(xₙ)=0, the method divides by zero.</text>
+  <line x1="90" y1="340" x2="820" y2="340" stroke="#222" stroke-width="3"/><line x1="140" y1="450" x2="140" y2="115" stroke="#222" stroke-width="3"/><path d="M110,420 C240,220 360,150 475,210 C585,268 610,395 790,420" fill="none" stroke="#1f77b4" stroke-width="5"/><circle cx="395" cy="188" r="9" fill="#111"/><line x1="270" y1="188" x2="530" y2="188" stroke="#d62728" stroke-width="4"/><text x="415" y="185" font-family="Arial" font-size="18">f′(xₙ)=0</text>
+</svg>

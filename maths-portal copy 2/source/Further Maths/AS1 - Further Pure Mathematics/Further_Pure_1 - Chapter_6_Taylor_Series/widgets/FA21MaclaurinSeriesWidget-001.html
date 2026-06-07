@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FA21MaclaurinSeriesWidget-001 - Maclaurin Coefficient Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Asset ID: FA21MaclaurinSeriesWidget-001
+    Topic ID: FA21MaclaurinSeries
+    Unit: FA21 - Further A2 1 Pure Mathematics
+    Topic code: FA21-FAF
+    Related lesson file: FA21_maclaurin_series_lesson.md
+    Related lesson section: Section 10.1 Interactive Learning Widgets
+    Source: AI-proposed teaching enhancement based on CCEA FA21-FAF-LO004 and derivative-matching evidence.
+    Purpose: Help students build a Maclaurin polynomial from derivative values at x=0.
+  -->
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--accent:#C5A059;--gold:#D4AF37;--rose:#FBEFEF;--text:#2C2C2E;--ok:#557A46;--bad:#9B3D3D;--muted:#6E6E73}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--text);font-family:Segoe UI,Arial,sans-serif;line-height:1.45}main{max-width:1100px;margin:24px auto;padding:20px}.shell{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px}h1{margin:0 0 8px;font-size:1.8rem}.subtitle{color:var(--muted)}.badge{display:inline-block;border:1px solid var(--line);background:var(--rose);border-radius:999px;padding:6px 10px;font-size:.85rem;margin:4px}.formula-card{background:var(--rose);border:1px solid var(--line);border-radius:16px;padding:14px;margin:14px 0;overflow-x:auto}.formula{font-family:Georgia,serif;font-size:1.1rem;white-space:nowrap}button{border:1px solid var(--accent);background:var(--panel);padding:9px 13px;border-radius:12px;cursor:pointer;font-weight:650;margin:4px}button:focus,input:focus{outline:2px solid var(--gold);outline-offset:1px}table{width:100%;border-collapse:collapse;margin-top:14px;background:#fffef6;border:1px solid var(--line);border-radius:14px;overflow:hidden}th,td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:var(--rose)}tr:last-child td{border-bottom:0}input{width:100%;min-width:90px;border:1px solid var(--line);border-radius:10px;padding:8px;background:white}.output{border:1px solid var(--line);border-radius:16px;background:white;padding:16px;margin-top:18px}.poly{font-family:Georgia,serif;font-size:1.25rem;line-height:1.7}.mini{color:var(--muted);font-size:.9rem}.ok{color:var(--ok);font-weight:700}.bad{color:var(--bad);font-weight:700}.warn{color:#7A5B00;font-weight:700}@media(max-width:800px){table{font-size:.88rem}}
+  </style>
+</head>
+<body>
+<main><section class="shell">
+  <h1>Maclaurin Coefficient Builder</h1>
+  <p class="subtitle">Enter derivative values at <strong>x = 0</strong>. The widget builds the polynomial and checks whether each coefficient has been divided by the correct factorial.</p>
+  <div><span class="badge">FA21-FAF-LO004</span><span class="badge">Maclaurin coefficients</span><span class="badge">Exact fractions</span><span class="badge">Factorial check</span></div>
+  <div class="formula-card"><div class="formula">f(x)=f(0)+f′(0)x+f″(0)x²/2!+f‴(0)x³/3!+f⁽⁴⁾(0)x⁴/4!+…</div></div>
+  <div><button data-example="blank">Clear</button><button data-example="exp">Example: eˣ</button><button data-example="sin">Example: sin x</button><button data-example="cos">Example: cos x</button></div>
+  <table><thead><tr><th>Derivative value</th><th>Enter value at x=0</th><th>Optional coefficient guess</th><th>Expected coefficient</th><th>Feedback</th></tr></thead><tbody id="rows"></tbody></table>
+  <div class="output"><h2>Built polynomial</h2><div id="polynomial" class="poly" aria-live="polite"></div><p id="notes" class="mini"></p></div>
+</section></main>
+<script>
+(function(){"use strict";const facts=[1,1,2,6,24],labs=["f(0)","f′(0)","f″(0)","f‴(0)","f⁽⁴⁾(0)"],rows=document.getElementById("rows"),poly=document.getElementById("polynomial"),notes=document.getElementById("notes");function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){let t=b;b=a%b;a=t}return a||1}function frac(n,d){if(!isFinite(n)||!isFinite(d)||d===0)return null;if(d<0){n=-n;d=-d}let g=gcd(Math.round(n),Math.round(d));return{n:Math.round(n)/g,d:Math.round(d)/g}}function parse(s){s=String(s).trim();if(!s)return null;if(/^[+-]?\d+\/[+-]?\d+$/.test(s)){let p=s.split("/");return frac(+p[0],+p[1])}if(/^[+-]?\d+(\.\d+)?$/.test(s)){if(s.includes(".")){let sign=s[0]==="-"?-1:1,clean=s.replace(/^[+-]/,"");let den=10**clean.split(".")[1].length;return frac(sign*Number(clean.replace(".","")),den)}return frac(+s,1)}return null}function txt(a){if(!a)return"invalid";if(a.d===1)return String(a.n);return a.n+"/"+a.d}function html(a){if(!a)return"<span class='bad'>invalid</span>";if(a.d===1)return String(a.n);return a.n+"/"+a.d}function term(c,p,first){if(!c||c.n===0)return"";let neg=c.n<0,abs=frac(Math.abs(c.n),c.d),sign=first?(neg?"−":""):(neg?" − ":" + ");let v=p===0?"":p===1?"x":"x<sup>"+p+"</sup>";if(p===0)return sign+html(abs);if(abs.n===1&&abs.d===1)return sign+v;return sign+html(abs)+v}function build(){for(let r=0;r<5;r++){let tr=document.createElement("tr");tr.innerHTML=`<td><strong>${labs[r]}</strong><br><span class="mini">${r}! = ${facts[r]}</span></td><td><input id="d${r}" placeholder="e.g. -3/2"></td><td><input id="g${r}" placeholder="optional"></td><td id="e${r}">Waiting…</td><td id="f${r}" class="mini">Enter a derivative value.</td>`;rows.appendChild(tr)}}function update(){let cs=[],valid=0;for(let r=0;r<5;r++){let d=parse(document.getElementById("d"+r).value),g=parse(document.getElementById("g"+r).value),guess=document.getElementById("g"+r).value.trim(),e=document.getElementById("e"+r),fb=document.getElementById("f"+r);if(!d){cs[r]=null;e.textContent="Waiting…";fb.innerHTML="<span class='warn'>Enter a valid value.</span>";continue}valid++;let c=frac(d.n,d.d*facts[r]);cs[r]=c;e.textContent=txt(d)+" / "+r+"! = "+txt(c);if(!guess)fb.innerHTML="<span class='mini'>Guess optional.</span>";else if(!g)fb.innerHTML="<span class='bad'>Unreadable guess.</span>";else if(g.n===c.n&&g.d===c.d)fb.innerHTML="<span class='ok'>Correct coefficient.</span>";else if(r>=2&&g.n===d.n&&g.d===d.d)fb.innerHTML="<span class='bad'>You used the derivative directly. Divide by "+r+"!.</span>";else fb.innerHTML="<span class='bad'>Expected "+txt(c)+".</span>"}let out=[];for(let r=0;r<5;r++){let t=term(cs[r],r,out.length===0);if(t)out.push(t)}poly.innerHTML="P<sub>4</sub>(x) = "+(out.length?out.join(""):"0");notes.textContent="Valid derivative entries: "+valid+" out of 5. The coefficient of x^r is f^(r)(0)/r!, not usually f^(r)(0)."}function example(name){let ex={blank:["","","","",""],exp:["1","1","1","1","1"],sin:["0","1","0","-1","0"],cos:["1","0","-1","0","1"]}[name];for(let r=0;r<5;r++){document.getElementById("d"+r).value=ex[r];document.getElementById("g"+r).value=""}update()}build();document.addEventListener("input",e=>{if(e.target.tagName==="INPUT")update()});document.querySelectorAll("button[data-example]").forEach(b=>b.addEventListener("click",()=>example(b.dataset.example)));example("sin")})();
+</script>
+</body>
+</html>

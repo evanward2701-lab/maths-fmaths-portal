@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Asset ID: FAS2CircularMotionWidget-002 | Purpose: Build horizontal circular motion equations using real forces only. -->
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAS2 Circular Motion Widget 002</title>
+  <style>
+    :root{--canvas:#FAF9F6;--panel:#FFFFF0;--line:#E5E5EA;--accent:#C5A059;--rose:#FBEFEF;--text:#2C2C2E;--muted:#6B6B70}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--canvas);color:var(--text);line-height:1.45}
+    main{max-width:1050px;margin:24px auto;padding:22px;background:var(--panel);border:2px solid var(--line);border-radius:24px}
+    .grid{display:grid;grid-template-columns:360px 1fr;gap:18px}@media(max-width:820px){.grid{grid-template-columns:1fr}}
+    section,.card{background:#fffdf4;border:1.5px solid var(--line);border-radius:18px;padding:16px}
+    label{display:block;margin:12px 0 6px;font-weight:700} select,input{width:100%;padding:11px;border:1.5px solid var(--line);border-radius:12px}
+    button{margin-top:16px;width:100%;border:0;border-radius:14px;padding:13px;background:var(--accent);color:white;font-weight:800}
+    .formula{padding:12px 14px;margin:10px 0;border-radius:14px;background:var(--rose);border:1px solid var(--line);font-family:"Times New Roman",serif;font-size:1.15rem}
+    .warning{margin-top:12px;padding:12px;border-radius:14px;background:var(--rose);border:1px solid var(--line);font-weight:700}
+    .success{margin-top:12px;padding:12px;border-radius:14px;background:#F4FAF6;border:1px solid var(--line);font-weight:700}
+    svg{width:100%;height:auto;border:1px solid var(--line);border-radius:18px;background:var(--canvas)}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Horizontal Circle Equation Builder</h1>
+    <p>Choose the model, then build the vertical and radial equations without inventing extra forces.</p>
+    <div class="grid">
+      <section>
+        <label for="model">Model</label>
+        <select id="model"><option value="flatFriction">Flat road or rough disc</option><option value="conical">Conical pendulum</option><option value="banked">Banked corner, no friction</option><option value="twoStrings">Two strings</option></select>
+        <label for="accelForm">Acceleration form</label>
+        <select id="accelForm"><option value="v">a = v²/r</option><option value="omega">a = rω²</option></select>
+        <label><input id="limiting" type="checkbox" /> Friction is limiting</label>
+        <label><input id="centripetal" type="checkbox" /> I was about to draw a separate centripetal force</label>
+        <label><input id="accelAsForce" type="checkbox" /> I drew acceleration as a force</label>
+        <label><input id="units" type="checkbox" checked /> All quantities are in SI units</label>
+        <button id="build">Build equations</button>
+      </section>
+      <section><div id="equations" class="card" aria-live="polite"></div><svg id="miniDiagram" viewBox="0 0 420 320" role="img" aria-label="Model diagram"></svg></section>
+    </div>
+  </main>
+  <script>
+    const model=document.getElementById("model"), accelForm=document.getElementById("accelForm"), equations=document.getElementById("equations"), miniDiagram=document.getElementById("miniDiagram");
+    function rhs(){return accelForm.value==="v"?"mv²/r":"mrω²"}
+    function warn(){let n=[]; if(!units.checked)n.push("Convert to standard SI units before substituting."); if(centripetal.checked)n.push("Do not add centripetal force as a separate force."); if(accelAsForce.checked)n.push("Acceleration is not a force."); if(model.value==="flatFriction"&&!limiting.checked)n.push("Only use F = μR when friction is limiting."); return n.length?`<div class="warning">${n.join("<br>")}</div>`:`<div class="success">Checks passed. Use real forces only.</div>`}
+    function draw(){miniDiagram.innerHTML='<rect x="0" y="0" width="420" height="320" rx="18" fill="#FAF9F6"/><circle cx="205" cy="155" r="90" fill="none" stroke="#2C2C2E" stroke-width="4"/><circle cx="205" cy="155" r="5" fill="#2C2C2E"/><line x1="310" y1="155" x2="220" y2="155" stroke="#C5A059" stroke-width="6"/><text x="120" y="285" fill="#2C2C2E" font-family="Arial" font-size="18">inward resultant = ma</text>'}
+    function build(){let html="";
+      if(model.value==="flatFriction")html=`<h3>Flat road or rough disc</h3><div class="formula">Vertical: R = mg</div><div class="formula">Radial: F = ${rhs()}</div><div class="formula">If limiting: F = μR</div>`;
+      if(model.value==="conical")html=`<h3>Conical pendulum</h3><div class="formula">Vertical: T cos α = mg</div><div class="formula">Radial: T sin α = ${rhs()}</div>`;
+      if(model.value==="banked")html=`<h3>Banked corner without friction</h3><div class="formula">Vertical: R cos α = mg</div><div class="formula">Radial: R sin α = ${rhs()}</div>`;
+      if(model.value==="twoStrings")html=`<h3>Two strings</h3><div class="formula">Vertical components balance weight</div><div class="formula">Radial components = ${rhs()}</div>`;
+      equations.innerHTML=html+warn(); draw();}
+    buildBtn=document.getElementById("build"); buildBtn.addEventListener("click",build); model.addEventListener("change",build); accelForm.addEventListener("change",build); build();
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1000 680" width="1000" height="680">
+<title id="title">Rectangular hyperbola xy equals c squared</title>
+<desc id="desc">A rectangular hyperbola xy equals c squared with branches in quadrants one and three, axes as asymptotes, and a general point P with coordinates ct, c over t.</desc>
+<!-- Asset ID: FAS1ConicSections1SVG-003; Source: FP1-Chp2-ConicSections1.pdf rectangular hyperbola section; Purpose: Show xy=c^2 as the formal conic version of a reciprocal graph. -->
+<defs><marker id="arrowGold" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="#C5A059"/></marker><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0L0 0 0 40" fill="none" stroke="#E5E5EA" stroke-width="0.8"/></pattern></defs>
+<style>.bg{fill:#FAF9F6}.plot{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.5;rx:18}.grid{fill:url(#grid)}.title{font:700 30px Inter,Arial,sans-serif;fill:#2C2C2E}.subtitle{font:500 15px Inter,Arial,sans-serif;fill:#55555A}.label{font:700 18px Inter,Arial,sans-serif;fill:#2C2C2E}.body{font:500 14px Inter,Arial,sans-serif;fill:#2C2C2E}.small{font:500 12px Inter,Arial,sans-serif;fill:#55555A}.math{font:600 18px "Cambria Math",serif;fill:#2C2C2E}.axis{stroke:#2C2C2E;stroke-width:2.2;marker-end:url(#arrowGold)}.asymptote{stroke:#8F6C9F;stroke-width:2;stroke-dasharray:8 7}.curve{fill:none;stroke:#C5A059;stroke-width:4;stroke-linecap:round}.branchHint{fill:none;stroke:#D4AF37;stroke-width:1.7;stroke-dasharray:6 6}.point{fill:#2C2C2E;stroke:#FFFFF0;stroke-width:3}.box{fill:#FFFFF0;stroke:#E5E5EA;stroke-width:1.3;rx:16}.warning{fill:#FBEFEF;stroke:#C5A059;stroke-width:1.3;rx:12}</style>
+<rect class="bg" width="1000" height="680"/>
+<text class="title" x="56" y="58">Rectangular hyperbola</text><text class="subtitle" x="56" y="84">The formal conic name for the axes-as-asymptotes reciprocal-graph shape.</text>
+<rect class="plot" x="56" y="112" width="650" height="500"/><rect class="grid" x="56" y="112" width="650" height="500"/>
+<line class="asymptote" x1="380" y1="132" x2="380" y2="592"/><line class="asymptote" x1="85" y1="362" x2="680" y2="362"/>
+<line class="axis" x1="85" y1="362" x2="682" y2="362"/><line class="axis" x1="380" y1="592" x2="380" y2="132"/>
+<text class="small" x="686" y="354">x</text><text class="small" x="392" y="138">y</text><text class="small" x="402" y="583">asymptote x = 0</text><text class="small" x="506" y="345">asymptote y = 0</text>
+<path class="curve" d="M414 145C462 176 485 226 500 278C514 326 553 352 675 356"/><path class="curve" d="M346 579C298 548 275 498 260 446C246 398 207 372 85 368"/>
+<circle class="point" cx="504" cy="268" r="6.5"/><text class="label" x="522" y="262">P(ct,c/t)</text>
+<line class="branchHint" x1="504" y1="268" x2="504" y2="362"/><line class="branchHint" x1="504" y1="268" x2="380" y2="268"/>
+<rect class="box" x="735" y="112" width="220" height="168"/><text class="label" x="760" y="146">Core equations</text><text class="math" x="760" y="181">Cartesian: xy = c²</text><text class="math" x="760" y="216">or y = c² / x</text><text class="math" x="760" y="251">x = ct, y = c/t</text>
+<rect class="box" x="735" y="305" width="220" height="162"/><text class="label" x="760" y="339">Conic facts</text><text class="body" x="760" y="370">Asymptotes:</text><text class="math" x="780" y="399">x = 0, y = 0</text><text class="body" x="760" y="430">Two branches.</text><text class="body" x="760" y="454">Parameter: t ≠ 0.</text>
+<rect class="warning" x="735" y="496" width="220" height="116"/><text class="label" x="760" y="527">Bridge warning</text><text class="body" x="760" y="557">Previously seen as</text><text class="math" x="760" y="585">y = k / x</text><text class="small" x="760" y="607">Here: rectangular hyperbola.</text>
+</svg>

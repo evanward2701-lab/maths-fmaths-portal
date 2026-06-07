@@ -1,0 +1,50 @@
+<!-- File: svg/FA22FurtherHypothesisTestsVarianceEnrichmentBridgeSVG-001.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bridge from ordinary A-Level mean inference to enrichment variance inference</title>
+  <desc id="desc">A two-column comparison showing ordinary A-Level inference about the mean on the left and off-spec enrichment inference about variance on the right.</desc>
+
+  <metadata>
+    asset_id: FA22FurtherHypothesisTestsVarianceEnrichmentBridgeSVG-001
+    unit_code: FA22
+    topic_id: FA22FurtherHypothesisTestsVarianceEnrichment
+    related_lesson_file: FA22_further_hypothesis_tests_variance_enrichment_lesson.md
+    related_lesson_section: Section 9 Visual Asset Integration
+    source: Ordinary A-Level Maths bridge plus enrichment transcript
+    source_status: Off-spec enrichment, not CCEA core
+    purpose: Compare prior ordinary Maths method with Further Statistics variance inference
+  </metadata>
+
+  <rect x="0" y="0" width="1400" height="760" fill="#FAF9F6"/>
+  <rect x="46" y="36" width="1308" height="688" rx="30" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <text x="700" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#2C2C2E">A-Level Maths Bridge: Mean Inference to Variance Inference</text>
+  <text x="700" y="128" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6B6B70">Off-spec enrichment route: useful insight, not required CCEA core unless official evidence is supplied</text>
+  <line x1="700" y1="164" x2="700" y2="650" stroke="#E5E5EA" stroke-width="3"/>
+  <rect x="92" y="180" width="542" height="72" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="363" y="216" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">Ordinary A-Level Maths</text>
+  <text x="363" y="239" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">Inference about the population mean μ</text>
+  <rect x="766" y="180" width="542" height="72" rx="18" fill="#FBEFEF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="1037" y="216" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#2C2C2E">Further Statistics Enrichment</text>
+  <text x="1037" y="239" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">Inference about the population variance σ²</text>
+  <rect x="116" y="295" width="494" height="230" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="152" y="336" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#C5A059">Known bridge tools</text>
+  <text x="152" y="378" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Sample mean: x̄ = Σx / n</text>
+  <text x="152" y="416" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Normal standardisation: Z = (X - μ) / σ</text>
+  <text x="152" y="454" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Confidence intervals estimate μ</text>
+  <text x="152" y="492" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Hypothesis tests compare observed data to H₀</text>
+  <rect x="790" y="295" width="494" height="230" rx="22" fill="#FFFFFF" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="826" y="336" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#C5A059">New enrichment tools</text>
+  <text x="826" y="378" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Sample variance: S² = Σ(xᵢ - x̄)² / (n - 1)</text>
+  <text x="826" y="416" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Variance statistic: (n - 1)S² / σ²</text>
+  <text x="826" y="454" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Distribution: χ² with n - 1 degrees of freedom</text>
+  <text x="826" y="492" font-family="Inter, Arial, sans-serif" font-size="19" fill="#2C2C2E">Two variances: F = S₁² / S₂²</text>
+  <path d="M610 410 C670 385, 728 385, 790 410" fill="none" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="785,398 812,410 785,422" fill="#D4AF37"/>
+  <rect x="145" y="575" width="436" height="74" rx="16" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="363" y="606" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E">Old habit that still works</text>
+  <text x="363" y="633" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">Hypothesis-test structure and contextual conclusion</text>
+  <rect x="819" y="575" width="436" height="74" rx="16" fill="#FAF9F6" stroke="#E5E5EA" stroke-width="2"/>
+  <text x="1037" y="606" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2E">New warning</text>
+  <text x="1037" y="633" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6B6B70">S² is not normal. Use χ² or F only in enrichment mode.</text>
+  <rect x="480" y="670" width="440" height="34" rx="17" fill="#2C2C2E"/>
+  <text x="700" y="693" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#FFFFF0">CCEA-safe core stops at S² as an unbiased estimator of σ²</text>
+</svg>

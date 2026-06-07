@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FAS2AlgorithmsOnGraphsSVG-001: Standard Flow-Chart Shapes</title>
+  <desc id="desc">The three examination flow-chart shapes: Start or End, Instruction and Decision.</desc>
+  <metadata>Asset ID: FAS2AlgorithmsOnGraphsSVG-001; Source: Decision 1 lesson PDF flow-chart evidence; Purpose: Identify flow-chart box types.</metadata>
+  <rect width="1200" height="760" fill="#FAF9F6"/>
+  <text x="600" y="70" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" fill="#2C2C2E">Flow-chart shapes used in algorithm questions</text>
+  <line x1="160" y1="105" x2="1040" y2="105" stroke="#D4AF37" stroke-width="4"/>
+  <rect x="110" y="220" width="280" height="350" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <rect x="150" y="285" width="200" height="85" rx="38" fill="#FAF9F6" stroke="#2C2C2E" stroke-width="4"/>
+  <text x="250" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2C2C2E">Start / End</text>
+  <text x="250" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">Where the algorithm</text>
+  <text x="250" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">begins or stops.</text>
+  <rect x="460" y="220" width="280" height="350" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <rect x="500" y="290" width="200" height="75" fill="#FAF9F6" stroke="#2C2C2E" stroke-width="4"/>
+  <text x="600" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2C2C2E">Instruction</text>
+  <text x="600" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">Do a calculation</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">or update.</text>
+  <rect x="810" y="220" width="280" height="350" rx="28" fill="#FFFFF0" stroke="#E5E5EA" stroke-width="3"/>
+  <polygon points="950,270 1080,328 950,386 820,328" fill="#FAF9F6" stroke="#2C2C2E" stroke-width="4"/>
+  <text x="950" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#2C2C2E">Decision</text>
+  <text x="950" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">Choose Yes or No</text>
+  <text x="950" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#2C2C2E">after a test.</text>
+</svg>

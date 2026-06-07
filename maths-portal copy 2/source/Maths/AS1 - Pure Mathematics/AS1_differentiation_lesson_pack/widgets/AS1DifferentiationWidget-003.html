@@ -1,0 +1,28 @@
+<!--
+Asset ID: AS1DifferentiationWidget-003
+Source: Chapter 12 Differentiation PDF pp.21-23
+Related section: Core Theory 14-16
+Purpose: Explore tangent and normal gradients on y = x^2.
+-->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AS1 Differentiation Widget 003: Tangent and Normal Explorer</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;color:#17202a;background:#fff}.widget{max-width:980px;margin:0 auto;padding:24px}.grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}canvas{width:100%;height:auto;border:1px solid #d5d8dc;border-radius:12px;background:#fff}.panel{background:#f8f9fa;border:1px solid #d5d8dc;border-radius:12px;padding:16px}input[type=range]{width:100%}.readout{background:#fff;border:1px solid #d5d8dc;border-radius:10px;padding:12px;margin-top:14px;line-height:1.7}.big{font-size:22px;font-weight:700}@media(max-width:820px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<main class="widget"><h1>Tangent and Normal Explorer</h1><p>For \(y=x^2\), the tangent gradient is \(2x\). The normal gradient is the negative reciprocal.</p>
+<section class="grid"><canvas id="graph" width="620" height="420"></canvas><aside class="panel">
+<label for="xSlider"><strong>Choose x-coordinate</strong></label><input id="xSlider" type="range" min="0.5" max="4.5" step="0.01" value="3"/>
+<div class="readout"><div class="big">x = <span id="xValue">3.00</span></div><div>Point = <strong><span id="pointValue">(3.00, 9.00)</span></strong></div><div>Tangent gradient = <strong><span id="tangentGradient">6.00</span></strong></div><div>Normal gradient = <strong><span id="normalGradient">-0.1667</span></strong></div></div>
+<div class="readout"><strong>Tangent equation</strong><div id="tangentEquation"></div><br/><strong>Normal equation</strong><div id="normalEquation"></div></div>
+<div class="readout">Exam trap: tangent uses \(m_t\). Normal uses \(m_n=-1/m_t\).</div>
+</aside></section></main>
+<script>
+const slider=document.getElementById("xSlider"),xValue=document.getElementById("xValue"),pointValue=document.getElementById("pointValue"),tangentGradient=document.getElementById("tangentGradient"),normalGradient=document.getElementById("normalGradient"),tangentEquation=document.getElementById("tangentEquation"),normalEquation=document.getElementById("normalEquation"),canvas=document.getElementById("graph"),ctx=canvas.getContext("2d");
+function f(x){return x*x}function fp(x){return 2*x}function mapX(x){return 55+x*(500/5)}function mapY(y){return 350-y*(290/22)}
+function axes(){ctx.clearRect(0,0,620,420);ctx.fillStyle="#fff";ctx.fillRect(0,0,620,420);ctx.strokeStyle="#d5d8dc";for(let x=0;x<=5;x++){let px=mapX(x);ctx.beginPath();ctx.moveTo(px,60);ctx.lineTo(px,350);ctx.stroke()}for(let y=0;y<=20;y+=5){let py=mapY(y);ctx.beginPath();ctx.moveTo(55,py);ctx.lineTo(560,py);ctx.stroke()}ctx.strokeStyle="#17202a";ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(55,350);ctx.lineTo(570,350);ctx.moveTo(55,350);ctx.lineTo(55,50);ctx.stroke()}
+function curve(){ctx.strokeStyle="#1f77b4";ctx.lineWidth=3;ctx.beginPath();for(let i=0;i<=500;i++){let x=i/100,y=f(x);if(i===0)ctx.moveTo(mapX(x),mapY(y));else ctx.lineTo(mapX(x),mapY(y))}ctx.stroke();ctx.fillStyle="#1f77b4";ctx.font="16px Arial";ctx.fillText("y = x²",405,110)}
+function line(x0,y0,m,xs,xe,c,label){let ys=y0+m*(xs-x0),ye=y0+m*(xe-x0);ctx.strokeStyle=c;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(mapX(xs),mapY(ys));ctx.lineTo(mapX(xe),mapY(ye));ctx.stroke();ctx.fillStyle=c;ctx.font="14px Arial";ctx.fillText(label,mapX(xe)-130,mapY(ye)-6)}
+function drawPoint(x,y){ctx.fillStyle="#17202a";ctx.beginPath();ctx.arc(mapX(x),mapY(y),6,0,Math.PI*2);ctx.fill();ctx.font="14px Arial";ctx.fillText(`(${x.toFixed(2)}, ${y.toFixed(2)})`,mapX(x)+8,mapY(y)-8)}
+function update(){let x=Number(slider.value),y=f(x),mt=fp(x),mn=-1/mt;xValue.textContent=x.toFixed(2);pointValue.textContent=`(${x.toFixed(2)}, ${y.toFixed(2)})`;tangentGradient.textContent=mt.toFixed(4);normalGradient.textContent=mn.toFixed(4);tangentEquation.textContent=`y − ${y.toFixed(2)} = ${mt.toFixed(4)}(x − ${x.toFixed(2)})`;normalEquation.textContent=`y − ${y.toFixed(2)} = ${mn.toFixed(4)}(x − ${x.toFixed(2)})`;axes();curve();line(x,y,mt,Math.max(0,x-1),Math.min(5,x+1),"#c0392b","tangent");line(x,y,mn,Math.max(0,x-1.8),Math.min(5,x+1.8),"#6c3483","normal");drawPoint(x,y)}
+slider.addEventListener("input",update);update();
+</script></body></html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Frequency Polygon</title>
+<desc id="desc">Join class midpoint points, including zero-frequency classes.</desc>
+<rect width="960" height="540" fill="#ffffff"/>
+<text x="40" y="55" font-family="Arial, sans-serif" font-size="30" font-weight="700">Frequency Polygon</text>
+<text x="40" y="86" font-family="Arial, sans-serif" font-size="16" fill="#334155">Join class midpoint points, including zero-frequency classes.</text>
+
+<metadata>Asset ID: AS2DataPresentationSVG-007; Source: Frequency polygon evidence; Section: Core Theory; Purpose: Frequency polygon from midpoints.</metadata>
+<rect x="110" y="120" width="720" height="300" fill="#fbfdff" stroke="#cbd5e1"/><line x1="110" y1="420" x2="850" y2="420" stroke="#222" stroke-width="3"/><line x1="110" y1="420" x2="110" y2="100" stroke="#222" stroke-width="3"/>
+<rect x="160" y="360" width="90" height="60" fill="#d8ecff" stroke="#111"/><rect x="250" y="300" width="90" height="120" fill="#d8ecff" stroke="#111"/><rect x="430" y="220" width="90" height="200" fill="#d8ecff" stroke="#111"/><rect x="520" y="260" width="90" height="160" fill="#d8ecff" stroke="#111"/><rect x="610" y="340" width="90" height="80" fill="#d8ecff" stroke="#111"/>
+<polyline points="205,360 295,300 385,420 475,220 565,260 655,340" fill="none" stroke="#9b2226" stroke-width="4"/>
+<g fill="#9b2226" stroke="#ffffff" stroke-width="2"><circle cx="205" cy="360" r="7"/><circle cx="295" cy="300" r="7"/><circle cx="385" cy="420" r="7"/><circle cx="475" cy="220" r="7"/><circle cx="565" cy="260" r="7"/><circle cx="655" cy="340" r="7"/></g>
+<text x="805" y="240" font-family="Arial" font-size="15" text-anchor="middle">Do not skip zero-frequency classes.</text>
+
+</svg>

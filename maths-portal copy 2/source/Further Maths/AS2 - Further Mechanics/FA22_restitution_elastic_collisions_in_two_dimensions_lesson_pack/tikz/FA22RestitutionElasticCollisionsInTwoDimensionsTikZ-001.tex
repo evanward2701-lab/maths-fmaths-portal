@@ -1,0 +1,47 @@
+% Asset ID: FA22RestitutionElasticCollisionsInTwoDimensionsTikZ-001
+% File path: tikz/FA22RestitutionElasticCollisionsInTwoDimensionsTikZ-001.tex
+% Topic ID: FA22RestitutionElasticCollisionsInTwoDimensions
+% Unit: FA22
+% Topic code: FA22-REST
+% Source: FM1-Chp5-ObliqueCollisions.pdf page 4
+% Purpose: Provide a precise mathematical diagram for fixed smooth plane oblique impact.
+
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, calc, angles, quotes, positioning}
+
+\definecolor{Canvas}{HTML}{FAF9F6}
+\definecolor{Ivory}{HTML}{FFFFF0}
+\definecolor{Line}{HTML}{2C2C2E}
+\definecolor{SoftLine}{HTML}{E5E5EA}
+\definecolor{Gold}{HTML}{C5A059}
+\definecolor{Rose}{HTML}{FBEFEF}
+\definecolor{NormalAccent}{HTML}{B45A64}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,every node/.style={font=\sffamily,text=Line},velocity/.style={->,very thick,draw=Line},parallel/.style={->,very thick,draw=Gold},normal/.style={->,very thick,draw=NormalAccent},guide/.style={draw=SoftLine,dashed,thick},surface/.style={draw=Line,line width=1.2pt},componentlabel/.style={font=\sffamily\small,fill=Canvas,inner sep=2pt},equationbox/.style={draw=Gold,fill=Rose,rounded corners=6pt,line width=0.7pt,inner sep=7pt,align=left}]
+\fill[Canvas] (-1.2,-2.2) rectangle (14.2,7.2);
+\draw[SoftLine,rounded corners=14pt,line width=0.8pt] (-0.9,-1.9) rectangle (13.9,6.9);
+\node[font=\sffamily\bfseries\Large,anchor=west] at (-0.55,6.45) {Oblique impact with a fixed smooth plane};
+\node[font=\sffamily\small,anchor=west] at (-0.55,6.05) {Resolve into components parallel and perpendicular to the plane.};
+\draw[surface] (0,0) -- (7.2,0);
+\foreach \x in {0.5,1.0,...,6.7}{\draw[SoftLine,line width=0.5pt] (\x,0) -- ++(-0.28,-0.45);}
+\coordinate (O) at (3.5,0); \fill[Line] (O) circle (1.4pt);
+\coordinate (Ustart) at (1.45,2.25); \coordinate (Vend) at (6.35,1.35);
+\draw[velocity] (Ustart) -- (O); \node[font=\sffamily\bfseries] at (1.25,2.45) {$u$};
+\draw[velocity] (O) -- (Vend); \node[font=\sffamily\bfseries] at (6.55,1.42) {$v$};
+\draw[guide] (O) -- ++(0,3.2); \node[font=\sffamily\small,anchor=west] at ($(O)+(0.12,2.85)$) {normal};
+\coordinate (Ufoot) at (1.45,0); \draw[parallel] (O) -- (Ufoot); \node[componentlabel,below] at ($(O)!0.52!(Ufoot)$) {$u\cos\alpha$};
+\draw[normal] (Ufoot) -- (Ustart); \node[componentlabel,left] at ($(Ufoot)!0.52!(Ustart)$) {$u\sin\alpha$};
+\coordinate (Vfoot) at (6.35,0); \draw[parallel] (O) -- (Vfoot); \node[componentlabel,below] at ($(O)!0.53!(Vfoot)$) {$v\cos\beta$};
+\draw[normal] (Vfoot) -- (Vend); \node[componentlabel,right] at ($(Vfoot)!0.54!(Vend)$) {$v\sin\beta$};
+\pic[draw=Line,line width=0.8pt,angle radius=0.72cm,angle eccentricity=1.25,"$\alpha$"] {angle=Ufoot--O--Ustart};
+\pic[draw=Line,line width=0.8pt,angle radius=0.78cm,angle eccentricity=1.25,"$\beta$"] {angle=Vend--O--Vfoot};
+\node[equationbox,anchor=west] at (7.65,4.65) {\(\textbf{Smooth plane}\)\\[2pt]No frictional impulse.};
+\node[equationbox,anchor=west] at (7.65,3.35) {\(\textbf{Parallel unchanged}\)\\[2pt]\[u\cos\alpha=v\cos\beta\]};
+\node[equationbox,anchor=west] at (7.65,1.85) {\(\textbf{Normal uses restitution}\)\\[2pt]\[eu\sin\alpha=v\sin\beta\]};
+\node[equationbox,anchor=west] at (7.65,0.25) {\(\textbf{This diagram}\)\\[2pt]Angle of deflection \(=\alpha+\beta\).};
+\node[font=\sffamily\small,align=left,anchor=west] at (0.15,-1.15) {Only the component perpendicular to the plane is changed by the impact.\\The component parallel to the plane passes through unchanged.};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1100" height="640" viewBox="0 0 1100 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">A21ParametricEquationsSVG-005 Intersections</title>
+<desc id="desc">Shows solving intersections by first finding t.</desc>
+<metadata>
+Asset ID: A21ParametricEquationsSVG-005
+Source: Transcript points of intersection section; CCEA A21-CG-LO001.
+Related lesson section: Worked Example 6; Exam Technique Notes.
+Purpose: Show intersection workflow using substitution into a line.
+</metadata>
+<rect width="1100" height="640" fill="#ffffff"/>
+<text x="55" y="55" font-family="Georgia, serif" font-size="34" font-weight="700">Intersections: solve for the parameter first</text>
+<text x="55" y="92" font-family="Arial, sans-serif" font-size="17">For x=t², y=4t and x+y+4=0, substitution gives t²+4t+4=0.</text>
+
+<rect x="70" y="125" width="700" height="455" rx="18" fill="#f7f9fc" stroke="#c7d2e5" stroke-width="2"/>
+<line x1="120" y1="350" x2="720" y2="350" stroke="#333" stroke-width="2"/>
+<line x1="420" y1="540" x2="420" y2="160" stroke="#333" stroke-width="2"/>
+<text x="728" y="355" font-family="Arial" font-size="16">x</text>
+<text x="428" y="165" font-family="Arial" font-size="16">y</text>
+
+<path d="M 630 160 C 500 220 420 310 420 350 C 420 390 500 480 630 540" fill="none" stroke="#2d5be3" stroke-width="5"/>
+<line x1="150" y1="250" x2="690" y2="520" stroke="#d61f69" stroke-width="4"/>
+<circle cx="575" cy="462" r="8" fill="#d61f69"/>
+<text x="590" y="470" font-family="Arial" font-size="17">A(4,-8)</text>
+<rect x="805" y="145" width="275" height="390" rx="18" fill="#fff8e6" stroke="#e2ad37" stroke-width="2"/>
+<text x="830" y="195" font-family="Georgia" font-size="18">x + y + 4 = 0</text>
+<text x="830" y="235" font-family="Georgia" font-size="18">t² + 4t + 4 = 0</text>
+<text x="830" y="275" font-family="Georgia" font-size="18">(t + 2)² = 0</text>
+<text x="830" y="315" font-family="Georgia" font-size="18">t = -2</text>
+<text x="830" y="370" font-family="Georgia" font-size="18">x = 4, y = -8</text>
+
+</svg>

@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>A21IntegrationWidget-002</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f8fafc;color:#0f172a;margin:0;padding:20px}
+main{max-width:900px;margin:auto;background:white;border:2px solid #cbd5e1;border-radius:20px;padding:20px}
+canvas{width:100%;max-width:650px;border:1px solid #cbd5e1;border-radius:12px;background:white}
+.controls{margin-top:12px}
+label{font-weight:700}
+</style>
+</head>
+<body><main><h1>Area Between Curves Explorer</h1>
+<p>For <strong>y=2x</strong> and <strong>y=x²</strong>, intersections are x=0 and x=2. The area is <strong>∫₀²(2x-x²)dx = 4/3</strong>.</p>
+<canvas id="c" width="650" height="420"></canvas>
+<script>
+const c=document.getElementById('c'),ctx=c.getContext('2d');function X(x){return 60+240*x} function Y(y){return 360-75*y}
+function draw(){ctx.clearRect(0,0,650,420);ctx.strokeStyle='#0f172a';ctx.beginPath();ctx.moveTo(X(-.2),Y(0));ctx.lineTo(X(2.3),Y(0));ctx.moveTo(X(0),Y(-.2));ctx.lineTo(X(0),Y(4.5));ctx.stroke();ctx.fillStyle='rgba(245,158,11,.35)';ctx.beginPath();for(let i=0;i<=100;i++){let x=2*i/100;let y=2*x;if(i===0)ctx.moveTo(X(x),Y(y));else ctx.lineTo(X(x),Y(y));}for(let i=100;i>=0;i--){let x=2*i/100;let y=x*x;ctx.lineTo(X(x),Y(y));}ctx.closePath();ctx.fill();ctx.strokeStyle='#2563eb';ctx.beginPath();ctx.moveTo(X(0),Y(0));ctx.lineTo(X(2),Y(4));ctx.stroke();ctx.strokeStyle='#dc2626';ctx.beginPath();for(let i=0;i<=100;i++){let x=2*i/100,y=x*x;if(i===0)ctx.moveTo(X(x),Y(y));else ctx.lineTo(X(x),Y(y));}ctx.stroke();ctx.fillStyle='#0f172a';ctx.fillText('Area = ∫₀²(2x-x²) dx',X(.55),Y(2.5));} draw();
+</script></main></body></html>
